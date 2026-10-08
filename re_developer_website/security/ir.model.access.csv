@@ -1,0 +1,25 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_re_amenity_manager,re.amenity manager,model_re_amenity,group_re_manager,1,1,1,1
+access_re_amenity_user,re.amenity user,model_re_amenity,base.group_user,1,0,0,0
+access_re_amenity_public,re.amenity public,model_re_amenity,base.group_public,1,0,0,0
+access_re_amenity_portal,re.amenity portal,model_re_amenity,base.group_portal,1,0,0,0
+access_re_project_manager,re.project manager,model_re_project,group_re_manager,1,1,1,1
+access_re_project_editor,re.project editor,model_re_project,website.group_website_restricted_editor,1,1,0,0
+access_re_project_user,re.project user,model_re_project,base.group_user,1,0,0,0
+access_re_project_public,re.project public,model_re_project,base.group_public,1,0,0,0
+access_re_project_portal,re.project portal,model_re_project,base.group_portal,1,0,0,0
+access_re_unit_manager,re.unit manager,model_re_unit,group_re_manager,1,1,1,1
+access_re_unit_editor,re.unit editor,model_re_unit,website.group_website_restricted_editor,1,1,0,0
+access_re_unit_user,re.unit user,model_re_unit,base.group_user,1,0,0,0
+access_re_unit_public,re.unit public,model_re_unit,base.group_public,1,0,0,0
+access_re_unit_portal,re.unit portal,model_re_unit,base.group_portal,1,0,0,0
+access_re_service_manager,re.service manager,model_re_service,group_re_manager,1,1,1,1
+access_re_service_editor,re.service editor,model_re_service,website.group_website_restricted_editor,1,1,0,0
+access_re_service_user,re.service user,model_re_service,base.group_user,1,0,0,0
+access_re_service_public,re.service public,model_re_service,base.group_public,1,0,0,0
+access_re_service_portal,re.service portal,model_re_service,base.group_portal,1,0,0,0
+access_re_team_member_manager,re.team.member manager,model_re_team_member,group_re_manager,1,1,1,1
+access_re_team_member_editor,re.team.member editor,model_re_team_member,website.group_website_restricted_editor,1,1,0,0
+access_re_team_member_user,re.team.member user,model_re_team_member,base.group_user,1,0,0,0
+access_re_team_member_public,re.team.member public,model_re_team_member,base.group_public,1,0,0,0
+access_re_team_member_portal,re.team.member portal,model_re_team_member,base.group_portal,1,0,0,0

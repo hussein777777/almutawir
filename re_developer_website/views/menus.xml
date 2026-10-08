@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_re_root" name="Real Estate" sequence="45"
+              web_icon="re_developer_website,static/description/icon.png"
+              groups="group_re_manager"/>
+
+    <menuitem id="menu_re_content" name="Website Content" parent="menu_re_root" sequence="10"/>
+    <menuitem id="menu_re_projects" name="Projects" parent="menu_re_content" action="re_project_action" sequence="10"/>
+    <menuitem id="menu_re_units" name="Units" parent="menu_re_content" action="re_unit_action" sequence="20"/>
+    <menuitem id="menu_re_services" name="Services" parent="menu_re_content" action="re_service_action" sequence="30"/>
+    <menuitem id="menu_re_team" name="Leadership Team" parent="menu_re_content" action="re_team_member_action" sequence="40"/>
+
+    <menuitem id="menu_re_inquiries" name="Inquiries" parent="menu_re_root" action="crm_lead_re_action" sequence="20"/>
+
+    <menuitem id="menu_re_config" name="Configuration" parent="menu_re_root" sequence="90"/>
+    <menuitem id="menu_re_profile" name="Company Profile" parent="menu_re_config" action="website_re_profile_action" sequence="10"
+              groups="website.group_website_designer"/>
+    <menuitem id="menu_re_amenities" name="Amenities" parent="menu_re_config" action="re_amenity_action" sequence="20"/>
+</odoo>

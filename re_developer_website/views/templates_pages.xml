@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================== -->
+    <!-- Services                                                       -->
+    <!-- ============================================================== -->
+    <template id="page_services" name="Real Estate: Services">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Services</t>
+            <div id="wrap" class="o_re_site">
+                <t t-call="re_developer_website.page_banner">
+                    <t t-set="banner_title">Our Services</t>
+                    <t t-set="banner_subtitle">From land acquisition and design to construction, sales and property management.</t>
+                </t>
+                <section class="py-5">
+                    <div class="container">
+                        <div t-foreach="services" t-as="service" t-att-id="'service-%s' % service.id"
+                             t-attf-class="row align-items-center g-5 o_re_service_row #{service_index % 2 and 'flex-lg-row-reverse' or ''}">
+                            <div class="col-lg-5">
+                                <div t-if="service.image_128" class="o_re_service_img"
+                                     t-attf-style="background-image: url('/web/image/re.service/#{service.id}/image_1024')"/>
+                                <div t-else="" class="o_re_service_img o_re_service_img_icon">
+                                    <i t-attf-class="fa #{service.icon or 'fa-building'}"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <span class="o_re_service_icon"><i t-attf-class="fa #{service.icon or 'fa-building'}"/></span>
+                                <h2 class="h3 mt-3" t-out="service.name"/>
+                                <p class="lead text-muted" t-out="service.short_description"/>
+                                <div class="o_re_rich" t-field="service.description"/>
+                                <a t-attf-href="/estate/contact?service_id=#{service.id}" class="btn btn-primary mt-2">
+                                    Request this service
+                                </a>
+                            </div>
+                        </div>
+                        <p t-if="not services" class="text-muted text-center">Services will be published soon.</p>
+                    </div>
+                </section>
+                <div class="oe_structure" id="oe_structure_re_services_1"/>
+                <t t-call="re_developer_website.cta_band"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- About us ("Who we are")                                        -->
+    <!-- ============================================================== -->
+    <template id="page_about" name="Real Estate: About Us">
+        <t t-call="website.layout">
+            <t t-set="additional_title">About Us</t>
+            <div id="wrap" class="o_re_site">
+                <t t-call="re_developer_website.page_banner">
+                    <t t-set="banner_title">Who We Are</t>
+                    <t t-set="banner_subtitle" t-value="website.re_tagline"/>
+                </t>
+
+                <t t-call="re_developer_website.overview_section"/>
+
+                <section t-if="website.re_vision or website.re_mission" class="py-5 o_re_bg_soft">
+                    <div class="container">
+                        <div class="row g-4">
+                            <div t-if="website.re_vision" class="col-md-6">
+                                <div class="o_re_vm_card h-100">
+                                    <i class="fa fa-eye"/>
+                                    <h3 class="h4">Our Vision</h3>
+                                    <p class="mb-0" t-field="website.re_vision"/>
+                                </div>
+                            </div>
+                            <div t-if="website.re_mission" class="col-md-6">
+                                <div class="o_re_vm_card h-100">
+                                    <i class="fa fa-bullseye"/>
+                                    <h3 class="h4">Our Mission</h3>
+                                    <p class="mb-0" t-field="website.re_mission"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <t t-call="re_developer_website.stats_band"/>
+
+                <section class="py-5">
+                    <div class="container">
+                        <t t-call="re_developer_website.section_heading">
+                            <t t-set="section_center" t-value="True"/>
+                            <t t-set="section_eyebrow">Why choose us</t>
+                            <t t-set="section_title">Built on trust, delivered on time</t>
+                        </t>
+                        <div class="row g-4 text-center">
+                            <div class="col-md-3 col-6">
+                                <div class="o_re_why"><i class="fa fa-calendar-check-o"/><h4 class="h6">On-time delivery</h4>
+                                <p class="small text-muted mb-0">A proven track record of handing over on schedule.</p></div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="o_re_why"><i class="fa fa-shield"/><h4 class="h6">Quality construction</h4>
+                                <p class="small text-muted mb-0">In-house engineering and strict quality control.</p></div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="o_re_why"><i class="fa fa-credit-card"/><h4 class="h6">Flexible payments</h4>
+                                <p class="small text-muted mb-0">Long installment plans tailored to you.</p></div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="o_re_why"><i class="fa fa-handshake-o"/><h4 class="h6">After-sales care</h4>
+                                <p class="small text-muted mb-0">Facility management long after handover.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section t-if="team" class="py-5 o_re_bg_soft" id="team">
+                    <div class="container">
+                        <t t-call="re_developer_website.section_heading">
+                            <t t-set="section_center" t-value="True"/>
+                            <t t-set="section_eyebrow">Leadership</t>
+                            <t t-set="section_title">Meet our team</t>
+                        </t>
+                        <div class="row g-4 justify-content-center">
+                            <div t-foreach="team" t-as="member" class="col-sm-6 col-lg-3">
+                                <div class="o_re_team_card text-center h-100">
+                                    <img t-attf-src="/web/image/re.team.member/#{member.id}/image_256" t-att-alt="member.name"
+                                         class="o_re_team_img mb-3" loading="lazy"/>
+                                    <h3 class="h6 mb-0" t-out="member.name"/>
+                                    <small class="text-primary d-block mb-2" t-out="member.job_title"/>
+                                    <p class="small text-muted" t-out="member.bio"/>
+                                    <a t-if="member.linkedin_url" t-att-href="member.linkedin_url" target="_blank" rel="noopener"
+                                       class="text-muted" aria-label="LinkedIn"><i class="fa fa-linkedin-square fa-lg"/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="oe_structure" id="oe_structure_re_about_1"/>
+                <t t-call="re_developer_website.cta_band"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Contact us / book a meeting                                    -->
+    <!-- ============================================================== -->
+    <template id="page_contact" name="Real Estate: Contact Us">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Contact Us</t>
+            <div id="wrap" class="o_re_site">
+                <t t-call="re_developer_website.page_banner">
+                    <t t-set="banner_title">Contact Us</t>
+                    <t t-set="banner_subtitle">Ask about a unit, book a site visit or schedule a meeting at our office.</t>
+                </t>
+                <section class="py-5">
+                    <div class="container">
+                        <div class="row g-5">
+                            <div class="col-lg-5">
+                                <h2 class="h4 mb-4">Get in touch</h2>
+                                <ul class="list-unstyled o_re_contact_list">
+                                    <li t-if="res_company.phone">
+                                        <i class="fa fa-phone"/>
+                                        <div><small>Call us</small><a t-att-href="'tel:%s' % res_company.phone" t-out="res_company.phone"/></div>
+                                    </li>
+                                    <li t-if="website.re_whatsapp_url">
+                                        <i class="fa fa-whatsapp"/>
+                                        <div><small>WhatsApp</small><a t-att-href="website.re_whatsapp_url" target="_blank" rel="noopener" t-out="website.re_whatsapp"/></div>
+                                    </li>
+                                    <li t-if="res_company.email">
+                                        <i class="fa fa-envelope"/>
+                                        <div><small>Email</small><a t-att-href="'mailto:%s' % res_company.email" t-out="res_company.email"/></div>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-map-marker"/>
+                                        <div><small>Head office</small>
+                                            <span t-field="res_company.partner_id"
+                                                  t-options="{'widget': 'contact', 'fields': ['address'], 'no_marker': True}"/>
+                                        </div>
+                                    </li>
+                                    <li t-if="website.re_office_hours">
+                                        <i class="fa fa-clock-o"/>
+                                        <div><small>Office hours</small><span t-out="website.re_office_hours"/></div>
+                                    </li>
+                                </ul>
+                                <div class="oe_structure" id="oe_structure_re_contact_1"/>
+                            </div>
+                            <div class="col-lg-7">
+                                <t t-call="re_developer_website.inquiry_form">
+                                    <t t-set="form_title">Send us a request</t>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Thank you                                                      -->
+    <!-- ============================================================== -->
+    <template id="page_thank_you" name="Real Estate: Thank You">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Thank You</t>
+            <div id="wrap" class="o_re_site">
+                <section class="py-5 my-5">
+                    <div class="container text-center">
+                        <div class="o_re_thanks_icon mb-4"><i class="fa fa-check"/></div>
+                        <h1 class="h2">Thank you! We received your request.</h1>
+                        <p class="lead text-muted">One of our sales consultants will contact you shortly.</p>
+                        <div class="d-flex gap-2 justify-content-center flex-wrap mt-4">
+                            <a href="/estate/projects" class="btn btn-primary">Explore Projects</a>
+                            <a href="/estate/units" class="btn btn-outline-primary">Browse Units</a>
+                        </div>
+                    </div>
+                </section>
+                <div class="oe_structure" id="oe_structure_re_thanks_1"/>
+            </div>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,278 @@
+// Real Estate Developer Website
+// Colours follow the website theme ($primary), so changing the palette in the
+// website editor restyles the whole site.
+
+$o-re-dark: #0f1b2d;
+$o-re-soft: #f5f6f8;
+$o-re-radius: 14px;
+$o-re-shadow: 0 10px 30px rgba(15, 27, 45, 0.08);
+
+.o_re_site {
+    .o_re_eyebrow {
+        display: inline-block;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: $primary;
+        margin-bottom: 0.5rem;
+    }
+    .o_re_eyebrow_light { color: rgba(255, 255, 255, 0.8); }
+    .o_re_section_title { font-weight: 700; margin-bottom: 0.75rem; }
+    .o_re_bg_soft { background: $o-re-soft; }
+    .o_re_price { color: $primary; font-weight: 700; }
+    .o_re_price_lg { font-size: 1.75rem; line-height: 1.1; }
+
+    // ---------------------------------------------------------- Hero / banner
+    .o_re_hero, .o_re_banner {
+        position: relative;
+        background: linear-gradient(135deg, $o-re-dark 0%, mix($primary, $o-re-dark, 45%) 100%);
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+    }
+    .o_re_hero { min-height: 78vh; }
+    .o_re_hero_overlay, .o_re_banner_overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba($o-re-dark, 0.85) 0%, rgba($o-re-dark, 0.35) 100%);
+    }
+    .o_re_hero_title {
+        color: #fff;
+        font-size: clamp(2.2rem, 5vw, 3.8rem);
+        font-weight: 800;
+        line-height: 1.1;
+    }
+    .o_re_hero_subtitle { color: rgba(255, 255, 255, 0.78); font-size: 1.2rem; max-width: 640px; }
+    .o_re_banner { padding: 5.5rem 0 4rem; }
+    .o_re_banner_title { color: #fff; font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.8rem); }
+    .o_re_banner_subtitle { color: rgba(255, 255, 255, 0.78); max-width: 720px; margin: 0; }
+    .o_re_breadcrumb {
+        a { color: rgba(255, 255, 255, 0.75); }
+        .breadcrumb-item.active, .breadcrumb-item + .breadcrumb-item::before { color: rgba(255, 255, 255, 0.55); }
+    }
+
+    // ---------------------------------------------------------- Search bar
+    .o_re_search_wrap { position: relative; z-index: 2; margin-top: -3rem; }
+    .o_re_search_bar {
+        background: #fff;
+        border-radius: $o-re-radius;
+        box-shadow: $o-re-shadow;
+        padding: 1.25rem 1.5rem;
+        .form-label { color: #6c757d; margin-bottom: 0.25rem; }
+    }
+
+    // ---------------------------------------------------------- Cards
+    .o_re_card {
+        border: 0;
+        border-radius: $o-re-radius;
+        overflow: hidden;
+        box-shadow: $o-re-shadow;
+        color: inherit;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        &:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(15, 27, 45, 0.14); }
+        .card-title { color: $o-re-dark; font-weight: 700; }
+    }
+    .o_re_card_media {
+        position: relative;
+        height: 230px;
+        background-color: mix($primary, #fff, 20%);
+        background-size: cover;
+        background-position: center;
+    }
+    .o_re_card_media_sm { height: 190px; }
+    .o_re_card_media_empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, mix($primary, #fff, 30%), mix($primary, $o-re-dark, 60%));
+    }
+    .o_re_media_icon { font-size: 3.5rem; color: rgba(255, 255, 255, 0.85); }
+    .o_re_card_meta { font-size: 0.82rem; color: #6c757d; }
+    .o_re_unpublished { position: absolute; bottom: 12px; left: 12px; }
+
+    .o_re_status, .o_re_type_chip {
+        position: absolute;
+        top: 12px;
+        padding: 0.25rem 0.7rem;
+        border-radius: 50rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #fff;
+        background: rgba($o-re-dark, 0.75);
+    }
+    .o_re_status { left: 12px; }
+    .o_re_type_chip { right: 12px; background: rgba(255, 255, 255, 0.92); color: $o-re-dark; }
+    .o_re_status_available, .o_re_status_delivered { background: #198754; }
+    .o_re_status_reserved, .o_re_status_construction { background: #f0a500; }
+    .o_re_status_sold { background: #dc3545; }
+    .o_re_status_planning { background: #0d6efd; }
+
+    .o_re_specs li { color: #495057; }
+
+    // ---------------------------------------------------------- Stats
+    .o_re_stats {
+        background: $o-re-dark;
+        color: #fff;
+        .o_re_stat_value { font-size: 2.6rem; font-weight: 800; color: #fff; }
+        .o_re_stat_label { color: rgba(255, 255, 255, 0.65); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em; }
+    }
+
+    // ---------------------------------------------------------- Overview / video
+    .o_re_video, .o_re_map {
+        border-radius: $o-re-radius;
+        overflow: hidden;
+        box-shadow: $o-re-shadow;
+        iframe { border: 0; }
+    }
+    .o_re_video_placeholder {
+        border-radius: $o-re-radius;
+        background: linear-gradient(135deg, $o-re-dark, mix($primary, $o-re-dark, 50%));
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    // ---------------------------------------------------------- Services
+    .o_re_service_card {
+        border: 0;
+        border-radius: $o-re-radius;
+        box-shadow: $o-re-shadow;
+        color: inherit;
+        transition: transform 0.25s ease;
+        &:hover { transform: translateY(-4px); }
+    }
+    .o_re_service_icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        font-size: 1.4rem;
+        color: $primary;
+        background: rgba($primary, 0.1);
+    }
+    .o_re_service_row { padding: 3rem 0; border-bottom: 1px solid rgba(0, 0, 0, 0.06); &:last-child { border-bottom: 0; } }
+    .o_re_service_img {
+        height: 320px;
+        border-radius: $o-re-radius;
+        background-size: cover;
+        background-position: center;
+        box-shadow: $o-re-shadow;
+    }
+    .o_re_service_img_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        color: #fff;
+        background: linear-gradient(135deg, $primary, $o-re-dark);
+    }
+
+    // ---------------------------------------------------------- Project / unit detail
+    .o_re_facts { position: relative; z-index: 2; margin-top: -2.5rem; }
+    .o_re_facts_card {
+        background: #fff;
+        border-radius: $o-re-radius;
+        box-shadow: $o-re-shadow;
+        > div {
+            padding: 1.1rem 0.75rem;
+            border-right: 1px solid rgba(0, 0, 0, 0.06);
+            &:last-child { border-right: 0; }
+        }
+        small { display: block; color: #6c757d; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; }
+        strong { color: $o-re-dark; }
+    }
+    .o_re_progress { height: 10px; border-radius: 50rem; .progress-bar { background: $primary; } }
+    .o_re_amenity {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        padding: 0.8rem 1rem;
+        border-radius: 10px;
+        background: $o-re-soft;
+        i { color: $primary; width: 20px; text-align: center; }
+    }
+    .o_re_sticky { position: sticky; top: 90px; }
+    .o_re_unit_hero {
+        position: relative;
+        height: 420px;
+        border-radius: $o-re-radius;
+        background-color: mix($primary, #fff, 20%);
+        background-size: cover;
+        background-position: center;
+    }
+    .o_re_spec_box {
+        text-align: center;
+        padding: 1rem;
+        border-radius: 12px;
+        background: $o-re-soft;
+        i { display: block; color: $primary; font-size: 1.3rem; margin-bottom: 0.4rem; }
+        strong { display: block; color: $o-re-dark; }
+        small { color: #6c757d; }
+    }
+    .o_re_details_table th { width: 40%; color: #6c757d; font-weight: 500; }
+    .o_re_payment_plan {
+        padding: 1.5rem;
+        border-radius: $o-re-radius;
+        border: 1px dashed rgba($primary, 0.5);
+        background: rgba($primary, 0.04);
+        small { display: block; color: #6c757d; font-size: 0.78rem; }
+        strong { color: $o-re-dark; }
+    }
+
+    // ---------------------------------------------------------- About
+    .o_re_vm_card, .o_re_why, .o_re_team_card {
+        background: #fff;
+        border-radius: $o-re-radius;
+        box-shadow: $o-re-shadow;
+        padding: 2rem;
+        > i { font-size: 1.8rem; color: $primary; margin-bottom: 1rem; display: block; }
+    }
+    .o_re_team_img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }
+
+    // ---------------------------------------------------------- Contact / forms
+    .o_re_form_card { border-radius: $o-re-radius; }
+    .o_re_hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .o_re_contact_list li {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        margin-bottom: 1.4rem;
+        > i {
+            flex: 0 0 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            color: $primary;
+            background: rgba($primary, 0.1);
+        }
+        small { display: block; color: #6c757d; }
+        a { color: $o-re-dark; font-weight: 600; }
+    }
+    .o_re_thanks_icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        font-size: 2.4rem;
+        color: #fff;
+        background: #198754;
+    }
+
+    // ---------------------------------------------------------- CTA
+    .o_re_cta { background: linear-gradient(135deg, $primary 0%, $o-re-dark 100%); }
+
+    @include media-breakpoint-down(md) {
+        .o_re_hero { min-height: 62vh; }
+        .o_re_facts_card > div { border-right: 0; border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+        .o_re_unit_hero { height: 260px; }
+        .o_re_sticky { position: static; }
+    }
+}
+// RTL (Arabic) needs no extra rules: Odoo runs rtlcss on the frontend bundle.

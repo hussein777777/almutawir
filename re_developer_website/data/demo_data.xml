@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Company profile on the default website -->
+    <record id="website.default_website" model="website">
+        <field name="re_tagline">Building Communities That Last</field>
+        <field name="re_hero_subtitle">Premium residential, commercial and coastal developments across Egypt, with flexible payment plans up to 10 years.</field>
+        <field name="re_overview_title">Company Overview &amp; Interview</field>
+        <field name="re_overview" type="html">
+            <p>For more than two decades we have been designing, building and delivering integrated communities.
+            Our in-house engineering, construction and facility-management teams control every step, from land acquisition to handover and beyond.</p>
+            <p>Watch our chairman talk about our journey, our current projects and our commitment to on-time delivery.</p>
+        </field>
+        <field name="re_vision">To be the most trusted developer in the region, creating places where families and businesses thrive.</field>
+        <field name="re_mission">Deliver quality homes and workplaces on time, with transparent pricing and long-term after-sales care.</field>
+        <field name="re_founded_year">2003</field>
+        <field name="re_years_experience">22</field>
+        <field name="re_projects_count">35</field>
+        <field name="re_units_count">12000</field>
+        <field name="re_clients_count">9500</field>
+        <field name="re_whatsapp">+20 100 000 0000</field>
+    </record>
+
+    <!-- Amenities -->
+    <record id="amenity_pool" model="re.amenity"><field name="name">Swimming Pools</field><field name="icon">fa-tint</field><field name="sequence">1</field></record>
+    <record id="amenity_security" model="re.amenity"><field name="name">24/7 Security</field><field name="icon">fa-shield</field><field name="sequence">2</field></record>
+    <record id="amenity_green" model="re.amenity"><field name="name">Landscaped Gardens</field><field name="icon">fa-tree</field><field name="sequence">3</field></record>
+    <record id="amenity_club" model="re.amenity"><field name="name">Clubhouse &amp; Gym</field><field name="icon">fa-heartbeat</field><field name="sequence">4</field></record>
+    <record id="amenity_mall" model="re.amenity"><field name="name">Commercial Area</field><field name="icon">fa-shopping-cart</field><field name="sequence">5</field></record>
+    <record id="amenity_parking" model="re.amenity"><field name="name">Underground Parking</field><field name="icon">fa-car</field><field name="sequence">6</field></record>
+    <record id="amenity_kids" model="re.amenity"><field name="name">Kids Area</field><field name="icon">fa-child</field><field name="sequence">7</field></record>
+    <record id="amenity_beach" model="re.amenity"><field name="name">Private Beach</field><field name="icon">fa-sun-o</field><field name="sequence">8</field></record>
+
+    <!-- Projects -->
+    <record id="project_palm" model="re.project">
+        <field name="name">Palm Residence</field>
+        <field name="subtitle">Resort-style living in New Cairo</field>
+        <field name="project_type">residential</field>
+        <field name="state">construction</field>
+        <field name="city">New Cairo</field>
+        <field name="location">5th Settlement, New Cairo, Egypt</field>
+        <field name="total_area">250000</field>
+        <field name="construction_progress">65</field>
+        <field name="delivery_date" eval="(DateTime.today() + relativedelta(months=18)).strftime('%Y-%m-%d')"/>
+        <field name="is_featured" eval="True"/>
+        <field name="is_published" eval="True"/>
+        <field name="short_description">A gated compound of apartments, duplexes and villas surrounded by 75% green spaces.</field>
+        <field name="description" type="html">
+            <p>Palm Residence is a fully integrated community in the heart of New Cairo, minutes from the American University and the 90th Street business district.</p>
+            <p>Only 25% of the land is built up; the rest is lakes, gardens and walkways.</p>
+        </field>
+        <field name="amenity_ids" eval="[(6, 0, [ref('amenity_pool'), ref('amenity_security'), ref('amenity_green'), ref('amenity_club'), ref('amenity_kids'), ref('amenity_parking')])]"/>
+    </record>
+
+    <record id="project_bay" model="re.project">
+        <field name="name">Blue Bay</field>
+        <field name="subtitle">Sea-view chalets on the North Coast</field>
+        <field name="project_type">coastal</field>
+        <field name="state">planning</field>
+        <field name="city">North Coast</field>
+        <field name="location">Ras El Hekma, North Coast, Egypt</field>
+        <field name="total_area">400000</field>
+        <field name="delivery_date" eval="(DateTime.today() + relativedelta(months=42)).strftime('%Y-%m-%d')"/>
+        <field name="is_featured" eval="True"/>
+        <field name="is_published" eval="True"/>
+        <field name="short_description">Chalets and twin houses with direct beach and lagoon access.</field>
+        <field name="description" type="html"><p>Blue Bay brings crystal lagoons and a 1 km private beach to the most sought-after bay on the North Coast.</p></field>
+        <field name="amenity_ids" eval="[(6, 0, [ref('amenity_pool'), ref('amenity_beach'), ref('amenity_security'), ref('amenity_mall')])]"/>
+    </record>
+
+    <record id="project_tower" model="re.project">
+        <field name="name">Capital Business Tower</field>
+        <field name="subtitle">Grade-A offices and retail</field>
+        <field name="project_type">administrative</field>
+        <field name="state">delivered</field>
+        <field name="city">New Capital</field>
+        <field name="location">Central Business District, New Administrative Capital, Egypt</field>
+        <field name="total_area">12000</field>
+        <field name="construction_progress">100</field>
+        <field name="is_featured" eval="True"/>
+        <field name="is_published" eval="True"/>
+        <field name="short_description">Ready-to-move offices, clinics and retail units in the CBD.</field>
+        <field name="description" type="html"><p>A 22-floor smart tower with central A/C, high-speed elevators and a two-level commercial mall.</p></field>
+        <field name="amenity_ids" eval="[(6, 0, [ref('amenity_security'), ref('amenity_parking'), ref('amenity_mall')])]"/>
+    </record>
+
+    <!-- Units -->
+    <record id="unit_palm_a101" model="re.unit">
+        <field name="name">A-101</field><field name="project_id" ref="project_palm"/>
+        <field name="unit_type">apartment</field><field name="bedrooms">3</field><field name="bathrooms">2</field>
+        <field name="area">165</field><field name="garden_area">60</field><field name="floor">Ground</field>
+        <field name="unit_view">Garden view</field><field name="finishing">semi</field>
+        <field name="price">7450000</field><field name="down_payment_pct">10</field><field name="installment_years">8</field>
+        <field name="is_featured" eval="True"/><field name="is_published" eval="True"/>
+    </record>
+    <record id="unit_palm_b204" model="re.unit">
+        <field name="name">B-204</field><field name="project_id" ref="project_palm"/>
+        <field name="unit_type">apartment</field><field name="bedrooms">2</field><field name="bathrooms">2</field>
+        <field name="area">125</field><field name="floor">2nd</field>
+        <field name="unit_view">Lake view</field><field name="finishing">fully</field>
+        <field name="price">5900000</field><field name="down_payment_pct">10</field><field name="installment_years">8</field>
+        <field name="is_featured" eval="True"/><field name="is_published" eval="True"/>
+    </record>
+    <record id="unit_palm_d01" model="re.unit">
+        <field name="name">D-01</field><field name="project_id" ref="project_palm"/>
+        <field name="unit_type">duplex</field><field name="bedrooms">4</field><field name="bathrooms">3</field>
+        <field name="area">240</field><field name="garden_area">40</field><field name="floor">3rd + Roof</field>
+        <field name="finishing">semi</field>
+        <field name="price">10800000</field><field name="down_payment_pct">15</field><field name="installment_years">7</field>
+        <field name="is_published" eval="True"/>
+    </record>
+    <record id="unit_palm_v12" model="re.unit">
+        <field name="name">V-12</field><field name="project_id" ref="project_palm"/>
+        <field name="unit_type">villa</field><field name="bedrooms">5</field><field name="bathrooms">5</field>
+        <field name="area">380</field><field name="garden_area">250</field>
+        <field name="finishing">core_shell</field><field name="state">reserved</field>
+        <field name="price">24500000</field><field name="down_payment_pct">20</field><field name="installment_years">6</field>
+        <field name="is_published" eval="True"/>
+    </record>
+    <record id="unit_bay_c07" model="re.unit">
+        <field name="name">C-07</field><field name="project_id" ref="project_bay"/>
+        <field name="unit_type">chalet</field><field name="bedrooms">2</field><field name="bathrooms">1</field>
+        <field name="area">95</field><field name="garden_area">35</field>
+        <field name="unit_view">Sea view</field><field name="finishing">fully</field>
+        <field name="price">6200000</field><field name="down_payment_pct">5</field><field name="installment_years">10</field>
+        <field name="is_featured" eval="True"/><field name="is_published" eval="True"/>
+    </record>
+    <record id="unit_bay_t03" model="re.unit">
+        <field name="name">TW-03</field><field name="project_id" ref="project_bay"/>
+        <field name="unit_type">twinhouse</field><field name="bedrooms">4</field><field name="bathrooms">3</field>
+        <field name="area">260</field><field name="garden_area">120</field>
+        <field name="unit_view">Lagoon view</field><field name="finishing">semi</field>
+        <field name="price">16900000</field><field name="down_payment_pct">5</field><field name="installment_years">10</field>
+        <field name="is_published" eval="True"/>
+    </record>
+    <record id="unit_tower_o1205" model="re.unit">
+        <field name="name">O-1205</field><field name="project_id" ref="project_tower"/>
+        <field name="unit_type">office</field><field name="bathrooms">1</field>
+        <field name="area">85</field><field name="floor">12th</field><field name="finishing">fully</field>
+        <field name="price">4750000</field><field name="down_payment_pct">20</field><field name="installment_years">5</field>
+        <field name="is_featured" eval="True"/><field name="is_published" eval="True"/>
+    </record>
+    <record id="unit_tower_r02" model="re.unit">
+        <field name="name">R-02</field><field name="project_id" ref="project_tower"/>
+        <field name="unit_type">retail</field><field name="bathrooms">1</field>
+        <field name="area">60</field><field name="floor">Ground</field><field name="finishing">core_shell</field>
+        <field name="state">sold</field>
+        <field name="price">9600000</field><field name="down_payment_pct">25</field><field name="installment_years">4</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- Services -->
+    <record id="service_dev" model="re.service">
+        <field name="name">Real Estate Development</field><field name="icon">fa-building</field><field name="sequence">1</field>
+        <field name="short_description">Master planning and development of residential, commercial and coastal communities.</field>
+        <field name="is_published" eval="True"/>
+    </record>
+    <record id="service_construction" model="re.service">
+        <field name="name">General Contracting</field><field name="icon">fa-cogs</field><field name="sequence">2</field>
+        <field name="short_description">Turnkey construction with in-house engineers and certified subcontractors.</field>
+        <field name="is_published" eval="True"/>
+    </record>
+    <record id="service_design" model="re.service">
+        <field name="name">Architecture &amp; Interior Design</field><field name="icon">fa-paint-brush</field><field name="sequence">3</field>
+        <field name="short_description">Modern architecture and interior finishing packages tailored to every budget.</field>
+        <field name="is_published" eval="True"/>
+    </record>
+    <record id="service_sales" model="re.service">
+        <field name="name">Sales &amp; Investment Advisory</field><field name="icon">fa-line-chart</field><field name="sequence">4</field>
+        <field name="short_description">Help choosing the right unit and payment plan, for living or investment.</field>
+        <field name="is_published" eval="True"/>
+    </record>
+    <record id="service_fm" model="re.service">
+        <field name="name">Facility Management</field><field name="icon">fa-wrench</field><field name="sequence">5</field>
+        <field name="short_description">Maintenance, security and landscaping long after handover.</field>
+        <field name="is_published" eval="True"/>
+    </record>
+    <record id="service_resale" model="re.service">
+        <field name="name">Resale &amp; Rentals</field><field name="icon">fa-key</field><field name="sequence">6</field>
+        <field name="short_description">We market and manage your unit for resale or rent.</field>
+        <field name="is_published" eval="True"/>
+    </record>
+
+    <!-- Leadership -->
+    <record id="team_ceo" model="re.team.member">
+        <field name="name">Ahmed Hassan</field><field name="job_title">Chairman &amp; CEO</field><field name="sequence">1</field>
+        <field name="bio">25 years leading large-scale development and construction projects.</field>
+        <field name="is_published" eval="True"/>
+    </record>
+    <record id="team_cto" model="re.team.member">
+        <field name="name">Mona Adel</field><field name="job_title">Chief Engineering Officer</field><field name="sequence">2</field>
+        <field name="bio">Oversees design, construction quality and delivery schedules.</field>
+        <field name="is_published" eval="True"/>
+    </record>
+    <record id="team_cso" model="re.team.member">
+        <field name="name">Karim Fathy</field><field name="job_title">Sales Director</field><field name="sequence">3</field>
+        <field name="bio">Leads a team of 60 sales consultants across Cairo and the North Coast.</field>
+        <field name="is_published" eval="True"/>
+    </record>
+</odoo>

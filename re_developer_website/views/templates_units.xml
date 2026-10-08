@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================== -->
+    <!-- Units listing with filters                                     -->
+    <!-- ============================================================== -->
+    <template id="page_units" name="Real Estate: Units">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Units</t>
+            <div id="wrap" class="o_re_site">
+                <t t-call="re_developer_website.page_banner">
+                    <t t-set="banner_title">Find Your Unit</t>
+                    <t t-set="banner_subtitle">Apartments, villas, offices and retail units with flexible payment plans.</t>
+                </t>
+
+                <div class="container o_re_search_wrap">
+                    <t t-call="re_developer_website.unit_search_bar"/>
+                </div>
+
+                <section class="py-5">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+                            <div class="text-muted"><strong t-out="total"/> units found</div>
+                            <form action="/estate/units" method="get" class="d-flex gap-2 align-items-center">
+                                <input type="hidden" name="project" t-att-value="filters.get('project') or ''"/>
+                                <input type="hidden" name="unit_type" t-att-value="filters.get('unit_type') or ''"/>
+                                <input type="hidden" name="bedrooms" t-att-value="filters.get('bedrooms') or ''"/>
+                                <input type="hidden" name="max_price" t-att-value="filters.get('max_price') or ''"/>
+                                <select name="status" class="form-select form-select-sm" onchange="this.form.submit()" aria-label="Status">
+                                    <option value="available" t-att-selected="filters.get('status') == 'available'">Available</option>
+                                    <option value="reserved" t-att-selected="filters.get('status') == 'reserved'">Reserved</option>
+                                    <option value="sold" t-att-selected="filters.get('status') == 'sold'">Sold</option>
+                                    <option value="all" t-att-selected="filters.get('status') == 'all'">All statuses</option>
+                                </select>
+                                <select name="sort" class="form-select form-select-sm" onchange="this.form.submit()" aria-label="Sort">
+                                    <option value="" t-att-selected="not filters.get('sort')">Recommended</option>
+                                    <option value="price_asc" t-att-selected="filters.get('sort') == 'price_asc'">Price: low to high</option>
+                                    <option value="price_desc" t-att-selected="filters.get('sort') == 'price_desc'">Price: high to low</option>
+                                    <option value="area_desc" t-att-selected="filters.get('sort') == 'area_desc'">Largest area</option>
+                                    <option value="newest" t-att-selected="filters.get('sort') == 'newest'">Newest</option>
+                                </select>
+                            </form>
+                        </div>
+
+                        <div t-if="units" class="row g-4">
+                            <div t-foreach="units" t-as="unit" class="col-sm-6 col-lg-4">
+                                <t t-call="re_developer_website.unit_card"/>
+                            </div>
+                        </div>
+                        <div t-else="" class="o_re_empty text-center py-5">
+                            <i class="fa fa-search fa-3x text-muted mb-3"/>
+                            <p class="lead">No units match your search.</p>
+                            <a href="/estate/contact?inquiry_type=unit" class="btn btn-primary">Tell us what you need</a>
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-5">
+                            <t t-call="website.pager"/>
+                        </div>
+                    </div>
+                </section>
+                <div class="oe_structure" id="oe_structure_re_units_1"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Unit detail                                                    -->
+    <!-- ============================================================== -->
+    <template id="page_unit_detail" name="Real Estate: Unit Detail">
+        <t t-call="website.layout">
+            <t t-set="additional_title" t-value="unit.display_name"/>
+            <div id="wrap" class="o_re_site">
+                <t t-call="re_developer_website.page_banner">
+                    <t t-set="banner_title" t-value="unit.display_name"/>
+                    <t t-set="crumb_parent_url" t-value="unit.project_id.website_url"/>
+                    <t t-set="crumb_parent_name" t-value="unit.project_id.name"/>
+                </t>
+
+                <section class="py-5">
+                    <div class="container">
+                        <div class="row g-5">
+                            <div class="col-lg-8">
+                                <div t-attf-class="o_re_unit_hero mb-4 #{not unit.image_128 and 'o_re_card_media_empty' or ''}"
+                                     t-att-style="unit.image_128 and ('background-image: url(/web/image/re.unit/%s/image_1920)' % unit.id) or None">
+                                    <i t-if="not unit.image_128" class="fa fa-home o_re_media_icon"/>
+                                    <span t-attf-class="o_re_status o_re_status_#{unit.state}" t-field="unit.state"/>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+                                    <div>
+                                        <span class="o_re_eyebrow" t-field="unit.unit_type"/>
+                                        <h2 class="h3 mb-1">Unit <t t-out="unit.name"/></h2>
+                                        <a t-att-href="unit.project_id.website_url" class="text-muted">
+                                            <i class="fa fa-building me-1"/><t t-out="unit.project_id.name"/>
+                                            <t t-if="unit.project_id.city"> · <t t-out="unit.project_id.city"/></t>
+                                        </a>
+                                    </div>
+                                    <div class="text-end">
+                                        <div class="o_re_price o_re_price_lg" t-out="unit.price"
+                                             t-options="{'widget': 'monetary', 'display_currency': unit.currency_id}"/>
+                                        <small t-if="unit.price_per_meter" class="text-muted">
+                                            <t t-out="unit.price_per_meter" t-options="{'widget': 'monetary', 'display_currency': unit.currency_id}"/> / m²
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-5">
+                                    <div t-if="unit.bedrooms" class="col-6 col-md-3">
+                                        <div class="o_re_spec_box"><i class="fa fa-bed"/><strong t-out="unit.bedrooms"/><small>Bedrooms</small></div>
+                                    </div>
+                                    <div t-if="unit.bathrooms" class="col-6 col-md-3">
+                                        <div class="o_re_spec_box"><i class="fa fa-bath"/><strong t-out="unit.bathrooms"/><small>Bathrooms</small></div>
+                                    </div>
+                                    <div t-if="unit.area" class="col-6 col-md-3">
+                                        <div class="o_re_spec_box"><i class="fa fa-arrows-alt"/><strong><t t-out="'%g' % unit.area"/> m²</strong><small>Built-up area</small></div>
+                                    </div>
+                                    <div t-if="unit.garden_area" class="col-6 col-md-3">
+                                        <div class="o_re_spec_box"><i class="fa fa-tree"/><strong><t t-out="'%g' % unit.garden_area"/> m²</strong><small>Garden / Terrace</small></div>
+                                    </div>
+                                </div>
+
+                                <h3 class="h4 mb-3">Details</h3>
+                                <table class="table o_re_details_table mb-5">
+                                    <tbody>
+                                        <tr><th>Project</th><td t-out="unit.project_id.name"/></tr>
+                                        <tr><th>Unit type</th><td><span t-field="unit.unit_type"/></td></tr>
+                                        <tr t-if="unit.floor"><th>Floor</th><td t-out="unit.floor"/></tr>
+                                        <tr t-if="unit.unit_view"><th>View</th><td t-out="unit.unit_view"/></tr>
+                                        <tr t-if="unit.finishing"><th>Finishing</th><td><span t-field="unit.finishing"/></td></tr>
+                                        <tr t-if="unit.delivery_date or unit.project_id.delivery_date">
+                                            <th>Delivery</th>
+                                            <td><span t-out="unit.delivery_date or unit.project_id.delivery_date" t-options="{'widget': 'date', 'format': 'MMM yyyy'}"/></td>
+                                        </tr>
+                                        <tr><th>Status</th><td><span t-field="unit.state"/></td></tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="o_re_rich mb-5" t-field="unit.description"/>
+
+                                <div t-if="unit.price" class="o_re_payment_plan">
+                                    <h3 class="h4 mb-3"><i class="fa fa-calculator me-2"/>Payment plan</h3>
+                                    <div class="row g-3 text-center">
+                                        <div class="col-6 col-md-3">
+                                            <small>Down payment</small>
+                                            <strong><t t-out="'%g' % unit.down_payment_pct"/>%</strong>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <small>Down payment amount</small>
+                                            <strong t-out="unit.down_payment_amount" t-options="{'widget': 'monetary', 'display_currency': unit.currency_id}"/>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <small>Installments</small>
+                                            <strong><t t-out="unit.installment_years"/> years</strong>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <small>Monthly</small>
+                                            <strong t-out="unit.monthly_installment" t-options="{'widget': 'monetary', 'display_currency': unit.currency_id}"/>
+                                        </div>
+                                    </div>
+                                    <p class="small text-muted mt-3 mb-0">Indicative plan. Final terms are confirmed in the reservation contract.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="o_re_sticky">
+                                    <t t-call="re_developer_website.inquiry_form">
+                                        <t t-set="form_title">Interested in this unit?</t>
+                                        <t t-set="form_compact" t-value="True"/>
+                                    </t>
+                                    <a t-if="whatsapp_link" class="btn btn-success w-100 mt-3" target="_blank" rel="noopener"
+                                       t-att-href="whatsapp_link">
+                                        <i class="fa fa-whatsapp me-2"/>Ask on WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section t-if="similar_units" class="py-5 o_re_bg_soft">
+                    <div class="container">
+                        <t t-call="re_developer_website.section_heading">
+                            <t t-set="section_title">Similar units in this project</t>
+                        </t>
+                        <div class="row g-4">
+                            <div t-foreach="similar_units" t-as="unit" class="col-sm-6 col-lg-4">
+                                <t t-call="re_developer_website.unit_card"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+</odoo>

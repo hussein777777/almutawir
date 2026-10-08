@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_lead_view_form_re" model="ir.ui.view">
+        <field name="name">crm.lead.form.real.estate</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Real Estate" name="real_estate" invisible="not re_inquiry_type">
+                    <group>
+                        <group>
+                            <field name="re_inquiry_type"/>
+                            <field name="re_project_id"/>
+                            <field name="re_unit_id" domain="[('project_id', '=?', re_project_id)]"/>
+                        </group>
+                        <group>
+                            <field name="re_preferred_date"/>
+                            <field name="re_budget"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_lead_view_search_re" model="ir.ui.view">
+        <field name="name">crm.lead.search.real.estate</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="re_project_id"/>
+                <field name="re_unit_id"/>
+                <filter name="re_website_inquiries" string="Real Estate Inquiries"
+                        domain="[('re_inquiry_type', '!=', False)]"/>
+                <filter name="re_group_project" string="Interested Project"
+                        context="{'group_by': 're_project_id'}"/>
+                <filter name="re_group_type" string="Request Type"
+                        context="{'group_by': 're_inquiry_type'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_lead_re_list" model="ir.ui.view">
+        <field name="name">crm.lead.list.real.estate</field>
+        <field name="model">crm.lead</field>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="create_date" string="Received"/>
+                <field name="contact_name"/>
+                <field name="phone"/>
+                <field name="email_from"/>
+                <field name="re_inquiry_type" widget="badge"/>
+                <field name="re_project_id"/>
+                <field name="re_unit_id"/>
+                <field name="re_preferred_date"/>
+                <field name="user_id" widget="many2one_avatar_user"/>
+                <field name="stage_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="crm_lead_re_action" model="ir.actions.act_window">
+        <field name="name">Website Inquiries</field>
+        <field name="res_model">crm.lead</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="domain">[('re_inquiry_type', '!=', False)]</field>
+        <field name="search_view_id" ref="crm.view_crm_case_opportunities_filter"/>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('crm_lead_re_list')}),
+            (0, 0, {'view_mode': 'kanban', 'view_id': ref('crm.crm_case_kanban_view_leads')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('crm.crm_lead_view_form')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No inquiries yet</p>
+            <p>Every form submitted on the website (unit inquiry, site visit, meeting request) lands here.</p>
+        </field>
+    </record>
+</odoo>

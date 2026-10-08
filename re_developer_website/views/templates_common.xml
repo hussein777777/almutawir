@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================== -->
+    <!-- Page header banner                                             -->
+    <!--   params: banner_title, banner_subtitle, banner_image (url)    -->
+    <!-- ============================================================== -->
+    <template id="page_banner" name="Real Estate: Page Banner">
+        <section class="o_re_banner" t-att-style="banner_image and ('background-image: url(%s)' % banner_image) or None">
+            <div class="o_re_banner_overlay"/>
+            <div class="container position-relative">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb o_re_breadcrumb mb-2">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li t-if="crumb_parent_url" class="breadcrumb-item">
+                            <a t-att-href="crumb_parent_url" t-out="crumb_parent_name"/>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page" t-out="banner_title"/>
+                    </ol>
+                </nav>
+                <h1 class="o_re_banner_title" t-out="banner_title"/>
+                <p t-if="banner_subtitle" class="o_re_banner_subtitle" t-out="banner_subtitle"/>
+            </div>
+        </section>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Section heading: params section_eyebrow, section_title         -->
+    <!-- ============================================================== -->
+    <template id="section_heading" name="Real Estate: Section Heading">
+        <div t-attf-class="o_re_section_heading mb-5 #{section_center and 'text-center' or ''}">
+            <span t-if="section_eyebrow" class="o_re_eyebrow" t-out="section_eyebrow"/>
+            <h2 class="o_re_section_title" t-out="section_title"/>
+            <p t-if="section_text" class="text-muted lead mb-0" t-out="section_text"/>
+        </div>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Project card                                                   -->
+    <!-- ============================================================== -->
+    <template id="project_card" name="Real Estate: Project Card">
+        <a t-att-href="project.website_url" class="o_re_card o_re_project_card card h-100 text-decoration-none">
+            <div t-attf-class="o_re_card_media #{not project.image_128 and 'o_re_card_media_empty' or ''}"
+                 t-att-style="project.image_128 and ('background-image: url(/web/image/re.project/%s/image_1024)' % project.id) or None">
+                <i t-if="not project.image_128" class="fa fa-building o_re_media_icon"/>
+                <span t-attf-class="o_re_status o_re_status_#{project.state}" t-field="project.state"/>
+                <span t-if="not project.is_published" class="badge text-bg-danger o_re_unpublished">Unpublished</span>
+            </div>
+            <div class="card-body">
+                <div class="o_re_card_meta mb-1">
+                    <i class="fa fa-map-marker me-1"/><span t-out="project.city or project.location"/>
+                    <span class="mx-1">·</span><span t-field="project.project_type"/>
+                </div>
+                <h3 class="h5 card-title mb-2" t-out="project.name"/>
+                <p class="card-text text-muted small mb-3" t-out="project.short_description or project.subtitle"/>
+                <div class="d-flex justify-content-between align-items-end border-top pt-3">
+                    <div>
+                        <small class="text-muted d-block">Starting from</small>
+                        <strong t-if="project.min_price" class="o_re_price"
+                                t-out="project.min_price"
+                                t-options="{'widget': 'monetary', 'display_currency': project.currency_id}"/>
+                        <strong t-else="" class="o_re_price">Contact us</strong>
+                    </div>
+                    <span class="small text-muted">
+                        <t t-out="project.available_unit_count"/>
+                        <t t-if="project.available_unit_count == 1">unit available</t>
+                        <t t-else="">units available</t>
+                    </span>
+                </div>
+            </div>
+        </a>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Unit card                                                      -->
+    <!-- ============================================================== -->
+    <template id="unit_card" name="Real Estate: Unit Card">
+        <a t-att-href="unit.website_url" class="o_re_card o_re_unit_card card h-100 text-decoration-none">
+            <div t-attf-class="o_re_card_media o_re_card_media_sm #{not unit.image_128 and 'o_re_card_media_empty' or ''}"
+                 t-att-style="unit.image_128 and ('background-image: url(/web/image/re.unit/%s/image_1024)' % unit.id) or None">
+                <i t-if="not unit.image_128" class="fa fa-home o_re_media_icon"/>
+                <span t-attf-class="o_re_status o_re_status_#{unit.state}" t-field="unit.state"/>
+                <span class="o_re_type_chip" t-field="unit.unit_type"/>
+            </div>
+            <div class="card-body">
+                <div class="o_re_card_meta mb-1" t-out="unit.project_id.name"/>
+                <h3 class="h6 card-title mb-3">Unit <t t-out="unit.name"/></h3>
+                <ul class="o_re_specs list-unstyled d-flex flex-wrap gap-3 small mb-3">
+                    <li t-if="unit.bedrooms"><i class="fa fa-bed me-1"/><t t-out="unit.bedrooms"/> Beds</li>
+                    <li t-if="unit.bathrooms"><i class="fa fa-bath me-1"/><t t-out="unit.bathrooms"/> Baths</li>
+                    <li t-if="unit.area"><i class="fa fa-arrows-alt me-1"/><t t-out="'%g' % unit.area"/> m²</li>
+                </ul>
+                <div class="border-top pt-3 d-flex justify-content-between align-items-center">
+                    <strong class="o_re_price" t-out="unit.price"
+                            t-options="{'widget': 'monetary', 'display_currency': unit.currency_id}"/>
+                    <small t-if="unit.monthly_installment" class="text-muted">
+                        <t t-out="unit.monthly_installment"
+                           t-options="{'widget': 'monetary', 'display_currency': unit.currency_id}"/>/mo
+                    </small>
+                </div>
+            </div>
+        </a>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Quick unit search bar                                          -->
+    <!-- ============================================================== -->
+    <template id="unit_search_bar" name="Real Estate: Unit Search Bar">
+        <t t-set="filters" t-value="filters or {}"/>
+        <form action="/estate/units" method="get" class="o_re_search_bar">
+            <div class="row g-2 align-items-end">
+                <div class="col-6 col-lg">
+                    <label class="form-label small" for="re_search_project">Project</label>
+                    <select id="re_search_project" name="project" class="form-select">
+                        <option value="">All projects</option>
+                        <t t-foreach="search_projects" t-as="p">
+                            <option t-att-value="p.id" t-att-selected="filters.get('project') == p.id" t-out="p.name"/>
+                        </t>
+                    </select>
+                </div>
+                <div class="col-6 col-lg">
+                    <label class="form-label small" for="re_search_type">Unit type</label>
+                    <select id="re_search_type" name="unit_type" class="form-select">
+                        <option value="">Any type</option>
+                        <t t-foreach="unit_types" t-as="ut">
+                            <option t-att-value="ut[0]" t-att-selected="filters.get('unit_type') == ut[0]" t-out="ut[1]"/>
+                        </t>
+                    </select>
+                </div>
+                <div class="col-6 col-lg">
+                    <label class="form-label small" for="re_search_beds">Bedrooms</label>
+                    <select id="re_search_beds" name="bedrooms" class="form-select">
+                        <option value="">Any</option>
+                        <t t-foreach="[1, 2, 3, 4, 5]" t-as="b">
+                            <option t-att-value="b" t-att-selected="filters.get('bedrooms') == b"><t t-out="b"/>+</option>
+                        </t>
+                    </select>
+                </div>
+                <div class="col-6 col-lg">
+                    <label class="form-label small" for="re_search_price">Max budget</label>
+                    <input id="re_search_price" type="number" min="0" step="any" name="max_price" class="form-control"
+                           placeholder="e.g. 5000000" t-att-value="filters.get('max_price')"/>
+                </div>
+                <div class="col-12 col-lg-auto">
+                    <button type="submit" class="btn btn-primary w-100 px-4"><i class="fa fa-search me-2"/>Search</button>
+                </div>
+            </div>
+        </form>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Key figures band                                               -->
+    <!-- ============================================================== -->
+    <template id="stats_band" name="Real Estate: Key Figures">
+        <section class="o_re_stats py-5">
+            <div class="container">
+                <div class="row text-center g-4">
+                    <div class="col-6 col-md-3">
+                        <div class="o_re_stat_value"><t t-out="'{:,}'.format(website.re_years_experience or 0)"/>+</div>
+                        <div class="o_re_stat_label">Years of Experience</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="o_re_stat_value"><t t-out="'{:,}'.format(website.re_projects_count or 0)"/>+</div>
+                        <div class="o_re_stat_label">Projects Delivered</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="o_re_stat_value"><t t-out="'{:,}'.format(website.re_units_count or 0)"/>+</div>
+                        <div class="o_re_stat_label">Units Delivered</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="o_re_stat_value"><t t-out="'{:,}'.format(website.re_clients_count or 0)"/>+</div>
+                        <div class="o_re_stat_label">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Company overview / interview (text + video)                   -->
+    <!-- ============================================================== -->
+    <template id="overview_section" name="Real Estate: Company Overview">
+        <section class="o_re_overview py-5">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="o_re_eyebrow">Who we are</span>
+                        <h2 class="o_re_section_title" t-field="website.re_overview_title"/>
+                        <div class="o_re_overview_text" t-field="website.re_overview"/>
+                        <a t-if="show_about_link" href="/estate/about" class="btn btn-outline-primary mt-3">
+                            More about us <i class="fa fa-arrow-right ms-1"/>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div t-if="website.re_video_embed_url" class="o_re_video ratio ratio-16x9">
+                            <iframe t-att-src="website.re_video_embed_url" title="Company interview"
+                                    loading="lazy" allowfullscreen="allowfullscreen"
+                                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"/>
+                        </div>
+                        <div t-else="" class="o_re_video_placeholder ratio ratio-16x9">
+                            <div class="d-flex flex-column align-items-center justify-content-center text-white">
+                                <i class="fa fa-play-circle fa-4x mb-3"/>
+                                <span>Add your company interview video from Real Estate &gt; Configuration &gt; Company Profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Inquiry form -> crm.lead                                       -->
+    <!--   params: form_project, form_unit, form_type, form_values,     -->
+    <!--           form_error, form_title                               -->
+    <!-- ============================================================== -->
+    <template id="inquiry_form" name="Real Estate: Inquiry Form">
+        <t t-set="fv" t-value="form_values or {}"/>
+        <t t-set="re_half_col" t-value="form_compact and 'col-12' or 'col-md-6'"/>
+        <div class="o_re_form_card card border-0 shadow-sm">
+            <div class="card-body p-4 p-lg-5">
+                <h3 class="h4 mb-1">
+                    <t t-if="form_title" t-out="form_title"/>
+                    <t t-else="">Request Information</t>
+                </h3>
+                <p class="text-muted small mb-4">Our sales team will call you back within one working day.</p>
+                <div t-if="form_error" class="alert alert-danger" role="alert" t-out="form_error"/>
+                <div t-if="form_unit" class="alert alert-light border small">
+                    <i class="fa fa-home me-1"/> About: <strong t-out="form_unit.display_name"/>
+                </div>
+                <div t-elif="form_project" class="alert alert-light border small">
+                    <i class="fa fa-building me-1"/> About: <strong t-out="form_project.name"/>
+                </div>
+                <form action="/estate/contact/submit" method="post" class="o_re_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="project_id" t-att-value="form_project and form_project.id or ''"/>
+                    <input type="hidden" name="unit_id" t-att-value="form_unit and form_unit.id or ''"/>
+                    <div class="o_re_hp" aria-hidden="true">
+                        <label>Leave empty<input type="text" name="website_url_hp" tabindex="-1" autocomplete="off"/></label>
+                    </div>
+                    <div class="row g-3">
+                        <div t-att-class="re_half_col">
+                            <label class="form-label" for="re_contact_name">Full name *</label>
+                            <input id="re_contact_name" type="text" name="contact_name" class="form-control" required="required"
+                                   t-att-value="fv.get('contact_name')"/>
+                        </div>
+                        <div t-att-class="re_half_col">
+                            <label class="form-label" for="re_phone">Phone / WhatsApp *</label>
+                            <input id="re_phone" type="tel" name="phone" class="form-control"
+                                   t-att-value="fv.get('phone')"/>
+                        </div>
+                        <div t-att-class="re_half_col">
+                            <label class="form-label" for="re_email">Email</label>
+                            <input id="re_email" type="email" name="email_from" class="form-control"
+                                   t-att-value="fv.get('email_from')"/>
+                        </div>
+                        <div t-att-class="re_half_col">
+                            <label class="form-label" for="re_type">I would like to</label>
+                            <select id="re_type" name="inquiry_type" class="form-select">
+                                <t t-foreach="inquiry_types" t-as="it">
+                                    <option t-att-value="it[0]" t-att-selected="(fv.get('inquiry_type') or form_type) == it[0]" t-out="it[1]"/>
+                                </t>
+                            </select>
+                        </div>
+                        <div t-att-class="re_half_col">
+                            <label class="form-label" for="re_date">Preferred date (visit / meeting)</label>
+                            <input id="re_date" type="date" name="preferred_date" class="form-control"
+                                   t-att-value="fv.get('preferred_date')"/>
+                        </div>
+                        <div t-att-class="re_half_col">
+                            <label class="form-label" for="re_budget">Budget</label>
+                            <input id="re_budget" type="text" name="budget" class="form-control"
+                                   placeholder="e.g. 3 - 5 million" t-att-value="fv.get('budget')"/>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="re_message">Message</label>
+                            <textarea id="re_message" name="description" rows="4" class="form-control"
+                                      t-out="fv.get('description') or ''"/>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">
+                        <i class="fa fa-paper-plane me-2"/>Send Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Call-to-action band                                            -->
+    <!-- ============================================================== -->
+    <template id="cta_band" name="Real Estate: Call to Action">
+        <section class="o_re_cta py-5">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <h2 class="h2 text-white mb-2">Ready to find your next home or investment?</h2>
+                        <p class="text-white-50 mb-0">Book a site visit or a meeting with our sales consultants today.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end d-flex gap-2 justify-content-lg-end flex-wrap">
+                        <a href="/estate/contact?inquiry_type=visit" class="btn btn-light btn-lg">Book a Visit</a>
+                        <a t-if="website.re_whatsapp_url" t-att-href="website.re_whatsapp_url" target="_blank"
+                           rel="noopener" class="btn btn-success btn-lg"><i class="fa fa-whatsapp me-1"/>WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

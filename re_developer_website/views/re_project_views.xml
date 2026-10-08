@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="re_project_view_form" model="ir.ui.view">
+        <field name="name">re.project.form</field>
+        <field name="model">re.project</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_units" icon="fa-building">
+                            <field name="unit_count" widget="statinfo" string="Units"/>
+                        </button>
+                        <field name="is_published" widget="website_redirect_button"/>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <field name="image_1920" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}"/>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="e.g. Palm Residence"/></h1>
+                        <field name="subtitle" placeholder="Catch line, e.g. Resort living in New Cairo"/>
+                    </div>
+                    <group>
+                        <group string="General">
+                            <field name="project_type"/>
+                            <field name="is_featured"/>
+                            <field name="city"/>
+                            <field name="location"/>
+                            <field name="map_query"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="active" invisible="1"/>
+                        </group>
+                        <group string="Timeline &amp; Figures">
+                            <field name="launch_date"/>
+                            <field name="delivery_date"/>
+                            <field name="construction_progress" widget="progressbar" options="{'editable': true}"/>
+                            <field name="total_area"/>
+                            <field name="available_unit_count"/>
+                            <field name="min_price" widget="monetary"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description" name="description">
+                            <field name="short_description" placeholder="Short summary shown on project cards..."/>
+                            <field name="description" placeholder="Full project description for the website..."/>
+                        </page>
+                        <page string="Amenities" name="amenities">
+                            <field name="amenity_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                        </page>
+                        <page string="Units" name="units">
+                            <field name="unit_ids" context="{'default_project_id': id}">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="unit_type"/>
+                                    <field name="bedrooms"/>
+                                    <field name="area"/>
+                                    <field name="price" widget="monetary"/>
+                                    <field name="currency_id" column_invisible="True"/>
+                                    <field name="state" widget="badge"
+                                           decoration-success="state == 'available'"
+                                           decoration-warning="state == 'reserved'"
+                                           decoration-danger="state == 'sold'"/>
+                                    <field name="is_published" widget="boolean_toggle"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Media" name="media">
+                            <group>
+                                <field name="video_url" widget="url"/>
+                                <field name="brochure" filename="brochure_filename"/>
+                                <field name="brochure_filename" invisible="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="re_project_view_list" model="ir.ui.view">
+        <field name="name">re.project.list</field>
+        <field name="model">re.project</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="project_type"/>
+                <field name="city"/>
+                <field name="delivery_date"/>
+                <field name="construction_progress" widget="progressbar"/>
+                <field name="unit_count"/>
+                <field name="available_unit_count"/>
+                <field name="state" widget="badge"
+                       decoration-info="state == 'planning'"
+                       decoration-warning="state == 'construction'"
+                       decoration-success="state == 'delivered'"/>
+                <field name="is_featured" widget="boolean_toggle"/>
+                <field name="is_published" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="re_project_view_kanban" model="ir.ui.view">
+        <field name="name">re.project.kanban</field>
+        <field name="model">re.project</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="card" class="flex-row">
+                        <aside class="me-2">
+                            <field name="image_128" widget="image" options="{'img_class': 'object-fit-cover'}" alt="Project"/>
+                        </aside>
+                        <main>
+                            <field name="name" class="fw-bold fs-5"/>
+                            <field name="city" class="text-muted"/>
+                            <div class="mt-1">
+                                <field name="state" widget="badge"/>
+                                <field name="project_type" class="ms-2 text-muted"/>
+                            </div>
+                            <div class="mt-1 small">
+                                <field name="available_unit_count"/> available /
+                                <field name="unit_count"/> units
+                            </div>
+                        </main>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="re_project_view_search" model="ir.ui.view">
+        <field name="name">re.project.search</field>
+        <field name="model">re.project</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="city"/>
+                <filter name="published" string="Published" domain="[('is_published', '=', True)]"/>
+                <filter name="featured" string="Featured" domain="[('is_featured', '=', True)]"/>
+                <separator/>
+                <filter name="archived" string="Archived" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_type" string="Type" context="{'group_by': 'project_type'}"/>
+                    <filter name="group_city" string="City" context="{'group_by': 'city'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="re_project_action" model="ir.actions.act_window">
+        <field name="name">Projects</field>
+        <field name="res_model">re.project</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create your first project</p>
+            <p>Projects and their units are published on the website automatically once you toggle "Published".</p>
+        </field>
+    </record>
+</odoo>

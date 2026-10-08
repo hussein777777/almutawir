@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Created under the template main menu: Odoo copies them to every website.
+         The existing "Contact us" menu keeps working: /contactus is served by this module. -->
+    <record id="menu_estate_projects" model="website.menu">
+        <field name="name">Projects</field>
+        <field name="url">/estate/projects</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">20</field>
+    </record>
+    <record id="menu_estate_units" model="website.menu">
+        <field name="name">Units</field>
+        <field name="url">/estate/units</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">25</field>
+    </record>
+    <record id="menu_estate_services" model="website.menu">
+        <field name="name">Services</field>
+        <field name="url">/estate/services</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">30</field>
+    </record>
+    <record id="menu_estate_about" model="website.menu">
+        <field name="name">About Us</field>
+        <field name="url">/estate/about</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">35</field>
+    </record>
+</odoo>

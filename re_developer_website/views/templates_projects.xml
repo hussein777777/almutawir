@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================== -->
+    <!-- Projects listing                                               -->
+    <!-- ============================================================== -->
+    <template id="page_projects" name="Real Estate: Projects">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Projects</t>
+            <div id="wrap" class="o_re_site">
+                <t t-call="re_developer_website.page_banner">
+                    <t t-set="banner_title">Our Projects</t>
+                    <t t-set="banner_subtitle">Residential, commercial and coastal developments built to last.</t>
+                </t>
+
+                <section class="py-5">
+                    <div class="container">
+                        <div class="o_re_filter_pills d-flex flex-wrap gap-2 mb-3">
+                            <a t-attf-href="/estate/projects#{current_type and ('?project_type=' + current_type) or ''}"
+                               t-attf-class="btn btn-sm #{not current_status and 'btn-primary' or 'btn-outline-secondary'}">All</a>
+                            <t t-foreach="project_states" t-as="st">
+                                <a t-att-href="'/estate/projects?status=%s%s' % (st[0], current_type and ('&amp;project_type=' + current_type) or '')"
+                                   t-attf-class="btn btn-sm #{current_status == st[0] and 'btn-primary' or 'btn-outline-secondary'}"
+                                   t-out="st[1]"/>
+                            </t>
+                        </div>
+                        <div class="o_re_filter_pills d-flex flex-wrap gap-2 mb-4">
+                            <a t-attf-href="/estate/projects#{current_status and ('?status=' + current_status) or ''}"
+                               t-attf-class="btn btn-sm #{not current_type and 'btn-dark' or 'btn-outline-secondary'}">All types</a>
+                            <t t-foreach="project_types" t-as="pt">
+                                <a t-att-href="'/estate/projects?project_type=%s%s' % (pt[0], current_status and ('&amp;status=' + current_status) or '')"
+                                   t-attf-class="btn btn-sm #{current_type == pt[0] and 'btn-dark' or 'btn-outline-secondary'}"
+                                   t-out="pt[1]"/>
+                            </t>
+                        </div>
+
+                        <div t-if="projects" class="row g-4">
+                            <div t-foreach="projects" t-as="project" class="col-md-6 col-lg-4">
+                                <t t-call="re_developer_website.project_card"/>
+                            </div>
+                        </div>
+                        <div t-else="" class="o_re_empty text-center py-5">
+                            <i class="fa fa-building-o fa-3x text-muted mb-3"/>
+                            <p class="lead">No projects match this filter yet.</p>
+                            <a href="/estate/projects" class="btn btn-outline-primary">Show all projects</a>
+                        </div>
+                    </div>
+                </section>
+                <div class="oe_structure" id="oe_structure_re_projects_1"/>
+                <t t-call="re_developer_website.cta_band"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Project detail                                                 -->
+    <!-- ============================================================== -->
+    <template id="page_project_detail" name="Real Estate: Project Detail">
+        <t t-call="website.layout">
+            <t t-set="additional_title" t-value="project.name"/>
+            <div id="wrap" class="o_re_site">
+                <t t-call="re_developer_website.page_banner">
+                    <t t-set="banner_title" t-value="project.name"/>
+                    <t t-set="banner_subtitle" t-value="project.subtitle"/>
+                    <t t-set="banner_image" t-value="project.image_128 and '/web/image/re.project/%s/image_1920' % project.id"/>
+                    <t t-set="crumb_parent_url" t-value="'/estate/projects'"/>
+                    <t t-set="crumb_parent_name">Projects</t>
+                </t>
+
+                <!-- Key facts -->
+                <section class="o_re_facts">
+                    <div class="container">
+                        <div class="o_re_facts_card row g-0 text-center">
+                            <div class="col-6 col-md">
+                                <small>Status</small><strong t-field="project.state"/>
+                            </div>
+                            <div class="col-6 col-md">
+                                <small>Type</small><strong t-field="project.project_type"/>
+                            </div>
+                            <div class="col-6 col-md">
+                                <small>Location</small><strong t-out="project.city or project.location or '-'"/>
+                            </div>
+                            <div t-if="project.delivery_date" class="col-6 col-md">
+                                <small>Delivery</small><strong t-out="project.delivery_date" t-options="{'widget': 'date', 'format': 'MMM yyyy'}"/>
+                            </div>
+                            <div t-if="project.total_area" class="col-6 col-md">
+                                <small>Land Area</small><strong><t t-out="'{:,.0f}'.format(project.total_area)"/> m²</strong>
+                            </div>
+                            <div class="col-6 col-md">
+                                <small>Starting from</small>
+                                <strong t-if="project.min_price" t-out="project.min_price"
+                                        t-options="{'widget': 'monetary', 'display_currency': project.currency_id}"/>
+                                <strong t-else="">On request</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-5">
+                    <div class="container">
+                        <div class="row g-5">
+                            <div class="col-lg-8">
+                                <h2 class="o_re_section_title h3">About the project</h2>
+                                <div class="o_re_rich" t-field="project.description"/>
+
+                                <div t-if="project.state != 'planning'" class="mt-4">
+                                    <div class="d-flex justify-content-between small mb-1">
+                                        <strong>Construction progress</strong>
+                                        <span><t t-out="project.construction_progress"/>%</span>
+                                    </div>
+                                    <div class="progress o_re_progress" role="progressbar"
+                                         t-att-aria-valuenow="project.construction_progress" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" t-attf-style="width: #{project.construction_progress}%"/>
+                                    </div>
+                                </div>
+
+                                <div t-if="project.amenity_ids" class="mt-5">
+                                    <h3 class="h4 mb-4">Amenities</h3>
+                                    <div class="row g-3">
+                                        <div t-foreach="project.amenity_ids" t-as="amenity" class="col-6 col-md-4">
+                                            <div class="o_re_amenity">
+                                                <i t-attf-class="fa #{amenity.icon or 'fa-check'}"/>
+                                                <span t-out="amenity.name"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div t-if="project.video_embed_url" class="mt-5">
+                                    <h3 class="h4 mb-3">Project video</h3>
+                                    <div class="o_re_video ratio ratio-16x9">
+                                        <iframe t-att-src="project.video_embed_url" t-att-title="project.name" loading="lazy"
+                                                allowfullscreen="allowfullscreen"
+                                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"/>
+                                    </div>
+                                </div>
+
+                                <div t-if="project.map_embed_url" class="mt-5">
+                                    <h3 class="h4 mb-3">Location</h3>
+                                    <p t-if="project.location" class="text-muted"><i class="fa fa-map-marker me-1"/><t t-out="project.location"/></p>
+                                    <div class="o_re_map ratio ratio-21x9">
+                                        <iframe t-att-src="project.map_embed_url" t-att-title="project.name" loading="lazy"
+                                                referrerpolicy="no-referrer-when-downgrade"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="o_re_sticky">
+                                    <a t-if="project.brochure" class="btn btn-outline-primary w-100 mb-3"
+                                       t-attf-href="/web/content/re.project/#{project.id}/brochure?download=true&amp;filename=#{project.brochure_filename or 'brochure.pdf'}">
+                                        <i class="fa fa-download me-2"/>Download Brochure
+                                    </a>
+                                    <t t-call="re_developer_website.inquiry_form">
+                                        <t t-set="form_title">Book a Site Visit</t>
+                                        <t t-set="form_compact" t-value="True"/>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Units in this project -->
+                <section class="py-5 o_re_bg_soft" id="units">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-end flex-wrap gap-2">
+                            <t t-call="re_developer_website.section_heading">
+                                <t t-set="section_eyebrow">Inventory</t>
+                                <t t-set="section_title">Units in this project</t>
+                            </t>
+                            <a t-attf-href="/estate/units?project=#{project.id}&amp;status=all" class="btn btn-link mb-5">
+                                Filter units <i class="fa fa-arrow-right ms-1"/>
+                            </a>
+                        </div>
+                        <div t-if="units" class="row g-4">
+                            <div t-foreach="units" t-as="unit" class="col-sm-6 col-lg-4">
+                                <t t-call="re_developer_website.unit_card"/>
+                            </div>
+                        </div>
+                        <p t-else="" class="text-muted">Units will be released soon. Register your interest using the form above.</p>
+                    </div>
+                </section>
+                <div class="oe_structure" id="oe_structure_re_project_detail_1"/>
+            </div>
+        </t>
+    </template>
+</odoo>

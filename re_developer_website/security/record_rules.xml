@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Visitors (public + portal) only ever see published content -->
+    <record id="rule_re_project_public" model="ir.rule">
+        <field name="name">Real Estate Project: published only (public/portal)</field>
+        <field name="model_id" ref="model_re_project"/>
+        <field name="domain_force">[('is_published', '=', True)]</field>
+        <field name="groups" eval="[(4, ref('base.group_public')), (4, ref('base.group_portal'))]"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_re_unit_public" model="ir.rule">
+        <field name="name">Real Estate Unit: published only (public/portal)</field>
+        <field name="model_id" ref="model_re_unit"/>
+        <field name="domain_force">[('is_published', '=', True), ('project_id.is_published', '=', True)]</field>
+        <field name="groups" eval="[(4, ref('base.group_public')), (4, ref('base.group_portal'))]"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_re_service_public" model="ir.rule">
+        <field name="name">Real Estate Service: published only (public/portal)</field>
+        <field name="model_id" ref="model_re_service"/>
+        <field name="domain_force">[('is_published', '=', True)]</field>
+        <field name="groups" eval="[(4, ref('base.group_public')), (4, ref('base.group_portal'))]"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="rule_re_team_member_public" model="ir.rule">
+        <field name="name">Real Estate Team Member: published only (public/portal)</field>
+        <field name="model_id" ref="model_re_team_member"/>
+        <field name="domain_force">[('is_published', '=', True)]</field>
+        <field name="groups" eval="[(4, ref('base.group_public')), (4, ref('base.group_portal'))]"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+</odoo>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="page_home" name="Real Estate: Home">
+        <t t-call="website.layout">
+            <t t-set="pageName" t-value="'re_home'"/>
+            <div id="wrap" class="o_re_site">
+
+                <!-- Hero -->
+                <section class="o_re_hero d-flex align-items-center"
+                         t-att-style="website.re_hero_image and ('background-image: url(/web/image/website/%s/re_hero_image)' % website.id) or None">
+                    <div class="o_re_hero_overlay"/>
+                    <div class="container position-relative py-5">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <span class="o_re_eyebrow o_re_eyebrow_light" t-out="website.company_id.name"/>
+                                <h1 class="o_re_hero_title" t-field="website.re_tagline"/>
+                                <p class="o_re_hero_subtitle" t-field="website.re_hero_subtitle"/>
+                                <div class="d-flex flex-wrap gap-2 mt-4">
+                                    <a href="/estate/projects" class="btn btn-primary btn-lg px-4">Explore Projects</a>
+                                    <a href="/estate/units" class="btn btn-outline-light btn-lg px-4">Find Your Unit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick search -->
+                <div class="container o_re_search_wrap">
+                    <t t-call="re_developer_website.unit_search_bar"/>
+                </div>
+
+                <div class="oe_structure" id="oe_structure_re_home_1"/>
+
+                <!-- Featured projects -->
+                <section t-if="projects" class="py-5">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-end flex-wrap gap-2">
+                            <t t-call="re_developer_website.section_heading">
+                                <t t-set="section_eyebrow">Our Projects</t>
+                                <t t-set="section_title">Featured Developments</t>
+                            </t>
+                            <a href="/estate/projects" class="btn btn-link mb-5">View all projects <i class="fa fa-arrow-right ms-1"/></a>
+                        </div>
+                        <div class="row g-4">
+                            <div t-foreach="projects" t-as="project" class="col-md-6 col-lg-4">
+                                <t t-call="re_developer_website.project_card"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Key figures -->
+                <t t-call="re_developer_website.stats_band"/>
+
+                <!-- Company overview / interview -->
+                <t t-call="re_developer_website.overview_section">
+                    <t t-set="show_about_link" t-value="True"/>
+                </t>
+
+                <!-- Services -->
+                <section t-if="services" class="py-5 o_re_bg_soft">
+                    <div class="container">
+                        <t t-call="re_developer_website.section_heading">
+                            <t t-set="section_center" t-value="True"/>
+                            <t t-set="section_eyebrow">What we do</t>
+                            <t t-set="section_title">Our Services</t>
+                        </t>
+                        <div class="row g-4">
+                            <div t-foreach="services" t-as="service" class="col-md-6 col-lg-4">
+                                <a t-att-href="service.website_url" class="o_re_service_card card h-100 text-decoration-none">
+                                    <div class="card-body p-4">
+                                        <span class="o_re_service_icon"><i t-attf-class="fa #{service.icon or 'fa-building'}"/></span>
+                                        <h3 class="h5 mt-3" t-out="service.name"/>
+                                        <p class="text-muted mb-0" t-out="service.short_description"/>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Featured units -->
+                <section t-if="units" class="py-5">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-end flex-wrap gap-2">
+                            <t t-call="re_developer_website.section_heading">
+                                <t t-set="section_eyebrow">Ready to move</t>
+                                <t t-set="section_title">Available Units</t>
+                            </t>
+                            <a href="/estate/units" class="btn btn-link mb-5">Browse all units <i class="fa fa-arrow-right ms-1"/></a>
+                        </div>
+                        <div class="row g-4">
+                            <div t-foreach="units" t-as="unit" class="col-sm-6 col-lg-4">
+                                <t t-call="re_developer_website.unit_card"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="oe_structure" id="oe_structure_re_home_2"/>
+
+                <t t-call="re_developer_website.cta_band"/>
+            </div>
+        </t>
+    </template>
+</odoo>
