@@ -1,0 +1,2351 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* re_developer_website
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-08 15:24+0000\n"
+"PO-Revision-Date: 2026-10-08 15:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "/ m²"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_card
+msgid "/mo"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_security
+msgid "24/7 Security"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.team.member,bio:re_developer_website.team_ceo
+msgid "25 years leading large-scale development and construction projects."
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,location:re_developer_website.project_palm
+msgid "5th Settlement, New Cairo, Egypt"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "<i class=\"fa fa-building me-1\"/> About:"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<i class=\"fa fa-calculator me-2\"/>Payment plan"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<i class=\"fa fa-download me-2\"/>Download Brochure"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "<i class=\"fa fa-home me-1\"/> About:"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "<i class=\"fa fa-paper-plane me-2\"/>Send Request"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.overview_section
+msgid ""
+"<i class=\"fa fa-play-circle fa-4x mb-3\"/>\n"
+"                                <span>Add your company interview video from Real Estate &gt; Configuration &gt; Company Profile</span>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "<i class=\"fa fa-search me-2\"/>Search"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.cta_band
+msgid "<i class=\"fa fa-whatsapp me-1\"/>WhatsApp"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<i class=\"fa fa-whatsapp me-2\"/>Ask on WhatsApp"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "<option value=\"\">All projects</option>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "<option value=\"\">Any type</option>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "<option value=\"\">Any</option>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.project_card
+msgid "<small class=\"text-muted d-block\">Starting from</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Bathrooms</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Bedrooms</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Built-up area</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "<small>Call us</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<small>Delivery</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Down payment amount</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Down payment</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "<small>Email</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Garden / Terrace</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "<small>Head office</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Installments</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<small>Land Area</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<small>Location</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Monthly</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "<small>Office hours</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<small>Starting from</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<small>Status</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<small>Type</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "<small>WhatsApp</small>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.project_card
+msgid "<span class=\"mx-1\">·</span>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.overview_section
+msgid "<span class=\"o_re_eyebrow\">Who we are</span>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<strong>Construction progress</strong>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:re.project,description:re_developer_website.project_tower
+msgid ""
+"A 22-floor smart tower with central A/C, high-speed elevators and a two-"
+"level commercial mall."
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,short_description:re_developer_website.project_palm
+msgid ""
+"A gated compound of apartments, duplexes and villas surrounded by 75% green "
+"spaces."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "A proven track record of handing over on schedule."
+msgstr ""
+
+#. module: re_developer_website
+#: model:website.menu,name:re_developer_website.menu_estate_about
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "About Us"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "About the project"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_needaction
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__active
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__active
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__active
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__active
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__active
+msgid "Active"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_ids
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_exception_decoration
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_state
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_type_icon
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__location
+msgid "Address / Location"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__map_query
+msgid "Address or \"latitude,longitude\" used for the Google map on the website."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__project_type__administrative
+msgid "Administrative"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "After-sales care"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.team.member,name:re_developer_website.team_ceo
+msgid "Ahmed Hassan"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "All"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "All statuses"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "All types"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.actions.act_window,name:re_developer_website.re_amenity_action
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__amenity_ids
+#: model:ir.ui.menu,name:re_developer_website.menu_re_amenities
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Amenities"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__apartment
+msgid "Apartment"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid ""
+"Apartments, villas, offices and retail units with flexible payment plans."
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.service,name:re_developer_website.service_design
+msgid "Architecture & Interior Design"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+msgid "Archived"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid ""
+"Ask about a unit, book a site visit or schedule a meeting at our office."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_attachment_count
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__state__available
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Available"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__available_unit_count
+msgid "Available Unit Count"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+msgid "Available Units"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_kanban
+msgid "BR ·"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__bathrooms
+msgid "Bathrooms"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_card
+msgid "Baths"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__bedrooms
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "Bedrooms"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_card
+msgid "Beds"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__bio
+msgid "Bio"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,name:re_developer_website.project_bay
+msgid "Blue Bay"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:re.project,description:re_developer_website.project_bay
+msgid ""
+"Blue Bay brings crystal lagoons and a 1 km private beach to the most sought-"
+"after bay on the North Coast."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "Book a Site Visit"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.cta_band
+msgid "Book a Visit"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.cta_band
+msgid "Book a site visit or a meeting with our sales consultants today."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__brochure
+msgid "Brochure"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__brochure_filename
+msgid "Brochure Filename"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_thank_you
+msgid "Browse Units"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+msgid "Browse all units <i class=\"fa fa-arrow-right ms-1\"/>"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_crm_lead__re_budget
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Budget"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Built on trust, delivered on time"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__area
+msgid "Built-up Area (m²)"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__can_publish
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__can_publish
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__can_publish
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__can_publish
+msgid "Can Publish"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,name:re_developer_website.project_tower
+msgid "Capital Business Tower"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Catch line, e.g. Resort living in New Cairo"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,location:re_developer_website.project_tower
+msgid "Central Business District, New Administrative Capital, Egypt"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.team.member,job_title:re_developer_website.team_ceo
+msgid "Chairman & CEO"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__chalet
+msgid "Chalet"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,short_description:re_developer_website.project_bay
+msgid "Chalets and twin houses with direct beach and lagoon access."
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.team.member,job_title:re_developer_website.team_cto
+msgid "Chief Engineering Officer"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__city
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+msgid "City"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__clinic
+msgid "Clinic"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_club
+msgid "Clubhouse & Gym"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__project_type__coastal
+msgid "Coastal / Resort"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__project_type__commercial
+msgid "Commercial"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_mall
+msgid "Commercial Area"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__company_id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__company_id
+msgid "Company"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_video_url
+msgid "Company Interview / Overview Video"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_overview
+msgid "Company Overview"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.actions.act_window,name:re_developer_website.website_re_profile_action
+#: model:ir.ui.menu,name:re_developer_website.menu_re_profile
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Company Profile"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_re_service
+msgid "Company Service"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.overview_section
+msgid "Company interview"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.ui.menu,name:re_developer_website.menu_re_config
+msgid "Configuration"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__construction_progress
+msgid "Construction Progress (%)"
+msgstr ""
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/models/re_project.py:0
+msgid "Construction progress must be between 0 and 100."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Contact"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Contact & Leads"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "Contact Us"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.project_card
+msgid "Contact us"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__finishing__core_shell
+msgid "Core & Shell"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.actions.act_window,help:re_developer_website.re_project_action
+msgid "Create your first project"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__create_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__create_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__create_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__create_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__create_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__create_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__create_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__create_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__currency_id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__state__delivered
+msgid "Delivered"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "Delivery"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__delivery_date
+msgid "Delivery Date"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__description
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__description
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__description
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Description"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_service_view_form
+msgid "Detailed description..."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "Details"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__display_name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__display_name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__display_name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__display_name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__down_payment_pct
+msgid "Down Payment (%)"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__down_payment_amount
+msgid "Down Payment Amount"
+msgstr ""
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/models/re_unit.py:0
+msgid "Down payment must be between 0 and 100%."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__duplex
+msgid "Duplex"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Email"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.actions.act_window,help:re_developer_website.crm_lead_re_action
+msgid ""
+"Every form submitted on the website (unit inquiry, site visit, meeting "
+"request) lands here."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__delivery_date
+msgid "Expected Delivery"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_thank_you
+msgid "Explore Projects"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.service,name:re_developer_website.service_fm
+msgid "Facility Management"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Facility management long after handover."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Featured"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+msgid "Featured Developments"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__is_featured
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__is_featured
+msgid "Featured on Homepage"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "Filter units <i class=\"fa fa-arrow-right ms-1\"/>"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Find Your Unit"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__finishing
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "Finishing"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Flexible payments"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__floor
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "Floor"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_follower_ids
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_partner_ids
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_amenity__icon
+msgid ""
+"Font Awesome 4 class shown on the website, e.g. fa-tree, fa-car, fa-shield."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_service__icon
+msgid "Font Awesome 4 class, e.g. fa-building, fa-paint-brush."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__activity_type_icon
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_founded_year
+msgid "Founded In"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_services
+msgid ""
+"From land acquisition and design to construction, sales and property "
+"management."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_team_member_view_form
+msgid "Full name"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Full name *"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Full project description for the website..."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__finishing__fully
+msgid "Fully Finished"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__finishing__furnished
+msgid "Furnished"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__garden_area
+msgid "Garden / Terrace (m²)"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.unit,unit_view:re_developer_website.unit_palm_a101
+msgid "Garden view"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "General"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.service,name:re_developer_website.service_construction
+msgid "General Contracting"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__crm_lead__re_inquiry_type__general
+msgid "General Inquiry"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "Get in touch"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,subtitle:re_developer_website.project_tower
+msgid "Grade-A offices and retail"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_clients_count
+#: model_terms:ir.ui.view,arch_db:re_developer_website.stats_band
+msgid "Happy Clients"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__has_message
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/controllers/main.py:0
+msgid "Hello, I am interested in unit %(unit)s (%(url)s)"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.service,short_description:re_developer_website.service_sales
+msgid ""
+"Help choosing the right unit and payment plan, for living or investment."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_hero_image
+msgid "Hero Image"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_hero_subtitle
+msgid "Hero Subtitle"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_tagline
+msgid "Hero Tagline"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_banner
+msgid "Home"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Homepage Hero"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "I would like to"
+msgstr ""
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/controllers/main.py:0
+msgid "I would like to know more about: %s"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__id
+msgid "ID"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__icon
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_exception_icon
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__icon
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__activity_exception_icon
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__message_needaction
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__message_has_error
+#: model:ir.model.fields,help:re_developer_website.field_re_project__message_has_sms_error
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__message_has_error
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__image_1920
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__image_1920
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__image_1920
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__image_1024
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__image_1024
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__image_1024
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__image_128
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__image_128
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__image_128
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__image_256
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__image_256
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__image_256
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__image_512
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__image_512
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__image_512
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "In-house engineering and strict quality control."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid ""
+"Indicative plan. Final terms are confirmed in the reservation contract."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.ui.menu,name:re_developer_website.menu_re_inquiries
+msgid "Inquiries"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_lead_team_id
+msgid "Inquiries Sales Team"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_lead_user_id
+msgid "Inquiries Salesperson"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__installment_years
+msgid "Installment Years"
+msgstr ""
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/models/re_unit.py:0
+msgid "Installment years cannot be negative."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_crm_lead__re_project_id
+#: model_terms:ir.ui.view,arch_db:re_developer_website.crm_lead_view_search_re
+msgid "Interested Project"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_crm_lead__re_unit_id
+msgid "Interested Unit"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "Interested in this unit?"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "Inventory"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_is_follower
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__is_published
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__is_published
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__is_published
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__is_published
+msgid "Is Published"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__job_title
+msgid "Job Title"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.team.member,name:re_developer_website.team_cso
+msgid "Karim Fathy"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Key Figures"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_kids
+msgid "Kids Area"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.unit,unit_view:re_developer_website.unit_bay_t03
+msgid "Lagoon view"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.unit,unit_view:re_developer_website.unit_palm_b204
+msgid "Lake view"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_green
+msgid "Landscaped Gardens"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Largest area"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__write_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__write_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__write_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__write_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__write_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__write_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__write_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__write_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__launch_date
+msgid "Launch Date"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__state__planning
+msgid "Launching Soon"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Leadership"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_re_team_member
+msgid "Leadership / Team Member"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.actions.act_window,name:re_developer_website.re_team_member_action
+#: model:ir.ui.menu,name:re_developer_website.menu_re_team
+msgid "Leadership Team"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.team.member,bio:re_developer_website.team_cso
+msgid "Leads a team of 60 sales consultants across Cairo and the North Coast."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Leave empty"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__linkedin_url
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "LinkedIn"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "Location"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Long installment plans tailored to you."
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.service,short_description:re_developer_website.service_fm
+msgid "Maintenance, security and landscaping long after handover."
+msgstr ""
+
+#. module: re_developer_website
+#: model:res.groups,name:re_developer_website.group_re_manager
+msgid "Manager"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__map_embed_url
+msgid "Map Embed Url"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__map_query
+msgid "Map Location"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Mark as Sold"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.service,short_description:re_developer_website.service_dev
+msgid ""
+"Master planning and development of residential, commercial and coastal "
+"communities."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "Max budget"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Media"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Meet our team"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Message"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_has_error
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_ids
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_mission
+msgid "Mission"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__project_type__mixed
+msgid "Mixed Use"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.service,short_description:re_developer_website.service_design
+msgid ""
+"Modern architecture and interior finishing packages tailored to every "
+"budget."
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.team.member,name:re_developer_website.team_cto
+msgid "Mona Adel"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__monthly_installment
+msgid "Monthly Installment"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.overview_section
+msgid "More about us <i class=\"fa fa-arrow-right ms-1\"/>"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__my_activity_date_deadline
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__name
+msgid "Name"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,city:re_developer_website.project_palm
+msgid "New Cairo"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,city:re_developer_website.project_tower
+msgid "New Capital"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Newest"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_calendar_event_id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_date_deadline
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_summary
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_type_id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.actions.act_window,help:re_developer_website.crm_lead_re_action
+msgid "No inquiries yet"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "No projects match this filter yet."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "No units match your search."
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,city:re_developer_website.project_bay
+msgid "North Coast"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_needaction_counter
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_has_error_counter
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__message_needaction_counter
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__message_has_error_counter
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__office
+msgid "Office"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_office_hours
+msgid "Office Hours"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__crm_lead__re_inquiry_type__meeting
+msgid "Office Meeting / Interview"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "On request"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "On-time delivery"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_thank_you
+msgid "One of our sales consultants will contact you shortly."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:re.project,description:re_developer_website.project_palm
+msgid ""
+"Only 25% of the land is built up; the rest is lakes, gardens and walkways."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Our Mission"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "Our Projects"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_services
+msgid "Our Services"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Our Vision"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Our sales team will call you back within one working day."
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.team.member,bio:re_developer_website.team_cto
+msgid "Oversees design, construction quality and delivery schedules."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Overview & Interview"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_overview_title
+msgid "Overview Title"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,name:re_developer_website.project_palm
+msgid "Palm Residence"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:re.project,description:re_developer_website.project_palm
+msgid ""
+"Palm Residence is a fully integrated community in the heart of New Cairo, "
+"minutes from the American University and the 90th Street business district."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__penthouse
+msgid "Penthouse"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Phone / WhatsApp *"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Phone, email and address are taken from the company record."
+msgstr ""
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/controllers/main.py:0
+msgid "Please enter a phone number or an email so we can reach you."
+msgstr ""
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/controllers/main.py:0
+msgid "Please enter your name."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_crm_lead__re_preferred_date
+msgid "Preferred Date"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Preferred date (visit / meeting)"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__price
+msgid "Price"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Price & Payment Plan"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__price_per_meter
+msgid "Price / m²"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Price: high to low"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Price: low to high"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_beach
+msgid "Private Beach"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__project_id
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_kanban
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "Project"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_re_amenity
+msgid "Project Amenity"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__project_type
+msgid "Project Type"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "Project video"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.actions.act_window,name:re_developer_website.re_project_action
+#: model:ir.ui.menu,name:re_developer_website.menu_re_projects
+#: model:website.menu,name:re_developer_website.menu_estate_projects
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "Projects"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_projects_count
+#: model_terms:ir.ui.view,arch_db:re_developer_website.stats_band
+msgid "Projects Delivered"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.actions.act_window,help:re_developer_website.re_project_action
+msgid ""
+"Projects and their units are published on the website automatically once you"
+" toggle \"Published\"."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Published"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Quality construction"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,location:re_developer_website.project_bay
+msgid "Ras El Hekma, North Coast, Egypt"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_video_embed_url
+msgid "Re Video Embed Url"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_whatsapp_url
+msgid "Re Whatsapp Url"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.cta_band
+msgid "Ready to find your next home or investment?"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+msgid "Ready to move"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,short_description:re_developer_website.project_tower
+msgid "Ready-to-move offices, clinics and retail units in the CBD."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.ui.menu,name:re_developer_website.menu_re_root
+#: model_terms:ir.ui.view,arch_db:re_developer_website.crm_lead_view_form_re
+msgid "Real Estate"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.service,name:re_developer_website.service_dev
+msgid "Real Estate Development"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.crm_lead_view_search_re
+msgid "Real Estate Inquiries"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_re_project
+msgid "Real Estate Project"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_re_unit
+msgid "Real Estate Unit"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.module.category,name:re_developer_website.module_category_real_estate
+msgid "Real Estate Website"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.crm_lead_re_list
+msgid "Received"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Recommended"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Request Information"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.crm_lead_view_search_re
+msgid "Request Type"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_services
+msgid "Request this service"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.service,name:re_developer_website.service_resale
+msgid "Resale & Rentals"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Reserve"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__state__reserved
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Reserved"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__project_type__residential
+msgid "Residential"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "Residential, commercial and coastal developments built to last."
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,subtitle:re_developer_website.project_palm
+msgid "Resort-style living in New Cairo"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_user_id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__retail
+msgid "Retail / Shop"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__is_seo_optimized
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__is_seo_optimized
+msgid "SEO optimized"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_has_sms_error
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.service,name:re_developer_website.service_sales
+msgid "Sales & Investment Advisory"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.team.member,job_title:re_developer_website.team_cso
+msgid "Sales Director"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.unit,unit_view:re_developer_website.unit_bay_c07
+msgid "Sea view"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.project,subtitle:re_developer_website.project_bay
+msgid "Sea-view chalets on the North Coast"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__finishing__semi
+msgid "Semi Finished"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "Send us a request"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__seo_name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__seo_name
+msgid "Seo name"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__sequence
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__sequence
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__sequence
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__sequence
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__crm_lead__re_inquiry_type__service
+msgid "Service Request"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.actions.act_window,name:re_developer_website.re_service_action
+#: model:ir.ui.menu,name:re_developer_website.menu_re_services
+#: model:website.menu,name:re_developer_website.menu_estate_services
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_services
+msgid "Services"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_services
+msgid "Services will be published soon."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Set Available"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__short_description
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__short_description
+msgid "Short Description"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_team_member_view_form
+msgid "Short biography..."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__subtitle
+msgid "Short catch line shown under the project name."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Short summary shown on project cards..."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "Show all projects"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__short_description
+msgid "Shown on project cards."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "Similar units in this project"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__crm_lead__re_inquiry_type__visit
+msgid "Site Visit"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__state__sold
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Sold"
+msgstr ""
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/controllers/main.py:0
+msgid "Something went wrong, please try again or call us."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Sort"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Specifications"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__min_price
+msgid "Starting Price"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__state
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__state
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Status"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__activity_state
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__subtitle
+msgid "Subtitle"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_pool
+msgid "Swimming Pools"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Tell us what you need"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_thank_you
+msgid "Thank You"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_thank_you
+msgid "Thank you! We received your request."
+msgstr ""
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/controllers/main.py:0
+msgid "The email address looks invalid."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__website_url
+#: model:ir.model.fields,help:re_developer_website.field_re_service__website_url
+#: model:ir.model.fields,help:re_developer_website.field_re_team_member__website_url
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__website_url
+msgid "The full URL to access the document through the website."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.constraint,message:re_developer_website.constraint_re_amenity_name_uniq
+msgid "This amenity already exists."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Timeline & Figures"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_list
+msgid "Total"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_list
+msgid "Total Area"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__total_area
+msgid "Total Land Area (m²)"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__townhouse
+msgid "Townhouse"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.service,short_description:re_developer_website.service_construction
+msgid ""
+"Turnkey construction with in-house engineers and certified subcontractors."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__twinhouse
+msgid "Twin House"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Type"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__activity_exception_decoration
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__state__construction
+msgid "Under Construction"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_parking
+msgid "Underground Parking"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_kanban
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_card
+msgid "Unit"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__name
+msgid "Unit Code"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__unit_count
+msgid "Unit Count"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__crm_lead__re_inquiry_type__unit
+msgid "Unit Inquiry"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__unit_type
+msgid "Unit Type"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.constraint,message:re_developer_website.constraint_re_unit_name_project_uniq
+msgid "Unit code must be unique per project."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Unit description for the website..."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "Unit type"
+msgstr ""
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/models/re_project.py:0
+#: model:ir.actions.act_window,name:re_developer_website.re_unit_action
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__unit_ids
+#: model:ir.ui.menu,name:re_developer_website.menu_re_units
+#: model:website.menu,name:re_developer_website.menu_estate_units
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Units"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_units_count
+#: model_terms:ir.ui.view,arch_db:re_developer_website.stats_band
+msgid "Units Delivered"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "Units in this project"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid ""
+"Units will be released soon. Register your interest using the form above."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.project_card
+msgid "Unpublished"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__video_embed_url
+msgid "Video Embed Url"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__video_url
+msgid "Video URL"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__unit_view
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "View"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+msgid "View all projects <i class=\"fa fa-arrow-right ms-1\"/>"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__villa
+msgid "Villa"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_published
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__website_published
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__website_published
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_published
+msgid "Visible on current website"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_vision
+msgid "Vision"
+msgstr ""
+
+#. module: re_developer_website
+#: model:re.service,short_description:re_developer_website.service_resale
+msgid "We market and manage your unit for resale or rent."
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_website
+msgid "Website"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.ui.menu,name:re_developer_website.menu_re_content
+msgid "Website Content"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.actions.act_window,name:re_developer_website.crm_lead_re_action
+msgid "Website Inquiries"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Website Inquiries Go To"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_message_ids
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_crm_lead__re_inquiry_type
+msgid "Website Request Type"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_url
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__website_url
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__website_url
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_url
+msgid "Website URL"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__website_message_ids
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_meta_description
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_meta_description
+msgid "Website meta description"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_meta_keywords
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_meta_keywords
+msgid "Website meta keywords"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_meta_title
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_meta_title
+msgid "Website meta title"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_meta_og_img
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_meta_og_img
+msgid "Website opengraph image"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+msgid "What we do"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_whatsapp
+msgid "WhatsApp Number"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Who We Are"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Who we are, our story and values..."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Why choose us"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_years_experience
+#: model_terms:ir.ui.view,arch_db:re_developer_website.stats_band
+msgid "Years of Experience"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__video_url
+#: model:ir.model.fields,help:re_developer_website.field_website__re_video_url
+msgid "YouTube or Vimeo link."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_kanban
+msgid "available /"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_banner
+msgid "breadcrumb"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "e.g. 3 - 5 million"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "e.g. 5000000"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "e.g. B2-104"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_team_member_view_form
+msgid "e.g. Chairman & CEO"
+msgstr ""
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__unit_view
+msgid "e.g. Garden view, Lagoon view"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_service_view_form
+msgid "e.g. General Contracting"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "e.g. Palm Residence"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "https://www.youtube.com/watch?v=..."
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_kanban
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_card
+msgid "m²"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.project_card
+msgid "unit available"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_kanban
+msgid "units"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.project_card
+msgid "units available"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "units found"
+msgstr ""
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "years"
+msgstr ""

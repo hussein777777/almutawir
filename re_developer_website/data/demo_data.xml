@@ -20,6 +20,20 @@
         <field name="re_whatsapp">+20 100 000 0000</field>
     </record>
 
+    <!-- Arabic version of the company profile texts -->
+    <function model="website" name="_re_write_arabic">
+        <value eval="[ref('website.default_website')]"/>
+        <value eval="{
+            're_tagline': 'نبني مجتمعات تدوم',
+            're_hero_subtitle': 'مشروعات سكنية وتجارية وساحلية متميزة في أنحاء مصر، بخطط سداد مرنة حتى 10 سنوات.',
+            're_overview_title': 'نبذة عن الشركة ولقاء',
+            're_overview': '&lt;p&gt;على مدار أكثر من عشرين عاماً نقوم بتصميم وإنشاء وتسليم مجتمعات متكاملة. تتحكم فرقنا الداخلية في الهندسة والإنشاء وإدارة المرافق في كل خطوة، من شراء الأرض حتى الاستلام وما بعده.&lt;/p&gt;&lt;p&gt;شاهد رئيس مجلس الإدارة يتحدث عن رحلتنا ومشروعاتنا الحالية والتزامنا بالتسليم في الموعد.&lt;/p&gt;',
+            're_vision': 'أن نكون المطور الأكثر ثقة في المنطقة، ونصنع أماكن تزدهر فيها العائلات والأعمال.',
+            're_mission': 'تسليم منازل وأماكن عمل عالية الجودة في موعدها، بأسعار شفافة وخدمة ما بعد بيع طويلة المدى.',
+            're_office_hours': 'السبت - الخميس، من 10 صباحاً حتى 7 مساءً',
+        }"/>
+    </function>
+
     <!-- Amenities -->
     <record id="amenity_pool" model="re.amenity"><field name="name">Swimming Pools</field><field name="icon">fa-tint</field><field name="sequence">1</field></record>
     <record id="amenity_security" model="re.amenity"><field name="name">24/7 Security</field><field name="icon">fa-shield</field><field name="sequence">2</field></record>

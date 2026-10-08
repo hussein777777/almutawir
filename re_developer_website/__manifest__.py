@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Real Estate Developer Website',
-    'version': '18.0.1.0.0',
+    'version': '18.0.1.1.0',
     'summary': 'Professional website for real estate developers & construction companies: '
                'projects, units, services, about us, company overview and contact (CRM leads).',
     'category': 'Website/Website',
@@ -13,6 +13,7 @@
         'security/ir.model.access.csv',
         'security/record_rules.xml',
         'data/website_menu.xml',
+        'data/website_lang.xml',
         'views/re_amenity_views.xml',
         'views/re_project_views.xml',
         'views/re_unit_views.xml',

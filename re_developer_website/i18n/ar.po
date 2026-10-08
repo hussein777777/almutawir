@@ -1,0 +1,2367 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* re_developer_website
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-08 15:24+0000\n"
+"PO-Revision-Date: 2026-10-08 15:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "/ m²"
+msgstr "/ م²"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_card
+msgid "/mo"
+msgstr "/شهرياً"
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_security
+msgid "24/7 Security"
+msgstr "أمن على مدار الساعة"
+
+#. module: re_developer_website
+#: model:re.team.member,bio:re_developer_website.team_ceo
+msgid "25 years leading large-scale development and construction projects."
+msgstr "25 عاماً في قيادة مشروعات التطوير والإنشاء الكبرى."
+
+#. module: re_developer_website
+#: model:re.project,location:re_developer_website.project_palm
+msgid "5th Settlement, New Cairo, Egypt"
+msgstr "التجمع الخامس، القاهرة الجديدة، مصر"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "<i class=\"fa fa-building me-1\"/> About:"
+msgstr "<i class=\"fa fa-building me-1\"/> بخصوص:"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<i class=\"fa fa-calculator me-2\"/>Payment plan"
+msgstr "<i class=\"fa fa-calculator me-2\"/>خطة السداد"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<i class=\"fa fa-download me-2\"/>Download Brochure"
+msgstr "<i class=\"fa fa-download me-2\"/>تحميل البروشور"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "<i class=\"fa fa-home me-1\"/> About:"
+msgstr "<i class=\"fa fa-home me-1\"/> بخصوص:"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "<i class=\"fa fa-paper-plane me-2\"/>Send Request"
+msgstr "<i class=\"fa fa-paper-plane me-2\"/>إرسال الطلب"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.overview_section
+msgid ""
+"<i class=\"fa fa-play-circle fa-4x mb-3\"/>\n"
+"                                <span>Add your company interview video from Real Estate &gt; Configuration &gt; Company Profile</span>"
+msgstr ""
+"<i class=\"fa fa-play-circle fa-4x mb-3\"/>\n"
+"                                <span>أضف فيديو لقاء الشركة من العقارات &gt; الإعدادات &gt; ملف الشركة</span>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "<i class=\"fa fa-search me-2\"/>Search"
+msgstr "<i class=\"fa fa-search me-2\"/>بحث"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.cta_band
+msgid "<i class=\"fa fa-whatsapp me-1\"/>WhatsApp"
+msgstr "<i class=\"fa fa-whatsapp me-1\"/>واتساب"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<i class=\"fa fa-whatsapp me-2\"/>Ask on WhatsApp"
+msgstr "<i class=\"fa fa-whatsapp me-2\"/>اسألنا على واتساب"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "<option value=\"\">All projects</option>"
+msgstr "<option value=\"\">كل المشروعات</option>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "<option value=\"\">Any type</option>"
+msgstr "<option value=\"\">أي نوع</option>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "<option value=\"\">Any</option>"
+msgstr "<option value=\"\">أي عدد</option>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.project_card
+msgid "<small class=\"text-muted d-block\">Starting from</small>"
+msgstr "<small class=\"text-muted d-block\">تبدأ من</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Bathrooms</small>"
+msgstr "<small>حمامات</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Bedrooms</small>"
+msgstr "<small>غرف نوم</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Built-up area</small>"
+msgstr "<small>المساحة المبنية</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "<small>Call us</small>"
+msgstr "<small>اتصل بنا</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<small>Delivery</small>"
+msgstr "<small>الاستلام</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Down payment amount</small>"
+msgstr "<small>قيمة المقدم</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Down payment</small>"
+msgstr "<small>المقدم</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "<small>Email</small>"
+msgstr "<small>البريد الإلكتروني</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Garden / Terrace</small>"
+msgstr "<small>حديقة / تراس</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "<small>Head office</small>"
+msgstr "<small>المقر الرئيسي</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Installments</small>"
+msgstr "<small>الأقساط</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<small>Land Area</small>"
+msgstr "<small>مساحة الأرض</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<small>Location</small>"
+msgstr "<small>الموقع</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "<small>Monthly</small>"
+msgstr "<small>القسط الشهري</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "<small>Office hours</small>"
+msgstr "<small>مواعيد العمل</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<small>Starting from</small>"
+msgstr "<small>تبدأ من</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<small>Status</small>"
+msgstr "<small>الحالة</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<small>Type</small>"
+msgstr "<small>النوع</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "<small>WhatsApp</small>"
+msgstr "<small>واتساب</small>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.project_card
+msgid "<span class=\"mx-1\">·</span>"
+msgstr "<span class=\"mx-1\">·</span>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.overview_section
+msgid "<span class=\"o_re_eyebrow\">Who we are</span>"
+msgstr "<span class=\"o_re_eyebrow\">من نحن</span>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "<strong>Construction progress</strong>"
+msgstr "<strong>نسبة الإنشاءات</strong>"
+
+#. module: re_developer_website
+#: model_terms:re.project,description:re_developer_website.project_tower
+msgid ""
+"A 22-floor smart tower with central A/C, high-speed elevators and a two-"
+"level commercial mall."
+msgstr ""
+"برج ذكي من 22 طابقاً بتكييف مركزي ومصاعد عالية السرعة ومول تجاري من طابقين."
+
+#. module: re_developer_website
+#: model:re.project,short_description:re_developer_website.project_palm
+msgid ""
+"A gated compound of apartments, duplexes and villas surrounded by 75% green "
+"spaces."
+msgstr ""
+"كمبوند مسوّر من الشقق والدوبلكسات والفيلات تحيط به مساحات خضراء بنسبة 75%."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "A proven track record of handing over on schedule."
+msgstr "سجل حافل بالتسليم في المواعيد المحددة."
+
+#. module: re_developer_website
+#: model:website.menu,name:re_developer_website.menu_estate_about
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "About Us"
+msgstr "من نحن"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "About the project"
+msgstr "عن المشروع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_needaction
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__active
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__active
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__active
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__active
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_ids
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_exception_decoration
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_state
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_type_icon
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__location
+msgid "Address / Location"
+msgstr "العنوان / الموقع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__map_query
+msgid "Address or \"latitude,longitude\" used for the Google map on the website."
+msgstr "العنوان أو \"خط العرض,خط الطول\" المستخدم لخريطة جوجل على الموقع."
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__project_type__administrative
+msgid "Administrative"
+msgstr "إداري"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "After-sales care"
+msgstr "خدمة ما بعد البيع"
+
+#. module: re_developer_website
+#: model:re.team.member,name:re_developer_website.team_ceo
+msgid "Ahmed Hassan"
+msgstr "أحمد حسن"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "All"
+msgstr "الكل"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "All statuses"
+msgstr "كل الحالات"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "All types"
+msgstr "كل الأنواع"
+
+#. module: re_developer_website
+#: model:ir.actions.act_window,name:re_developer_website.re_amenity_action
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__amenity_ids
+#: model:ir.ui.menu,name:re_developer_website.menu_re_amenities
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Amenities"
+msgstr "الخدمات والمرافق"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__apartment
+msgid "Apartment"
+msgstr "شقة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid ""
+"Apartments, villas, offices and retail units with flexible payment plans."
+msgstr "شقق وفيلات ومكاتب ومحلات تجارية بخطط سداد مرنة."
+
+#. module: re_developer_website
+#: model:re.service,name:re_developer_website.service_design
+msgid "Architecture & Interior Design"
+msgstr "التصميم المعماري والداخلي"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid ""
+"Ask about a unit, book a site visit or schedule a meeting at our office."
+msgstr "استفسر عن وحدة، احجز معاينة، أو حدد موعداً لزيارة مكتبنا."
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_attachment_count
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__state__available
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Available"
+msgstr "متاحة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__available_unit_count
+msgid "Available Unit Count"
+msgstr "عدد الوحدات المتاحة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+msgid "Available Units"
+msgstr "الوحدات المتاحة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_kanban
+msgid "BR ·"
+msgstr "غرف ·"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__bathrooms
+msgid "Bathrooms"
+msgstr "الحمامات"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_card
+msgid "Baths"
+msgstr "حمام"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__bedrooms
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "Bedrooms"
+msgstr "غرف النوم"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_card
+msgid "Beds"
+msgstr "غرف"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__bio
+msgid "Bio"
+msgstr "نبذة"
+
+#. module: re_developer_website
+#: model:re.project,name:re_developer_website.project_bay
+msgid "Blue Bay"
+msgstr "بلو باي"
+
+#. module: re_developer_website
+#: model_terms:re.project,description:re_developer_website.project_bay
+msgid ""
+"Blue Bay brings crystal lagoons and a 1 km private beach to the most sought-"
+"after bay on the North Coast."
+msgstr ""
+"يقدم بلو باي لاجونات كريستالية وشاطئاً خاصاً بطول 1 كم في أكثر خلجان الساحل "
+"الشمالي تميزاً."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "Book a Site Visit"
+msgstr "احجز معاينة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.cta_band
+msgid "Book a Visit"
+msgstr "احجز معاينة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.cta_band
+msgid "Book a site visit or a meeting with our sales consultants today."
+msgstr "احجز معاينة أو اجتماعاً مع مستشاري المبيعات اليوم."
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__brochure
+msgid "Brochure"
+msgstr "البروشور"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__brochure_filename
+msgid "Brochure Filename"
+msgstr "اسم ملف البروشور"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_thank_you
+msgid "Browse Units"
+msgstr "تصفح الوحدات"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+msgid "Browse all units <i class=\"fa fa-arrow-right ms-1\"/>"
+msgstr "تصفح كل الوحدات <i class=\"fa fa-arrow-right ms-1\"/>"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_crm_lead__re_budget
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Budget"
+msgstr "الميزانية"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Built on trust, delivered on time"
+msgstr "نبني على الثقة ونسلّم في الموعد"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__area
+msgid "Built-up Area (m²)"
+msgstr "المساحة المبنية (م²)"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__can_publish
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__can_publish
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__can_publish
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__can_publish
+msgid "Can Publish"
+msgstr "يمكن النشر"
+
+#. module: re_developer_website
+#: model:re.project,name:re_developer_website.project_tower
+msgid "Capital Business Tower"
+msgstr "كابيتال بيزنس تاور"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Catch line, e.g. Resort living in New Cairo"
+msgstr "جملة جذابة، مثال: حياة المنتجعات في القاهرة الجديدة"
+
+#. module: re_developer_website
+#: model:re.project,location:re_developer_website.project_tower
+msgid "Central Business District, New Administrative Capital, Egypt"
+msgstr "منطقة الأعمال المركزية، العاصمة الإدارية الجديدة، مصر"
+
+#. module: re_developer_website
+#: model:re.team.member,job_title:re_developer_website.team_ceo
+msgid "Chairman & CEO"
+msgstr "رئيس مجلس الإدارة والرئيس التنفيذي"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__chalet
+msgid "Chalet"
+msgstr "شاليه"
+
+#. module: re_developer_website
+#: model:re.project,short_description:re_developer_website.project_bay
+msgid "Chalets and twin houses with direct beach and lagoon access."
+msgstr "شاليهات وتوين هاوس بإطلالة مباشرة على البحر واللاجون."
+
+#. module: re_developer_website
+#: model:re.team.member,job_title:re_developer_website.team_cto
+msgid "Chief Engineering Officer"
+msgstr "رئيس القطاع الهندسي"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__city
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+msgid "City"
+msgstr "المدينة"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__clinic
+msgid "Clinic"
+msgstr "عيادة"
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_club
+msgid "Clubhouse & Gym"
+msgstr "كلوب هاوس وجيم"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__project_type__coastal
+msgid "Coastal / Resort"
+msgstr "ساحلي / منتجع"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__project_type__commercial
+msgid "Commercial"
+msgstr "تجاري"
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_mall
+msgid "Commercial Area"
+msgstr "منطقة تجارية"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__company_id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_video_url
+msgid "Company Interview / Overview Video"
+msgstr "فيديو لقاء / تعريف الشركة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_overview
+msgid "Company Overview"
+msgstr "نبذة عن الشركة"
+
+#. module: re_developer_website
+#: model:ir.actions.act_window,name:re_developer_website.website_re_profile_action
+#: model:ir.ui.menu,name:re_developer_website.menu_re_profile
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Company Profile"
+msgstr "ملف الشركة"
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_re_service
+msgid "Company Service"
+msgstr "خدمة الشركة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.overview_section
+msgid "Company interview"
+msgstr "لقاء الشركة"
+
+#. module: re_developer_website
+#: model:ir.ui.menu,name:re_developer_website.menu_re_config
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__construction_progress
+msgid "Construction Progress (%)"
+msgstr "نسبة الإنشاءات (%)"
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/models/re_project.py:0
+msgid "Construction progress must be between 0 and 100."
+msgstr "يجب أن تكون نسبة الإنشاءات بين 0 و100."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Contact"
+msgstr "التواصل"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Contact & Leads"
+msgstr "التواصل والعملاء المحتملون"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "Contact Us"
+msgstr "تواصل معنا"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.project_card
+msgid "Contact us"
+msgstr "تواصل معنا"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__finishing__core_shell
+msgid "Core & Shell"
+msgstr "محارة / طوب أحمر"
+
+#. module: re_developer_website
+#: model_terms:ir.actions.act_window,help:re_developer_website.re_project_action
+msgid "Create your first project"
+msgstr "أنشئ أول مشروع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__create_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__create_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__create_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__create_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__create_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__create_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__create_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__create_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__currency_id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__state__delivered
+msgid "Delivered"
+msgstr "تم التسليم"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "Delivery"
+msgstr "الاستلام"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__delivery_date
+msgid "Delivery Date"
+msgstr "تاريخ الاستلام"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__description
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__description
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__description
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_service_view_form
+msgid "Detailed description..."
+msgstr "وصف تفصيلي..."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__display_name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__display_name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__display_name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__display_name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__down_payment_pct
+msgid "Down Payment (%)"
+msgstr "المقدم (%)"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__down_payment_amount
+msgid "Down Payment Amount"
+msgstr "قيمة المقدم"
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/models/re_unit.py:0
+msgid "Down payment must be between 0 and 100%."
+msgstr "يجب أن يكون المقدم بين 0 و100%."
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__duplex
+msgid "Duplex"
+msgstr "دوبلكس"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: re_developer_website
+#: model_terms:ir.actions.act_window,help:re_developer_website.crm_lead_re_action
+msgid ""
+"Every form submitted on the website (unit inquiry, site visit, meeting "
+"request) lands here."
+msgstr ""
+"كل طلب يُرسل من الموقع (استفسار عن وحدة، معاينة، طلب اجتماع) يظهر هنا."
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__delivery_date
+msgid "Expected Delivery"
+msgstr "موعد الاستلام المتوقع"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_thank_you
+msgid "Explore Projects"
+msgstr "استكشف مشروعاتنا"
+
+#. module: re_developer_website
+#: model:re.service,name:re_developer_website.service_fm
+msgid "Facility Management"
+msgstr "إدارة المرافق"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Facility management long after handover."
+msgstr "إدارة المرافق لسنوات بعد الاستلام."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Featured"
+msgstr "مميز"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+msgid "Featured Developments"
+msgstr "أبرز مشروعاتنا"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__is_featured
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__is_featured
+msgid "Featured on Homepage"
+msgstr "مميز في الصفحة الرئيسية"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "Filter units <i class=\"fa fa-arrow-right ms-1\"/>"
+msgstr "فلترة الوحدات <i class=\"fa fa-arrow-right ms-1\"/>"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Find Your Unit"
+msgstr "ابحث عن وحدتك"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__finishing
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "Finishing"
+msgstr "التشطيب"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Flexible payments"
+msgstr "سداد مرن"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__floor
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "Floor"
+msgstr "الدور"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_follower_ids
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_partner_ids
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_amenity__icon
+msgid ""
+"Font Awesome 4 class shown on the website, e.g. fa-tree, fa-car, fa-shield."
+msgstr ""
+"كلاس أيقونة Font Awesome 4 التي تظهر على الموقع، مثال: fa-tree، fa-car، fa-"
+"shield."
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_service__icon
+msgid "Font Awesome 4 class, e.g. fa-building, fa-paint-brush."
+msgstr "كلاس أيقونة Font Awesome 4، مثال: fa-building، fa-paint-brush."
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__activity_type_icon
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة Font Awesome مثال: fa-tasks"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_founded_year
+msgid "Founded In"
+msgstr "سنة التأسيس"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_services
+msgid ""
+"From land acquisition and design to construction, sales and property "
+"management."
+msgstr "من شراء الأرض والتصميم إلى الإنشاء والمبيعات وإدارة العقارات."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_team_member_view_form
+msgid "Full name"
+msgstr "الاسم بالكامل"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Full name *"
+msgstr "الاسم بالكامل *"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Full project description for the website..."
+msgstr "الوصف الكامل للمشروع على الموقع..."
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__finishing__fully
+msgid "Fully Finished"
+msgstr "تشطيب كامل"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__finishing__furnished
+msgid "Furnished"
+msgstr "مفروشة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__garden_area
+msgid "Garden / Terrace (m²)"
+msgstr "حديقة / تراس (م²)"
+
+#. module: re_developer_website
+#: model:re.unit,unit_view:re_developer_website.unit_palm_a101
+msgid "Garden view"
+msgstr "إطلالة على الحديقة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "General"
+msgstr "عام"
+
+#. module: re_developer_website
+#: model:re.service,name:re_developer_website.service_construction
+msgid "General Contracting"
+msgstr "المقاولات العامة"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__crm_lead__re_inquiry_type__general
+msgid "General Inquiry"
+msgstr "استفسار عام"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "Get in touch"
+msgstr "تواصل معنا"
+
+#. module: re_developer_website
+#: model:re.project,subtitle:re_developer_website.project_tower
+msgid "Grade-A offices and retail"
+msgstr "مكاتب ومحلات تجارية فئة A"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_clients_count
+#: model_terms:ir.ui.view,arch_db:re_developer_website.stats_band
+msgid "Happy Clients"
+msgstr "عميل سعيد"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__has_message
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/controllers/main.py:0
+msgid "Hello, I am interested in unit %(unit)s (%(url)s)"
+msgstr "مرحباً، أنا مهتم بالوحدة %(unit)s (%(url)s)"
+
+#. module: re_developer_website
+#: model:re.service,short_description:re_developer_website.service_sales
+msgid ""
+"Help choosing the right unit and payment plan, for living or investment."
+msgstr "نساعدك في اختيار الوحدة وخطة السداد المناسبة للسكن أو الاستثمار."
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_hero_image
+msgid "Hero Image"
+msgstr "صورة الواجهة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_hero_subtitle
+msgid "Hero Subtitle"
+msgstr "العنوان الفرعي للواجهة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_tagline
+msgid "Hero Tagline"
+msgstr "شعار الواجهة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_banner
+msgid "Home"
+msgstr "الرئيسية"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Homepage Hero"
+msgstr "واجهة الصفحة الرئيسية"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "I would like to"
+msgstr "أرغب في"
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/controllers/main.py:0
+msgid "I would like to know more about: %s"
+msgstr "أرغب في معرفة المزيد عن: %s"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__icon
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_exception_icon
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__icon
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__activity_exception_icon
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة تشير إلى نشاط استثنائي."
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__message_needaction
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محدداً، فهناك رسائل جديدة تحتاج لانتباهك."
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__message_has_error
+#: model:ir.model.fields,help:re_developer_website.field_re_project__message_has_sms_error
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__message_has_error
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محدداً، فبعض الرسائل بها خطأ في التسليم."
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__image_1920
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__image_1920
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__image_1920
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__image_1920
+msgid "Image"
+msgstr "الصورة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__image_1024
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__image_1024
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__image_1024
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__image_1024
+msgid "Image 1024"
+msgstr "صورة 1024"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__image_128
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__image_128
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__image_128
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__image_128
+msgid "Image 128"
+msgstr "صورة 128"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__image_256
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__image_256
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__image_256
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__image_256
+msgid "Image 256"
+msgstr "صورة 256"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__image_512
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__image_512
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__image_512
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__image_512
+msgid "Image 512"
+msgstr "صورة 512"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "In-house engineering and strict quality control."
+msgstr "فريق هندسي داخلي ورقابة صارمة على الجودة."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid ""
+"Indicative plan. Final terms are confirmed in the reservation contract."
+msgstr "خطة استرشادية، والشروط النهائية يتم تأكيدها في عقد الحجز."
+
+#. module: re_developer_website
+#: model:ir.ui.menu,name:re_developer_website.menu_re_inquiries
+msgid "Inquiries"
+msgstr "الاستفسارات"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_lead_team_id
+msgid "Inquiries Sales Team"
+msgstr "فريق المبيعات المسؤول عن الاستفسارات"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_lead_user_id
+msgid "Inquiries Salesperson"
+msgstr "مندوب المبيعات المسؤول عن الاستفسارات"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__installment_years
+msgid "Installment Years"
+msgstr "سنوات التقسيط"
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/models/re_unit.py:0
+msgid "Installment years cannot be negative."
+msgstr "لا يمكن أن تكون سنوات التقسيط بالسالب."
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_crm_lead__re_project_id
+#: model_terms:ir.ui.view,arch_db:re_developer_website.crm_lead_view_search_re
+msgid "Interested Project"
+msgstr "المشروع المهتم به"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_crm_lead__re_unit_id
+msgid "Interested Unit"
+msgstr "الوحدة المهتم بها"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "Interested in this unit?"
+msgstr "مهتم بهذه الوحدة؟"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "Inventory"
+msgstr "الوحدات"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_is_follower
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__is_published
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__is_published
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__is_published
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__is_published
+msgid "Is Published"
+msgstr "منشور"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__job_title
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: re_developer_website
+#: model:re.team.member,name:re_developer_website.team_cso
+msgid "Karim Fathy"
+msgstr "كريم فتحي"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Key Figures"
+msgstr "أرقام رئيسية"
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_kids
+msgid "Kids Area"
+msgstr "منطقة ألعاب أطفال"
+
+#. module: re_developer_website
+#: model:re.unit,unit_view:re_developer_website.unit_bay_t03
+msgid "Lagoon view"
+msgstr "إطلالة على اللاجون"
+
+#. module: re_developer_website
+#: model:re.unit,unit_view:re_developer_website.unit_palm_b204
+msgid "Lake view"
+msgstr "إطلالة على البحيرة"
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_green
+msgid "Landscaped Gardens"
+msgstr "حدائق ومساحات خضراء"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Largest area"
+msgstr "الأكبر مساحة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__write_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__write_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__write_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__write_uid
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__write_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__write_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__write_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__write_date
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__launch_date
+msgid "Launch Date"
+msgstr "تاريخ الإطلاق"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__state__planning
+msgid "Launching Soon"
+msgstr "يُطلق قريباً"
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "عميل محتمل / فرصة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Leadership"
+msgstr "القيادة"
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_re_team_member
+msgid "Leadership / Team Member"
+msgstr "عضو فريق القيادة"
+
+#. module: re_developer_website
+#: model:ir.actions.act_window,name:re_developer_website.re_team_member_action
+#: model:ir.ui.menu,name:re_developer_website.menu_re_team
+msgid "Leadership Team"
+msgstr "فريق القيادة"
+
+#. module: re_developer_website
+#: model:re.team.member,bio:re_developer_website.team_cso
+msgid "Leads a team of 60 sales consultants across Cairo and the North Coast."
+msgstr "يقود فريقاً من 60 مستشار مبيعات في القاهرة والساحل الشمالي."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Leave empty"
+msgstr "اتركه فارغاً"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__linkedin_url
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "LinkedIn"
+msgstr "لينكدإن"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "Location"
+msgstr "الموقع"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Long installment plans tailored to you."
+msgstr "خطط تقسيط طويلة مصممة لك."
+
+#. module: re_developer_website
+#: model:re.service,short_description:re_developer_website.service_fm
+msgid "Maintenance, security and landscaping long after handover."
+msgstr "صيانة وأمن وتنسيق حدائق لسنوات بعد الاستلام."
+
+#. module: re_developer_website
+#: model:res.groups,name:re_developer_website.group_re_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__map_embed_url
+msgid "Map Embed Url"
+msgstr "رابط تضمين الخريطة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__map_query
+msgid "Map Location"
+msgstr "الموقع على الخريطة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Mark as Sold"
+msgstr "تحديد كمباعة"
+
+#. module: re_developer_website
+#: model:re.service,short_description:re_developer_website.service_dev
+msgid ""
+"Master planning and development of residential, commercial and coastal "
+"communities."
+msgstr "التخطيط العام وتطوير المجتمعات السكنية والتجارية والساحلية."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "Max budget"
+msgstr "أقصى ميزانية"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Media"
+msgstr "الوسائط"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Meet our team"
+msgstr "تعرّف على فريقنا"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Message"
+msgstr "الرسالة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_has_error
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_ids
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_mission
+msgid "Mission"
+msgstr "الرسالة"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__project_type__mixed
+msgid "Mixed Use"
+msgstr "متعدد الاستخدامات"
+
+#. module: re_developer_website
+#: model:re.service,short_description:re_developer_website.service_design
+msgid ""
+"Modern architecture and interior finishing packages tailored to every "
+"budget."
+msgstr "عمارة عصرية وباقات تشطيب داخلي تناسب كل الميزانيات."
+
+#. module: re_developer_website
+#: model:re.team.member,name:re_developer_website.team_cto
+msgid "Mona Adel"
+msgstr "منى عادل"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__monthly_installment
+msgid "Monthly Installment"
+msgstr "القسط الشهري"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.overview_section
+msgid "More about us <i class=\"fa fa-arrow-right ms-1\"/>"
+msgstr "المزيد عنا <i class=\"fa fa-arrow-right ms-1\"/>"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__my_activity_date_deadline
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "موعد نشاطي النهائي"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: re_developer_website
+#: model:re.project,city:re_developer_website.project_palm
+msgid "New Cairo"
+msgstr "القاهرة الجديدة"
+
+#. module: re_developer_website
+#: model:re.project,city:re_developer_website.project_tower
+msgid "New Capital"
+msgstr "العاصمة الإدارية"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Newest"
+msgstr "الأحدث"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_calendar_event_id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "فعالية التقويم للنشاط التالي"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_date_deadline
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_summary
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_type_id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: re_developer_website
+#: model_terms:ir.actions.act_window,help:re_developer_website.crm_lead_re_action
+msgid "No inquiries yet"
+msgstr "لا توجد استفسارات بعد"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "No projects match this filter yet."
+msgstr "لا توجد مشروعات مطابقة لهذا الفلتر حالياً."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "No units match your search."
+msgstr "لا توجد وحدات مطابقة لبحثك."
+
+#. module: re_developer_website
+#: model:re.project,city:re_developer_website.project_bay
+msgid "North Coast"
+msgstr "الساحل الشمالي"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_needaction_counter
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_has_error_counter
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__message_needaction_counter
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__message_has_error_counter
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__office
+msgid "Office"
+msgstr "مكتب"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_office_hours
+msgid "Office Hours"
+msgstr "مواعيد العمل"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__crm_lead__re_inquiry_type__meeting
+msgid "Office Meeting / Interview"
+msgstr "اجتماع / مقابلة في المكتب"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "On request"
+msgstr "عند الطلب"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "On-time delivery"
+msgstr "التسليم في الموعد"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_thank_you
+msgid "One of our sales consultants will contact you shortly."
+msgstr "سيتواصل معك أحد مستشاري المبيعات قريباً."
+
+#. module: re_developer_website
+#: model_terms:re.project,description:re_developer_website.project_palm
+msgid ""
+"Only 25% of the land is built up; the rest is lakes, gardens and walkways."
+msgstr "25% فقط من الأرض مبنية، والباقي بحيرات وحدائق وممشى."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Our Mission"
+msgstr "رسالتنا"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "Our Projects"
+msgstr "مشروعاتنا"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_services
+msgid "Our Services"
+msgstr "خدماتنا"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Our Vision"
+msgstr "رؤيتنا"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Our sales team will call you back within one working day."
+msgstr "سيتصل بك فريق المبيعات خلال يوم عمل واحد."
+
+#. module: re_developer_website
+#: model:re.team.member,bio:re_developer_website.team_cto
+msgid "Oversees design, construction quality and delivery schedules."
+msgstr "يشرف على التصميم وجودة الإنشاء ومواعيد التسليم."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Overview & Interview"
+msgstr "نبذة ولقاء"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_overview_title
+msgid "Overview Title"
+msgstr "عنوان النبذة"
+
+#. module: re_developer_website
+#: model:re.project,name:re_developer_website.project_palm
+msgid "Palm Residence"
+msgstr "بالم ريزيدنس"
+
+#. module: re_developer_website
+#: model_terms:re.project,description:re_developer_website.project_palm
+msgid ""
+"Palm Residence is a fully integrated community in the heart of New Cairo, "
+"minutes from the American University and the 90th Street business district."
+msgstr ""
+"بالم ريزيدنس مجتمع متكامل في قلب القاهرة الجديدة، على بعد دقائق من الجامعة "
+"الأمريكية ومنطقة أعمال شارع التسعين."
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__penthouse
+msgid "Penthouse"
+msgstr "بنتهاوس"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Phone / WhatsApp *"
+msgstr "الموبايل / واتساب *"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Phone, email and address are taken from the company record."
+msgstr "رقم الهاتف والبريد والعنوان يتم أخذها من بيانات الشركة."
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/controllers/main.py:0
+msgid "Please enter a phone number or an email so we can reach you."
+msgstr "من فضلك أدخل رقم موبايل أو بريد إلكتروني حتى نتواصل معك."
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/controllers/main.py:0
+msgid "Please enter your name."
+msgstr "من فضلك أدخل اسمك."
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_crm_lead__re_preferred_date
+msgid "Preferred Date"
+msgstr "التاريخ المفضل"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Preferred date (visit / meeting)"
+msgstr "التاريخ المفضل (معاينة / اجتماع)"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__price
+msgid "Price"
+msgstr "السعر"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Price & Payment Plan"
+msgstr "السعر وخطة السداد"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__price_per_meter
+msgid "Price / m²"
+msgstr "سعر المتر²"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Price: high to low"
+msgstr "السعر: من الأعلى للأقل"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Price: low to high"
+msgstr "السعر: من الأقل للأعلى"
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_beach
+msgid "Private Beach"
+msgstr "شاطئ خاص"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__project_id
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_kanban
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "Project"
+msgstr "المشروع"
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_re_amenity
+msgid "Project Amenity"
+msgstr "مرفق المشروع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__project_type
+msgid "Project Type"
+msgstr "نوع المشروع"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "Project video"
+msgstr "فيديو المشروع"
+
+#. module: re_developer_website
+#: model:ir.actions.act_window,name:re_developer_website.re_project_action
+#: model:ir.ui.menu,name:re_developer_website.menu_re_projects
+#: model:website.menu,name:re_developer_website.menu_estate_projects
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "Projects"
+msgstr "المشروعات"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_projects_count
+#: model_terms:ir.ui.view,arch_db:re_developer_website.stats_band
+msgid "Projects Delivered"
+msgstr "مشروع تم تسليمه"
+
+#. module: re_developer_website
+#: model_terms:ir.actions.act_window,help:re_developer_website.re_project_action
+msgid ""
+"Projects and their units are published on the website automatically once you"
+" toggle \"Published\"."
+msgstr "تظهر المشروعات ووحداتها على الموقع تلقائياً بمجرد تفعيل \"منشور\"."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Published"
+msgstr "منشور"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Quality construction"
+msgstr "جودة الإنشاء"
+
+#. module: re_developer_website
+#: model:re.project,location:re_developer_website.project_bay
+msgid "Ras El Hekma, North Coast, Egypt"
+msgstr "رأس الحكمة، الساحل الشمالي، مصر"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_video_embed_url
+msgid "Re Video Embed Url"
+msgstr "رابط تضمين الفيديو"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_whatsapp_url
+msgid "Re Whatsapp Url"
+msgstr "رابط واتساب"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.cta_band
+msgid "Ready to find your next home or investment?"
+msgstr "جاهز تلاقي بيتك أو استثمارك الجاي؟"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+msgid "Ready to move"
+msgstr "استلام فوري"
+
+#. module: re_developer_website
+#: model:re.project,short_description:re_developer_website.project_tower
+msgid "Ready-to-move offices, clinics and retail units in the CBD."
+msgstr "مكاتب وعيادات ومحلات استلام فوري في منطقة الأعمال المركزية."
+
+#. module: re_developer_website
+#: model:ir.ui.menu,name:re_developer_website.menu_re_root
+#: model_terms:ir.ui.view,arch_db:re_developer_website.crm_lead_view_form_re
+msgid "Real Estate"
+msgstr "العقارات"
+
+#. module: re_developer_website
+#: model:re.service,name:re_developer_website.service_dev
+msgid "Real Estate Development"
+msgstr "التطوير العقاري"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.crm_lead_view_search_re
+msgid "Real Estate Inquiries"
+msgstr "استفسارات العقارات"
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_re_project
+msgid "Real Estate Project"
+msgstr "مشروع عقاري"
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_re_unit
+msgid "Real Estate Unit"
+msgstr "وحدة عقارية"
+
+#. module: re_developer_website
+#: model:ir.module.category,name:re_developer_website.module_category_real_estate
+msgid "Real Estate Website"
+msgstr "موقع العقارات"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.crm_lead_re_list
+msgid "Received"
+msgstr "تاريخ الاستلام"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Recommended"
+msgstr "المقترح"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "Request Information"
+msgstr "اطلب معلومات"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.crm_lead_view_search_re
+msgid "Request Type"
+msgstr "نوع الطلب"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_services
+msgid "Request this service"
+msgstr "اطلب هذه الخدمة"
+
+#. module: re_developer_website
+#: model:re.service,name:re_developer_website.service_resale
+msgid "Resale & Rentals"
+msgstr "إعادة البيع والإيجار"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Reserve"
+msgstr "حجز"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__state__reserved
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Reserved"
+msgstr "محجوزة"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__project_type__residential
+msgid "Residential"
+msgstr "سكني"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "Residential, commercial and coastal developments built to last."
+msgstr "مشروعات سكنية وتجارية وساحلية مبنية لتدوم."
+
+#. module: re_developer_website
+#: model:re.project,subtitle:re_developer_website.project_palm
+msgid "Resort-style living in New Cairo"
+msgstr "حياة المنتجعات في القاهرة الجديدة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__activity_user_id
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__retail
+msgid "Retail / Shop"
+msgstr "محل تجاري"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__is_seo_optimized
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__is_seo_optimized
+msgid "SEO optimized"
+msgstr "محسّن لمحركات البحث"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__message_has_sms_error
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: re_developer_website
+#: model:re.service,name:re_developer_website.service_sales
+msgid "Sales & Investment Advisory"
+msgstr "استشارات المبيعات والاستثمار"
+
+#. module: re_developer_website
+#: model:re.team.member,job_title:re_developer_website.team_cso
+msgid "Sales Director"
+msgstr "مدير المبيعات"
+
+#. module: re_developer_website
+#: model:re.unit,unit_view:re_developer_website.unit_bay_c07
+msgid "Sea view"
+msgstr "إطلالة على البحر"
+
+#. module: re_developer_website
+#: model:re.project,subtitle:re_developer_website.project_bay
+msgid "Sea-view chalets on the North Coast"
+msgstr "شاليهات بإطلالة بحرية في الساحل الشمالي"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__finishing__semi
+msgid "Semi Finished"
+msgstr "نصف تشطيب"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_contact
+msgid "Send us a request"
+msgstr "أرسل لنا طلبك"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__seo_name
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__seo_name
+msgid "Seo name"
+msgstr "اسم SEO"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_amenity__sequence
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__sequence
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__sequence
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__sequence
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__crm_lead__re_inquiry_type__service
+msgid "Service Request"
+msgstr "طلب خدمة"
+
+#. module: re_developer_website
+#: model:ir.actions.act_window,name:re_developer_website.re_service_action
+#: model:ir.ui.menu,name:re_developer_website.menu_re_services
+#: model:website.menu,name:re_developer_website.menu_estate_services
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_services
+msgid "Services"
+msgstr "الخدمات"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_services
+msgid "Services will be published soon."
+msgstr "سيتم نشر الخدمات قريباً."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Set Available"
+msgstr "تحديد كمتاحة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__short_description
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__short_description
+msgid "Short Description"
+msgstr "وصف مختصر"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_team_member_view_form
+msgid "Short biography..."
+msgstr "نبذة مختصرة..."
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__subtitle
+msgid "Short catch line shown under the project name."
+msgstr "جملة قصيرة تظهر تحت اسم المشروع."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Short summary shown on project cards..."
+msgstr "ملخص قصير يظهر على كروت المشروعات..."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_projects
+msgid "Show all projects"
+msgstr "عرض كل المشروعات"
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__short_description
+msgid "Shown on project cards."
+msgstr "يظهر على كروت المشروعات."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "Similar units in this project"
+msgstr "وحدات مشابهة في نفس المشروع"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__crm_lead__re_inquiry_type__visit
+msgid "Site Visit"
+msgstr "معاينة الموقع"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__state__sold
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Sold"
+msgstr "مباعة"
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/controllers/main.py:0
+msgid "Something went wrong, please try again or call us."
+msgstr "حدث خطأ، من فضلك حاول مرة أخرى أو اتصل بنا."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Sort"
+msgstr "الترتيب"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Specifications"
+msgstr "المواصفات"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__min_price
+msgid "Starting Price"
+msgstr "السعر يبدأ من"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__state
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__state
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__activity_state
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"متأخرة: تجاوز تاريخ الاستحقاق\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط لها: أنشطة مستقبلية."
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__subtitle
+msgid "Subtitle"
+msgstr "العنوان الفرعي"
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_pool
+msgid "Swimming Pools"
+msgstr "حمامات سباحة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "Tell us what you need"
+msgstr "أخبرنا بما تحتاجه"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_thank_you
+msgid "Thank You"
+msgstr "شكراً لك"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_thank_you
+msgid "Thank you! We received your request."
+msgstr "شكراً لك! تم استلام طلبك."
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/controllers/main.py:0
+msgid "The email address looks invalid."
+msgstr "البريد الإلكتروني غير صحيح."
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__website_url
+#: model:ir.model.fields,help:re_developer_website.field_re_service__website_url
+#: model:ir.model.fields,help:re_developer_website.field_re_team_member__website_url
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__website_url
+msgid "The full URL to access the document through the website."
+msgstr "الرابط الكامل للوصول إلى المستند عبر الموقع."
+
+#. module: re_developer_website
+#: model:ir.model.constraint,message:re_developer_website.constraint_re_amenity_name_uniq
+msgid "This amenity already exists."
+msgstr "هذا المرفق موجود بالفعل."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Timeline & Figures"
+msgstr "الجدول الزمني والأرقام"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_list
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_list
+msgid "Total Area"
+msgstr "إجمالي المساحة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__total_area
+msgid "Total Land Area (m²)"
+msgstr "إجمالي مساحة الأرض (م²)"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__townhouse
+msgid "Townhouse"
+msgstr "تاون هاوس"
+
+#. module: re_developer_website
+#: model:re.service,short_description:re_developer_website.service_construction
+msgid ""
+"Turnkey construction with in-house engineers and certified subcontractors."
+msgstr "تنفيذ متكامل بمهندسين داخليين ومقاولين باطن معتمدين."
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__twinhouse
+msgid "Twin House"
+msgstr "توين هاوس"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_search
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__activity_exception_decoration
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي في السجل."
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_project__state__construction
+msgid "Under Construction"
+msgstr "تحت الإنشاء"
+
+#. module: re_developer_website
+#: model:re.amenity,name:re_developer_website.amenity_parking
+msgid "Underground Parking"
+msgstr "جراج تحت الأرض"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_kanban
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_card
+msgid "Unit"
+msgstr "وحدة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__name
+msgid "Unit Code"
+msgstr "كود الوحدة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__unit_count
+msgid "Unit Count"
+msgstr "عدد الوحدات"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__crm_lead__re_inquiry_type__unit
+msgid "Unit Inquiry"
+msgstr "استفسار عن وحدة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__unit_type
+msgid "Unit Type"
+msgstr "نوع الوحدة"
+
+#. module: re_developer_website
+#: model:ir.model.constraint,message:re_developer_website.constraint_re_unit_name_project_uniq
+msgid "Unit code must be unique per project."
+msgstr "يجب ألا يتكرر كود الوحدة داخل نفس المشروع."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "Unit description for the website..."
+msgstr "وصف الوحدة على الموقع..."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "Unit type"
+msgstr "نوع الوحدة"
+
+#. module: re_developer_website
+#. odoo-python
+#: code:addons/re_developer_website/models/re_project.py:0
+#: model:ir.actions.act_window,name:re_developer_website.re_unit_action
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__unit_ids
+#: model:ir.ui.menu,name:re_developer_website.menu_re_units
+#: model:website.menu,name:re_developer_website.menu_estate_units
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "Units"
+msgstr "الوحدات"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_units_count
+#: model_terms:ir.ui.view,arch_db:re_developer_website.stats_band
+msgid "Units Delivered"
+msgstr "وحدة تم تسليمها"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid "Units in this project"
+msgstr "وحدات هذا المشروع"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+msgid ""
+"Units will be released soon. Register your interest using the form above."
+msgstr "سيتم طرح الوحدات قريباً. سجّل اهتمامك من خلال النموذج."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.project_card
+msgid "Unpublished"
+msgstr "غير منشور"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__video_embed_url
+msgid "Video Embed Url"
+msgstr "رابط تضمين الفيديو"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__video_url
+msgid "Video URL"
+msgstr "رابط الفيديو"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__unit_view
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "View"
+msgstr "الإطلالة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+msgid "View all projects <i class=\"fa fa-arrow-right ms-1\"/>"
+msgstr "عرض كل المشروعات <i class=\"fa fa-arrow-right ms-1\"/>"
+
+#. module: re_developer_website
+#: model:ir.model.fields.selection,name:re_developer_website.selection__re_unit__unit_type__villa
+msgid "Villa"
+msgstr "فيلا"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_published
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__website_published
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__website_published
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_published
+msgid "Visible on current website"
+msgstr "ظاهر على الموقع الحالي"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_vision
+msgid "Vision"
+msgstr "الرؤية"
+
+#. module: re_developer_website
+#: model:re.service,short_description:re_developer_website.service_resale
+msgid "We market and manage your unit for resale or rent."
+msgstr "نسوّق ونُدير وحدتك لإعادة البيع أو الإيجار."
+
+#. module: re_developer_website
+#: model:ir.model,name:re_developer_website.model_website
+msgid "Website"
+msgstr "الموقع الإلكتروني"
+
+#. module: re_developer_website
+#: model:ir.ui.menu,name:re_developer_website.menu_re_content
+msgid "Website Content"
+msgstr "محتوى الموقع"
+
+#. module: re_developer_website
+#: model:ir.actions.act_window,name:re_developer_website.crm_lead_re_action
+msgid "Website Inquiries"
+msgstr "استفسارات الموقع"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Website Inquiries Go To"
+msgstr "توجيه استفسارات الموقع إلى"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_message_ids
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_crm_lead__re_inquiry_type
+msgid "Website Request Type"
+msgstr "نوع طلب الموقع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_url
+#: model:ir.model.fields,field_description:re_developer_website.field_re_service__website_url
+#: model:ir.model.fields,field_description:re_developer_website.field_re_team_member__website_url
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_url
+msgid "Website URL"
+msgstr "رابط الموقع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__website_message_ids
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__website_message_ids
+msgid "Website communication history"
+msgstr "سجل التواصل عبر الموقع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_meta_description
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_meta_description
+msgid "Website meta description"
+msgstr "الوصف التعريفي للموقع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_meta_keywords
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_meta_keywords
+msgid "Website meta keywords"
+msgstr "الكلمات المفتاحية للموقع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_meta_title
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_meta_title
+msgid "Website meta title"
+msgstr "العنوان التعريفي للموقع"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_re_project__website_meta_og_img
+#: model:ir.model.fields,field_description:re_developer_website.field_re_unit__website_meta_og_img
+msgid "Website opengraph image"
+msgstr "صورة Open Graph للموقع"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_home
+msgid "What we do"
+msgstr "ماذا نقدم"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_whatsapp
+msgid "WhatsApp Number"
+msgstr "رقم الواتساب"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Who We Are"
+msgstr "من نحن"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Who we are, our story and values..."
+msgstr "من نحن، قصتنا وقيمنا..."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_about
+msgid "Why choose us"
+msgstr "لماذا تختارنا"
+
+#. module: re_developer_website
+#: model:ir.model.fields,field_description:re_developer_website.field_website__re_years_experience
+#: model_terms:ir.ui.view,arch_db:re_developer_website.stats_band
+msgid "Years of Experience"
+msgstr "سنوات الخبرة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_project__video_url
+#: model:ir.model.fields,help:re_developer_website.field_website__re_video_url
+msgid "YouTube or Vimeo link."
+msgstr "رابط يوتيوب أو فيميو."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_kanban
+msgid "available /"
+msgstr "متاحة /"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_banner
+msgid "breadcrumb"
+msgstr "مسار التنقل"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.inquiry_form
+msgid "e.g. 3 - 5 million"
+msgstr "مثال: 3 - 5 مليون"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_search_bar
+msgid "e.g. 5000000"
+msgstr "مثال: 5000000"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_form
+msgid "e.g. B2-104"
+msgstr "مثال: B2-104"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_team_member_view_form
+msgid "e.g. Chairman & CEO"
+msgstr "مثال: رئيس مجلس الإدارة"
+
+#. module: re_developer_website
+#: model:ir.model.fields,help:re_developer_website.field_re_unit__unit_view
+msgid "e.g. Garden view, Lagoon view"
+msgstr "مثال: إطلالة على الحديقة، إطلالة على اللاجون"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_service_view_form
+msgid "e.g. General Contracting"
+msgstr "مثال: المقاولات العامة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_form
+msgid "e.g. Palm Residence"
+msgstr "مثال: بالم ريزيدنس"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "https://www.youtube.com/watch?v=..."
+msgstr "https://www.youtube.com/watch?v=..."
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_project_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_unit_view_kanban
+#: model_terms:ir.ui.view,arch_db:re_developer_website.unit_card
+msgid "m²"
+msgstr "م²"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.project_card
+msgid "unit available"
+msgstr "وحدة متاحة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.re_project_view_kanban
+msgid "units"
+msgstr "وحدة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.project_card
+msgid "units available"
+msgstr "وحدات متاحة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_units
+msgid "units found"
+msgstr "وحدة"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
+msgid "years"
+msgstr "سنوات"

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Enable the English / العربية language switcher in the website header -->
+    <function model="website" name="_re_enable_arabic"/>
+</odoo>
