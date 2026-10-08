@@ -27,6 +27,8 @@
                         <page string="Homepage Hero" name="hero">
                             <group>
                                 <group>
+                                    <field name="logo" widget="image" options="{'size': [180, 60]}"
+                                           string="Website Logo"/>
                                     <field name="re_tagline"/>
                                     <field name="re_hero_subtitle"/>
                                 </group>

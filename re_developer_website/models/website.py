@@ -9,6 +9,23 @@ RE_MENU_AR = {
     '/estate/services': ('Services', 'الخدمات'),
     '/estate/about': ('About Us', 'من نحن'),
 }
+RE_BRAND_PARAM = 're_developer_website.brand_palette_applied'
+# El Motawer brand: gold on deep navy (sampled from the company logo)
+RE_BRAND_PALETTE = {
+    'o-color-1': '#C8A45D',  # gold - buttons, accents
+    'o-color-2': '#13233F',  # navy - secondary
+    'o-color-3': '#F7F3EA',  # warm cream - light sections
+    'o-color-4': '#FFFFFF',  # white
+    'o-color-5': '#06101E',  # deep navy - header, footer, hero
+    # header / footer use colour combination 5 (deep navy) so the gold logo
+    # sits on its own background
+    'menu': 5,
+    'footer': 5,
+    'copyright': 5,
+}
+RE_BRAND_LAYOUT = {
+    'logo-height': '2.6rem',
+}
 RE_DEFAULTS_AR = {
     're_tagline': ('Building Communities That Last', 'نبني مجتمعات تدوم'),
     're_overview_title': ('Company Overview', 'نبذة عن الشركة'),
@@ -85,6 +102,37 @@ class Website(models.Model):
         websites = self.search([])
         for field, (english, arabic) in RE_DEFAULTS_AR.items():
             translate(websites, field, english, arabic)
+
+    @api.model
+    def _re_apply_brand_palette(self, force=False):
+        """Apply the brand colours to every website, exactly like picking a
+        palette in the website editor. Runs once (tracked by a system
+        parameter) so later changes made in the editor are never overwritten."""
+        params = self.env['ir.config_parameter'].sudo()
+        if params.get_param(RE_BRAND_PARAM) and not force:
+            return
+        assets = self.env['web_editor.assets']
+        for website in self.search([]):
+            website_assets = assets.with_context(website_id=website.id)
+            website_assets.make_scss_customization(
+                '/website/static/src/scss/options/user_values.scss',
+                dict(RE_BRAND_LAYOUT, **{'color-palettes-name': "'base-1'"}),
+            )
+            website_assets.make_scss_customization(
+                '/website/static/src/scss/options/colors/user_color_palette.scss',
+                RE_BRAND_PALETTE,
+            )
+        params.set_param(RE_BRAND_PARAM, '1')
+
+    @api.model
+    def _re_translate_html_terms(self, website_ids, field, arabic_terms):
+        """Translate an HTML field paragraph by paragraph (writing the whole
+        value in Arabic would replace the English version as well)."""
+        lang = self.env.ref('base.lang_ar').code
+        for website in self.browse(website_ids):
+            translations = website.get_field_translations(field, langs=[lang])[0]
+            sources = list(dict.fromkeys(t['source'] for t in translations))
+            website.update_field_translations(field, {lang: dict(zip(sources, arabic_terms))})
 
     @api.model
     def _re_write_arabic(self, website_ids, values):

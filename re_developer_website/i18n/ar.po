@@ -2365,3 +2365,8 @@ msgstr "وحدة"
 #: model_terms:ir.ui.view,arch_db:re_developer_website.page_unit_detail
 msgid "years"
 msgstr "سنوات"
+
+#. module: re_developer_website
+#: model_terms:ir.ui.view,arch_db:re_developer_website.website_view_re_profile_form
+msgid "Website Logo"
+msgstr "شعار الموقع"

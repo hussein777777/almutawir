@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Gold / navy brand palette, applied once (editor changes are kept afterwards) -->
+    <function model="website" name="_re_apply_brand_palette"/>
+</odoo>
