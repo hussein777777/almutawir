@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Marketplace search + latest listings on the homepage -->
+    <template id="page_home_marketplace" name="Property Portal: Homepage Marketplace" inherit_id="re_developer_website.page_home">
+        <xpath expr="//div[@id='oe_structure_re_home_1']" position="after">
+            <section t-if="rp_latest" class="py-5 o_rp_site o_rp_home_market">
+                <div class="container">
+                    <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+                        <div class="o_re_section_heading">
+                            <span class="o_re_eyebrow">Marketplace</span>
+                            <h2 class="o_re_section_title mb-0">Latest properties</h2>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a href="/properties/buy" class="btn btn-primary">For sale</a>
+                            <a href="/properties/rent" class="btn btn-outline-primary">For rent</a>
+                            <a href="/properties/buy?view=map" class="btn btn-outline-dark"><i class="fa fa-map-o me-1"/>Map</a>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div t-foreach="rp_latest" t-as="listing" class="col-sm-6 col-lg-3">
+                            <t t-call="re_property_portal.listing_card">
+                                <t t-set="compact" t-value="True"/>
+                                <t t-set="card_scope" t-value="'home'"/>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </xpath>
+    </template>
+</odoo>

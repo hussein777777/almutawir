@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_marketplace" name="Marketplace" parent="re_developer_website.menu_re_root" sequence="15"/>
+    <menuitem id="menu_marketplace_review" name="Listings to Review" parent="menu_marketplace"
+              action="re_listing_review_action" sequence="5"/>
+    <menuitem id="menu_marketplace_listings" name="All Listings" parent="menu_marketplace"
+              action="re_listing_action" sequence="10"/>
+    <menuitem id="menu_marketplace_agent_requests" name="Agent Requests" parent="menu_marketplace"
+              action="re_agent_pending_action" sequence="20"/>
+    <menuitem id="menu_marketplace_agents" name="Agents" parent="menu_marketplace"
+              action="re_agent_action" sequence="25"/>
+    <menuitem id="menu_marketplace_agencies" name="Agencies &amp; Developers" parent="menu_marketplace"
+              action="re_agency_action" sequence="30"/>
+    <menuitem id="menu_marketplace_alerts" name="Search Alerts" parent="menu_marketplace"
+              action="re_search_alert_action" sequence="40"/>
+    <menuitem id="menu_marketplace_locations" name="Locations" parent="re_developer_website.menu_re_config"
+              action="re_location_action" sequence="30"/>
+</odoo>

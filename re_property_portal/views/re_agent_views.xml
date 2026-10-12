@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="re_agent_view_form" model="ir.ui.view">
+        <field name="name">re.agent.form</field>
+        <field name="model">re.agent</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_approve" type="object" string="Approve &amp; Invite" class="btn-primary"
+                            invisible="state == 'active'"
+                            confirm="This creates a portal account and emails the invitation. Continue?"/>
+                    <button name="action_resend_invitation" type="object" string="Resend Invitation"
+                            invisible="state != 'active' or not user_id"/>
+                    <button name="action_block" type="object" string="Block" invisible="state != 'active'"
+                            confirm="The agent loses portal access and all their listings are unpublished. Continue?"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_listings" icon="fa-home">
+                            <field name="listing_count" widget="statinfo" string="Listings"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_leads" icon="fa-envelope">
+                            <field name="lead_count" widget="statinfo" string="Inquiries"/>
+                        </button>
+                        <field name="is_published" widget="website_redirect_button"/>
+                    </div>
+                    <widget name="web_ribbon" title="Verified" bg_color="text-bg-success" invisible="not is_verified"/>
+                    <field name="image_1920" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}"/>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Full name"/></h1>
+                        <field name="job_title" placeholder="e.g. Senior Property Consultant"/>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="agent_kind"/>
+                            <field name="agency_id" invisible="agent_kind == 'owner'"/>
+                            <field name="requested_agency" invisible="not requested_agency" readonly="1"/>
+                            <field name="is_verified"/>
+                            <field name="languages"/>
+                        </group>
+                        <group>
+                            <field name="phone" widget="phone"/>
+                            <field name="whatsapp" widget="phone"/>
+                            <field name="email" widget="email"/>
+                            <field name="user_id" readonly="1"/>
+                            <field name="partner_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <field name="bio" placeholder="Short bio shown on the agent page..."/>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="re_agent_view_list" model="ir.ui.view">
+        <field name="name">re.agent.list</field>
+        <field name="model">re.agent</field>
+        <field name="arch" type="xml">
+            <list decoration-warning="state == 'pending'" decoration-muted="state == 'blocked'">
+                <field name="create_date" string="Requested" optional="show"/>
+                <field name="name"/>
+                <field name="agent_kind"/>
+                <field name="agency_id"/>
+                <field name="requested_agency" optional="hide"/>
+                <field name="phone"/>
+                <field name="email"/>
+                <field name="listing_count"/>
+                <field name="is_verified" widget="boolean_toggle"/>
+                <field name="state" widget="badge"
+                       decoration-warning="state == 'pending'"
+                       decoration-success="state == 'active'"
+                       decoration-danger="state == 'blocked'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="re_agent_view_search" model="ir.ui.view">
+        <field name="name">re.agent.search</field>
+        <field name="model">re.agent</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="agency_id"/>
+                <field name="email"/>
+                <filter name="pending" string="Pending Approval" domain="[('state', '=', 'pending')]"/>
+                <filter name="active_agents" string="Active" domain="[('state', '=', 'active')]"/>
+                <separator/>
+                <filter name="owners" string="Owners" domain="[('agent_kind', '=', 'owner')]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_agency" string="Agency" context="{'group_by': 'agency_id'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="re_agent_action" model="ir.actions.act_window">
+        <field name="name">Agents</field>
+        <field name="res_model">re.agent</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No agents yet</p>
+            <p>Agents and owners request access from the website ("List your property"). Approve them here to give them a portal account.</p>
+        </field>
+    </record>
+
+    <record id="re_agent_pending_action" model="ir.actions.act_window">
+        <field name="name">Agent Requests</field>
+        <field name="res_model">re.agent</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_pending': 1}</field>
+    </record>
+</odoo>

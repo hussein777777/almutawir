@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_lead_view_form_portal" model="ir.ui.view">
+        <field name="name">crm.lead.form.property.portal</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="re_developer_website.crm_lead_view_form_re"/>
+        <field name="arch" type="xml">
+            <field name="re_unit_id" position="after">
+                <field name="re_listing_id"/>
+                <field name="re_agent_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="crm_lead_list_portal" model="ir.ui.view">
+        <field name="name">crm.lead.list.property.portal</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="re_developer_website.crm_lead_re_list"/>
+        <field name="arch" type="xml">
+            <field name="re_unit_id" position="after">
+                <field name="re_listing_id" optional="show"/>
+                <field name="re_agent_id" optional="show"/>
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="re_location_view_list" model="ir.ui.view">
+        <field name="name">re.location.list</field>
+        <field name="model">re.location</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="complete_name" readonly="1"/>
+                <field name="name"/>
+                <field name="parent_id"/>
+                <field name="location_type"/>
+                <field name="latitude" optional="hide"/>
+                <field name="longitude" optional="hide"/>
+                <field name="listing_count"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="re_location_view_search" model="ir.ui.view">
+        <field name="name">re.location.search</field>
+        <field name="model">re.location</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="complete_name"/>
+                <field name="parent_id"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_type" string="Type" context="{'group_by': 'location_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="re_location_action" model="ir.actions.act_window">
+        <field name="name">Locations</field>
+        <field name="res_model">re.location</field>
+        <field name="view_mode">list</field>
+    </record>
+</odoo>

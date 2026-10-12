@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Portal home: entries for agents -->
+    <template id="portal_my_home_properties" name="Portal: My Properties" inherit_id="portal.portal_my_home" priority="30">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="before">
+            <t t-set="re_portal_agent" t-value="request.env['re.agent']._get_for_user()"/>
+            <t t-if="re_portal_agent" t-set="portal_client_category_enable" t-value="True"/>
+        </xpath>
+        <div id="portal_client_category" position="inside">
+            <t t-if="re_portal_agent">
+                <t t-call="portal.portal_docs_entry">
+                    <t t-set="icon" t-value="'/re_property_portal/static/description/icon_listing.svg'"/>
+                    <t t-set="title">My Properties</t>
+                    <t t-set="url" t-value="'/my/listings'"/>
+                    <t t-set="text">Add, edit and publish your listings</t>
+                    <t t-set="placeholder_count" t-value="'re_listing_count'"/>
+                    <t t-set="config_card" t-value="True"/>
+                </t>
+                <t t-call="portal.portal_docs_entry">
+                    <t t-set="icon" t-value="'/re_property_portal/static/description/icon_inquiry.svg'"/>
+                    <t t-set="title">Property Inquiries</t>
+                    <t t-set="url" t-value="'/my/property-leads'"/>
+                    <t t-set="text">Messages from buyers and tenants</t>
+                    <t t-set="placeholder_count" t-value="'re_lead_count'"/>
+                    <t t-set="config_card" t-value="True"/>
+                </t>
+            </t>
+        </div>
+    </template>
+
+    <template id="portal_breadcrumbs_properties" name="Portal: Properties Breadcrumbs" inherit_id="portal.portal_breadcrumbs" priority="30">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 're_listings'" class="breadcrumb-item active">My Properties</li>
+            <t t-if="page_name == 're_listing_form'">
+                <li class="breadcrumb-item"><a href="/my/listings">My Properties</a></li>
+                <li class="breadcrumb-item active">
+                    <t t-if="listing" t-out="listing.reference"/>
+                    <t t-else="">New property</t>
+                </li>
+            </t>
+            <li t-if="page_name == 're_leads'" class="breadcrumb-item active">Property Inquiries</li>
+        </xpath>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- My listings                                                     -->
+    <!-- ============================================================== -->
+    <template id="portal_my_listings" name="Portal: My Listings">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <div class="o_rp_site o_rp_portal">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 my-3">
+                    <h3 class="mb-0">My Properties</h3>
+                    <div class="d-flex gap-2">
+                        <a href="/my/listings/new?type=sale" class="btn btn-primary"><i class="fa fa-plus me-1"/>Property for sale</a>
+                        <a href="/my/listings/new?type=rent" class="btn btn-outline-primary"><i class="fa fa-plus me-1"/>Property for rent</a>
+                    </div>
+                </div>
+                <div t-if="saved" class="alert alert-success" role="alert"><i class="fa fa-check me-1"/>Saved.</div>
+                <div t-if="request.params.get('error')" class="alert alert-danger" role="alert" t-out="request.params.get('error')"/>
+                <ul class="nav nav-tabs mb-3">
+                    <t t-foreach="[('all', None), ('published', ['published']), ('pending', ['pending']), ('draft', ['draft', 'rejected']), ('closed', ['closed'])]" t-as="t">
+                        <li class="nav-item">
+                            <a t-attf-href="/my/listings?tab=#{t[0]}" t-attf-class="nav-link #{tab == t[0] and 'active' or ''}">
+                                <t t-if="t[0] == 'all'">All</t>
+                                <t t-elif="t[0] == 'published'">Published</t>
+                                <t t-elif="t[0] == 'pending'">In review</t>
+                                <t t-elif="t[0] == 'draft'">Drafts</t>
+                                <t t-else="">Sold / Rented</t>
+                                <span class="badge text-bg-light ms-1" t-out="sum(counts.get(s, 0) for s in t[1]) if t[1] else sum(counts.values())"/>
+                            </a>
+                        </li>
+                    </t>
+                </ul>
+                <t t-set="state_badges" t-value="{'draft': 'text-bg-secondary', 'pending': 'text-bg-warning', 'published': 'text-bg-success', 'rejected': 'text-bg-danger', 'closed': 'text-bg-dark'}"/>
+                <div t-if="not listings" class="text-center py-5 text-muted">
+                    <i class="fa fa-home fa-3x mb-3"/>
+                    <p>No properties here yet.</p>
+                </div>
+                <div t-else="" class="table-responsive">
+                    <table class="table align-middle o_rp_portal_table">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th class="text-end">Price</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center d-none d-md-table-cell"><i class="fa fa-eye" title="Views"/></th>
+                                <th class="text-center d-none d-md-table-cell"><i class="fa fa-envelope" title="Inquiries"/></th>
+                                <th class="text-end">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="listings" t-as="listing">
+                                <td>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img t-if="listing.cover_image_id" t-attf-src="/web/image/re.listing.image/#{listing.cover_image_id.id}/image_128"
+                                             class="o_rp_portal_thumb" t-att-alt="listing.name"/>
+                                        <div t-else="" class="o_rp_portal_thumb o_rp_card_noimg"><i class="fa fa-home"/></div>
+                                        <div>
+                                            <div class="fw-bold" t-out="listing.name"/>
+                                            <small class="text-muted">
+                                                <t t-out="listing.reference"/> · <span t-field="listing.listing_type"/> ·
+                                                <t t-out="listing.location_id.name"/>
+                                            </small>
+                                            <div t-if="listing.state == 'rejected' and listing.rejection_reason" class="small text-danger">
+                                                <i class="fa fa-exclamation-circle me-1"/><t t-out="listing.rejection_reason"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-end text-nowrap" t-out="money(listing.price, listing.currency_id)"/>
+                                <td class="text-center">
+                                    <span t-att-class="'badge ' + state_badges[listing.state]"
+                                          t-field="listing.state"/>
+                                </td>
+                                <td class="text-center d-none d-md-table-cell" t-out="listing.view_count"/>
+                                <td class="text-center d-none d-md-table-cell" t-out="listing.lead_count"/>
+                                <td class="text-end text-nowrap">
+                                    <a t-att-href="listing.website_url" class="btn btn-sm btn-link" title="View"><i class="fa fa-eye"/></a>
+                                    <a t-if="listing.state != 'closed'" t-attf-href="/my/listings/#{listing.id}/edit" class="btn btn-sm btn-outline-primary">Edit</a>
+                                    <form t-if="listing.state in ('draft', 'rejected')" t-attf-action="/my/listings/#{listing.id}/submit" method="post" class="d-inline">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <button class="btn btn-sm btn-primary">Submit</button>
+                                    </form>
+                                    <form t-if="listing.state == 'pending'" t-attf-action="/my/listings/#{listing.id}/withdraw" method="post" class="d-inline">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <button class="btn btn-sm btn-outline-secondary">Withdraw</button>
+                                    </form>
+                                    <form t-if="listing.state == 'published'" t-attf-action="/my/listings/#{listing.id}/close" method="post" class="d-inline"
+                                          onsubmit="return confirm(this.dataset.confirm)" t-att-data-confirm="confirm_close">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <button class="btn btn-sm btn-outline-dark">
+                                            <t t-if="listing.listing_type == 'rent'">Rented</t>
+                                            <t t-else="">Sold</t>
+                                        </button>
+                                    </form>
+                                    <form t-if="listing.state in ('draft', 'rejected')" t-attf-action="/my/listings/#{listing.id}/delete" method="post" class="d-inline"
+                                          onsubmit="return confirm(this.dataset.confirm)" t-att-data-confirm="confirm_delete">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <button class="btn btn-sm btn-link text-danger" title="Delete"><i class="fa fa-trash"/></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div t-if="pager" class="o_portal_pager d-flex justify-content-center">
+                    <t t-call="portal.pager"/>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Add / edit listing                                              -->
+    <!-- ============================================================== -->
+    <template id="portal_listing_form" name="Portal: Listing Form">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <div class="o_rp_site o_rp_portal my-3">
+                <h3>
+                    <t t-if="listing">Edit <t t-out="listing.reference"/></t>
+                    <t t-else="">New property</t>
+                </h3>
+                <div t-if="form_error" class="alert alert-danger" role="alert" t-out="form_error"/>
+                <div t-if="listing and listing.state == 'published'" class="alert alert-info small" role="alert">
+                    <i class="fa fa-info-circle me-1"/>Price changes go live immediately. Other changes (photos, description, details) are reviewed again before they are published.
+                </div>
+                <div t-if="listing and listing.state == 'rejected' and listing.rejection_reason" class="alert alert-danger small" role="alert">
+                    <strong>Review note: </strong><t t-out="listing.rejection_reason"/>
+                </div>
+                <form action="/my/listings/save" method="post" enctype="multipart/form-data" class="o_rp_listing_form">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input t-if="listing" type="hidden" name="listing_id" t-att-value="listing.id"/>
+
+                    <div class="card mb-4"><div class="card-body">
+                        <h5 class="card-title mb-3">Basics</h5>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Purpose *</label>
+                                <div class="btn-group w-100" role="group">
+                                    <t t-foreach="listing_types" t-as="lt">
+                                        <input type="radio" class="btn-check o_rp_purpose_radio" name="listing_type" t-att-id="'o_rp_lt_' + lt[0]"
+                                               t-att-value="lt[0]" t-att-checked="fv.get('listing_type') == lt[0]"/>
+                                        <label class="btn btn-outline-primary" t-att-for="'o_rp_lt_' + lt[0]" t-out="lt[1]"/>
+                                    </t>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label" for="o_rp_f_ptype">Property type *</label>
+                                <select id="o_rp_f_ptype" name="property_type" class="form-select" required="required">
+                                    <t t-foreach="property_types" t-as="pt">
+                                        <option t-att-value="pt[0]" t-att-selected="fv.get('property_type') == pt[0]" t-out="pt[1]"/>
+                                    </t>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label" for="o_rp_f_completion">Completion *</label>
+                                <select id="o_rp_f_completion" name="completion" class="form-select">
+                                    <t t-foreach="completions" t-as="c"><option t-att-value="c[0]" t-att-selected="fv.get('completion') == c[0]" t-out="c[1]"/></t>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="o_rp_f_name">Title *</label>
+                                <input id="o_rp_f_name" type="text" name="name" class="form-control" maxlength="150" required="required"
+                                       t-att-value="fv.get('name')" placeholder="e.g. Fully finished 3 bedroom apartment with garden"/>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="card mb-4"><div class="card-body">
+                        <h5 class="card-title mb-3">Price</h5>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label" for="o_rp_f_price">Price *</label>
+                                <input id="o_rp_f_price" type="number" min="0" step="any" name="price" class="form-control" required="required"
+                                       t-att-value="fv.get('price', '')"/>
+                            </div>
+                            <div class="col-md-4 o_rp_rent_only">
+                                <label class="form-label" for="o_rp_f_period">Rent paid</label>
+                                <select id="o_rp_f_period" name="rent_period" class="form-select">
+                                    <t t-foreach="rent_periods" t-as="rp"><option t-att-value="rp[0]" t-att-selected="fv.get('rent_period') == rp[0]" t-out="rp[1]"/></t>
+                                </select>
+                            </div>
+                            <div class="col-md-4 o_rp_sale_only">
+                                <label class="form-label" for="o_rp_f_sale_type">Sale type</label>
+                                <select id="o_rp_f_sale_type" name="sale_type" class="form-select">
+                                    <t t-foreach="sale_types" t-as="st"><option t-att-value="st[0]" t-att-selected="fv.get('sale_type') == st[0]" t-out="st[1]"/></t>
+                                </select>
+                            </div>
+                            <div class="col-md-4 o_rp_sale_only">
+                                <label class="form-label" for="o_rp_f_down">Down payment</label>
+                                <input id="o_rp_f_down" type="number" min="0" step="any" name="down_payment" class="form-control" t-att-value="fv.get('down_payment', '')"/>
+                            </div>
+                            <div class="col-md-4 o_rp_sale_only">
+                                <label class="form-label" for="o_rp_f_years">Installment years</label>
+                                <input id="o_rp_f_years" type="number" min="0" max="30" name="installment_years" class="form-control" t-att-value="fv.get('installment_years', '')"/>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="card mb-4"><div class="card-body">
+                        <h5 class="card-title mb-3">Details</h5>
+                        <div class="row g-3">
+                            <div class="col-6 col-md-3">
+                                <label class="form-label" for="o_rp_f_beds">Bedrooms</label>
+                                <input id="o_rp_f_beds" type="number" min="0" name="bedrooms" class="form-control" t-att-value="fv.get('bedrooms', '')"/>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <label class="form-label" for="o_rp_f_baths">Bathrooms</label>
+                                <input id="o_rp_f_baths" type="number" min="0" name="bathrooms" class="form-control" t-att-value="fv.get('bathrooms', '')"/>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <label class="form-label" for="o_rp_f_area">Area (m²) *</label>
+                                <input id="o_rp_f_area" type="number" min="0" step="any" name="area" class="form-control" t-att-value="fv.get('area', '')"/>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <label class="form-label" for="o_rp_f_garden">Garden / roof (m²)</label>
+                                <input id="o_rp_f_garden" type="number" min="0" step="any" name="garden_area" class="form-control" t-att-value="fv.get('garden_area', '')"/>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <label class="form-label" for="o_rp_f_floor">Floor</label>
+                                <input id="o_rp_f_floor" type="text" name="floor" class="form-control" maxlength="30" t-att-value="fv.get('floor', '')"/>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <label class="form-label" for="o_rp_f_finishing">Finishing</label>
+                                <select id="o_rp_f_finishing" name="finishing" class="form-select">
+                                    <t t-foreach="finishings" t-as="f"><option t-att-value="f[0]" t-att-selected="fv.get('finishing') == f[0]" t-out="f[1]"/></t>
+                                </select>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <label class="form-label" for="o_rp_f_furnishing">Furnishing</label>
+                                <select id="o_rp_f_furnishing" name="furnishing" class="form-select">
+                                    <t t-foreach="furnishings" t-as="f"><option t-att-value="f[0]" t-att-selected="fv.get('furnishing') == f[0]" t-out="f[1]"/></t>
+                                </select>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <label class="form-label" for="o_rp_f_delivery">Delivery date (off-plan)</label>
+                                <input id="o_rp_f_delivery" type="date" name="delivery_date" class="form-control" t-att-value="fv.get('delivery_date', '')"/>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="o_rp_f_desc">Description</label>
+                                <textarea id="o_rp_f_desc" name="description" rows="6" class="form-control" maxlength="5000"
+                                          t-out="fv.get('description', '')"/>
+                            </div>
+                            <div t-if="amenities" class="col-12">
+                                <span class="form-label d-block">Amenities</span>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <t t-foreach="amenities" t-as="amenity">
+                                        <input type="checkbox" class="btn-check" name="amenity_ids" t-att-value="amenity.id"
+                                               t-att-id="'o_rp_fa_%s' % amenity.id" t-att-checked="amenity.id in fv.get('amenity_ids', [])"/>
+                                        <label class="btn btn-sm btn-outline-secondary" t-att-for="'o_rp_fa_%s' % amenity.id">
+                                            <i t-attf-class="fa #{amenity.icon or 'fa-check'} me-1"/><t t-out="amenity.name"/>
+                                        </label>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="card mb-4"><div class="card-body">
+                        <h5 class="card-title mb-3">Location</h5>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label" for="o_rp_f_loc">Area *</label>
+                                <select id="o_rp_f_loc" name="location_id" class="form-select" required="required">
+                                    <option value="">Choose...</option>
+                                    <t t-foreach="locations" t-as="loc">
+                                        <option t-att-value="loc.id" t-att-selected="fv.get('location_id') == str(loc.id)"
+                                                t-att-data-lat="loc.latitude" t-att-data-lng="loc.longitude" t-out="loc.complete_name"/>
+                                    </t>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="o_rp_f_project">Project / compound</label>
+                                <select id="o_rp_f_project" name="project_id" class="form-select">
+                                    <option value="">None</option>
+                                    <t t-foreach="projects" t-as="project">
+                                        <option t-att-value="project.id" t-att-selected="fv.get('project_id') == str(project.id)" t-out="project.name"/>
+                                    </t>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="o_rp_f_address">Address</label>
+                                <input id="o_rp_f_address" type="text" name="address" class="form-control" maxlength="200" t-att-value="fv.get('address', '')"/>
+                            </div>
+                            <div class="col-12">
+                                <span class="form-label d-block">Pin on the map <small class="text-muted">(click the map to place the pin)</small></span>
+                                <div class="o_rp_map o_rp_map_picker" data-lat-input="#o_rp_f_lat" data-lng-input="#o_rp_f_lng" data-location-select="#o_rp_f_loc"/>
+                                <div class="row g-2 mt-1">
+                                    <div class="col-6"><input id="o_rp_f_lat" type="number" step="any" name="latitude" class="form-control form-control-sm" placeholder="Latitude" t-att-value="fv.get('latitude', '')"/></div>
+                                    <div class="col-6"><input id="o_rp_f_lng" type="number" step="any" name="longitude" class="form-control form-control-sm" placeholder="Longitude" t-att-value="fv.get('longitude', '')"/></div>
+                                </div>
+                                <t t-call-assets="re_property_portal.assets_map"/>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="card mb-4"><div class="card-body">
+                        <h5 class="card-title mb-1">Photos</h5>
+                        <p class="text-muted small">Up to <t t-out="max_photos"/> photos, JPG or PNG, max 10 MB each. The first photo is the cover.</p>
+                        <div t-if="listing and listing.image_ids" class="d-flex flex-wrap gap-3 mb-3">
+                            <t t-foreach="listing._get_images()" t-as="image">
+                                <label class="o_rp_photo_tile">
+                                    <img t-attf-src="/web/image/re.listing.image/#{image.id}/image_256" t-att-alt="image.name"/>
+                                    <span class="form-check small mt-1">
+                                        <input type="checkbox" class="form-check-input" name="remove_image_ids" t-att-value="image.id"/>
+                                        Remove
+                                    </span>
+                                </label>
+                            </t>
+                        </div>
+                        <input type="file" name="photos" class="form-control o_rp_photo_input" accept="image/*" multiple="multiple"/>
+                        <div class="o_rp_photo_preview d-flex flex-wrap gap-2 mt-2"/>
+                    </div></div>
+
+                    <div class="d-flex flex-wrap gap-2 justify-content-end mb-5">
+                        <a href="/my/listings" class="btn btn-link">Cancel</a>
+                        <t t-if="not listing or listing.state in ('draft', 'rejected')">
+                            <button type="submit" name="submit_action" value="draft" class="btn btn-outline-primary">Save draft</button>
+                            <button type="submit" name="submit_action" value="submit" class="btn btn-primary">Save &amp; submit for review</button>
+                        </t>
+                        <button t-else="" type="submit" name="submit_action" value="save" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Inquiries received                                              -->
+    <!-- ============================================================== -->
+    <template id="portal_my_leads" name="Portal: Property Inquiries">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <div class="o_rp_site o_rp_portal my-3">
+                <h3 class="mb-3">Property Inquiries</h3>
+                <div t-if="not leads" class="text-center py-5 text-muted">
+                    <i class="fa fa-envelope-o fa-3x mb-3"/>
+                    <p>No inquiries yet. They appear here when someone contacts you about a listing.</p>
+                </div>
+                <div t-else="" class="table-responsive">
+                    <table class="table align-middle">
+                        <thead>
+                            <tr><th>Date</th><th>Name</th><th>Contact</th><th>Property</th><th>Message</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="leads" t-as="lead">
+                                <td class="text-nowrap small"><span t-out="lead.create_date" t-options="{'widget': 'datetime', 'format': 'dd MMM yyyy HH:mm'}"/></td>
+                                <td t-out="lead.contact_name"/>
+                                <td class="small">
+                                    <a t-if="lead.phone" t-attf-href="tel:#{lead.phone}" class="d-block" t-out="lead.phone"/>
+                                    <a t-if="lead.email_from" t-attf-href="mailto:#{lead.email_from}" class="d-block" t-out="lead.email_from"/>
+                                </td>
+                                <td class="small">
+                                    <a t-if="lead.re_listing_id" t-att-href="lead.re_listing_id.website_url" t-out="lead.re_listing_id.reference"/>
+                                </td>
+                                <td class="small text-muted" t-out="html2plaintext(lead.description or '')[:200]"/>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div t-if="pager" class="o_portal_pager d-flex justify-content-center"><t t-call="portal.pager"/></div>
+            </div>
+        </t>
+    </template>
+</odoo>

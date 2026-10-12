@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="page_listing" name="Property Portal: Listing">
+        <t t-call="website.layout">
+            <t t-set="additional_title" t-value="listing.name"/>
+            <t t-set="images" t-value="listing._get_images()"/>
+            <t t-set="agent" t-value="listing.agent_id"/>
+            <t t-set="purpose" t-value="listing.listing_type == 'rent' and 'rent' or 'buy'"/>
+            <div id="wrap" class="o_rp_site o_rp_listing_page">
+                <div t-if="is_preview" class="alert alert-warning rounded-0 mb-0 text-center" role="alert">
+                    <i class="fa fa-eye me-1"/>Preview - this listing is <strong t-field="listing.state"/> and not visible to the public.
+                </div>
+
+                <div class="container pt-4">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb small mb-3">
+                            <li class="breadcrumb-item">
+                                <a t-attf-href="/properties/#{purpose}">
+                                    <t t-if="purpose == 'rent'">For rent</t>
+                                    <t t-else="">For sale</t>
+                                </a>
+                            </li>
+                            <t t-foreach="listing.location_id.search([('id', 'parent_of', listing.location_id.id)], order='parent_path')" t-as="crumb">
+                                <li class="breadcrumb-item">
+                                    <a t-attf-href="/properties/#{purpose}?loc=#{crumb.id}" t-out="crumb.name"/>
+                                </li>
+                            </t>
+                            <li class="breadcrumb-item active" aria-current="page" t-out="listing.reference"/>
+                        </ol>
+                    </nav>
+
+                    <!-- Gallery -->
+                    <div class="o_rp_gallery mb-4">
+                        <t t-if="images">
+                            <div t-attf-class="o_rp_gallery_grid o_rp_gallery_n#{min(len(images), 5)}">
+                                <t t-foreach="images[:5]" t-as="image">
+                                    <a href="#" t-attf-class="o_rp_gallery_item #{image_first and 'o_rp_gallery_main' or ''}"
+                                       data-bs-toggle="modal" data-bs-target="#o_rp_gallery_modal"
+                                       t-att-data-slide="image_index">
+                                        <img t-attf-src="/web/image/re.listing.image/#{image.id}/#{image_first and 'image_1920' or 'image_1024'}"
+                                             t-att-alt="listing.name" t-att-loading="not image_first and 'lazy' or None"/>
+                                        <span t-if="image_index == 4 and len(images) &gt; 5" class="o_rp_gallery_more">
+                                            +<t t-out="len(images) - 5"/>
+                                        </span>
+                                    </a>
+                                </t>
+                            </div>
+                            <button type="button" class="btn btn-light btn-sm o_rp_gallery_all" data-bs-toggle="modal" data-bs-target="#o_rp_gallery_modal">
+                                <i class="fa fa-th me-1"/>Show all <t t-out="len(images)"/> photos
+                            </button>
+                        </t>
+                        <div t-else="" class="o_rp_gallery_empty"><i class="fa fa-home"/></div>
+                    </div>
+                </div>
+
+                <section class="container pb-5">
+                    <div class="row g-5">
+                        <div class="col-lg-8">
+                            <div class="d-flex flex-wrap gap-2 mb-2">
+                                <span t-if="listing.is_premium" class="o_rp_badge o_rp_badge_premium"><i class="fa fa-star me-1"/>Premium</span>
+                                <span class="o_rp_badge o_rp_badge_light" t-field="listing.listing_type"/>
+                                <span class="o_rp_badge o_rp_badge_light" t-field="listing.completion"/>
+                                <span t-if="listing.listing_type == 'sale'" class="o_rp_badge o_rp_badge_light" t-field="listing.sale_type"/>
+                            </div>
+                            <div class="o_rp_price o_rp_price_lg">
+                                <t t-out="money(listing.price, listing.currency_id)"/>
+                                <small t-if="listing.listing_type == 'rent'" class="o_rp_period">
+                                    <t t-if="listing.rent_period == 'year'">/ year</t>
+                                    <t t-else="">/ month</t>
+                                </small>
+                            </div>
+                            <h1 class="h3 mt-2" t-field="listing.name"/>
+                            <div class="o_rp_location mb-4">
+                                <i class="fa fa-map-marker me-1"/><t t-out="listing.location_id.complete_name"/>
+                                <t t-if="listing.project_id"> · <a t-att-href="listing.project_id.website_url" t-out="listing.project_id.name"/></t>
+                            </div>
+
+                            <div class="o_rp_facts row g-0 text-center mb-5">
+                                <div class="col-6 col-md">
+                                    <i class="fa fa-building-o"/><small>Type</small><strong t-field="listing.property_type"/>
+                                </div>
+                                <div t-if="listing.property_type not in ('office', 'retail', 'clinic', 'land', 'building')" class="col-6 col-md">
+                                    <i class="fa fa-bed"/><small>Bedrooms</small>
+                                    <strong><t t-if="listing.bedrooms == 0">Studio</t><t t-else="" t-out="listing.bedrooms"/></strong>
+                                </div>
+                                <div t-if="listing.bathrooms" class="col-6 col-md">
+                                    <i class="fa fa-bath"/><small>Bathrooms</small><strong t-out="listing.bathrooms"/>
+                                </div>
+                                <div t-if="listing.area" class="col-6 col-md">
+                                    <i class="fa fa-arrows-alt"/><small>Area</small><strong><t t-out="'{:,.0f}'.format(listing.area)"/> m²</strong>
+                                </div>
+                            </div>
+
+                            <h2 class="h5 mb-3">Property details</h2>
+                            <div class="row g-0 o_rp_details mb-5">
+                                <div class="col-md-6">
+                                    <dl class="row mb-0">
+                                        <dt class="col-6">Reference</dt><dd class="col-6" t-out="listing.reference"/>
+                                        <dt class="col-6">Purpose</dt><dd class="col-6"><span t-field="listing.listing_type"/></dd>
+                                        <dt class="col-6">Property type</dt><dd class="col-6"><span t-field="listing.property_type"/></dd>
+                                        <dt class="col-6">Completion</dt><dd class="col-6"><span t-field="listing.completion"/></dd>
+                                        <t t-if="listing.delivery_date and listing.completion == 'offplan'">
+                                            <dt class="col-6">Delivery</dt>
+                                            <dd class="col-6"><span t-out="listing.delivery_date" t-options="{'widget': 'date', 'format': 'MMM yyyy'}"/></dd>
+                                        </t>
+                                        <t t-if="listing.price_per_meter and listing.listing_type == 'sale'">
+                                            <dt class="col-6">Price / m²</dt><dd class="col-6" t-out="money(listing.price_per_meter, listing.currency_id)"/>
+                                        </t>
+                                    </dl>
+                                </div>
+                                <div class="col-md-6">
+                                    <dl class="row mb-0">
+                                        <t t-if="listing.area"><dt class="col-6">Area</dt><dd class="col-6"><t t-out="'{:,.0f}'.format(listing.area)"/> m²</dd></t>
+                                        <t t-if="listing.garden_area"><dt class="col-6">Garden / Roof</dt><dd class="col-6"><t t-out="'{:,.0f}'.format(listing.garden_area)"/> m²</dd></t>
+                                        <t t-if="listing.floor"><dt class="col-6">Floor</dt><dd class="col-6" t-out="listing.floor"/></t>
+                                        <t t-if="listing.finishing"><dt class="col-6">Finishing</dt><dd class="col-6"><span t-field="listing.finishing"/></dd></t>
+                                        <t t-if="listing.furnishing"><dt class="col-6">Furnishing</dt><dd class="col-6"><span t-field="listing.furnishing"/></dd></t>
+                                        <t t-if="listing.published_date"><dt class="col-6">Listed</dt><dd class="col-6" t-out="listed_ago(listing.published_date)"/></t>
+                                    </dl>
+                                </div>
+                            </div>
+
+                            <t t-if="not is_html_empty(listing.description)">
+                                <h2 class="h5 mb-3">Description</h2>
+                                <div class="o_rp_description mb-5" t-field="listing.description"/>
+                            </t>
+
+                            <t t-if="listing.amenity_ids">
+                                <h2 class="h5 mb-3">Amenities</h2>
+                                <div class="row g-3 mb-5">
+                                    <div t-foreach="listing.amenity_ids" t-as="amenity" class="col-6 col-md-4">
+                                        <div class="o_rp_amenity"><i t-attf-class="fa #{amenity.icon or 'fa-check'}"/><span t-out="amenity.name"/></div>
+                                    </div>
+                                </div>
+                            </t>
+
+                            <div t-if="listing.listing_type == 'sale' and listing.installment_years" class="o_rp_payment mb-5">
+                                <h2 class="h5 mb-3"><i class="fa fa-calculator me-2"/>Payment plan</h2>
+                                <div class="row g-3 text-center">
+                                    <div class="col-6 col-md-3"><small>Down payment</small><strong t-out="money(listing.down_payment, listing.currency_id)"/></div>
+                                    <div class="col-6 col-md-3"><small>Installments</small><strong><t t-out="listing.installment_years"/> years</strong></div>
+                                    <div class="col-6 col-md-3"><small>Monthly</small><strong t-out="money(listing.monthly_installment, listing.currency_id)"/></div>
+                                    <div class="col-6 col-md-3"><small>Total</small><strong t-out="money(listing.price, listing.currency_id)"/></div>
+                                </div>
+                            </div>
+
+                            <t t-if="listing.latitude and listing.longitude">
+                                <h2 class="h5 mb-3">Location</h2>
+                                <p class="text-muted small"><i class="fa fa-map-marker me-1"/><t t-out="listing.address or listing.location_id.complete_name"/></p>
+                                <div class="o_rp_map o_rp_map_single mb-5" t-att-data-markers="markers_json" data-zoom="15"/>
+                                <t t-call-assets="re_property_portal.assets_map"/>
+                            </t>
+                        </div>
+
+                        <!-- Agent / contact -->
+                        <div class="col-lg-4" id="contact">
+                            <div class="o_rp_sticky">
+                                <div class="o_rp_contact_card card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <img t-attf-src="/web/image/re.agent/#{agent.id}/image_128" class="o_rp_agent_avatar_lg" t-att-alt="agent.name"/>
+                                            <div>
+                                                <div class="fw-bold">
+                                                    <a t-att-href="agent.website_url" class="text-reset" t-out="agent.name"/>
+                                                    <i t-if="agent.is_verified" class="fa fa-check-circle text-success ms-1" title="Verified"/>
+                                                </div>
+                                                <small t-if="agent.agency_id" class="d-block">
+                                                    <a t-att-href="agent.agency_id.website_url" class="o_rp_gold_text" t-out="agent.agency_id.name"/>
+                                                </small>
+                                                <small t-elif="agent.agent_kind == 'owner'" class="d-block text-muted">Owner</small>
+                                            </div>
+                                            <img t-if="agent.agency_id.image_128" t-attf-src="/web/image/re.agency/#{agent.agency_id.id}/image_128"
+                                                 class="o_rp_agency_logo ms-auto" t-att-alt="agent.agency_id.name"/>
+                                        </div>
+                                        <div class="d-grid gap-2 mb-3">
+                                            <a t-if="agent.phone" t-attf-href="tel:#{agent.phone}" class="btn btn-outline-primary">
+                                                <i class="fa fa-phone me-1"/>Call <span class="o_rp_phone" t-out="agent.phone"/>
+                                            </a>
+                                            <a t-if="listing_whatsapp(listing)" t-att-href="listing_whatsapp(listing)" target="_blank" rel="noopener" class="btn btn-success">
+                                                <i class="fa fa-whatsapp me-1"/>WhatsApp
+                                            </a>
+                                        </div>
+                                        <div t-if="inquiry_sent" class="alert alert-success small mb-0" role="alert">
+                                            <i class="fa fa-check me-1"/>Your message was sent. The agent will contact you soon.
+                                        </div>
+                                        <div t-elif="request.params.get('error')" class="alert alert-danger small" role="alert">
+                                            Please enter your name and a valid phone or email.
+                                        </div>
+                                        <form t-if="not inquiry_sent and not is_preview" action="/property/inquiry" method="post" class="o_rp_inquiry_form">
+                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                            <input type="hidden" name="listing_id" t-att-value="listing.id"/>
+                                            <div class="o_rp_hp" aria-hidden="true"><input type="text" name="website_url_hp" tabindex="-1" autocomplete="off"/></div>
+                                            <h3 class="h6 mb-2">Email the agent</h3>
+                                            <input type="text" name="contact_name" class="form-control form-control-sm mb-2" placeholder="Name *" required="required" aria-label="Name"/>
+                                            <input type="tel" name="phone" class="form-control form-control-sm mb-2" placeholder="Phone" aria-label="Phone"/>
+                                            <input type="email" name="email_from" class="form-control form-control-sm mb-2" placeholder="Email" aria-label="Email"/>
+                                            <textarea name="message" rows="3" class="form-control form-control-sm mb-2" aria-label="Message"
+                                                      t-out="inquiry_message"/>
+                                            <button type="submit" class="btn btn-primary w-100"><i class="fa fa-paper-plane me-1"/>Send</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="small text-muted text-center mt-3">
+                                    <i class="fa fa-eye me-1"/><t t-out="listing.view_count"/> views · <t t-out="listing.reference"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section t-if="similar" class="py-5 o_rp_bg_soft">
+                    <div class="container">
+                        <h2 class="h4 mb-4">Similar properties</h2>
+                        <div class="row g-4">
+                            <div t-foreach="similar" t-as="listing" class="col-sm-6 col-lg-3">
+                                <t t-call="re_property_portal.listing_card">
+                                    <t t-set="compact" t-value="True"/>
+                                    <t t-set="card_scope" t-value="'similar'"/>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Fullscreen photo viewer -->
+                <div t-if="images" class="modal fade" id="o_rp_gallery_modal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content bg-dark">
+                            <div class="modal-header border-0">
+                                <span class="text-white" t-field="listing.name"/>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"/>
+                            </div>
+                            <div class="modal-body d-flex align-items-center">
+                                <div id="o_rp_gallery_carousel" class="carousel slide w-100" data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div t-foreach="images" t-as="image" t-attf-class="carousel-item #{image_first and 'active' or ''}">
+                                            <img t-attf-src="/web/image/re.listing.image/#{image.id}/image_1920" class="d-block mx-auto o_rp_gallery_full"
+                                                 t-att-alt="listing.name" loading="lazy"/>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#o_rp_gallery_carousel" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"/><span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#o_rp_gallery_carousel" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"/><span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

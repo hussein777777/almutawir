@@ -1,0 +1,3217 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* re_property_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-11 22:19+0000\n"
+"PO-Revision-Date: 2026-10-11 22:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid "\"%s\" is larger than 10 MB."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid "\"%s\" is not a valid number."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid "\"%s\" is not an image."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_search_alert.py:0
+msgid "%(count)s new properties match \"%(search)s\""
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_agent.py:0
+msgid "%s is an internal user, link it manually if needed."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "/ month"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "/ year"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__bedrooms
+msgid "0 = studio"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_l7
+msgid "2 bedroom apartment near AUC"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_l7
+msgid "2 bedroom apartment near AUC. Contact the agent for a viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_fifth_settlement
+msgid "5th Settlement"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_fifth_settlement
+msgid "5th Settlement, New Cairo, Cairo"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_october
+msgid "6th of October"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_october
+msgid "6th of October, Giza"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<i class=\"fa fa-arrows-alt\"/><small>Area</small>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<i class=\"fa fa-bath\"/><small>Bathrooms</small>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<i class=\"fa fa-bed\"/><small>Bedrooms</small>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "<i class=\"fa fa-bell me-1\"/>Create alert"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.alert_modal
+msgid "<i class=\"fa fa-bell me-2\"/>Create an alert"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid ""
+"<i class=\"fa fa-bell\"/>\n"
+"                        <span>Your alert is saved. We will email you new matching properties.</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "<i class=\"fa fa-bell-o me-1\"/>Create alert"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<i class=\"fa fa-building-o\"/><small>Type</small>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<i class=\"fa fa-calculator me-2\"/>Payment plan"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "<i class=\"fa fa-check me-1\"/>Saved."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid ""
+"<i class=\"fa fa-check me-1\"/>Your message was sent. The agent will contact"
+" you soon."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "<i class=\"fa fa-envelope\" title=\"Inquiries\"/>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<i class=\"fa fa-eye me-1\"/>Preview - this listing is"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "<i class=\"fa fa-eye\" title=\"Views\"/>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agency
+msgid "<i class=\"fa fa-globe me-1\"/>Website"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid ""
+"<i class=\"fa fa-info-circle me-1\"/>Price changes go live immediately. "
+"Other changes (photos, description, details) are reviewed again before they "
+"are published."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "<i class=\"fa fa-list me-1\"/>List"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_home_marketplace
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "<i class=\"fa fa-map-o me-1\"/>Map"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<i class=\"fa fa-paper-plane me-1\"/>Send"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agency
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agent
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<i class=\"fa fa-phone me-1\"/>Call"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "<i class=\"fa fa-plus me-1\"/>Property for rent"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "<i class=\"fa fa-plus me-1\"/>Property for sale"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "<i class=\"fa fa-search me-1\"/>Search"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "<i class=\"fa fa-sliders me-1\"/>Filters"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<i class=\"fa fa-star me-1\"/>Premium"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<i class=\"fa fa-th me-1\"/>Show all"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agent
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<i class=\"fa fa-whatsapp me-1\"/>WhatsApp"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "<option value=\"\">Any</option>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "<option value=\"\">Beds</option>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "<option value=\"\">Choose...</option>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "<option value=\"\">None</option>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "<option value=\"\">Property type</option>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.alert_modal
+msgid ""
+"<select id=\"o_rp_alert_freq\" name=\"frequency\" class=\"form-select\">\n"
+"                                <option value=\"daily\">Daily</option>\n"
+"                                <option value=\"weekly\">Weekly</option>\n"
+"                            </select>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<small>Down payment</small>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<small>Installments</small>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<small>Monthly</small>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "<small>Total</small>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid ""
+"<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"/><span "
+"class=\"visually-hidden\">Next</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid ""
+"<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"/><span "
+"class=\"visually-hidden\">Previous</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "<span class=\"form-label d-block\">Amenities</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "<span class=\"form-label d-block\">I am</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid ""
+"<span class=\"form-label d-block\">Pin on the map <small class=\"text-"
+"muted\">(click the map to place the pin)</small></span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "<span class=\"form-label small d-block mb-1\">Amenities</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_home_marketplace
+msgid "<span class=\"o_re_eyebrow\">Marketplace</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "<span class=\"text-muted\">·</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_new_inquiry
+msgid ""
+"<span style=\"color: #C8A45D; font-size: 18px; font-weight: bold;\">New "
+"inquiry on your listing</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_search_alert
+msgid ""
+"<span style=\"color: #C8A45D; font-size: 20px; font-weight: bold;\">New "
+"properties for you</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "<span>1</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "<span>2</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "<span>3</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "<span>4</span>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "<strong>Add your properties</strong>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "<strong>Get calls and messages</strong>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "<strong>Rejected: </strong>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "<strong>Review note: </strong>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "<strong>Send your request</strong>"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "<strong>We verify and invite you</strong>"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid "A listing can have at most %s photos."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "A property owner"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agency_view_form
+msgid "About"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__message_needaction
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__message_needaction
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "Actions"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__active
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__active
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__active
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__active
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__active
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_agent__state__active
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_search
+msgid "Active"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__activity_ids
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__activity_exception_decoration
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__activity_state
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__activity_type_icon
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_listing.py:0
+msgid "Add at least one photo to \"%s\" before submitting it."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_home_properties
+msgid "Add, edit and publish your listings"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__address
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Address"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_r5
+msgid "Administrative office for rent"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_r5
+msgid "Administrative office for rent. Contact the agent for a viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "After a quick review your listing goes live."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.actions.act_window,name:re_property_portal.re_agency_action
+#: model:ir.ui.menu,name:re_property_portal.menu_marketplace_agencies
+msgid "Agencies & Developers"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+msgid "Agencies &amp; Developers"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__agency_id
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__agency_id
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_search
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_search
+msgid "Agency"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__requested_agency
+msgid "Agency (as requested)"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agency_view_form
+msgid "Agency / Developer name"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "Agency / company (agents only)"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__agency_type
+msgid "Agency Type"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__requested_agency
+msgid "Agency name typed in the sign-up request."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__agent_id
+msgid "Agent"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_agent.py:0
+msgid "Agent %s needs a valid email to get a portal account."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_agent__agent_kind__agent
+msgid "Agent / Broker"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__agent_count
+msgid "Agent Count"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.actions.act_window,name:re_property_portal.re_agent_pending_action
+#: model:ir.ui.menu,name:re_property_portal.menu_marketplace_agent_requests
+msgid "Agent Requests"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_agent.py:0
+msgid "Agent approved and invited to the portal."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+msgid "Agent or agency name"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.actions.act_window,name:re_property_portal.re_agent_action
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__agent_ids
+#: model:ir.ui.menu,name:re_property_portal.menu_marketplace_agents
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agency
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agency_view_form
+msgid "Agents"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.actions.act_window,help:re_property_portal.re_agent_action
+msgid ""
+"Agents and owners request access from the website (\"List your property\"). "
+"Approve them here to give them a portal account."
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_sokhna
+msgid "Ain Sokhna"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_sokhna
+msgid "Ain Sokhna, Suez"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_alex
+#: model:re.location,name:re_property_portal.loc_alex
+msgid "Alexandria"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "All"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.ui.menu,name:re_property_portal.menu_marketplace_listings
+msgid "All Listings"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "Already approved?"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__amenity_ids
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Amenities"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "An agent / broker"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__apartment
+msgid "Apartment"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_form
+msgid "Approve & Invite"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Approve & Publish"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_listing.py:0
+msgid "Approve the listing to publish it."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+msgid "Are you an agent or a property owner?"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Area"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__area
+msgid "Area (m²)"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Area (m²) *"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Area *"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_location__location_type__area
+msgid "Area / District"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__message_attachment_count
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__message_attachment_count
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_search_alert
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_kanban
+msgid "BR ·"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Back to Draft"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Basics"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__bathrooms
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Bathrooms"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__bedrooms
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Bedrooms"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__bio
+msgid "Bio"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_form
+msgid "Block"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_agent__state__blocked
+msgid "Blocked"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_agency__agency_type__brokerage
+msgid "Brokerage"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.agency,description:re_property_portal.agency_cairohomes
+msgid ""
+"Brokerage specialised in resale and rentals in New Cairo, Sheikh Zayed and "
+"the North Coast."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_message
+msgid "Browse properties"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Bump to Top"
+msgstr ""
+
+#. module: re_property_portal
+#: model:website.menu,name:re_property_portal.menu_properties_buy
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Buy"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Buy or rent"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_cairo
+#: model:re.location,name:re_property_portal.loc_cairo
+msgid "Cairo"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+msgid "Call"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__can_publish
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__can_publish
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__can_publish
+msgid "Can Publish"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.alert_modal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_reject_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__chalet
+msgid "Chalet"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_location__location_type__city
+msgid "City"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "City, area, compound or keyword"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__clinic
+msgid "Clinic"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.alert_modal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Close"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__company_id
+msgid "Company"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__complete_name
+msgid "Complete Name"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__completion
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Completion"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Completion *"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_location__location_type__compound
+msgid "Compound"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__partner_id
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_leads
+msgid "Contact"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__finishing__core_shell
+msgid "Core & Shell"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid ""
+"Could not save the listing. Please check the photos (JPG / PNG) and try "
+"again."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__cover_image_id
+msgid "Cover Image"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.alert_modal
+msgid "Create alert"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "Create an alert and we will email you as soon as one is listed."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.actions.act_window,help:re_property_portal.re_listing_action
+msgid "Create the first listing"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_search_alert_view_list
+msgid "Created"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__create_uid
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__create_uid
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__create_uid
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__create_uid
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_reject_wizard__create_uid
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__create_uid
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__create_date
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__create_date
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__create_date
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__create_date
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_reject_wizard__create_date
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__create_date
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_search_alert__frequency__daily
+msgid "Daily"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_leads
+msgid "Date"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "Delete"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid "Delete this draft permanently?"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Delivery"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__delivery_date
+msgid "Delivery Date"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Delivery date (off-plan)"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Describe the property..."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__description
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__description
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Description"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Description & Amenities"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Details"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_project__agency_id
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_agency__agency_type__developer
+msgid "Developer"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__display_name
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__display_name
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__display_name
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__display_name
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_reject_wizard__display_name
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__display_name
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "Do you have a property to sell or rent?"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__down_payment
+msgid "Down Payment"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Down payment"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "Drafts"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__duplex
+msgid "Duplex"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "Edit"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid "Edited by the agent from the portal: sent back to review."
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_gouna
+msgid "El Gouna"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_gouna
+msgid "El Gouna, Red Sea"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_shorouk
+msgid "El Shorouk"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_shorouk
+msgid "El Shorouk, Cairo"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__email
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__email
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__email
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_new_inquiry
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Email"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.alert_modal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "Email *"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Email the agent"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__sent_count
+msgid "Emails Sent"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "Featured"
+msgstr ""
+
+#. module: re_property_portal
+#: model:website.menu,name:re_property_portal.menu_find_agent
+msgid "Find Agent"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+msgid "Find a real estate agent"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+msgid "Find an agent"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__finishing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Finishing"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__sale_type__primary
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "First Sale"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__floor
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Floor"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__message_follower_ids
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__message_follower_ids
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__message_partner_ids
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__message_partner_ids
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__activity_type_icon
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__listing_type__rent
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_search
+msgid "For Rent"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__listing_type__sale
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_search
+msgid "For Sale"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_home_marketplace
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "For rent"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_home_marketplace
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "For sale"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__frequency
+msgid "Frequency"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_form
+msgid "Full name"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "Full name *"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__finishing__fully
+msgid "Fully Finished"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_l1
+msgid "Fully finished 3 bedroom apartment with garden"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_l1
+msgid ""
+"Fully finished 3 bedroom apartment with garden. Contact the agent for a "
+"viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__furnishing__furnished
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Furnished"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_r1
+msgid "Furnished 2 bedroom apartment for rent"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_r1
+msgid ""
+"Furnished 2 bedroom apartment for rent. Contact the agent for a viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__furnishing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Furnishing"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Garden / Roof"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__garden_area
+msgid "Garden / Roof (m²)"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Garden / roof (m²)"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_giza
+#: model:re.location,name:re_property_portal.loc_giza
+msgid "Giza"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_location__location_type__governorate
+msgid "Governorate"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_l6
+msgid "Grade A office in the CBD"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_l6
+msgid "Grade A office in the CBD. Contact the agent for a viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_search
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_search
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_location_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__has_message
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__has_message
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__location_id
+msgid "Head Office Location"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_heliopolis
+msgid "Heliopolis"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_heliopolis
+msgid "Heliopolis, Cairo"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_new_inquiry
+msgid "Hello"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "Hello, I am interested in %(title)s (%(ref)s). Please contact me."
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.agent,bio:re_property_portal.agent_mina
+msgid ""
+"Helping families and investors find the right home in El Motawer projects "
+"for more than 10 years."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_message
+msgid "Home"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "How it works"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.alert_modal
+msgid "How often?"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_hurghada
+msgid "Hurghada"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_hurghada
+msgid "Hurghada, Red Sea"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__id
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__id
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__id
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__id
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_reject_wizard__id
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__id
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__id
+msgid "ID"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__activity_exception_icon
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__activity_exception_icon
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_agency__message_needaction
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__message_needaction
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_agency__message_has_error
+#: model:ir.model.fields,help:re_property_portal.field_re_agency__message_has_sms_error
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__message_has_error
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__message_has_sms_error
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__message_has_error
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__image_1920
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__image_1920
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__image_1024
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__image_1024
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__image_128
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__image_128
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__image_256
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__image_256
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__image_512
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__image_512
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__image_count
+msgid "Image Count"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "In review"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_agent.py:0
+#: code:addons/re_property_portal/models/re_listing.py:0
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__lead_ids
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Inquiries"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__installment_years
+msgid "Installment Years"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Installment years"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_listing.py:0
+msgid "Installment years cannot be negative."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_search_alert.py:0
+msgid "Invalid email address."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_listing.py:0
+msgid "Invalid map coordinates."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__message_is_follower
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__message_is_follower
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__is_published
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__is_published
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__is_published
+msgid "Is Published"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__job_title
+msgid "Job Title"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+msgid "Join now"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+msgid "Join the marketplace and publish your listings."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__land
+msgid "Land"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__lang
+msgid "Lang"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__languages
+msgid "Languages"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "Largest area"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__last_sent_date
+msgid "Last Sent Date"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__write_uid
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__write_uid
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__write_uid
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__write_uid
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_reject_wizard__write_uid
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__write_uid
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__write_date
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__write_date
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__write_date
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__write_date
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_reject_wizard__write_date
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__write_date
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_home_marketplace
+msgid "Latest properties"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__latitude
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__latitude
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Latitude"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__lead_count
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__lead_count
+msgid "Lead Count"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model,name:re_property_portal.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "List it for free and reach thousands of buyers and tenants."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "List your property"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "List your property with us"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Listed"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_crm_lead__re_listing_id
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__listing_id
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_reject_wizard__listing_ids
+msgid "Listing"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_crm_lead__re_agent_id
+msgid "Listing Agent"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model,name:re_property_portal.model_re_listing_image
+msgid "Listing Photo"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_agent.py:0
+#: model:ir.actions.act_window,name:re_property_portal.re_listing_action
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__listing_ids
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agency
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agency_view_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_form
+msgid "Listings"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agent
+msgid "Listings by"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.actions.act_window,help:re_property_portal.re_listing_action
+msgid ""
+"Listings submitted by agents from the portal appear here as \"Pending "
+"Review\"."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.actions.act_window,name:re_property_portal.re_listing_review_action
+#: model:ir.ui.menu,name:re_property_portal.menu_marketplace_review
+msgid "Listings to Review"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__location_id
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_search
+msgid "Location"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_project__location_id
+msgid "Location (marketplace)"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__location_type
+msgid "Location Type"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Location or keyword"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.actions.act_window,name:re_property_portal.re_location_action
+#: model:ir.ui.menu,name:re_property_portal.menu_marketplace_locations
+msgid "Locations"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "Log in"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__longitude
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__longitude
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Longitude"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_maadi
+msgid "Maadi"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_maadi
+msgid "Maadi, Cairo"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_madinaty
+msgid "Madinaty"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_madinaty
+msgid "Madinaty, Cairo"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Mark Sold / Rented"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid ""
+"Mark this property as sold / rented? It will be removed from the website."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.ui.menu,name:re_property_portal.menu_marketplace
+msgid "Marketplace"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_project__listing_ids
+msgid "Marketplace Listings"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Max area (m²)"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Max price"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_new_inquiry
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_leads
+msgid "Message"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__message_has_error
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__message_has_error
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__message_ids
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__message_ids
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_home_properties
+msgid "Messages from buyers and tenants"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Min area (m²)"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Min price"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__rent_period__month
+msgid "Monthly"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__monthly_installment
+msgid "Monthly Installment"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_mostakbal
+msgid "Mostakbal City"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_mostakbal
+msgid "Mostakbal City, Cairo"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_new_inquiry
+msgid "My Account"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__my_activity_date_deadline
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_breadcrumbs_properties
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_home_properties
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "My Properties"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__name
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__name
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__name
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__name
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_new_inquiry
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_leads
+msgid "Name"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Name *"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_nasr_city
+msgid "Nasr City"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_nasr_city
+msgid "Nasr City, Cairo"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_new_capital
+msgid "New Administrative Capital"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_new_capital
+msgid "New Administrative Capital, Cairo"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_alamein
+msgid "New Alamein"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_alamein
+msgid "New Alamein, North Coast"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_new_cairo
+msgid "New Cairo"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_new_cairo
+msgid "New Cairo, Cairo"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "New inquiry: %s"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agency
+msgid "New projects"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_breadcrumbs_properties
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "New property"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "Newest"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__activity_calendar_event_id
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__activity_date_deadline
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__activity_summary
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__activity_type_id
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agency
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agent
+msgid "No active listings right now."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.actions.act_window,help:re_property_portal.re_agent_action
+msgid "No agents yet"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_leads
+msgid ""
+"No inquiries yet. They appear here when someone contacts you about a "
+"listing."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "No properties here yet."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "No properties match your search yet."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+msgid "No results."
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_north_coast
+#: model:re.location,name:re_property_portal.loc_north_coast
+msgid "North Coast"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__message_needaction_counter
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__message_needaction_counter
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__message_has_error_counter
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__message_has_error_counter
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_agency__message_needaction_counter
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__message_needaction_counter
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_agency__message_has_error_counter
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__message_has_error_counter
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__completion__offplan
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Off-plan"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_l4
+msgid "Off-plan duplex with roof - 10 years installments"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_l4
+msgid ""
+"Off-plan duplex with roof - 10 years installments. Contact the agent for a "
+"viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__office
+msgid "Office"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_search_alert__last_sent_date
+msgid "Only listings published after this date are sent."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid ""
+"Our team will review your request and email you a link to set your password."
+" Then you can add your properties from \"My Account\"."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Owner"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_search
+msgid "Owners"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__parent_id
+msgid "Parent Location"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__parent_path
+msgid "Parent Path"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_agent__state__pending
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_search
+msgid "Pending Approval"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__state__pending
+msgid "Pending Review"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__penthouse
+msgid "Penthouse"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_l8
+msgid "Penthouse with panoramic view"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_l8
+msgid "Penthouse with panoramic view. Contact the agent for a viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__phone
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__phone
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_new_inquiry
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Phone"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "Phone *"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_kanban
+msgid "Photo"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__image_ids
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Photos"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid "Please choose a value for \"%s\"."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid "Please choose the location."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_new_inquiry
+msgid "Please contact them as soon as possible. All your inquiries are in"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid "Please enter a title."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "Please enter a valid email: your portal login will be sent to it."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid "Please enter the area."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid "Please enter the price."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Please enter your name and a valid phone or email."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "Please fill in your name and phone number."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__user_id
+msgid "Portal User"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__is_premium
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_search
+msgid "Premium"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__is_premium
+msgid "Premium listings are shown first."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__price
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Price"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "Price (high to low)"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "Price (low to high)"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Price *"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__price_per_meter
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Price / m²"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__project_id
+msgid "Project / Compound"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Project / compound"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "Properties"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "Properties for rent"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "Properties for sale"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_leads
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Property"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.agent,job_title:re_property_portal.agent_omar
+msgid "Property Consultant"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_breadcrumbs_properties
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_home_properties
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_leads
+msgid "Property Inquiries"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model,name:re_property_portal.model_re_listing
+msgid "Property Listing"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model,name:re_property_portal.model_re_location
+msgid "Property Location"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_agent__agent_kind__owner
+msgid "Property Owner"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.actions.server,name:re_property_portal.cron_send_search_alerts_ir_actions_server
+msgid "Property Portal: send search alerts"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model,name:re_property_portal.model_re_search_alert
+msgid "Property Search Alert"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__property_type
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_search
+msgid "Property Type"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Property details"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "Property inquiry - %(ref)s %(title)s"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Property type"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Property type *"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Publication"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__state__published
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_search
+msgid "Published"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__published_date
+msgid "Published Date"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__listing_count
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__listing_count
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__listing_count
+msgid "Published Listings"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__listing_type
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Purpose"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Purpose *"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_ras_hekma
+msgid "Ras El Hekma"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_ras_hekma
+msgid "Ras El Hekma, North Coast"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "Reach serious buyers and tenants. Free for owners and agents."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__completion__ready
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Ready"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model,name:re_property_portal.model_re_agency
+msgid "Real Estate Agency / Developer"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model,name:re_property_portal.model_re_agent
+msgid "Real Estate Agent"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model,name:re_property_portal.model_re_project
+msgid "Real Estate Project"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.agency,description:re_property_portal.agency_elmotawer
+msgid ""
+"Real estate investment and development company building residential, "
+"commercial and coastal communities across Egypt."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_reject_wizard__reason
+msgid "Reason"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_red_sea
+#: model:re.location,name:re_property_portal.loc_red_sea
+msgid "Red Sea"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__reference
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Reference"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_reject_wizard_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Reject"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_listing.py:0
+#: model:ir.model,name:re_property_portal.model_re_listing_reject_wizard
+msgid "Reject Listing"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__state__rejected
+msgid "Rejected"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__rejection_reason
+msgid "Rejection Reason"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Remove"
+msgstr ""
+
+#. module: re_property_portal
+#: model:website.menu,name:re_property_portal.menu_properties_rent
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Rent"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__rent_period
+msgid "Rent Period"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Rent paid"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "Rented"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "Request received"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_list
+msgid "Requested"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__sale_type__resale
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Resale"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.agent,bio:re_property_portal.agent_sara
+msgid "Resale and rental specialist in New Cairo and Sheikh Zayed."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_form
+msgid "Resend Invitation"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Reset all filters"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__activity_user_id
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__retail
+msgid "Retail / Shop"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "Review agent request"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__is_seo_optimized
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__is_seo_optimized
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__is_seo_optimized
+msgid "SEO optimized"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__message_has_sms_error
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__message_has_sms_error
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__sale_type
+msgid "Sale Type"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Sale type"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.agent,job_title:re_property_portal.agent_mina
+msgid "Sales Director"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "Same as phone if empty"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Save"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Save &amp; submit for review"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Save draft"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_l3
+msgid "Sea view chalet in Ras El Hekma"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_l3
+msgid "Sea view chalet in Ras El Hekma. Contact the agent for a viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__name
+msgid "Search"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.actions.act_window,name:re_property_portal.re_search_alert_action
+#: model:ir.ui.menu,name:re_property_portal.menu_marketplace_alerts
+msgid "Search Alerts"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__query
+msgid "Search Parameters"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.alert_modal
+msgid "Search name"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_search_alert
+msgid "See all results"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__finishing__semi
+msgid "Semi Finished"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__furnishing__semi
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Semi Furnished"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_search_alert_view_form
+msgid "Send New Matches Now"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "Send request"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.agent,job_title:re_property_portal.agent_sara
+msgid "Senior Property Consultant"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_listing_reject_wizard__reason
+msgid "Sent to the agent so they can fix the listing."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__seo_name
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__seo_name
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__seo_name
+msgid "Seo name"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing_image__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_zayed
+msgid "Sheikh Zayed"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_zayed
+msgid "Sheikh Zayed, Giza"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_form
+msgid "Short bio shown on the agent page..."
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,name:re_property_portal.loc_sidi_abdelrahman
+msgid "Sidi Abdel Rahman"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_sidi_abdelrahman
+msgid "Sidi Abdel Rahman, North Coast"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "Similar properties"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "Sold"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__state__closed
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "Sold / Rented"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/portal.py:0
+msgid "Sold / rented listings cannot be edited."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_new_inquiry
+msgid "Someone is interested in"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "Sort"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_l2
+msgid "Standalone villa with private pool"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_l2
+msgid "Standalone villa with private pool. Contact the agent for a viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__state
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__state
+msgid "State"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_search
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_search
+msgid "Status"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__activity_state
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__studio
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Studio"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_r4
+msgid "Studio for rent in Maadi"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_r4
+msgid "Studio for rent in Maadi. Contact the agent for a viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_location__child_ids
+msgid "Sub-locations"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "Submit"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Submit for Review"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.location,complete_name:re_property_portal.loc_suez
+#: model:re.location,name:re_property_portal.loc_suez
+msgid "Suez"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_r3
+msgid "Summer chalet for rent - first row"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_r3
+msgid "Summer chalet for rent - first row. Contact the agent for a viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+msgid ""
+"Talk to trusted agents and developers about buying, selling or renting."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "Tell us who you are. It takes one minute."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_form
+msgid ""
+"The agent loses portal access and all their listings are unpublished. "
+"Continue?"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_listing.py:0
+msgid "The agent of \"%s\" is not active yet."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_listing.py:0
+msgid "The down payment must be between 0 and the price."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_agency__website_url
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__website_url
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__website_url
+msgid "The full URL to access the document through the website."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_agent.py:0
+msgid ""
+"The invitation email could not be sent. Check the outgoing mail server, then"
+" click \"Resend Invitation\"."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.constraint,message:re_property_portal.constraint_re_listing_price_positive
+msgid "The price cannot be negative."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_form
+msgid "This creates a portal account and emails the invitation. Continue?"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.constraint,message:re_property_portal.constraint_re_agent_user_uniq
+msgid "This user is already linked to another agent."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid ""
+"Tip: in Google Maps, right-click the building and click the coordinates to "
+"copy them."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__name
+msgid "Title"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Title *"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_search
+msgid "To Review"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__token
+msgid "Token"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.constraint,message:re_property_portal.constraint_re_search_alert_token_uniq
+msgid "Token must be unique."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__townhouse
+msgid "Townhouse"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_d1
+msgid "Townhouse - waiting for photos approval"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_d1
+msgid ""
+"Townhouse - waiting for photos approval. Contact the agent for a viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__twinhouse
+msgid "Twin House"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_l5
+msgid "Twin house in a gated compound"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_l5
+msgid "Twin house in a gated compound. Contact the agent for a viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__agent_kind
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_location_view_search
+msgid "Type"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__activity_exception_decoration
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_search_alert__query
+msgid "URL query string of the saved search."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__furnishing__unfurnished
+#: model_terms:ir.ui.view,arch_db:re_property_portal.search_bar
+msgid "Unfurnished"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_search_alert
+msgid "Unsubscribe"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "Up to"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "Upload photos, price and details from \"My Account\"."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__is_verified
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__is_verified
+#: model_terms:ir.ui.view,arch_db:re_property_portal.agent_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agency
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agent
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agency_view_form
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_form
+msgid "Verified"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "View"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__view_count
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "Views"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__villa
+msgid "Villa"
+msgstr ""
+
+#. module: re_property_portal
+#: model:re.listing,name:re_property_portal.listing_r2
+msgid "Villa for rent with garden"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:re.listing,description:re_property_portal.listing_r2
+msgid "Villa for rent with garden. Contact the agent for a viewing."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__website_published
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__website_published
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__website_published
+msgid "Visible on current website"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.alert_modal
+msgid "We will email you new properties that match this search."
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__website
+#: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__website_id
+msgid "Website"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__website_message_ids
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__website_message_ids
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__website_url
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__website_url
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__website_url
+msgid "Website URL"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_agency__website_message_ids
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__website_message_ids
+#: model:ir.model.fields,help:re_property_portal.field_re_listing__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__website_meta_description
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__website_meta_description
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__website_meta_description
+msgid "Website meta description"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__website_meta_keywords
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__website_meta_keywords
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__website_meta_keywords
+msgid "Website meta keywords"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__website_meta_title
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__website_meta_title
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__website_meta_title
+msgid "Website meta title"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agency__website_meta_og_img
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__website_meta_og_img
+#: model:ir.model.fields,field_description:re_property_portal.field_re_listing__website_meta_og_img
+msgid "Website opengraph image"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_search_alert__frequency__weekly
+msgid "Weekly"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "What would you like to list?"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__whatsapp
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "WhatsApp"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,field_description:re_property_portal.field_re_agent__whatsapp_url
+msgid "Whatsapp Url"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__building
+msgid "Whole Building"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_my_listings
+msgid "Withdraw"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__rent_period__year
+msgid "Yearly"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "You are unsubscribed"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_location.py:0
+msgid "You cannot create recursive locations."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "You receive an email to set your password."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_search_alert
+msgid "You receive this email because you created a search alert."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "You will not receive emails for this search anymore."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_listing.py:0
+msgid "Your listing is now live on the website."
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/models/re_listing.py:0
+msgid "Your listing was not approved: %s"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agent
+msgid "active listings"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agency
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+msgid "agents"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "and not visible to the public."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "breadcrumb"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_become_agent
+msgid "e.g. 3 apartments in New Cairo, 1 villa in Sheikh Zayed"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields,help:re_property_portal.field_re_agent__languages
+msgid "e.g. Arabic, English"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "e.g. Fully finished 3 bedroom apartment with garden"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
+msgid "e.g. Fully finished 3BR apartment with garden"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_reject_wizard_form
+msgid ""
+"e.g. Photos are blurry, please upload clearer photos of the living room."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_agent_view_form
+msgid "e.g. Senior Property Consultant"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "for rent"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "for sale"
+msgstr ""
+
+#. module: re_property_portal
+#: model:ir.model.fields.selection,name:re_property_portal.selection__re_listing__property_type__ivilla
+msgid "iVilla"
+msgstr ""
+
+#. module: re_property_portal
+#. odoo-python
+#: code:addons/re_property_portal/controllers/main.py:0
+msgid "in"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.agent_card
+msgid "listings"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agency
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+msgid "listings ·"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.listing_card
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_search_alert
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+#: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_kanban
+msgid "m²"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.mail_search_alert
+msgid ""
+"new properties match your search\n"
+"                    \""
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "photos"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
+msgid "photos, JPG or PNG, max 10 MB each. The first photo is the cover."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "properties with a location on the map."
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_agents
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "results"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "views ·"
+msgstr ""
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
+msgid "years"
+msgstr ""

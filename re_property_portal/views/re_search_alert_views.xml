@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="re_search_alert_view_list" model="ir.ui.view">
+        <field name="name">re.search.alert.list</field>
+        <field name="model">re.search.alert</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="create_date" string="Created"/>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="frequency"/>
+                <field name="last_sent_date"/>
+                <field name="sent_count"/>
+                <field name="active" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="re_search_alert_view_form" model="ir.ui.view">
+        <field name="name">re.search.alert.form</field>
+        <field name="model">re.search.alert</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_send_now" type="object" string="Send New Matches Now"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="frequency"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="last_sent_date"/>
+                            <field name="sent_count"/>
+                            <field name="lang"/>
+                            <field name="website_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="query"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="re_search_alert_action" model="ir.actions.act_window">
+        <field name="name">Search Alerts</field>
+        <field name="res_model">re.search.alert</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'active_test': False}</field>
+    </record>
+</odoo>

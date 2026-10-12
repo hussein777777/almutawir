@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================== -->
+    <!-- Find agent                                                      -->
+    <!-- ============================================================== -->
+    <template id="page_agents" name="Property Portal: Find Agent">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Find an agent</t>
+            <div id="wrap" class="o_rp_site">
+                <section class="o_rp_page_head">
+                    <div class="container">
+                        <h1 class="h2 mb-2">Find a real estate agent</h1>
+                        <p class="mb-4 opacity-75">Talk to trusted agents and developers about buying, selling or renting.</p>
+                        <form action="/agents" method="get" class="o_rp_agent_search d-flex gap-2">
+                            <input type="hidden" name="tab" t-att-value="tab"/>
+                            <input type="search" name="q" class="form-control" t-att-value="q"
+                                   placeholder="Agent or agency name" aria-label="Name"/>
+                            <button type="submit" class="btn btn-primary px-4"><i class="fa fa-search"/></button>
+                        </form>
+                    </div>
+                </section>
+                <section class="container py-5">
+                    <ul class="nav nav-pills mb-4">
+                        <li class="nav-item">
+                            <a t-attf-class="nav-link #{tab == 'agents' and 'active' or ''}" t-att-href="tab_urls['agents']">Agents</a>
+                        </li>
+                        <li class="nav-item">
+                            <a t-attf-class="nav-link #{tab == 'agencies' and 'active' or ''}" t-att-href="tab_urls['agencies']">Agencies &amp; Developers</a>
+                        </li>
+                    </ul>
+                    <p class="text-muted small"><t t-out="total"/> results</p>
+                    <div class="row g-4">
+                        <t t-if="tab == 'agents'">
+                            <div t-foreach="records" t-as="agent" class="col-6 col-md-4 col-lg-3">
+                                <t t-call="re_property_portal.agent_card"/>
+                            </div>
+                        </t>
+                        <t t-else="">
+                            <div t-foreach="records" t-as="agency" class="col-md-6 col-lg-4">
+                                <div class="o_rp_agency_card card h-100">
+                                    <div class="card-body d-flex gap-3 align-items-center">
+                                        <img t-attf-src="/web/image/re.agency/#{agency.id}/image_256" class="o_rp_agency_logo_lg" t-att-alt="agency.name" loading="lazy"/>
+                                        <div>
+                                            <h3 class="h6 mb-1">
+                                                <a t-att-href="agency.website_url" class="stretched-link text-reset" t-out="agency.name"/>
+                                                <i t-if="agency.is_verified" class="fa fa-check-circle text-success ms-1" title="Verified"/>
+                                            </h3>
+                                            <small class="o_rp_gold_text d-block" t-field="agency.agency_type"/>
+                                            <small class="text-muted">
+                                                <t t-out="agency.listing_count"/> listings · <t t-out="agency.agent_count"/> agents
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                    <p t-if="not records" class="text-muted text-center py-5">No results.</p>
+                    <div class="d-flex justify-content-center mt-5"><t t-call="website.pager"/></div>
+                </section>
+                <section class="o_rp_list_cta py-5">
+                    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+                        <div>
+                            <h2 class="h4 mb-1">Are you an agent or a property owner?</h2>
+                            <p class="mb-0 text-muted">Join the marketplace and publish your listings.</p>
+                        </div>
+                        <a href="/list-your-property" class="btn btn-primary btn-lg">Join now</a>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Agent profile                                                   -->
+    <!-- ============================================================== -->
+    <template id="page_agent" name="Property Portal: Agent">
+        <t t-call="website.layout">
+            <t t-set="additional_title" t-value="agent.name"/>
+            <div id="wrap" class="o_rp_site">
+                <section class="o_rp_page_head">
+                    <div class="container">
+                        <div class="d-flex flex-wrap gap-4 align-items-center">
+                            <img t-attf-src="/web/image/re.agent/#{agent.id}/image_256" class="o_rp_profile_photo" t-att-alt="agent.name"/>
+                            <div class="flex-grow-1">
+                                <h1 class="h2 mb-1">
+                                    <t t-out="agent.name"/>
+                                    <i t-if="agent.is_verified" class="fa fa-check-circle text-success ms-1" title="Verified"/>
+                                </h1>
+                                <div class="opacity-75" t-out="agent.job_title"/>
+                                <a t-if="agent.agency_id" t-att-href="agent.agency_id.website_url" class="o_rp_gold_text" t-out="agent.agency_id.name"/>
+                                <div class="small mt-2 opacity-75">
+                                    <span t-if="agent.languages"><i class="fa fa-language me-1"/><t t-out="agent.languages"/> · </span>
+                                    <span><t t-out="agent.listing_count"/> active listings</span>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a t-if="agent.phone" t-attf-href="tel:#{agent.phone}" class="btn btn-light"><i class="fa fa-phone me-1"/>Call</a>
+                                <a t-if="agent.whatsapp_url" t-att-href="agent.whatsapp_url" target="_blank" rel="noopener" class="btn btn-success">
+                                    <i class="fa fa-whatsapp me-1"/>WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container py-5">
+                    <p t-if="agent.bio" class="lead mb-5" t-field="agent.bio"/>
+                    <h2 class="h4 mb-4">Listings by <t t-out="agent.name"/></h2>
+                    <div t-if="listings" class="d-flex flex-column gap-4">
+                        <t t-foreach="listings" t-as="listing"><t t-call="re_property_portal.listing_card"/></t>
+                    </div>
+                    <p t-else="" class="text-muted">No active listings right now.</p>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Agency profile                                                  -->
+    <!-- ============================================================== -->
+    <template id="page_agency" name="Property Portal: Agency">
+        <t t-call="website.layout">
+            <t t-set="additional_title" t-value="agency.name"/>
+            <div id="wrap" class="o_rp_site">
+                <section class="o_rp_page_head">
+                    <div class="container d-flex flex-wrap gap-4 align-items-center">
+                        <img t-attf-src="/web/image/re.agency/#{agency.id}/image_256" class="o_rp_profile_logo" t-att-alt="agency.name"/>
+                        <div class="flex-grow-1">
+                            <h1 class="h2 mb-1">
+                                <t t-out="agency.name"/>
+                                <i t-if="agency.is_verified" class="fa fa-check-circle text-success ms-1" title="Verified"/>
+                            </h1>
+                            <div class="o_rp_gold_text" t-field="agency.agency_type"/>
+                            <div class="small mt-2 opacity-75">
+                                <t t-out="agency.listing_count"/> listings · <t t-out="agency.agent_count"/> agents
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a t-if="agency.phone" t-attf-href="tel:#{agency.phone}" class="btn btn-light"><i class="fa fa-phone me-1"/>Call</a>
+                            <a t-if="agency.website" t-att-href="agency.website" target="_blank" rel="noopener" class="btn btn-outline-light">
+                                <i class="fa fa-globe me-1"/>Website
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section class="container py-5">
+                    <div t-if="not is_html_empty(agency.description)" class="o_rp_description mb-5" t-field="agency.description"/>
+                    <t t-if="projects">
+                        <h2 class="h4 mb-4">New projects</h2>
+                        <div class="row g-4 mb-5 o_re_site">
+                            <div t-foreach="projects" t-as="project" class="col-md-6 col-lg-4">
+                                <t t-call="re_developer_website.project_card"/>
+                            </div>
+                        </div>
+                    </t>
+                    <t t-if="agents">
+                        <h2 class="h4 mb-4">Agents</h2>
+                        <div class="row g-4 mb-5">
+                            <div t-foreach="agents" t-as="agent" class="col-6 col-md-4 col-lg-3">
+                                <t t-call="re_property_portal.agent_card"/>
+                            </div>
+                        </div>
+                    </t>
+                    <h2 class="h4 mb-4">Listings</h2>
+                    <div t-if="listings" class="d-flex flex-column gap-4">
+                        <t t-foreach="listings" t-as="listing"><t t-call="re_property_portal.listing_card"/></t>
+                    </div>
+                    <p t-else="" class="text-muted">No active listings right now.</p>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- List your property (agent / owner request)                     -->
+    <!-- ============================================================== -->
+    <template id="page_become_agent" name="Property Portal: List Your Property">
+        <t t-call="website.layout">
+            <t t-set="additional_title">List your property</t>
+            <t t-set="fv" t-value="form_values or {}"/>
+            <div id="wrap" class="o_rp_site">
+                <section class="o_rp_page_head">
+                    <div class="container">
+                        <h1 class="h2 mb-2">List your property with us</h1>
+                        <p class="mb-0 opacity-75">Reach serious buyers and tenants. Free for owners and agents.</p>
+                    </div>
+                </section>
+                <section class="container py-5">
+                    <div class="row g-5">
+                        <div class="col-lg-5">
+                            <h2 class="h4 mb-4">How it works</h2>
+                            <ol class="o_rp_steps list-unstyled">
+                                <li><span>1</span><div><strong>Send your request</strong><p class="text-muted small mb-0">Tell us who you are. It takes one minute.</p></div></li>
+                                <li><span>2</span><div><strong>We verify and invite you</strong><p class="text-muted small mb-0">You receive an email to set your password.</p></div></li>
+                                <li><span>3</span><div><strong>Add your properties</strong><p class="text-muted small mb-0">Upload photos, price and details from "My Account".</p></div></li>
+                                <li><span>4</span><div><strong>Get calls and messages</strong><p class="text-muted small mb-0">After a quick review your listing goes live.</p></div></li>
+                            </ol>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-4 p-lg-5">
+                                    <div t-if="form_error" class="alert alert-danger" role="alert" t-out="form_error"/>
+                                    <form action="/list-your-property/submit" method="post">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <div class="o_rp_hp" aria-hidden="true"><input type="text" name="website_url_hp" tabindex="-1" autocomplete="off"/></div>
+                                        <div class="mb-3">
+                                            <span class="form-label d-block">I am</span>
+                                            <div class="btn-group w-100" role="group">
+                                                <input type="radio" class="btn-check" name="agent_kind" id="o_rp_kind_owner" value="owner"
+                                                       t-att-checked="fv.get('agent_kind', 'owner') == 'owner'"/>
+                                                <label class="btn btn-outline-primary" for="o_rp_kind_owner">A property owner</label>
+                                                <input type="radio" class="btn-check" name="agent_kind" id="o_rp_kind_agent" value="agent"
+                                                       t-att-checked="fv.get('agent_kind') == 'agent'"/>
+                                                <label class="btn btn-outline-primary" for="o_rp_kind_agent">An agent / broker</label>
+                                            </div>
+                                        </div>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="o_rp_ba_name">Full name *</label>
+                                                <input id="o_rp_ba_name" type="text" name="name" class="form-control" required="required" t-att-value="fv.get('name')"/>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="o_rp_ba_email">Email *</label>
+                                                <input id="o_rp_ba_email" type="email" name="email" class="form-control" required="required" t-att-value="fv.get('email')"/>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="o_rp_ba_phone">Phone *</label>
+                                                <input id="o_rp_ba_phone" type="tel" name="phone" class="form-control" required="required" t-att-value="fv.get('phone')"/>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label" for="o_rp_ba_wa">WhatsApp</label>
+                                                <input id="o_rp_ba_wa" type="tel" name="whatsapp" class="form-control" t-att-value="fv.get('whatsapp')"
+                                                       placeholder="Same as phone if empty"/>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label" for="o_rp_ba_agency">Agency / company (agents only)</label>
+                                                <input id="o_rp_ba_agency" type="text" name="agency" class="form-control" t-att-value="fv.get('agency')"/>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label" for="o_rp_ba_msg">What would you like to list?</label>
+                                                <textarea id="o_rp_ba_msg" name="message" rows="3" class="form-control"
+                                                          placeholder="e.g. 3 apartments in New Cairo, 1 villa in Sheikh Zayed" t-out="fv.get('message') or ''"/>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">Send request</button>
+                                        <p class="small text-muted text-center mt-3 mb-0">
+                                            Already approved? <a href="/web/login?redirect=/my/listings">Log in</a>
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+</odoo>

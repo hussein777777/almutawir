@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="menu_properties_buy" model="website.menu">
+        <field name="name">Buy</field>
+        <field name="url">/properties/buy</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">12</field>
+    </record>
+    <record id="menu_properties_rent" model="website.menu">
+        <field name="name">Rent</field>
+        <field name="url">/properties/rent</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">13</field>
+    </record>
+    <record id="menu_find_agent" model="website.menu">
+        <field name="name">Find Agent</field>
+        <field name="url">/agents</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">32</field>
+    </record>
+
+    <!-- Arabic labels for the per-website copies of these menus -->
+    <function model="website" name="_rp_translate_menus"/>
+</odoo>

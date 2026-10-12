@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Agencies -->
+    <record id="agency_elmotawer" model="re.agency">
+        <field name="name">El Motawer Developments</field>
+        <field name="agency_type">developer</field>
+        <field name="is_verified" eval="True"/>
+        <field name="is_published" eval="True"/>
+        <field name="phone">+20 100 000 0000</field>
+        <field name="email">sales@elmotawer.example.com</field>
+        <field name="location_id" ref="loc_new_cairo"/>
+        <field name="image_1920" type="base64" file="re_property_portal/static/img/demo/logo_elmotawer.png"/>
+        <field name="description" type="html"><p>Real estate investment and development company building residential, commercial and coastal communities across Egypt.</p></field>
+    </record>
+    <record id="agency_cairohomes" model="re.agency">
+        <field name="name">Cairo Homes Realty</field>
+        <field name="agency_type">brokerage</field>
+        <field name="is_verified" eval="True"/>
+        <field name="is_published" eval="True"/>
+        <field name="phone">+20 111 222 3333</field>
+        <field name="email">info@cairohomes.example.com</field>
+        <field name="location_id" ref="loc_fifth_settlement"/>
+        <field name="image_1920" type="base64" file="re_property_portal/static/img/demo/logo_cairohomes.png"/>
+        <field name="description" type="html"><p>Brokerage specialised in resale and rentals in New Cairo, Sheikh Zayed and the North Coast.</p></field>
+    </record>
+
+    <!-- Demo portal user for the agent portal (login: agent / password: agent) -->
+    <record id="user_demo_agent" model="res.users" context="{'no_reset_password': True}">
+        <field name="name">Sara Mahmoud</field>
+        <field name="login">agent</field>
+        <field name="password">agent</field>
+        <field name="email">sara.agent@example.com</field>
+        <field name="groups_id" eval="[(6, 0, [ref('base.group_portal')])]"/>
+    </record>
+
+    <!-- Agents -->
+    <record id="agent_mina" model="re.agent">
+        <field name="name">Mina Adel</field>
+        <field name="job_title">Sales Director</field>
+        <field name="agency_id" ref="agency_elmotawer"/>
+        <field name="phone">+20 100 000 0000</field>
+        <field name="whatsapp">+20 100 000 0000</field>
+        <field name="email">mina@elmotawer.example.com</field>
+        <field name="languages">Arabic, English</field>
+        <field name="state">active</field>
+        <field name="is_verified" eval="True"/>
+        <field name="is_published" eval="True"/>
+        <field name="image_1920" type="base64" file="re_property_portal/static/img/demo/agent_mina.png"/>
+        <field name="bio">Helping families and investors find the right home in El Motawer projects for more than 10 years.</field>
+    </record>
+    <record id="agent_sara" model="re.agent">
+        <field name="name">Sara Mahmoud</field>
+        <field name="job_title">Senior Property Consultant</field>
+        <field name="agency_id" ref="agency_cairohomes"/>
+        <field name="phone">+20 111 222 3334</field>
+        <field name="whatsapp">+20 111 222 3334</field>
+        <field name="email">sara.agent@example.com</field>
+        <field name="languages">Arabic, English, French</field>
+        <field name="state">active</field>
+        <field name="is_verified" eval="True"/>
+        <field name="is_published" eval="True"/>
+        <field name="user_id" ref="user_demo_agent"/>
+        <field name="image_1920" type="base64" file="re_property_portal/static/img/demo/agent_sara.png"/>
+        <field name="bio">Resale and rental specialist in New Cairo and Sheikh Zayed.</field>
+    </record>
+    <record id="agent_omar" model="re.agent">
+        <field name="name">Omar Khaled</field>
+        <field name="job_title">Property Consultant</field>
+        <field name="agency_id" ref="agency_cairohomes"/>
+        <field name="phone">+20 111 222 3335</field>
+        <field name="email">omar.agent@example.com</field>
+        <field name="languages">Arabic, English</field>
+        <field name="state">active</field>
+        <field name="is_published" eval="True"/>
+        <field name="image_1920" type="base64" file="re_property_portal/static/img/demo/agent_omar.png"/>
+    </record>
+    <record id="agent_ahmed" model="re.agent">
+        <field name="name">Ahmed Samir</field>
+        <field name="agent_kind">owner</field>
+        <field name="phone">+20 122 333 4444</field>
+        <field name="email">ahmed.owner@example.com</field>
+        <field name="state">active</field>
+        <field name="is_published" eval="True"/>
+        <field name="image_1920" type="base64" file="re_property_portal/static/img/demo/agent_ahmed.png"/>
+    </record>
+    <record id="agent_pending" model="re.agent">
+        <field name="name">Youssef Nabil</field>
+        <field name="requested_agency">Nile Brokers</field>
+        <field name="phone">+20 109 876 5432</field>
+        <field name="email">youssef.request@example.com</field>
+        <field name="state">pending</field>
+    </record>
+
+    <record id="listing_l1" model="re.listing">
+        <field name="name">Fully finished 3 bedroom apartment with garden</field>
+        <field name="listing_type">sale</field>
+        <field name="property_type">apartment</field>
+        <field name="completion">ready</field>
+        <field name="sale_type">resale</field>
+        <field name="price">7450000</field>
+        <field name="down_payment">1500000</field>
+        <field name="installment_years">6</field>
+        <field name="bedrooms">3</field>
+        <field name="bathrooms">2</field>
+        <field name="area">165</field>
+        <field name="garden_area">60</field>
+        <field name="furnishing">unfurnished</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_fifth_settlement"/>
+        <field name="latitude">30.0091</field>
+        <field name="longitude">31.4887</field>
+        <field name="agent_id" ref="agent_sara"/>
+        <field name="is_premium" eval="True"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_pool'), ref('re_developer_website.amenity_security'), ref('re_developer_website.amenity_green')])]"/>
+        <field name="description" type="html"><p>Fully finished 3 bedroom apartment with garden. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_l1_img0" model="re.listing.image"><field name="listing_id" ref="listing_l1"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/apt_ext_1.jpg"/></record>
+    <record id="listing_l1_img1" model="re.listing.image"><field name="listing_id" ref="listing_l1"/><field name="sequence">2</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_1.jpg"/></record>
+    <record id="listing_l1_img2" model="re.listing.image"><field name="listing_id" ref="listing_l1"/><field name="sequence">3</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_2.jpg"/></record>
+    <record id="listing_l1_img3" model="re.listing.image"><field name="listing_id" ref="listing_l1"/><field name="sequence">4</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_3.jpg"/></record>
+    <record id="listing_l1" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=3)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_l2" model="re.listing">
+        <field name="name">Standalone villa with private pool</field>
+        <field name="listing_type">sale</field>
+        <field name="property_type">villa</field>
+        <field name="completion">ready</field>
+        <field name="sale_type">resale</field>
+        <field name="price">24500000</field>
+        <field name="down_payment">0</field>
+        <field name="installment_years">0</field>
+        <field name="bedrooms">5</field>
+        <field name="bathrooms">5</field>
+        <field name="area">420</field>
+        <field name="garden_area">300</field>
+        <field name="furnishing">semi</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_zayed"/>
+        <field name="latitude">30.0465</field>
+        <field name="longitude">30.9752</field>
+        <field name="agent_id" ref="agent_sara"/>
+        <field name="is_premium" eval="True"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_pool'), ref('re_developer_website.amenity_security'), ref('re_developer_website.amenity_parking')])]"/>
+        <field name="description" type="html"><p>Standalone villa with private pool. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_l2_img0" model="re.listing.image"><field name="listing_id" ref="listing_l2"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/villa_1.jpg"/></record>
+    <record id="listing_l2_img1" model="re.listing.image"><field name="listing_id" ref="listing_l2"/><field name="sequence">2</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_2.jpg"/></record>
+    <record id="listing_l2_img2" model="re.listing.image"><field name="listing_id" ref="listing_l2"/><field name="sequence">3</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_3.jpg"/></record>
+    <record id="listing_l2_img3" model="re.listing.image"><field name="listing_id" ref="listing_l2"/><field name="sequence">4</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_1.jpg"/></record>
+    <record id="listing_l2" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=26)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_l3" model="re.listing">
+        <field name="name">Sea view chalet in Ras El Hekma</field>
+        <field name="listing_type">sale</field>
+        <field name="property_type">chalet</field>
+        <field name="completion">offplan</field>
+        <field name="sale_type">primary</field>
+        <field name="price">6200000</field>
+        <field name="down_payment">620000</field>
+        <field name="installment_years">10</field>
+        <field name="bedrooms">2</field>
+        <field name="bathrooms">1</field>
+        <field name="area">95</field>
+        <field name="garden_area">35</field>
+        <field name="furnishing">unfurnished</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_ras_hekma"/>
+        <field name="latitude">31.1735</field>
+        <field name="longitude">27.8462</field>
+        <field name="agent_id" ref="agent_mina"/>
+        <field name="is_premium" eval="True"/>
+        <field name="delivery_date" eval="(DateTime.today() + relativedelta(months=30)).strftime('%Y-%m-%d')"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_pool'), ref('re_developer_website.amenity_beach'), ref('re_developer_website.amenity_security')])]"/>
+        <field name="description" type="html"><p>Sea view chalet in Ras El Hekma. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_l3_img0" model="re.listing.image"><field name="listing_id" ref="listing_l3"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/chalet_1.jpg"/></record>
+    <record id="listing_l3_img1" model="re.listing.image"><field name="listing_id" ref="listing_l3"/><field name="sequence">2</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_2.jpg"/></record>
+    <record id="listing_l3" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=50)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_l4" model="re.listing">
+        <field name="name">Off-plan duplex with roof - 10 years installments</field>
+        <field name="listing_type">sale</field>
+        <field name="property_type">duplex</field>
+        <field name="completion">offplan</field>
+        <field name="sale_type">primary</field>
+        <field name="price">10800000</field>
+        <field name="down_payment">1080000</field>
+        <field name="installment_years">10</field>
+        <field name="bedrooms">4</field>
+        <field name="bathrooms">3</field>
+        <field name="area">240</field>
+        <field name="garden_area">90</field>
+        <field name="furnishing">unfurnished</field>
+        <field name="finishing">semi</field>
+        <field name="location_id" ref="loc_new_cairo"/>
+        <field name="latitude">30.0302</field>
+        <field name="longitude">31.481</field>
+        <field name="agent_id" ref="agent_mina"/>
+        <field name="is_premium" eval="False"/>
+        <field name="delivery_date" eval="(DateTime.today() + relativedelta(months=30)).strftime('%Y-%m-%d')"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_club'), ref('re_developer_website.amenity_security'), ref('re_developer_website.amenity_kids')])]"/>
+        <field name="description" type="html"><p>Off-plan duplex with roof - 10 years installments. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_l4_img0" model="re.listing.image"><field name="listing_id" ref="listing_l4"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/apt_ext_2.jpg"/></record>
+    <record id="listing_l4_img1" model="re.listing.image"><field name="listing_id" ref="listing_l4"/><field name="sequence">2</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_3.jpg"/></record>
+    <record id="listing_l4" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_l5" model="re.listing">
+        <field name="name">Twin house in a gated compound</field>
+        <field name="listing_type">sale</field>
+        <field name="property_type">twinhouse</field>
+        <field name="completion">ready</field>
+        <field name="sale_type">resale</field>
+        <field name="price">16900000</field>
+        <field name="down_payment">3000000</field>
+        <field name="installment_years">5</field>
+        <field name="bedrooms">4</field>
+        <field name="bathrooms">3</field>
+        <field name="area">280</field>
+        <field name="garden_area">150</field>
+        <field name="furnishing">unfurnished</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_october"/>
+        <field name="latitude">29.9612</field>
+        <field name="longitude">30.929</field>
+        <field name="agent_id" ref="agent_omar"/>
+        <field name="is_premium" eval="False"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_green'), ref('re_developer_website.amenity_security'), ref('re_developer_website.amenity_kids')])]"/>
+        <field name="description" type="html"><p>Twin house in a gated compound. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_l5_img0" model="re.listing.image"><field name="listing_id" ref="listing_l5"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/villa_2.jpg"/></record>
+    <record id="listing_l5_img1" model="re.listing.image"><field name="listing_id" ref="listing_l5"/><field name="sequence">2</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_1.jpg"/></record>
+    <record id="listing_l5" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=30)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_l6" model="re.listing">
+        <field name="name">Grade A office in the CBD</field>
+        <field name="listing_type">sale</field>
+        <field name="property_type">office</field>
+        <field name="completion">ready</field>
+        <field name="sale_type">primary</field>
+        <field name="price">4750000</field>
+        <field name="down_payment">950000</field>
+        <field name="installment_years">5</field>
+        <field name="bedrooms">0</field>
+        <field name="bathrooms">1</field>
+        <field name="area">85</field>
+        <field name="garden_area">0</field>
+        <field name="furnishing">unfurnished</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_new_capital"/>
+        <field name="latitude">30.0215</field>
+        <field name="longitude">31.759</field>
+        <field name="agent_id" ref="agent_mina"/>
+        <field name="is_premium" eval="False"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_parking'), ref('re_developer_website.amenity_security')])]"/>
+        <field name="description" type="html"><p>Grade A office in the CBD. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_l6_img0" model="re.listing.image"><field name="listing_id" ref="listing_l6"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/office_1.jpg"/></record>
+    <record id="listing_l6" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=72)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_l7" model="re.listing">
+        <field name="name">2 bedroom apartment near AUC</field>
+        <field name="listing_type">sale</field>
+        <field name="property_type">apartment</field>
+        <field name="completion">ready</field>
+        <field name="sale_type">resale</field>
+        <field name="price">5900000</field>
+        <field name="down_payment">0</field>
+        <field name="installment_years">0</field>
+        <field name="bedrooms">2</field>
+        <field name="bathrooms">2</field>
+        <field name="area">125</field>
+        <field name="garden_area">0</field>
+        <field name="furnishing">semi</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_new_cairo"/>
+        <field name="latitude">30.0195</field>
+        <field name="longitude">31.501</field>
+        <field name="agent_id" ref="agent_ahmed"/>
+        <field name="is_premium" eval="False"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_security')])]"/>
+        <field name="description" type="html"><p>2 bedroom apartment near AUC. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_l7_img0" model="re.listing.image"><field name="listing_id" ref="listing_l7"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/apt_ext_1.jpg"/></record>
+    <record id="listing_l7_img1" model="re.listing.image"><field name="listing_id" ref="listing_l7"/><field name="sequence">2</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_3.jpg"/></record>
+    <record id="listing_l7" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=8)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_l8" model="re.listing">
+        <field name="name">Penthouse with panoramic view</field>
+        <field name="listing_type">sale</field>
+        <field name="property_type">penthouse</field>
+        <field name="completion">ready</field>
+        <field name="sale_type">resale</field>
+        <field name="price">13200000</field>
+        <field name="down_payment">0</field>
+        <field name="installment_years">0</field>
+        <field name="bedrooms">3</field>
+        <field name="bathrooms">3</field>
+        <field name="area">210</field>
+        <field name="garden_area">120</field>
+        <field name="furnishing">furnished</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_heliopolis"/>
+        <field name="latitude">30.089</field>
+        <field name="longitude">31.324</field>
+        <field name="agent_id" ref="agent_omar"/>
+        <field name="is_premium" eval="False"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_parking'), ref('re_developer_website.amenity_club')])]"/>
+        <field name="description" type="html"><p>Penthouse with panoramic view. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_l8_img0" model="re.listing.image"><field name="listing_id" ref="listing_l8"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/apt_ext_2.jpg"/></record>
+    <record id="listing_l8_img1" model="re.listing.image"><field name="listing_id" ref="listing_l8"/><field name="sequence">2</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_2.jpg"/></record>
+    <record id="listing_l8_img2" model="re.listing.image"><field name="listing_id" ref="listing_l8"/><field name="sequence">3</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_1.jpg"/></record>
+    <record id="listing_l8" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=96)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_r1" model="re.listing">
+        <field name="name">Furnished 2 bedroom apartment for rent</field>
+        <field name="listing_type">rent</field>
+        <field name="property_type">apartment</field>
+        <field name="completion">ready</field>
+        <field name="rent_period">month</field>
+        <field name="price">45000</field>
+        <field name="down_payment">0</field>
+        <field name="installment_years">0</field>
+        <field name="bedrooms">2</field>
+        <field name="bathrooms">2</field>
+        <field name="area">140</field>
+        <field name="garden_area">0</field>
+        <field name="furnishing">furnished</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_fifth_settlement"/>
+        <field name="latitude">30.006</field>
+        <field name="longitude">31.495</field>
+        <field name="agent_id" ref="agent_sara"/>
+        <field name="is_premium" eval="True"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_pool'), ref('re_developer_website.amenity_security')])]"/>
+        <field name="description" type="html"><p>Furnished 2 bedroom apartment for rent. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_r1_img0" model="re.listing.image"><field name="listing_id" ref="listing_r1"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_2.jpg"/></record>
+    <record id="listing_r1_img1" model="re.listing.image"><field name="listing_id" ref="listing_r1"/><field name="sequence">2</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/apt_ext_1.jpg"/></record>
+    <record id="listing_r1_img2" model="re.listing.image"><field name="listing_id" ref="listing_r1"/><field name="sequence">3</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_1.jpg"/></record>
+    <record id="listing_r1" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_r2" model="re.listing">
+        <field name="name">Villa for rent with garden</field>
+        <field name="listing_type">rent</field>
+        <field name="property_type">villa</field>
+        <field name="completion">ready</field>
+        <field name="rent_period">month</field>
+        <field name="price">120000</field>
+        <field name="down_payment">0</field>
+        <field name="installment_years">0</field>
+        <field name="bedrooms">4</field>
+        <field name="bathrooms">4</field>
+        <field name="area">350</field>
+        <field name="garden_area">250</field>
+        <field name="furnishing">semi</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_zayed"/>
+        <field name="latitude">30.042</field>
+        <field name="longitude">30.985</field>
+        <field name="agent_id" ref="agent_sara"/>
+        <field name="is_premium" eval="False"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_green'), ref('re_developer_website.amenity_security'), ref('re_developer_website.amenity_parking')])]"/>
+        <field name="description" type="html"><p>Villa for rent with garden. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_r2_img0" model="re.listing.image"><field name="listing_id" ref="listing_r2"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/villa_2.jpg"/></record>
+    <record id="listing_r2_img1" model="re.listing.image"><field name="listing_id" ref="listing_r2"/><field name="sequence">2</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_3.jpg"/></record>
+    <record id="listing_r2" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=20)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_r3" model="re.listing">
+        <field name="name">Summer chalet for rent - first row</field>
+        <field name="listing_type">rent</field>
+        <field name="property_type">chalet</field>
+        <field name="completion">ready</field>
+        <field name="rent_period">year</field>
+        <field name="price">900000</field>
+        <field name="down_payment">0</field>
+        <field name="installment_years">0</field>
+        <field name="bedrooms">3</field>
+        <field name="bathrooms">2</field>
+        <field name="area">130</field>
+        <field name="garden_area">40</field>
+        <field name="furnishing">furnished</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_sidi_abdelrahman"/>
+        <field name="latitude">30.972</field>
+        <field name="longitude">28.738</field>
+        <field name="agent_id" ref="agent_omar"/>
+        <field name="is_premium" eval="True"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_beach'), ref('re_developer_website.amenity_pool')])]"/>
+        <field name="description" type="html"><p>Summer chalet for rent - first row. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_r3_img0" model="re.listing.image"><field name="listing_id" ref="listing_r3"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/chalet_1.jpg"/></record>
+    <record id="listing_r3_img1" model="re.listing.image"><field name="listing_id" ref="listing_r3"/><field name="sequence">2</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_1.jpg"/></record>
+    <record id="listing_r3" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=12)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_r4" model="re.listing">
+        <field name="name">Studio for rent in Maadi</field>
+        <field name="listing_type">rent</field>
+        <field name="property_type">studio</field>
+        <field name="completion">ready</field>
+        <field name="rent_period">month</field>
+        <field name="price">18000</field>
+        <field name="down_payment">0</field>
+        <field name="installment_years">0</field>
+        <field name="bedrooms">0</field>
+        <field name="bathrooms">1</field>
+        <field name="area">55</field>
+        <field name="garden_area">0</field>
+        <field name="furnishing">furnished</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_maadi"/>
+        <field name="latitude">29.959</field>
+        <field name="longitude">31.26</field>
+        <field name="agent_id" ref="agent_ahmed"/>
+        <field name="is_premium" eval="False"/>
+        <field name="description" type="html"><p>Studio for rent in Maadi. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_r4_img0" model="re.listing.image"><field name="listing_id" ref="listing_r4"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/int_1.jpg"/></record>
+    <record id="listing_r4" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=40)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_r5" model="re.listing">
+        <field name="name">Administrative office for rent</field>
+        <field name="listing_type">rent</field>
+        <field name="property_type">office</field>
+        <field name="completion">ready</field>
+        <field name="rent_period">month</field>
+        <field name="price">60000</field>
+        <field name="down_payment">0</field>
+        <field name="installment_years">0</field>
+        <field name="bedrooms">0</field>
+        <field name="bathrooms">2</field>
+        <field name="area">150</field>
+        <field name="garden_area">0</field>
+        <field name="furnishing">unfurnished</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_new_capital"/>
+        <field name="latitude">30.018</field>
+        <field name="longitude">31.765</field>
+        <field name="agent_id" ref="agent_omar"/>
+        <field name="is_premium" eval="False"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_parking')])]"/>
+        <field name="description" type="html"><p>Administrative office for rent. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_r5_img0" model="re.listing.image"><field name="listing_id" ref="listing_r5"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/office_1.jpg"/></record>
+    <record id="listing_r5" model="re.listing">
+        <field name="state">published</field>
+        <field name="is_published" eval="True"/>
+        <field name="published_date" eval="(DateTime.now() - timedelta(hours=60)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+    <record id="listing_d1" model="re.listing">
+        <field name="name">Townhouse - waiting for photos approval</field>
+        <field name="listing_type">sale</field>
+        <field name="property_type">townhouse</field>
+        <field name="completion">ready</field>
+        <field name="sale_type">resale</field>
+        <field name="price">11500000</field>
+        <field name="down_payment">0</field>
+        <field name="installment_years">0</field>
+        <field name="bedrooms">3</field>
+        <field name="bathrooms">3</field>
+        <field name="area">230</field>
+        <field name="garden_area">80</field>
+        <field name="furnishing">unfurnished</field>
+        <field name="finishing">fully</field>
+        <field name="location_id" ref="loc_shorouk"/>
+        <field name="latitude">30.143</field>
+        <field name="longitude">31.624</field>
+        <field name="agent_id" ref="agent_sara"/>
+        <field name="is_premium" eval="False"/>
+        <field name="amenity_ids" eval="[(6, 0, [ref('re_developer_website.amenity_green')])]"/>
+        <field name="description" type="html"><p>Townhouse - waiting for photos approval. Contact the agent for a viewing.</p></field>
+    </record>
+    <record id="listing_d1_img0" model="re.listing.image"><field name="listing_id" ref="listing_d1"/><field name="sequence">1</field><field name="image_1920" type="base64" file="re_property_portal/static/img/demo/villa_2.jpg"/></record>
+    <record id="listing_d1" model="re.listing"><field name="state">pending</field></record>
+
+    <!-- El Motawer's own project is listed under the developer -->
+    <record id="re_developer_website.project_palm" model="re.project">
+        <field name="agency_id" ref="agency_elmotawer"/>
+        <field name="location_id" ref="loc_fifth_settlement"/>
+    </record>
+    <record id="re_developer_website.project_bay" model="re.project">
+        <field name="agency_id" ref="agency_elmotawer"/>
+        <field name="location_id" ref="loc_ras_hekma"/>
+    </record>
+
+    <!-- A saved search alert -->
+    <record id="alert_demo" model="re.search.alert">
+        <field name="name">Apartments for sale in New Cairo</field>
+        <field name="email">buyer@example.com</field>
+        <field name="query">type=sale&amp;ptype=apartment&amp;q=New+Cairo</field>
+        <field name="last_sent_date" eval="(DateTime.now() - timedelta(days=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+</odoo>

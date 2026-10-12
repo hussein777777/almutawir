@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="page_search" name="Property Portal: Search">
+        <t t-call="website.layout">
+            <t t-set="additional_title">
+                <t t-if="purpose == 'rent'">Properties for rent</t>
+                <t t-else="">Properties for sale</t>
+            </t>
+            <t t-set="loc_record" t-value="filters['loc'] and request.env['re.location'].sudo().browse(filters['loc']).exists()"/>
+            <t t-set="where" t-value="loc_record and loc_record.name or filters['q']"/>
+            <div id="wrap" class="o_rp_site o_rp_search_page">
+                <section class="o_rp_search_head">
+                    <div class="container">
+                        <t t-call="re_property_portal.search_bar"/>
+                    </div>
+                </section>
+
+                <section class="container py-4">
+                    <div t-if="alert_created" class="alert alert-success d-flex align-items-center gap-2" role="alert">
+                        <i class="fa fa-bell"/>
+                        <span>Your alert is saved. We will email you new matching properties.</span>
+                    </div>
+
+                    <!-- Property type shortcuts with counts -->
+                    <div t-if="type_counts" class="o_rp_categories d-flex flex-wrap gap-2 mb-4">
+                        <a t-att-href="search_url(filters, view=view, ptype='')"
+                           t-attf-class="o_rp_category #{not filters['ptype'] and 'active' or ''}">All</a>
+                        <t t-foreach="property_types" t-as="pt">
+                            <a t-if="type_counts.get(pt[0])" t-att-href="search_url(filters, view=view, ptype=pt[0])"
+                               t-attf-class="o_rp_category #{filters['ptype'] == [pt[0]] and 'active' or ''}">
+                                <t t-out="pt[1]"/> <span class="o_rp_category_count" t-out="'{:,}'.format(type_counts[pt[0]])"/>
+                            </a>
+                        </t>
+                    </div>
+
+                    <!-- Result header -->
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+                        <div>
+                            <h1 class="h4 mb-1">
+                                <t t-if="purpose == 'rent'">Properties for rent</t>
+                                <t t-else="">Properties for sale</t>
+                                <t t-if="where"> <span class="text-muted">·</span> <t t-out="where"/></t>
+                            </h1>
+                            <div class="text-muted small"><strong t-out="'{:,}'.format(total)"/> results</div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 align-items-center">
+                            <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#o_rp_alert_modal">
+                                <i class="fa fa-bell-o me-1"/>Create alert
+                            </button>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="View">
+                                <a t-att-href="search_url(filters)" t-attf-class="btn #{view == 'list' and 'btn-dark' or 'btn-outline-dark'}">
+                                    <i class="fa fa-list me-1"/>List
+                                </a>
+                                <a t-att-href="search_url(filters, view='map')" t-attf-class="btn #{view == 'map' and 'btn-dark' or 'btn-outline-dark'}">
+                                    <i class="fa fa-map-o me-1"/>Map
+                                </a>
+                            </div>
+                            <form t-if="view == 'list'" t-attf-action="/properties/#{purpose}" method="get" class="o_rp_sort_form">
+                                <t t-foreach="filters_to_query(filters, sort='').items()" t-as="item">
+                                    <input type="hidden" t-att-name="item[0]" t-att-value="item[1]"/>
+                                </t>
+                                <select name="sort" class="form-select form-select-sm o_rp_autosubmit" aria-label="Sort">
+                                    <option value="" t-att-selected="not filters['sort']">Featured</option>
+                                    <option value="newest" t-att-selected="filters['sort'] == 'newest'">Newest</option>
+                                    <option value="price_asc" t-att-selected="filters['sort'] == 'price_asc'">Price (low to high)</option>
+                                    <option value="price_desc" t-att-selected="filters['sort'] == 'price_desc'">Price (high to low)</option>
+                                    <option value="area_desc" t-att-selected="filters['sort'] == 'area_desc'">Largest area</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Map view -->
+                    <t t-if="view == 'map'">
+                        <div class="o_rp_map o_rp_map_search" t-att-data-markers="markers_json"/>
+                        <p class="small text-muted mt-2">
+                            <t t-out="len(listings)"/> properties with a location on the map.
+                        </p>
+                        <t t-call-assets="re_property_portal.assets_map"/>
+                    </t>
+
+                    <!-- List view -->
+                    <t t-else="">
+                        <div t-if="listings" class="d-flex flex-column gap-4">
+                            <t t-foreach="listings" t-as="listing">
+                                <t t-call="re_property_portal.listing_card"/>
+                            </t>
+                        </div>
+                        <div t-else="" class="o_rp_empty text-center py-5">
+                            <i class="fa fa-search fa-3x text-muted mb-3"/>
+                            <p class="lead">No properties match your search yet.</p>
+                            <p class="text-muted">Create an alert and we will email you as soon as one is listed.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#o_rp_alert_modal">
+                                <i class="fa fa-bell me-1"/>Create alert
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-center mt-5">
+                            <t t-call="website.pager"/>
+                        </div>
+                    </t>
+                </section>
+
+                <section class="o_rp_list_cta py-5">
+                    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+                        <div>
+                            <h2 class="h4 mb-1">Do you have a property to sell or rent?</h2>
+                            <p class="mb-0 text-muted">List it for free and reach thousands of buyers and tenants.</p>
+                        </div>
+                        <a href="/list-your-property" class="btn btn-primary btn-lg">List your property</a>
+                    </div>
+                </section>
+                <div class="oe_structure" id="oe_structure_rp_search_1"/>
+                <t t-call="re_property_portal.alert_modal"/>
+            </div>
+        </t>
+    </template>
+</odoo>

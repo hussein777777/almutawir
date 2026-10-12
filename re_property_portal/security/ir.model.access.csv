@@ -1,0 +1,23 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_re_location_manager,re.location manager,model_re_location,re_developer_website.group_re_manager,1,1,1,1
+access_re_location_user,re.location user,model_re_location,base.group_user,1,0,0,0
+access_re_location_public,re.location public,model_re_location,base.group_public,1,0,0,0
+access_re_location_portal,re.location portal,model_re_location,base.group_portal,1,0,0,0
+access_re_agency_manager,re.agency manager,model_re_agency,re_developer_website.group_re_manager,1,1,1,1
+access_re_agency_user,re.agency user,model_re_agency,base.group_user,1,0,0,0
+access_re_agency_public,re.agency public,model_re_agency,base.group_public,1,0,0,0
+access_re_agency_portal,re.agency portal,model_re_agency,base.group_portal,1,0,0,0
+access_re_agent_manager,re.agent manager,model_re_agent,re_developer_website.group_re_manager,1,1,1,1
+access_re_agent_user,re.agent user,model_re_agent,base.group_user,1,0,0,0
+access_re_agent_public,re.agent public,model_re_agent,base.group_public,1,0,0,0
+access_re_agent_portal,re.agent portal,model_re_agent,base.group_portal,1,0,0,0
+access_re_listing_manager,re.listing manager,model_re_listing,re_developer_website.group_re_manager,1,1,1,1
+access_re_listing_user,re.listing user,model_re_listing,base.group_user,1,0,0,0
+access_re_listing_public,re.listing public,model_re_listing,base.group_public,1,0,0,0
+access_re_listing_portal,re.listing portal,model_re_listing,base.group_portal,1,0,0,0
+access_re_listing_image_manager,re.listing.image manager,model_re_listing_image,re_developer_website.group_re_manager,1,1,1,1
+access_re_listing_image_user,re.listing.image user,model_re_listing_image,base.group_user,1,0,0,0
+access_re_listing_image_public,re.listing.image public,model_re_listing_image,base.group_public,1,0,0,0
+access_re_listing_image_portal,re.listing.image portal,model_re_listing_image,base.group_portal,1,0,0,0
+access_re_search_alert_manager,re.search.alert manager,model_re_search_alert,re_developer_website.group_re_manager,1,1,1,1
+access_re_listing_reject_wizard_manager,re.listing.reject.wizard manager,model_re_listing_reject_wizard,re_developer_website.group_re_manager,1,1,1,1

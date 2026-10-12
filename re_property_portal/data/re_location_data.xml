@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Governorates -->
+    <record id="loc_cairo" model="re.location"><field name="name">Cairo</field><field name="location_type">governorate</field><field name="latitude">30.0444</field><field name="longitude">31.2357</field></record>
+    <record id="loc_giza" model="re.location"><field name="name">Giza</field><field name="location_type">governorate</field><field name="latitude">30.0131</field><field name="longitude">31.2089</field></record>
+    <record id="loc_alex" model="re.location"><field name="name">Alexandria</field><field name="location_type">governorate</field><field name="latitude">31.2001</field><field name="longitude">29.9187</field></record>
+    <record id="loc_north_coast" model="re.location"><field name="name">North Coast</field><field name="location_type">governorate</field><field name="latitude">30.9500</field><field name="longitude">28.6000</field></record>
+    <record id="loc_red_sea" model="re.location"><field name="name">Red Sea</field><field name="location_type">governorate</field><field name="latitude">27.2579</field><field name="longitude">33.8116</field></record>
+    <record id="loc_suez" model="re.location"><field name="name">Suez</field><field name="location_type">governorate</field><field name="latitude">29.9668</field><field name="longitude">32.5498</field></record>
+
+    <!-- Cairo -->
+    <record id="loc_new_cairo" model="re.location"><field name="name">New Cairo</field><field name="parent_id" ref="loc_cairo"/><field name="latitude">30.0300</field><field name="longitude">31.4700</field></record>
+    <record id="loc_fifth_settlement" model="re.location"><field name="name">5th Settlement</field><field name="parent_id" ref="loc_new_cairo"/><field name="location_type">area</field><field name="latitude">30.0074</field><field name="longitude">31.4913</field></record>
+    <record id="loc_new_capital" model="re.location"><field name="name">New Administrative Capital</field><field name="parent_id" ref="loc_cairo"/><field name="latitude">30.0197</field><field name="longitude">31.7612</field></record>
+    <record id="loc_mostakbal" model="re.location"><field name="name">Mostakbal City</field><field name="parent_id" ref="loc_cairo"/><field name="latitude">30.1250</field><field name="longitude">31.6100</field></record>
+    <record id="loc_madinaty" model="re.location"><field name="name">Madinaty</field><field name="parent_id" ref="loc_cairo"/><field name="latitude">30.1070</field><field name="longitude">31.6400</field></record>
+    <record id="loc_shorouk" model="re.location"><field name="name">El Shorouk</field><field name="parent_id" ref="loc_cairo"/><field name="latitude">30.1430</field><field name="longitude">31.6240</field></record>
+    <record id="loc_maadi" model="re.location"><field name="name">Maadi</field><field name="parent_id" ref="loc_cairo"/><field name="latitude">29.9602</field><field name="longitude">31.2569</field></record>
+    <record id="loc_heliopolis" model="re.location"><field name="name">Heliopolis</field><field name="parent_id" ref="loc_cairo"/><field name="latitude">30.0911</field><field name="longitude">31.3225</field></record>
+    <record id="loc_nasr_city" model="re.location"><field name="name">Nasr City</field><field name="parent_id" ref="loc_cairo"/><field name="latitude">30.0561</field><field name="longitude">31.3301</field></record>
+
+    <!-- Giza -->
+    <record id="loc_october" model="re.location"><field name="name">6th of October</field><field name="parent_id" ref="loc_giza"/><field name="latitude">29.9387</field><field name="longitude">30.9133</field></record>
+    <record id="loc_zayed" model="re.location"><field name="name">Sheikh Zayed</field><field name="parent_id" ref="loc_giza"/><field name="latitude">30.0440</field><field name="longitude">30.9800</field></record>
+
+    <!-- Coast -->
+    <record id="loc_ras_hekma" model="re.location"><field name="name">Ras El Hekma</field><field name="parent_id" ref="loc_north_coast"/><field name="latitude">31.1700</field><field name="longitude">27.8500</field></record>
+    <record id="loc_sidi_abdelrahman" model="re.location"><field name="name">Sidi Abdel Rahman</field><field name="parent_id" ref="loc_north_coast"/><field name="latitude">30.9700</field><field name="longitude">28.7400</field></record>
+    <record id="loc_alamein" model="re.location"><field name="name">New Alamein</field><field name="parent_id" ref="loc_north_coast"/><field name="latitude">30.8300</field><field name="longitude">28.9500</field></record>
+    <record id="loc_hurghada" model="re.location"><field name="name">Hurghada</field><field name="parent_id" ref="loc_red_sea"/><field name="latitude">27.2579</field><field name="longitude">33.8116</field></record>
+    <record id="loc_gouna" model="re.location"><field name="name">El Gouna</field><field name="parent_id" ref="loc_red_sea"/><field name="latitude">27.3947</field><field name="longitude">33.6782</field></record>
+    <record id="loc_sokhna" model="re.location"><field name="name">Ain Sokhna</field><field name="parent_id" ref="loc_suez"/><field name="latitude">29.6000</field><field name="longitude">32.3200</field></record>
+</odoo>

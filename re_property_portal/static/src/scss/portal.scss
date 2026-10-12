@@ -1,0 +1,316 @@
+// Property Portal - uses the website palette (gold o-color-1, navy o-color-2/5, cream o-color-3)
+
+$rp-gold: o-color('o-color-1');
+$rp-navy-2: o-color('o-color-2');
+$rp-soft: o-color('o-color-3');
+$rp-navy: o-color('o-color-5');
+$rp-gold-text: mix($rp-gold, #000, 70%);
+$rp-radius: 14px;
+$rp-shadow: 0 8px 26px rgba(6, 16, 30, 0.08);
+
+.o_rp_site {
+    .o_rp_gold_text { color: $rp-gold-text; }
+    .o_rp_bg_soft { background: $rp-soft; }
+    .o_rp_hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .o_rp_above { position: relative; z-index: 2; }
+
+    // ------------------------------------------------------------ Headers
+    .o_rp_search_head, .o_rp_page_head {
+        background: radial-gradient(ellipse at 80% 0%, $rp-navy-2 0%, $rp-navy 70%);
+        color: #fff;
+        border-bottom: 2px solid $rp-gold;
+    }
+    .o_rp_search_head { padding: 1.5rem 0; }
+    .o_rp_page_head { padding: 3rem 0; h1 { color: #fff; } }
+    .o_rp_search_bar {
+        background: #fff;
+        border-radius: $rp-radius;
+        padding: 1rem;
+        box-shadow: $rp-shadow;
+        color: $body-color;
+        .o_rp_purpose .btn { min-width: 70px; }
+    }
+    .o_rp_input_icon {
+        position: absolute;
+        top: 50%;
+        inset-inline-start: 1rem;
+        transform: translateY(-50%);
+        color: #9aa0a6;
+    }
+    .o_rp_agent_search { max-width: 560px; }
+
+    // ------------------------------------------------------------ Categories
+    .o_rp_category {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.35rem 0.9rem;
+        border: 1px solid rgba($rp-navy, 0.15);
+        border-radius: 50rem;
+        color: $rp-navy;
+        font-size: 0.875rem;
+        text-decoration: none;
+        background: #fff;
+        &:hover { border-color: $rp-gold; }
+        &.active { background: $rp-navy; border-color: $rp-navy; color: #fff; .o_rp_category_count { color: $rp-gold; } }
+    }
+    .o_rp_category_count { color: #6c757d; font-size: 0.8rem; }
+
+    // ------------------------------------------------------------ Listing card
+    .o_rp_card {
+        border: 0;
+        border-radius: $rp-radius;
+        overflow: hidden;
+        box-shadow: $rp-shadow;
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+        &:hover { box-shadow: 0 14px 34px rgba(6, 16, 30, 0.14); }
+        .card-body { padding: 1.1rem 1.25rem; }
+    }
+    .o_rp_card_premium { outline: 2px solid rgba($rp-gold, 0.7); }
+    .o_rp_card_media { height: 210px; background: $rp-soft; }
+    .o_rp_card_img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .o_rp_card_noimg { height: 100%; }
+    @include media-breakpoint-up(md) {
+        .o_rp_card_wide { height: 250px; }
+        .o_rp_card_wide .o_rp_card_media { height: 100%; }
+    }
+    .o_rp_card_compact {
+        .o_rp_card_media { height: 180px; }
+        .o_rp_price { font-size: 1.1rem; }
+        .card-body { padding: 0.9rem 1rem; }
+    }
+    .o_rp_price { white-space: nowrap; }
+    .o_rp_card_noimg, .o_rp_gallery_empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+        background: linear-gradient(135deg, $rp-navy-2, $rp-navy);
+        color: $rp-gold;
+        font-size: 3rem;
+    }
+    .o_rp_photo_count {
+        position: absolute;
+        bottom: 10px;
+        inset-inline-end: 10px;
+        padding: 0.15rem 0.55rem;
+        border-radius: 50rem;
+        font-size: 0.75rem;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: 2;
+    }
+    .o_rp_badges {
+        position: absolute;
+        top: 10px;
+        inset-inline-start: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        z-index: 2;
+    }
+    .o_rp_badge {
+        display: inline-block;
+        padding: 0.2rem 0.6rem;
+        border-radius: 6px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: #fff;
+        background: rgba($rp-navy, 0.82);
+    }
+    .o_rp_badge_premium { background: $rp-gold; color: $rp-navy; }
+    .o_rp_badge_light { background: rgba($rp-navy, 0.07); color: $rp-navy; }
+    .o_rp_price { font-size: 1.35rem; font-weight: 800; color: $rp-navy; line-height: 1.2; }
+    .o_rp_price_lg { font-size: 2rem; }
+    .o_rp_period { font-size: 0.85rem; font-weight: 500; color: #6c757d; }
+    .o_rp_down { color: $rp-gold-text; }
+    .o_rp_type_chip {
+        flex-shrink: 0;
+        padding: 0.15rem 0.6rem;
+        border-radius: 50rem;
+        font-size: 0.72rem;
+        color: $rp-gold-text;
+        background: rgba($rp-gold, 0.14);
+    }
+    .o_rp_card_title a { color: $rp-navy; text-decoration: none; &:hover { color: $rp-gold-text; } }
+    .o_rp_location { color: #6c757d; }
+    .o_rp_specs { color: $rp-navy; i { color: $rp-gold-text; } }
+    .o_rp_agency_logo { width: 40px; height: 40px; object-fit: contain; border-radius: 8px; background: #fff; border: 1px solid #eee; }
+    .o_rp_agent_avatar { width: 34px; height: 34px; object-fit: cover; border-radius: 50%; }
+    .o_rp_agent_avatar_lg { width: 64px; height: 64px; object-fit: cover; border-radius: 50%; }
+
+    // ------------------------------------------------------------ Listing page
+    .o_rp_gallery { position: relative; }
+    .o_rp_gallery_grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 210px 210px;
+        gap: 8px;
+        border-radius: $rp-radius;
+        overflow: hidden;
+    }
+    .o_rp_gallery_item {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        background: $rp-soft;
+        img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        &:hover img { transform: scale(1.03); }
+    }
+    .o_rp_gallery_main { grid-row: span 2; }
+    .o_rp_gallery_n1 { grid-template-columns: 1fr; .o_rp_gallery_main { grid-row: span 2; } }
+    .o_rp_gallery_n2 { grid-template-columns: 2fr 1fr; .o_rp_gallery_item:nth-child(2) { grid-row: span 2; } }
+    .o_rp_gallery_n3 { grid-template-columns: 2fr 1fr; }
+    .o_rp_gallery_n4 .o_rp_gallery_item:nth-child(4) { grid-column: span 2; }
+    .o_rp_gallery_more {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: rgba($rp-navy, 0.55);
+    }
+    .o_rp_gallery_all { position: absolute; bottom: 14px; inset-inline-end: 14px; }
+    .o_rp_gallery_empty { height: 300px; border-radius: $rp-radius; }
+    .o_rp_gallery_full { max-height: 85vh; max-width: 100%; object-fit: contain; }
+    .o_rp_facts {
+        border: 1px solid rgba($rp-navy, 0.1);
+        border-radius: $rp-radius;
+        > div {
+            padding: 1rem 0.5rem;
+            border-inline-end: 1px solid rgba($rp-navy, 0.1);
+            &:last-child { border-inline-end: 0; }
+        }
+        i { display: block; color: $rp-gold-text; font-size: 1.2rem; margin-bottom: 0.3rem; }
+        small { display: block; color: #6c757d; font-size: 0.75rem; }
+        strong { color: $rp-navy; }
+    }
+    .o_rp_details {
+        dt { font-weight: 400; color: #6c757d; padding: 0.45rem 0; border-bottom: 1px solid #f1f1f1; }
+        dd { margin: 0; padding: 0.45rem 0; border-bottom: 1px solid #f1f1f1; color: $rp-navy; font-weight: 500; }
+    }
+    .o_rp_amenity {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.7rem 0.9rem;
+        border-radius: 10px;
+        background: $rp-soft;
+        i { color: $rp-gold-text; width: 18px; text-align: center; }
+    }
+    .o_rp_payment {
+        padding: 1.25rem;
+        border-radius: $rp-radius;
+        border: 1px dashed rgba($rp-gold, 0.7);
+        background: rgba($rp-gold, 0.06);
+        small { display: block; color: #6c757d; font-size: 0.78rem; }
+        strong { color: $rp-navy; }
+    }
+    .o_rp_sticky { position: sticky; top: 90px; }
+    .o_rp_contact_card { border: 0; border-radius: $rp-radius; box-shadow: $rp-shadow; border-top: 3px solid $rp-gold; }
+
+    // ------------------------------------------------------------ Maps
+    .o_rp_map { width: 100%; border-radius: $rp-radius; overflow: hidden; z-index: 0; background: $rp-soft; }
+    .o_rp_map_search { height: 72vh; min-height: 420px; }
+    .o_rp_map_single { height: 340px; }
+    .o_rp_map_picker { height: 320px; border: 1px solid #dee2e6; }
+
+    // ------------------------------------------------------------ Agents
+    .o_rp_agent_card, .o_rp_agency_card { border: 0; border-radius: $rp-radius; box-shadow: $rp-shadow; }
+    .o_rp_agent_photo { width: 96px; height: 96px; object-fit: cover; border-radius: 50%; border: 3px solid rgba($rp-gold, 0.5); }
+    .o_rp_agency_logo_lg { width: 72px; height: 72px; object-fit: contain; border-radius: 12px; border: 1px solid #eee; background: #fff; }
+    .o_rp_profile_photo { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 3px solid $rp-gold; }
+    .o_rp_profile_logo { width: 120px; height: 120px; object-fit: contain; border-radius: 16px; background: #fff; padding: 8px; }
+    .o_rp_steps li {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.4rem;
+        > span {
+            flex: 0 0 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: 700;
+            color: $rp-navy;
+            background: $rp-gold;
+        }
+    }
+
+    // ------------------------------------------------------------ Misc
+    .o_rp_list_cta { background: $rp-soft; border-top: 1px solid rgba($rp-gold, 0.35); }
+    .o_rp_message_icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        font-size: 2.4rem;
+        color: $rp-navy;
+        background: $rp-gold;
+    }
+    .o_rp_portal_thumb {
+        width: 64px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        min-height: 0;
+    }
+    .o_rp_photo_tile {
+        width: 140px;
+        cursor: pointer;
+        img { width: 140px; height: 100px; object-fit: cover; border-radius: 8px; display: block; }
+    }
+    .o_rp_photo_preview img { width: 90px; height: 66px; object-fit: cover; border-radius: 6px; }
+
+    @include media-breakpoint-down(md) {
+        .o_rp_gallery_grid { grid-template-columns: 1fr; grid-template-rows: 260px; }
+        .o_rp_gallery_item:not(.o_rp_gallery_main) { display: none; }
+        .o_rp_gallery_main { grid-row: auto; }
+        .o_rp_facts > div { border-inline-end: 0; border-bottom: 1px solid rgba($rp-navy, 0.1); }
+        .o_rp_sticky { position: static; }
+        .o_rp_price_lg { font-size: 1.6rem; }
+    }
+}
+
+// Map pins (outside .o_rp_site: Leaflet renders them inside the map panes)
+.o_rp_pin {
+    span {
+        display: inline-block;
+        transform: translate(-50%, -100%);
+        padding: 0.2rem 0.55rem;
+        border-radius: 6px;
+        font: 700 12px/1.4 $font-family-sans-serif;
+        white-space: nowrap;
+        color: #fff;
+        background: o-color('o-color-5');
+        border: 1px solid o-color('o-color-1');
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    }
+    &.o_rp_pin_premium span { color: o-color('o-color-5'); background: o-color('o-color-1'); }
+    &.o_rp_pin_dot span {
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        border-radius: 50% 50% 50% 0;
+        transform: translate(-50%, -100%) rotate(-45deg);
+        background: o-color('o-color-1');
+        border: 2px solid o-color('o-color-5');
+    }
+}
+.o_rp_popup {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    img { width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 0.5rem; }
+    .o_rp_popup_price { font-weight: 800; color: o-color('o-color-5'); }
+    .o_rp_popup_title { font-weight: 600; font-size: 0.85rem; margin: 0.15rem 0; }
+    .o_rp_popup_loc, .o_rp_popup_specs { font-size: 0.78rem; color: #6c757d; }
+    .o_rp_popup_specs { display: flex; gap: 0.75rem; margin-top: 0.25rem; }
+}

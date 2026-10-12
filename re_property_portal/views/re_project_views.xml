@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="re_project_view_form_portal" model="ir.ui.view">
+        <field name="name">re.project.form.portal</field>
+        <field name="model">re.project</field>
+        <field name="inherit_id" ref="re_developer_website.re_project_view_form"/>
+        <field name="arch" type="xml">
+            <field name="project_type" position="before">
+                <field name="agency_id"/>
+                <field name="location_id"/>
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================== -->
+    <!-- Listing card (search results, agent pages, similar listings)    -->
+    <!--   params: listing, compact (bool)                               -->
+    <!-- ============================================================== -->
+    <template id="listing_card" name="Property Portal: Listing Card">
+        <t t-set="images" t-value="listing._get_images()[:6]"/>
+        <t t-set="carousel_id" t-value="'o_rp_carousel_%s_%s' % (listing.id, card_scope or 'x')"/>
+        <article t-attf-class="o_rp_card card #{not compact and 'o_rp_card_wide' or 'o_rp_card_compact h-100'} #{listing.is_premium and 'o_rp_card_premium' or ''}">
+            <div class="row g-0 h-100">
+                <div t-attf-class="#{not compact and 'col-md-5' or 'col-12'} position-relative">
+                    <div t-att-id="carousel_id" class="carousel slide o_rp_card_media h-100" data-bs-interval="false">
+                        <div class="carousel-inner h-100">
+                            <t t-foreach="images" t-as="image">
+                                <div t-attf-class="carousel-item h-100 #{image_first and 'active' or ''}">
+                                    <img t-attf-src="/web/image/re.listing.image/#{image.id}/image_1024"
+                                         t-att-alt="listing.name" loading="lazy" class="o_rp_card_img"/>
+                                </div>
+                            </t>
+                            <div t-if="not images" class="carousel-item active h-100 o_rp_card_noimg">
+                                <i class="fa fa-home"/>
+                            </div>
+                        </div>
+                        <t t-if="len(images) &gt; 1">
+                            <button class="carousel-control-prev o_rp_above" type="button" t-att-data-bs-target="'#' + carousel_id" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"/><span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next o_rp_above" type="button" t-att-data-bs-target="'#' + carousel_id" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"/><span class="visually-hidden">Next</span>
+                            </button>
+                            <span class="o_rp_photo_count"><i class="fa fa-camera me-1"/><t t-out="listing.image_count"/></span>
+                        </t>
+                    </div>
+                    <div class="o_rp_badges">
+                        <span t-if="listing.is_premium" class="o_rp_badge o_rp_badge_premium"><i class="fa fa-star me-1"/>Premium</span>
+                        <span t-if="listing.completion == 'offplan'" class="o_rp_badge">Off-plan</span>
+                        <span t-else="" class="o_rp_badge">Ready</span>
+                        <span t-if="listing.listing_type == 'sale' and listing.sale_type == 'primary'" class="o_rp_badge">First Sale</span>
+                    </div>
+                </div>
+                <div t-attf-class="#{not compact and 'col-md-7' or 'col-12'} d-flex">
+                    <div class="card-body d-flex flex-column w-100">
+                        <div class="d-flex justify-content-between align-items-start gap-2">
+                            <div>
+                                <div class="o_rp_price">
+                                    <t t-out="money(listing.price, listing.currency_id)"/>
+                                    <small t-if="listing.listing_type == 'rent'" class="o_rp_period">
+                                        <t t-if="listing.rent_period == 'year'">/ year</t>
+                                        <t t-else="">/ month</t>
+                                    </small>
+                                </div>
+                                <div t-if="listing.listing_type == 'sale' and listing.down_payment" class="o_rp_down small">
+                                    Down payment <strong t-out="money(listing.down_payment, listing.currency_id)"/>
+                                </div>
+                            </div>
+                            <span class="o_rp_type_chip" t-field="listing.property_type"/>
+                        </div>
+                        <h3 t-attf-class="o_rp_card_title #{compact and 'h6' or 'h5'} mt-2 mb-1">
+                            <a t-att-href="listing.website_url" class="stretched-link" t-out="listing.name"/>
+                        </h3>
+                        <div class="o_rp_location small mb-2">
+                            <i class="fa fa-map-marker me-1"/><t t-out="listing._get_location_trail()"/>
+                        </div>
+                        <ul class="o_rp_specs list-unstyled d-flex flex-wrap gap-3 small mb-3">
+                            <li t-if="listing.property_type not in ('office', 'retail', 'clinic', 'land', 'building')">
+                                <i class="fa fa-bed me-1"/>
+                                <t t-if="listing.bedrooms == 0">Studio</t>
+                                <t t-else=""><t t-out="listing.bedrooms"/></t>
+                            </li>
+                            <li t-if="listing.bathrooms"><i class="fa fa-bath me-1"/><t t-out="listing.bathrooms"/></li>
+                            <li t-if="listing.area"><i class="fa fa-arrows-alt me-1"/><t t-out="'{:,.0f}'.format(listing.area)"/> m²</li>
+                        </ul>
+                        <div class="mt-auto d-flex align-items-center justify-content-between gap-2 border-top pt-3">
+                            <div class="d-flex align-items-center gap-2 o_rp_card_agent">
+                                <img t-if="listing.agency_id.image_128" t-attf-src="/web/image/re.agency/#{listing.agency_id.id}/image_128"
+                                     class="o_rp_agency_logo" t-att-alt="listing.agency_id.name" loading="lazy"/>
+                                <img t-elif="listing.agent_id.image_128" t-attf-src="/web/image/re.agent/#{listing.agent_id.id}/image_128"
+                                     class="o_rp_agent_avatar" t-att-alt="listing.agent_id.name" loading="lazy"/>
+                                <small class="text-muted" t-out="listed_ago(listing.published_date)"/>
+                            </div>
+                            <div class="d-flex gap-2 o_rp_above">
+                                <a t-if="listing.agent_id.phone" t-attf-href="tel:#{listing.agent_id.phone}" class="btn btn-sm btn-outline-primary" title="Call">
+                                    <i class="fa fa-phone"/><span t-if="not compact" class="ms-1">Call</span>
+                                </a>
+                                <a t-if="listing_whatsapp(listing)" t-att-href="listing_whatsapp(listing)" target="_blank" rel="noopener"
+                                   class="btn btn-sm btn-success" title="WhatsApp">
+                                    <i class="fa fa-whatsapp"/><span t-if="not compact" class="ms-1">WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Search bar: params filters, purpose                            -->
+    <!-- ============================================================== -->
+    <template id="search_bar" name="Property Portal: Search Bar">
+        <form t-attf-action="/properties/#{purpose}" method="get" class="o_rp_search_bar">
+            <input t-if="view == 'map'" type="hidden" name="view" value="map"/>
+            <input t-if="filters.get('sort')" type="hidden" name="sort" t-att-value="filters['sort']"/>
+            <div class="row g-2 align-items-end">
+                <div class="col-12 col-lg-auto">
+                    <div class="btn-group w-100 o_rp_purpose" role="group" aria-label="Buy or rent">
+                        <a t-att-href="search_url(filters, purpose='buy', view=view, price_min='', price_max='')"
+                           t-attf-class="btn #{purpose == 'buy' and 'btn-primary' or 'btn-outline-primary'}">Buy</a>
+                        <a t-att-href="search_url(filters, purpose='rent', view=view, price_min='', price_max='', sale_type='')"
+                           t-attf-class="btn #{purpose == 'rent' and 'btn-primary' or 'btn-outline-primary'}">Rent</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg">
+                    <div class="position-relative">
+                        <i class="fa fa-search o_rp_input_icon"/>
+                        <input type="search" name="q" list="o_rp_locations" class="form-control ps-5" autocomplete="off"
+                               placeholder="City, area, compound or keyword" t-att-value="filters.get('q')"
+                               aria-label="Location or keyword"/>
+                        <datalist id="o_rp_locations">
+                            <t t-foreach="locations" t-as="loc"><option t-att-value="loc.name" t-out="loc.complete_name"/></t>
+                        </datalist>
+                    </div>
+                    <input t-if="filters.get('loc')" type="hidden" name="loc" t-att-value="filters['loc']"/>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <select name="ptype" class="form-select" aria-label="Property type">
+                        <option value="">Property type</option>
+                        <t t-foreach="property_types" t-as="pt">
+                            <option t-att-value="pt[0]" t-att-selected="filters['ptype'] == [pt[0]]" t-out="pt[1]"/>
+                        </t>
+                    </select>
+                </div>
+                <div class="col-6 col-md-3 col-lg-1">
+                    <select name="beds" class="form-select" aria-label="Bedrooms">
+                        <option value="">Beds</option>
+                        <option value="0" t-att-selected="filters['beds'] == '0'">Studio</option>
+                        <t t-foreach="['1', '2', '3', '4']" t-as="b">
+                            <option t-att-value="b" t-att-selected="filters['beds'] == b"><t t-out="b"/></option>
+                        </t>
+                        <option value="5" t-att-selected="filters['beds'] == '5'">5+</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="input-group">
+                        <input type="number" min="0" step="any" name="price_min" class="form-control"
+                               placeholder="Min price" t-att-value="filters.get('price_min') and '%d' % filters['price_min']" aria-label="Min price"/>
+                        <input type="number" min="0" step="any" name="price_max" class="form-control"
+                               placeholder="Max price" t-att-value="filters.get('price_max') and '%d' % filters['price_max']" aria-label="Max price"/>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-auto">
+                    <button type="button" class="btn btn-outline-secondary w-100" data-bs-toggle="collapse"
+                            data-bs-target="#o_rp_more_filters" aria-expanded="false">
+                        <i class="fa fa-sliders me-1"/>Filters
+                    </button>
+                </div>
+                <div class="col-6 col-lg-auto">
+                    <button type="submit" class="btn btn-primary w-100 px-4"><i class="fa fa-search me-1"/>Search</button>
+                </div>
+            </div>
+            <t t-set="more_open" t-value="filters['baths'] or filters['area_min'] or filters['area_max'] or filters['completion'] or filters['sale_type'] or filters['furnishing'] or filters['amenities']"/>
+            <div id="o_rp_more_filters" t-attf-class="collapse #{more_open and 'show' or ''}">
+                <div class="row g-3 pt-3 mt-2 border-top">
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <label class="form-label small" for="o_rp_baths">Bathrooms</label>
+                        <select id="o_rp_baths" name="baths" class="form-select form-select-sm">
+                            <option value="">Any</option>
+                            <t t-foreach="['1', '2', '3', '4']" t-as="b">
+                                <option t-att-value="b" t-att-selected="filters['baths'] == b"><t t-out="b"/></option>
+                            </t>
+                            <option value="5" t-att-selected="filters['baths'] == '5'">5+</option>
+                        </select>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <label class="form-label small" for="o_rp_area_min">Min area (m²)</label>
+                        <input id="o_rp_area_min" type="number" min="0" name="area_min" class="form-control form-control-sm"
+                               t-att-value="filters.get('area_min') and '%d' % filters['area_min']"/>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <label class="form-label small" for="o_rp_area_max">Max area (m²)</label>
+                        <input id="o_rp_area_max" type="number" min="0" name="area_max" class="form-control form-control-sm"
+                               t-att-value="filters.get('area_max') and '%d' % filters['area_max']"/>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <label class="form-label small" for="o_rp_completion">Completion</label>
+                        <select id="o_rp_completion" name="completion" class="form-select form-select-sm">
+                            <option value="">Any</option>
+                            <option value="ready" t-att-selected="filters['completion'] == 'ready'">Ready</option>
+                            <option value="offplan" t-att-selected="filters['completion'] == 'offplan'">Off-plan</option>
+                        </select>
+                    </div>
+                    <div t-if="purpose == 'buy'" class="col-6 col-md-3 col-lg-2">
+                        <label class="form-label small" for="o_rp_sale_type">Sale type</label>
+                        <select id="o_rp_sale_type" name="sale_type" class="form-select form-select-sm">
+                            <option value="">Any</option>
+                            <option value="primary" t-att-selected="filters['sale_type'] == 'primary'">First Sale</option>
+                            <option value="resale" t-att-selected="filters['sale_type'] == 'resale'">Resale</option>
+                        </select>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2">
+                        <label class="form-label small" for="o_rp_furnishing">Furnishing</label>
+                        <select id="o_rp_furnishing" name="furnishing" class="form-select form-select-sm">
+                            <option value="">Any</option>
+                            <option value="unfurnished" t-att-selected="filters['furnishing'] == 'unfurnished'">Unfurnished</option>
+                            <option value="semi" t-att-selected="filters['furnishing'] == 'semi'">Semi Furnished</option>
+                            <option value="furnished" t-att-selected="filters['furnishing'] == 'furnished'">Furnished</option>
+                        </select>
+                    </div>
+                    <div t-if="amenities" class="col-12">
+                        <span class="form-label small d-block mb-1">Amenities</span>
+                        <div class="d-flex flex-wrap gap-2 o_rp_amenity_checks">
+                            <t t-foreach="amenities" t-as="amenity">
+                                <input type="checkbox" class="btn-check" name="amenities" t-att-value="amenity.id"
+                                       t-att-id="'o_rp_am_%s' % amenity.id" t-att-checked="amenity.id in filters['amenities']"/>
+                                <label class="btn btn-sm btn-outline-secondary" t-att-for="'o_rp_am_%s' % amenity.id">
+                                    <i t-attf-class="fa #{amenity.icon or 'fa-check'} me-1"/><t t-out="amenity.name"/>
+                                </label>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="col-12 text-end">
+                        <a t-attf-href="/properties/#{purpose}" class="btn btn-link btn-sm">Reset all filters</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Create alert modal                                              -->
+    <!-- ============================================================== -->
+    <template id="alert_modal" name="Property Portal: Alert Modal">
+        <div class="modal fade" id="o_rp_alert_modal" tabindex="-1" aria-labelledby="o_rp_alert_title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <form action="/property/alert/create" method="post" class="modal-content">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="query" t-att-value="alert_query"/>
+                    <div class="o_rp_hp" aria-hidden="true"><input type="text" name="website_url_hp" tabindex="-1" autocomplete="off"/></div>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="o_rp_alert_title"><i class="fa fa-bell me-2"/>Create an alert</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"/>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-muted small">We will email you new properties that match this search.</p>
+                        <div class="mb-3">
+                            <label class="form-label" for="o_rp_alert_name">Search name</label>
+                            <input id="o_rp_alert_name" type="text" name="name" class="form-control" t-att-value="alert_name" maxlength="200"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="o_rp_alert_email">Email *</label>
+                            <input id="o_rp_alert_email" type="email" name="email" class="form-control" required="required"
+                                   t-att-value="not request.env.user._is_public() and request.env.user.email or ''"/>
+                        </div>
+                        <div>
+                            <label class="form-label" for="o_rp_alert_freq">How often?</label>
+                            <select id="o_rp_alert_freq" name="frequency" class="form-select">
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-link" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Create alert</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Agent mini card (find agent, agency page)                       -->
+    <!-- ============================================================== -->
+    <template id="agent_card" name="Property Portal: Agent Card">
+        <div class="o_rp_agent_card card h-100 text-center">
+            <div class="card-body">
+                <img t-attf-src="/web/image/re.agent/#{agent.id}/image_256" t-att-alt="agent.name"
+                     class="o_rp_agent_photo mb-3" loading="lazy"/>
+                <h3 class="h6 mb-0">
+                    <a t-att-href="agent.website_url" class="stretched-link text-reset" t-out="agent.name"/>
+                    <i t-if="agent.is_verified" class="fa fa-check-circle text-success ms-1" title="Verified"/>
+                </h3>
+                <small class="text-muted d-block" t-out="agent.job_title or (agent.agent_kind == 'owner' and 'Owner' or '')"/>
+                <small t-if="agent.agency_id" class="d-block o_rp_gold_text" t-out="agent.agency_id.name"/>
+                <div class="small mt-2">
+                    <strong t-out="agent.listing_count"/> listings
+                    <t t-if="agent.languages"> · <t t-out="agent.languages"/></t>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent d-flex gap-2 justify-content-center o_rp_above">
+                <a t-if="agent.phone" t-attf-href="tel:#{agent.phone}" class="btn btn-sm btn-outline-primary"><i class="fa fa-phone"/></a>
+                <a t-if="agent.whatsapp_url" t-att-href="agent.whatsapp_url" target="_blank" rel="noopener" class="btn btn-sm btn-success"><i class="fa fa-whatsapp"/></a>
+            </div>
+        </div>
+    </template>
+
+    <!-- ============================================================== -->
+    <!-- Simple message page                                             -->
+    <!-- ============================================================== -->
+    <template id="page_message" name="Property Portal: Message">
+        <t t-call="website.layout">
+            <div id="wrap" class="o_rp_site">
+                <section class="py-5 my-5">
+                    <div class="container text-center">
+                        <div class="o_rp_message_icon mb-4"><i t-attf-class="fa #{message_icon or 'fa-info'}"/></div>
+                        <h1 class="h2" t-out="message_title"/>
+                        <p class="lead text-muted" t-out="message_text"/>
+                        <div class="d-flex gap-2 justify-content-center flex-wrap mt-4">
+                            <a href="/properties/buy" class="btn btn-primary">Browse properties</a>
+                            <a href="/" class="btn btn-outline-primary">Home</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+</odoo>
