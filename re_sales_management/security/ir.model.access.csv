@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_re_building_user,re.building user,model_re_building,base.group_user,1,0,0,0
+access_re_building_sales,re.building sales,model_re_building,group_re_sales_user,1,1,1,0
+access_re_building_manager,re.building manager,model_re_building,re_developer_website.group_re_manager,1,1,1,1
+access_re_unit_tag_user,re.unit.tag user,model_re_unit_tag,base.group_user,1,0,0,0
+access_re_unit_tag_sales,re.unit.tag sales,model_re_unit_tag,group_re_sales_user,1,1,1,1
+access_re_unit_image_user,re.unit.image user,model_re_unit_image,base.group_user,1,0,0,0
+access_re_unit_image_sales,re.unit.image sales,model_re_unit_image,group_re_sales_user,1,1,1,1
+access_re_unit_sales,re.unit sales,re_developer_website.model_re_unit,group_re_sales_user,1,1,1,0
+access_re_project_sales,re.project sales,re_developer_website.model_re_project,group_re_sales_user,1,1,0,0
+access_re_contract_user,re.contract user,model_re_contract,base.group_user,1,0,0,0
+access_re_contract_sales,re.contract sales,model_re_contract,group_re_sales_user,1,1,1,1
+access_re_contract_installment_user,re.contract.installment user,model_re_contract_installment,base.group_user,1,0,0,0
+access_re_contract_installment_sales,re.contract.installment sales,model_re_contract_installment,group_re_sales_user,1,1,1,1
+access_re_receivable_aging_sales,re.receivable.aging sales,model_re_receivable_aging,group_re_sales_user,1,0,0,0
+access_re_payment_wizard_sales,re.payment.wizard sales,model_re_payment_wizard,group_re_sales_user,1,1,1,1

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="re_payment_wizard_view_form" model="ir.ui.view">
+        <field name="name">re.payment.wizard.form</field>
+        <field name="model">re.payment.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Record Payment">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <group>
+                            <field name="contract_id"/>
+                            <field name="partner_id"/>
+                            <field name="installment_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="company_id" invisible="1"/>
+                            <field name="amount" widget="monetary"/>
+                            <field name="date"/>
+                            <field name="payment_method" widget="radio" options="{'horizontal': true}"/>
+                            <field name="journal_id" options="{'no_create': True}"/>
+                            <field name="reference" placeholder="e.g. TRX-2025-002"/>
+                        </group>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="o_re_info_panel">
+                            <div class="o_re_info_title"><i title="Info Circle" class="fa fa-info-circle me-2"/>Payment Information</div>
+                            <div class="o_re_info_row"><span>Selected Installments</span><field name="selected_remaining" widget="monetary"/></div>
+                            <div class="o_re_info_row"><span>Contract Remaining</span><field name="contract_remaining" widget="monetary"/></div>
+                            <p class="small text-muted mt-2 mb-0">
+                                The amount pays the selected installments first (oldest first); any extra pays the next installments.
+                                Installments without an invoice are invoiced automatically.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="o_re_cheque_box" invisible="payment_method != 'cheque'">
+                    <div class="o_re_info_title"><i title="Credit Card" class="fa fa-credit-card me-2"/>Cheque Details</div>
+                    <group>
+                        <group>
+                            <field name="cheque_number" required="payment_method == 'cheque'" placeholder="e.g. 123456"/>
+                            <field name="cheque_bank_id"/>
+                        </group>
+                        <group>
+                            <field name="cheque_date"/>
+                            <field name="cheque_holder" placeholder="e.g. Ahmed Mohamed"/>
+                        </group>
+                    </group>
+                </div>
+                <group>
+                    <field name="attachment" filename="attachment_name"/>
+                    <field name="attachment_name" invisible="1"/>
+                    <field name="notes" placeholder="Add any notes..."/>
+                </group>
+                <footer>
+                    <button name="action_confirm" type="object" string="Record Payment" class="btn-primary"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

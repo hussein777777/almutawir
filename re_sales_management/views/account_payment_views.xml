@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_payment_form_re" model="ir.ui.view">
+        <field name="name">account.payment.form.re</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_re_cheque_deposit" type="object" string="Cheque Deposited"
+                        invisible="re_cheque_state != 'received'" groups="re_sales_management.group_re_sales_user"/>
+                <button name="action_re_cheque_clear" type="object" string="Cheque Cleared" class="btn-primary"
+                        invisible="re_cheque_state not in ('received', 'deposited')" groups="re_sales_management.group_re_sales_user"/>
+                <button name="action_re_cheque_bounce" type="object" string="Cheque Bounced"
+                        invisible="re_cheque_state not in ('received', 'deposited')" groups="re_sales_management.group_re_sales_user"
+                        confirm="Mark this cheque as bounced? The payment is cancelled and the installments become unpaid again."/>
+            </xpath>
+            <xpath expr="//sheet/group" position="after">
+                <group string="Real Estate" name="re_info" invisible="not re_contract_id">
+                    <group>
+                        <field name="re_contract_id" readonly="1"/>
+                        <field name="re_project_id"/>
+                        <field name="re_unit_id"/>
+                        <field name="re_installment_ids" widget="many2many_tags" readonly="1"/>
+                        <field name="re_payment_method" readonly="1"/>
+                    </group>
+                    <group invisible="re_payment_method != 'cheque'">
+                        <field name="re_cheque_number"/>
+                        <field name="re_cheque_date"/>
+                        <field name="re_cheque_bank_id"/>
+                        <field name="re_cheque_holder"/>
+                        <field name="re_cheque_state" widget="badge" decoration-success="re_cheque_state == 'cleared'"
+                               decoration-warning="re_cheque_state in ('received', 'deposited')" decoration-danger="re_cheque_state == 'bounced'"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_payment_re_list" model="ir.ui.view">
+        <field name="name">account.payment.list.re</field>
+        <field name="model">account.payment</field>
+        <field name="priority">50</field>
+        <field name="arch" type="xml">
+            <list create="0" decoration-muted="state in ('canceled', 'rejected')">
+                <field name="date"/>
+                <field name="name"/>
+                <field name="re_contract_id"/>
+                <field name="partner_id" string="Customer"/>
+                <field name="re_project_id" optional="show"/>
+                <field name="re_unit_id" optional="show"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="amount" widget="monetary" sum="Total"/>
+                <field name="re_payment_method" string="Method"/>
+                <field name="journal_id" optional="hide"/>
+                <field name="re_cheque_number" optional="show"/>
+                <field name="re_cheque_date" optional="show"/>
+                <field name="re_cheque_bank_id" optional="hide"/>
+                <field name="memo" string="Reference" optional="show"/>
+                <field name="re_cheque_state" widget="badge" optional="show" decoration-success="re_cheque_state == 'cleared'"
+                       decoration-warning="re_cheque_state in ('received', 'deposited')" decoration-danger="re_cheque_state == 'bounced'"/>
+                <field name="state" widget="badge" decoration-success="state == 'paid'" decoration-info="state == 'in_process'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_account_payment_search_re" model="ir.ui.view">
+        <field name="name">account.payment.search.re</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="re_contract_id"/>
+                <field name="re_cheque_number"/>
+                <filter name="re_cheques_open" string="Cheques to Clear" domain="[('re_cheque_state', 'in', ('received', 'deposited'))]"/>
+                <filter name="re_cheques_bounced" string="Bounced Cheques" domain="[('re_cheque_state', '=', 'bounced')]"/>
+                <filter name="re_group_method" string="Collection Method" context="{'group_by': 're_payment_method'}"/>
+                <filter name="re_group_cheque_state" string="Cheque Status" context="{'group_by': 're_cheque_state'}"/>
+                <filter name="re_group_project" string="Project" context="{'group_by': 're_project_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_payment_re_graph" model="ir.ui.view">
+        <field name="name">account.payment.graph.re</field>
+        <field name="model">account.payment</field>
+        <field name="priority">50</field>
+        <field name="arch" type="xml">
+            <graph string="Collections" type="bar">
+                <field name="date" interval="month"/>
+                <field name="amount" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_account_payment_re_pivot" model="ir.ui.view">
+        <field name="name">account.payment.pivot.re</field>
+        <field name="model">account.payment</field>
+        <field name="priority">50</field>
+        <field name="arch" type="xml">
+            <pivot string="Collections">
+                <field name="re_project_id" type="row"/>
+                <field name="date" interval="month" type="col"/>
+                <field name="amount" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_re_payments" model="ir.actions.act_window">
+        <field name="name">Payments</field>
+        <field name="res_model">account.payment</field>
+        <field name="view_mode">list,form,graph,pivot</field>
+        <field name="domain">[('re_contract_id', '!=', False)]</field>
+        <field name="context">{'create': False}</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_account_payment_re_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('account.view_account_payment_form')}),
+            (0, 0, {'view_mode': 'graph', 'view_id': ref('view_account_payment_re_graph')}),
+            (0, 0, {'view_mode': 'pivot', 'view_id': ref('view_account_payment_re_pivot')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No payments yet</p>
+            <p>Record payments from a contract with "Record Payment".</p>
+        </field>
+    </record>
+
+    <record id="action_re_cheques" model="ir.actions.act_window">
+        <field name="name">Cheques</field>
+        <field name="res_model">account.payment</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('re_payment_method', '=', 'cheque')]</field>
+        <field name="context">{'create': False, 'search_default_re_cheques_open': 1}</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_account_payment_re_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('account.view_account_payment_form')})]"/>
+    </record>
+
+    <record id="action_re_collections_analysis" model="ir.actions.act_window">
+        <field name="name">Collections Analysis</field>
+        <field name="res_model">account.payment</field>
+        <field name="view_mode">graph,pivot,list</field>
+        <field name="domain">[('re_contract_id', '!=', False), ('state', 'in', ('in_process', 'paid'))]</field>
+        <field name="context">{'create': False}</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'graph', 'view_id': ref('view_account_payment_re_graph')}),
+            (0, 0, {'view_mode': 'pivot', 'view_id': ref('view_account_payment_re_pivot')}),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_account_payment_re_list')})]"/>
+    </record>
+</odoo>

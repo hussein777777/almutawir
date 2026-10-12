@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_re_contract_company" model="ir.rule">
+        <field name="name">Contract: multi-company</field>
+        <field name="model_id" ref="model_re_contract"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_re_installment_company" model="ir.rule">
+        <field name="name">Installment: multi-company</field>
+        <field name="model_id" ref="model_re_contract_installment"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_re_aging_company" model="ir.rule">
+        <field name="name">Aging: multi-company</field>
+        <field name="model_id" ref="model_re_receivable_aging"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

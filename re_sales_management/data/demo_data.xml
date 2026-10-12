@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Unit tags -->
+    <record id="tag_corner" model="re.unit.tag"><field name="name">Corner</field><field name="color">2</field></record>
+    <record id="tag_garden" model="re.unit.tag"><field name="name">Garden</field><field name="color">10</field></record>
+    <record id="tag_sea_view" model="re.unit.tag"><field name="name">Sea View</field><field name="color">4</field></record>
+    <record id="tag_premium" model="re.unit.tag"><field name="name">Premium</field><field name="color">3</field></record>
+
+    <!-- Buildings -->
+    <record id="building_palm_a" model="re.building">
+        <field name="name">Building A</field><field name="code">PG-A</field>
+        <field name="project_id" ref="re_developer_website.project_palm"/><field name="floor_count">6</field>
+    </record>
+    <record id="building_palm_b" model="re.building">
+        <field name="name">Building B</field><field name="code">PG-B</field>
+        <field name="project_id" ref="re_developer_website.project_palm"/><field name="floor_count">6</field>
+    </record>
+    <record id="building_palm_villas" model="re.building">
+        <field name="name">Villas Cluster</field><field name="code">PG-V</field>
+        <field name="project_id" ref="re_developer_website.project_palm"/><field name="floor_count">2</field>
+    </record>
+    <record id="building_bay_chalets" model="re.building">
+        <field name="name">Chalets Zone</field><field name="code">BR-C</field>
+        <field name="project_id" ref="re_developer_website.project_bay"/><field name="floor_count">2</field>
+    </record>
+    <record id="building_tower_main" model="re.building">
+        <field name="name">Main Tower</field><field name="code">BT-1</field>
+        <field name="project_id" ref="re_developer_website.project_tower"/><field name="floor_count">22</field>
+    </record>
+
+    <!-- Existing units: buildings & sales data -->
+    <record id="re_developer_website.unit_palm_a101" model="re.unit">
+        <field name="building_id" ref="building_palm_a"/><field name="unit_number">101</field><field name="facing">north</field>
+        <field name="has_parking" eval="True"/><field name="parking_number">P-14</field>
+        <field name="tag_ids" eval="[(6, 0, [ref('tag_garden'), ref('tag_corner')])]"/>
+    </record>
+    <record id="re_developer_website.unit_palm_b204" model="re.unit">
+        <field name="building_id" ref="building_palm_b"/><field name="unit_number">204</field><field name="facing">east</field>
+        <field name="has_parking" eval="True"/><field name="parking_number">P-31</field>
+    </record>
+    <record id="re_developer_website.unit_palm_d01" model="re.unit">
+        <field name="building_id" ref="building_palm_b"/><field name="unit_number">D01</field><field name="facing">south</field>
+    </record>
+    <record id="re_developer_website.unit_palm_v12" model="re.unit">
+        <field name="building_id" ref="building_palm_villas"/><field name="unit_number">V12</field>
+        <field name="tag_ids" eval="[(6, 0, [ref('tag_premium'), ref('tag_garden')])]"/>
+    </record>
+    <record id="re_developer_website.unit_bay_c07" model="re.unit">
+        <field name="building_id" ref="building_bay_chalets"/><field name="unit_number">C07</field><field name="facing">north</field>
+        <field name="tag_ids" eval="[(6, 0, [ref('tag_sea_view')])]"/>
+    </record>
+    <record id="re_developer_website.unit_bay_t03" model="re.unit">
+        <field name="building_id" ref="building_bay_chalets"/><field name="unit_number">TW03</field>
+    </record>
+    <record id="re_developer_website.unit_tower_o1205" model="re.unit">
+        <field name="building_id" ref="building_tower_main"/><field name="unit_number">1205</field><field name="facing">west</field>
+        <field name="has_parking" eval="True"/><field name="parking_number">B2-07</field>
+    </record>
+    <record id="re_developer_website.unit_tower_r02" model="re.unit">
+        <field name="building_id" ref="building_tower_main"/><field name="unit_number">R02</field>
+    </record>
+
+    <!-- More stock -->
+    <record id="unit_palm_a305" model="re.unit">
+        <field name="name">A-305</field><field name="project_id" ref="re_developer_website.project_palm"/>
+        <field name="building_id" ref="building_palm_a"/><field name="unit_number">305</field><field name="facing">south</field>
+        <field name="unit_type">apartment</field><field name="bedrooms">3</field><field name="bathrooms">2</field>
+        <field name="area">150</field><field name="floor">3rd</field><field name="finishing">semi</field>
+        <field name="price">6800000</field><field name="down_payment_pct">10</field><field name="installment_years">8</field>
+    </record>
+    <record id="unit_palm_a402" model="re.unit">
+        <field name="name">A-402</field><field name="project_id" ref="re_developer_website.project_palm"/>
+        <field name="building_id" ref="building_palm_a"/><field name="unit_number">402</field><field name="facing">east</field>
+        <field name="unit_type">apartment</field><field name="bedrooms">2</field><field name="bathrooms">2</field>
+        <field name="area">120</field><field name="floor">4th</field><field name="finishing">semi</field>
+        <field name="price">5450000</field><field name="down_payment_pct">10</field><field name="installment_years">8</field>
+    </record>
+    <record id="unit_tower_o0803" model="re.unit">
+        <field name="name">O-0803</field><field name="project_id" ref="re_developer_website.project_tower"/>
+        <field name="building_id" ref="building_tower_main"/><field name="unit_number">803</field>
+        <field name="unit_type">office</field><field name="bathrooms">1</field>
+        <field name="area">70</field><field name="floor">8th</field><field name="finishing">fully</field>
+        <field name="price">3900000</field><field name="down_payment_pct">20</field><field name="installment_years">5</field>
+    </record>
+    <record id="unit_tower_k04" model="re.unit">
+        <field name="name">K-04</field><field name="project_id" ref="re_developer_website.project_tower"/>
+        <field name="building_id" ref="building_tower_main"/><field name="unit_number">K04</field>
+        <field name="unit_type">retail</field><field name="area">25</field><field name="floor">Ground</field>
+        <field name="finishing">core_shell</field><field name="price">1250000</field>
+        <field name="down_payment_pct">100</field><field name="installment_years">0</field>
+    </record>
+
+    <!-- Customers -->
+    <record id="customer_ahmed" model="res.partner">
+        <field name="name">Ahmed Hassan</field><field name="is_re_customer" eval="True"/>
+        <field name="email">ahmed.hassan@example.com</field><field name="phone">+20 100 123 4567</field>
+        <field name="city">Cairo</field><field name="re_national_id">28501010101234</field><field name="re_source">website</field>
+    </record>
+    <record id="customer_sara" model="res.partner">
+        <field name="name">Sara Mahmoud</field><field name="is_re_customer" eval="True"/>
+        <field name="email">sara.mahmoud@example.com</field><field name="phone">+20 111 555 2233</field>
+        <field name="city">Giza</field><field name="re_national_id">29003150104567</field><field name="re_source">referral</field>
+    </record>
+    <record id="customer_omar" model="res.partner">
+        <field name="name">Omar Khaled</field><field name="is_re_customer" eval="True"/>
+        <field name="email">omar.khaled@example.com</field><field name="phone">+20 122 444 9988</field>
+        <field name="city">Alexandria</field><field name="re_national_id">28807220203344</field><field name="re_source">exhibition</field>
+    </record>
+    <record id="customer_mona" model="res.partner">
+        <field name="name">Mona Adel</field><field name="is_re_customer" eval="True"/>
+        <field name="email">mona.adel@example.com</field><field name="phone">+20 109 777 1122</field>
+        <field name="city">New Cairo</field><field name="re_national_id">29211050106789</field><field name="re_source">social</field>
+    </record>
+    <record id="customer_youssef" model="res.partner">
+        <field name="name">Youssef Ibrahim</field><field name="is_re_customer" eval="True"/>
+        <field name="email">youssef.ibrahim@example.com</field><field name="phone">+20 127 333 6655</field>
+        <field name="city">Sheikh Zayed</field><field name="re_national_id">28409300107788</field><field name="re_source">broker</field>
+    </record>
+    <record id="customer_nour" model="res.partner">
+        <field name="name">Nour El-Din Co.</field><field name="is_company" eval="True"/><field name="is_re_customer" eval="True"/>
+        <field name="email">info@nour-eldin.example.com</field><field name="phone">+20 2 2345 6789</field>
+        <field name="city">Cairo</field><field name="re_source">walk_in</field>
+    </record>
+    <record id="customer_laila" model="res.partner">
+        <field name="name">Laila Fathy</field><field name="is_re_customer" eval="True"/>
+        <field name="email">laila.fathy@example.com</field><field name="phone">+20 106 888 4433</field>
+        <field name="city">Maadi</field><field name="re_source">website</field>
+    </record>
+
+    <!-- Contracts, schedules, invoices and payments (needs a chart of accounts) -->
+    <function model="re.contract" name="_re_load_demo"/>
+</odoo>

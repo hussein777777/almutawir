@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Cheques Under Collection journal for companies that have a chart of accounts -->
+    <function model="res.company" name="_re_setup_accounting"/>
+</odoo>

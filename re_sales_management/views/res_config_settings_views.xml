@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_re_sales" model="ir.ui.view">
+        <field name="name">res.config.settings.re.sales</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Real Estate" string="Real Estate" name="re_sales_management"
+                     logo="/re_sales_management/static/description/icon.png"
+                     groups="re_developer_website.group_re_manager">
+                    <block title="Collections" name="re_collections">
+                        <setting string="Late payment grace period" company_dependent="1"
+                                 help="Installments late by up to this number of days mark the contract At Risk; beyond it, Overdue.">
+                            <field name="re_grace_days"/> <span>days</span>
+                        </setting>
+                        <setting string="Invoice installments automatically" company_dependent="1"
+                                 help="A daily job creates and posts each installment invoice when it falls due.">
+                            <field name="re_auto_invoice"/>
+                            <div class="mt-2" invisible="not re_auto_invoice">
+                                <field name="re_invoice_lead_days" class="oe_inline"/> <span>days before the due date</span>
+                            </div>
+                        </setting>
+                    </block>
+                    <block title="Accounting" name="re_accounting">
+                        <setting string="Products" company_dependent="1"
+                                 help="Their income accounts are used on installment / maintenance invoices.">
+                            <div class="row"><label for="re_installment_product_id" class="col-lg-5 o_light_label"/><field name="re_installment_product_id"/></div>
+                            <div class="row"><label for="re_maintenance_product_id" class="col-lg-5 o_light_label"/><field name="re_maintenance_product_id"/></div>
+                        </setting>
+                        <setting string="Journals" company_dependent="1" help="Default journals per collection method.">
+                            <div class="row"><label for="re_sales_journal_id" class="col-lg-5 o_light_label"/><field name="re_sales_journal_id"/></div>
+                            <div class="row"><label for="re_cash_journal_id" class="col-lg-5 o_light_label"/><field name="re_cash_journal_id"/></div>
+                            <div class="row"><label for="re_bank_journal_id" class="col-lg-5 o_light_label"/><field name="re_bank_journal_id"/></div>
+                            <div class="row"><label for="re_cheque_journal_id" class="col-lg-5 o_light_label"/><field name="re_cheque_journal_id"/></div>
+                            <button name="action_re_setup_accounting" type="object" string="Create Cheques Journal"
+                                    class="btn-link" icon="oi-arrow-right" invisible="re_cheque_journal_id"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_re_sales_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module': 're_sales_management', 'bin_size': False}</field>
+    </record>
+</odoo>

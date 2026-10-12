@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="re_project_view_form_sales" model="ir.ui.view">
+        <field name="name">re.project.form.sales</field>
+        <field name="model">re.project</field>
+        <field name="inherit_id" ref="re_developer_website.re_project_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/field[@name='state']" position="before">
+                <button name="action_set_on_hold" type="object" string="Put On Hold" invisible="sales_state != 'active'"/>
+                <button name="action_set_closed" type="object" string="Close Sales" invisible="sales_state == 'closed'"/>
+                <button name="action_set_active" type="object" string="Reactivate Sales" invisible="sales_state == 'active'"/>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" type="object" name="action_view_buildings" icon="fa-building">
+                    <field name="building_count" widget="statinfo" string="Buildings"/>
+                </button>
+                <button class="oe_stat_button" type="object" name="action_view_contracts" icon="fa-file-text-o">
+                    <field name="contract_count" widget="statinfo" string="Contracts"/>
+                </button>
+            </xpath>
+            <xpath expr="//div[hasclass('oe_title')]" position="inside">
+                <field name="sales_state" widget="badge" decoration-success="sales_state == 'active'"
+                       decoration-warning="sales_state == 'on_hold'" decoration-muted="sales_state == 'closed'"/>
+            </xpath>
+            <xpath expr="//div[hasclass('oe_title')]" position="after">
+                <div class="o_re_stat_cards">
+                    <button type="object" name="action_view_buildings" class="o_re_stat_card o_re_card_blue">
+                        <i title="Building" class="fa fa-building"/><div><field name="building_count"/><span>Buildings</span></div>
+                    </button>
+                    <button type="object" name="action_view_all_units" class="o_re_stat_card o_re_card_teal">
+                        <i title="Th" class="fa fa-th"/><div><field name="total_units"/><span>Total Units</span></div>
+                    </button>
+                    <button type="object" name="action_view_units_state" context="{'unit_state': 'available'}" class="o_re_stat_card o_re_card_green">
+                        <i title="Check Circle" class="fa fa-check-circle"/><div><field name="available_units"/><span>Available (<field name="available_pct" widget="float" digits="[16, 0]" class="d-inline"/>%)</span></div>
+                    </button>
+                    <button type="object" name="action_view_units_state" context="{'unit_state': 'reserved'}" class="o_re_stat_card o_re_card_orange">
+                        <i title="Clock O" class="fa fa-clock-o"/><div><field name="reserved_units"/><span>Reserved (<field name="reserved_pct" widget="float" digits="[16, 0]" class="d-inline"/>%)</span></div>
+                    </button>
+                    <button type="object" name="action_view_units_state" context="{'unit_state': 'sold'}" class="o_re_stat_card o_re_card_purple">
+                        <i title="File Text" class="fa fa-file-text"/><div><field name="sold_units"/><span>Sold (<field name="sold_pct" widget="float" digits="[16, 0]" class="d-inline"/>%)</span></div>
+                    </button>
+                </div>
+            </xpath>
+            <xpath expr="//notebook/page[@name='description']" position="before">
+                <page string="Buildings" name="buildings">
+                    <field name="building_ids" context="{'default_project_id': id}">
+                        <list editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="code" optional="hide"/>
+                            <field name="floors_label"/>
+                            <field name="unit_count"/>
+                            <field name="available_count"/>
+                            <field name="reserved_count"/>
+                            <field name="sold_count"/>
+                            <button name="action_view_units" type="object" string="Units" icon="fa-th" class="btn-link"/>
+                        </list>
+                    </field>
+                </page>
+                <page string="Project Details" name="sales_details">
+                    <group>
+                        <group string="Basic Information">
+                            <field name="code"/>
+                            <field name="developer_name"/>
+                            <field name="external_website" widget="url"/>
+                            <field name="master_plan" filename="master_plan_filename"/>
+                            <field name="master_plan_filename" invisible="1"/>
+                        </group>
+                        <group string="Key Dates">
+                            <field name="launch_date"/>
+                            <field name="construction_start_date"/>
+                            <field name="delivery_date"/>
+                            <field name="completion_date"/>
+                        </group>
+                        <group string="Sales">
+                            <field name="sales_value" widget="monetary"/>
+                            <field name="collected_amount" widget="monetary"/>
+                            <field name="collection_pct" widget="progressbar"/>
+                        </group>
+                        <group string="Accounting">
+                            <field name="analytic_account_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Sales kanban: image, status, buildings, units and % sold -->
+    <record id="re_project_view_kanban_sales" model="ir.ui.view">
+        <field name="name">re.project.kanban.sales</field>
+        <field name="model">re.project</field>
+        <field name="priority">20</field>
+        <field name="arch" type="xml">
+            <kanban class="o_re_project_kanban">
+                <field name="sales_state"/>
+                <templates>
+                    <t t-name="card" class="flex-row p-0">
+                        <aside class="o_re_kanban_img" t-if="record.image_256.raw_value">
+                            <field name="image_256" widget="image" options="{'img_class': 'object-fit-cover w-100 h-100'}" alt="Project"/>
+                        </aside>
+                        <main class="p-3 w-100">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <field name="name" class="fw-bold fs-5"/>
+                                <field name="sales_state" widget="badge" decoration-success="sales_state == 'active'"
+                                       decoration-warning="sales_state == 'on_hold'" decoration-muted="sales_state == 'closed'"/>
+                            </div>
+                            <field name="city" class="text-muted"/>
+                            <div class="d-flex gap-3 small mt-2">
+                                <span>Buildings <strong><field name="building_count"/></strong></span>
+                                <span>Units <strong><field name="total_units"/></strong></span>
+                                <span>Contracts <strong><field name="contract_count"/></strong></span>
+                            </div>
+                            <div class="mt-2 small"><field name="sold_pct" widget="progressbar"/></div>
+                            <div class="small text-muted">Sold</div>
+                        </main>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="re_project_view_list_sales" model="ir.ui.view">
+        <field name="name">re.project.list.sales</field>
+        <field name="model">re.project</field>
+        <field name="priority">20</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="code" optional="show"/>
+                <field name="name"/>
+                <field name="city"/>
+                <field name="building_count"/>
+                <field name="total_units"/>
+                <field name="sold_units"/>
+                <field name="available_units"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="sales_value" widget="monetary"/>
+                <field name="collection_pct" widget="progressbar"/>
+                <field name="sales_state" widget="badge" decoration-success="sales_state == 'active'"
+                       decoration-warning="sales_state == 'on_hold'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="re_project_sales_action" model="ir.actions.act_window">
+        <field name="name">Projects</field>
+        <field name="res_model">re.project</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'kanban', 'view_id': ref('re_project_view_kanban_sales')}),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('re_project_view_list_sales')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('re_developer_website.re_project_view_form')})]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create your first project</p>
+            <p>A project groups buildings and units. Its units are sold through contracts.</p>
+        </field>
+    </record>
+</odoo>

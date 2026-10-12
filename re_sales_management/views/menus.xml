@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Sales users can open the Real Estate app too -->
+    <record id="re_developer_website.menu_re_root" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('group_re_sales_user'))]"/>
+    </record>
+
+    <menuitem id="menu_re_dashboard" name="Dashboard" parent="re_developer_website.menu_re_root"
+              action="action_re_sales_dashboard" sequence="1" groups="group_re_sales_user"/>
+
+    <menuitem id="menu_re_sales" name="Sales" parent="re_developer_website.menu_re_root" sequence="2"
+              groups="group_re_sales_user"/>
+    <menuitem id="menu_re_sales_projects" name="Projects" parent="menu_re_sales" action="re_project_sales_action" sequence="10"/>
+    <menuitem id="menu_re_sales_buildings" name="Buildings" parent="menu_re_sales" action="re_building_action" sequence="15"/>
+    <menuitem id="menu_re_sales_units" name="Units" parent="menu_re_sales" action="re_unit_sales_action" sequence="20"/>
+    <menuitem id="menu_re_sales_customers" name="Customers" parent="menu_re_sales" action="action_re_customers" sequence="30"/>
+    <menuitem id="menu_re_sales_contracts" name="Contracts" parent="menu_re_sales" action="re_contract_action" sequence="40"/>
+
+    <menuitem id="menu_re_payments" name="Payments" parent="re_developer_website.menu_re_root" sequence="3"
+              groups="group_re_sales_user"/>
+    <menuitem id="menu_re_payments_collections" name="Collections" parent="menu_re_payments" action="re_contract_collections_action" sequence="10"/>
+    <menuitem id="menu_re_payments_installments" name="Installments" parent="menu_re_payments" action="re_installment_action" sequence="20"/>
+    <menuitem id="menu_re_payments_payments" name="Payments" parent="menu_re_payments" action="action_re_payments" sequence="30"/>
+    <menuitem id="menu_re_payments_cheques" name="Cheques" parent="menu_re_payments" action="action_re_cheques" sequence="40"/>
+
+    <menuitem id="menu_re_reports" name="Reports" parent="re_developer_website.menu_re_root" sequence="80"
+              groups="group_re_sales_user"/>
+    <menuitem id="menu_re_reports_aging" name="Receivables Aging" parent="menu_re_reports" action="re_aging_action" sequence="10"/>
+    <menuitem id="menu_re_reports_collections" name="Collections Analysis" parent="menu_re_reports" action="action_re_collections_analysis" sequence="20"/>
+    <menuitem id="menu_re_reports_contracts" name="Contracts Analysis" parent="menu_re_reports" action="re_contract_analysis_action" sequence="30"/>
+
+    <menuitem id="menu_re_config_settings" name="Settings" parent="re_developer_website.menu_re_config"
+              action="action_re_sales_settings" sequence="1" groups="re_developer_website.group_re_manager"/>
+    <menuitem id="menu_re_config_unit_tags" name="Unit Tags" parent="re_developer_website.menu_re_config"
+              action="re_unit_tag_action" sequence="40"/>
+</odoo>

@@ -1,0 +1,2818 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* re_sales_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-12 17:45+0000\n"
+"PO-Revision-Date: 2026-10-12 17:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_installment.py:0
+msgid "\"%s\" is already invoiced: cancel its invoice before changing the amount."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "% of total value"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.report,print_report_name:re_sales_management.action_report_contract_statement
+msgid "'Statement - %s' % object.name"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__bucket_0_30
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_receivable_aging__bucket__1_0_30
+msgid "1-30 Days"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__bucket_31_60
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_receivable_aging__bucket__2_31_60
+msgid "31-60 Days"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__bucket_61_90
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_receivable_aging__bucket__3_61_90
+msgid "61-90 Days"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "<i title=\"Building\" class=\"fa fa-building\"/>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "<i title=\"Calendar\" class=\"fa fa-calendar\"/>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "<i title=\"Check Circle\" class=\"fa fa-check-circle\"/>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "<i title=\"Clock O\" class=\"fa fa-clock-o\"/>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_payment_wizard_view_form
+msgid "<i title=\"Credit Card\" class=\"fa fa-credit-card me-2\"/>Cheque Details"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "<i title=\"Database\" class=\"fa fa-database\"/>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "<i title=\"Exclamation Circle\" class=\"fa fa-exclamation-circle\"/>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "<i title=\"File Text\" class=\"fa fa-file-text\"/>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "<i title=\"Home\" class=\"fa fa-home\"/>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "<i title=\"Hourglass Half\" class=\"fa fa-hourglass-half\"/>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid ""
+"<i title=\"Info Circle\" class=\"fa fa-info-circle me-2\"/>Installment "
+"Information"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_payment_wizard_view_form
+msgid "<i title=\"Info Circle\" class=\"fa fa-info-circle me-2\"/>Payment Information"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "<i title=\"Th\" class=\"fa fa-th\"/>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid "<i title=\"University\" class=\"fa fa-university me-2\"/>Bank Transfer Notes"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_unit_view_form_sales
+msgid "<span class=\"o_stat_text\">Contracts</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "<span class=\"o_stat_text\">Payments</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+msgid "<span>Available</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "<span>Buildings</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_payment_wizard_view_form
+msgid "<span>Contract Remaining</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "<span>Contract Value</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid "<span>Invoice</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "<span>Next Due Date</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "<span>Overdue</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid "<span>Paid</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "<span>Remaining Amount</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "<span>Remaining</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+msgid "<span>Reserved</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_payment_wizard_view_form
+msgid "<span>Selected Installments</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+msgid "<span>Sold</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid "<span>This Installment</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "<span>Total Contract Value</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "<span>Total Contracts</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid "<span>Total Installments</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "<span>Total Units</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid "<span>Unit Price</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid "<span>Unit</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+msgid "<span>Units</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+msgid "<span>days before the due date</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+msgid "<span>days</span>"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "<strong>Customer</strong>"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.constraint,message:re_sales_management.constraint_re_building_name_project_uniq
+msgid "A building with this name already exists in the project."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+msgid ""
+"A daily job creates and posts each installment invoice when it falls due."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_res_company__re_auto_invoice
+#: model:ir.model.fields,help:re_sales_management.field_res_config_settings__re_auto_invoice
+msgid ""
+"A daily job creates and posts the customer invoice of each installment when "
+"it falls due."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.actions.act_window,help:re_sales_management.re_project_sales_action
+msgid ""
+"A project groups buildings and units. Its units are sold through contracts."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_account_payment__re_cheque_holder
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__cheque_holder
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__cheque_holder
+msgid "Account Holder"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+msgid "Accounting"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__message_needaction
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__active
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__state__active
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_project__sales_state__active
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+msgid "Active"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_search
+msgid "Active Contracts"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_unit_view_form_sales
+msgid "Add any internal notes about this unit..."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_payment_wizard_view_form
+msgid "Add any notes..."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.actions.act_window,help:re_sales_management.action_re_customers
+msgid "Add your first customer"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_aging_view_search
+msgid "Aging Bucket"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__all_unit_ids
+msgid "All Units"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__amount
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__amount
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Amount"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__amount_type
+msgid "Amount Type"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__analytic_account_id
+msgid "Analytic Account"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__installment_frequency__annual
+msgid "Annual"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.js:0
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__collection_status__at_risk
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+msgid "At Risk"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__message_attachment_count
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__attachment_name
+msgid "Attachment Name"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__attachment_ids
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid "Attachments"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__available_count
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__available_units
+msgid "Available"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__available_pct
+msgid "Available %"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "Available ("
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__cheque_bank_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__cheque_bank_id
+msgid "Bank"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__account_payment__re_payment_method__bank_transfer
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__payment_method__bank_transfer
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_payment_wizard__payment_method__bank_transfer
+msgid "Bank Transfer"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_company__re_bank_journal_id
+#: model:ir.model.fields,field_description:re_sales_management.field_res_config_settings__re_bank_journal_id
+msgid "Bank Transfer Journal"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_unit_view_list_sales
+msgid "Base Price"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "Basic Information"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__account_payment__re_cheque_state__bounced
+msgid "Bounced"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_search_re
+msgid "Bounced Cheques"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__res_partner__re_source__broker
+msgid "Broker"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__bucket
+msgid "Bucket"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model,name:re_sales_management.model_re_building
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__building_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit__building_id
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_unit_view_form_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_unit_view_search_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Building"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__building_count
+msgid "Building Count"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_project.py:0
+#: model:ir.actions.act_window,name:re_sales_management.re_building_action
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__building_ids
+#: model:ir.ui.menu,name:re_sales_management.menu_re_sales_buildings
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_kanban_sales
+msgid "Buildings"
+msgstr ""
+
+#. module: re_sales_management
+#: model:res.groups,comment:re_sales_management.group_re_sales_user
+msgid "Can manage customers, contracts and record payments."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_payment_wizard_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "Cancel contract %s before deleting it."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Cancel this contract? The unit becomes available again."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__state__cancelled
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__state__cancelled
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Cancelled"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__account_payment__re_payment_method__cash
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__payment_method__cash
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_payment_wizard__payment_method__cash
+msgid "Cash"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_company__re_cash_journal_id
+#: model:ir.model.fields,field_description:re_sales_management.field_res_config_settings__re_cash_journal_id
+msgid "Cash Journal"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__account_payment__re_payment_method__cheque
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__payment_method__cheque
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_payment_wizard__payment_method__cheque
+msgid "Cheque"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/account_payment.py:0
+msgid ""
+"Cheque %(number)s of %(amount)s bounced: the installments are unpaid again."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__cheque_amount
+msgid "Cheque Amount"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_account_payment__re_cheque_bank_id
+msgid "Cheque Bank"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_form_re
+msgid "Cheque Bounced"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_form_re
+msgid "Cheque Cleared"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_account_payment__re_cheque_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__cheque_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__cheque_date
+msgid "Cheque Date"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_form_re
+msgid "Cheque Deposited"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Cheque No."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_account_payment__re_cheque_number
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__cheque_number
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__cheque_number
+msgid "Cheque Number"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_account_payment__re_cheque_state
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_search_re
+msgid "Cheque Status"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.act_window,name:re_sales_management.action_re_cheques
+#: model:ir.ui.menu,name:re_sales_management.menu_re_payments_cheques
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_search
+msgid "Cheques"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_company__re_cheque_journal_id
+#: model:ir.model.fields,field_description:re_sales_management.field_res_config_settings__re_cheque_journal_id
+msgid "Cheques Journal"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/res_company.py:0
+msgid "Cheques Under Collection"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_search_re
+msgid "Cheques to Clear"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__account_payment__re_cheque_state__cleared
+msgid "Cleared"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid ""
+"Click \"Generate Schedule\" to (re)build the installments from this plan.\n"
+"                                You can then edit, add or remove installments before confirming."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "Close Sales"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__state__closed
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_project__sales_state__closed
+msgid "Closed"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__code
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__code
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_list_re_customers
+msgid "Code"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.js:0
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__collected_amount
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__collected_amount
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Collected"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_collection_pct
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_collection_pct
+msgid "Collected %"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Collected ("
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__collection_pct
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__collection_pct
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Collection %"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_account_payment__re_payment_method
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_search_re
+msgid "Collection Method"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__collection_status
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+msgid "Collection Status"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.act_window,name:re_sales_management.re_contract_collections_action
+#: model:ir.ui.menu,name:re_sales_management.menu_re_payments_collections
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_re_graph
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_re_pivot
+msgid "Collections"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.act_window,name:re_sales_management.action_re_collections_analysis
+#: model:ir.ui.menu,name:re_sales_management.menu_re_reports_collections
+msgid "Collections Analysis"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Collections Overview"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_tag__color
+msgid "Color"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model,name:re_sales_management.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__company_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__company_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__company_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__company_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__company_id
+msgid "Company"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__completion_date
+msgid "Completion"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model,name:re_sales_management.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_installment.py:0
+msgid "Configure the installment products in Real Estate settings."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Confirm Contract"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_installment.py:0
+msgid "Confirm contract %s before invoicing."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+#: code:addons/re_sales_management/wizard/re_payment_wizard.py:0
+msgid "Confirm the contract before recording payments."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "Confirm the contract first."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__construction_start_date
+msgid "Construction Start"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model,name:re_sales_management.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__contract_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__contract_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__contract_id
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_aging_view_search
+msgid "Contract"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "Contract %s has collected payments: refund or cancel them first."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__contract_count
+msgid "Contract Count"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__date
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Contract Date"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model,name:re_sales_management.model_re_contract_installment
+#: model:ir.model.fields,field_description:re_sales_management.field_account_bank_statement_line__re_installment_id
+#: model:ir.model.fields,field_description:re_sales_management.field_account_move__re_installment_id
+msgid "Contract Installment"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__contract_installment_count
+msgid "Contract Installment Count"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+msgid "Contract Month"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__name
+msgid "Contract No."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__contract_remaining
+msgid "Contract Remaining"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.report,name:re_sales_management.action_report_contract_statement
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Contract Statement"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__contract_state
+msgid "Contract Status"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__total_value
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__contract_value
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Contract Value"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "Contract confirmed: unit %s is sold."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "Contract fully paid."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.constraint,message:re_sales_management.constraint_re_contract_name_company_uniq
+msgid "Contract number must be unique."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#. odoo-python
+#: code:addons/re_sales_management/models/re_project.py:0
+#: code:addons/re_sales_management/models/re_unit.py:0
+#: code:addons/re_sales_management/models/res_partner.py:0
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.js:0
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.actions.act_window,name:re_sales_management.re_contract_action
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__contract_ids
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit__contract_ids
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_contract_count
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_contract_count
+#: model:ir.ui.menu,name:re_sales_management.menu_re_sales_contracts
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_graph
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_kanban_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_unit_view_form_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_list_re_customers
+msgid "Contracts"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.act_window,name:re_sales_management.re_contract_analysis_action
+#: model:ir.ui.menu,name:re_sales_management.menu_re_reports_contracts
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_pivot
+msgid "Contracts Analysis"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Contracts by Status"
+msgstr ""
+
+#. module: re_sales_management
+#: model:re.unit.tag,name:re_sales_management.tag_corner
+msgid "Corner"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_search_re_customers
+msgid "Corporates"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+msgid "Create Cheques Journal"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid "Create Invoice"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Create and post the invoices of every remaining installment now?"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_res_company__re_invoice_lead_days
+#: model:ir.model.fields,help:re_sales_management.field_res_config_settings__re_invoice_lead_days
+msgid "Create the installment invoice this many days before its due date."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.actions.act_window,help:re_sales_management.re_contract_action
+msgid "Create your first contract"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.actions.act_window,help:re_sales_management.re_project_sales_action
+msgid "Create your first project"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__create_uid
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__create_uid
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__create_uid
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__create_uid
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__create_uid
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_tag__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__create_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__create_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__create_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__create_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__create_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_tag__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__currency_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__currency_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__currency_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit__contract_id
+msgid "Current Contract"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__partner_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__partner_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__partner_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__partner_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit__customer_id
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_aging_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_re_list
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "Customer"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Customer & Unit"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_customer_code
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_customer_code
+msgid "Customer Code"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_list_re_customers
+msgid "Customer Name"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_source
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_source
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_search_re_customers
+msgid "Customer Source"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.constraint,message:re_sales_management.constraint_res_partner_re_customer_code_uniq
+msgid "Customer code must be unique."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.act_window,name:re_sales_management.action_re_customers
+#: model:ir.ui.menu,name:re_sales_management.menu_re_sales_customers
+msgid "Customers"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.actions.act_window,help:re_sales_management.action_re_customers
+msgid "Customers are also added automatically when you create a contract."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.client,name:re_sales_management.action_re_sales_dashboard
+#: model:ir.ui.menu,name:re_sales_management.menu_re_dashboard
+msgid "Dashboard"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Date"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_birthdate
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_birthdate
+msgid "Date of Birth"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__days_overdue
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__days_overdue
+msgid "Days Overdue"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+msgid "Default journals per collection method."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__account_payment__re_cheque_state__deposited
+msgid "Deposited"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__name
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Description"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__developer_name
+msgid "Developer Name"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__discount_amount
+msgid "Discount"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__display_name
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__display_name
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__display_name
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__display_name
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__display_name
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__display_name
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_tag__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__installment_type__down_payment
+msgid "Down Payment"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__down_payment_percent
+msgid "Down Payment %"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__down_payment_amount
+msgid "Down Payment Amount"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__down_payment_date
+msgid "Down Payment Date"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__down_payment_type
+msgid "Down Payment Type"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__due_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__due_date
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Due Date"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_search
+msgid "Due Month"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.js:0
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_search
+msgid "Due This Month"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__state__due
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_search
+msgid "Due Today"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_unit__facing__east
+msgid "East"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/wizard/re_payment_wizard.py:0
+msgid "Enter the cheque number."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__res_partner__re_source__exhibition
+msgid "Exhibition / Event"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit__facing
+msgid "Facing"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__first_installment_date
+msgid "First Installment Date"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__down_payment_type__fixed
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__amount_type__fixed
+msgid "Fixed Amount"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__down_payment_fixed
+msgid "Fixed Down Payment"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__floors_label
+msgid "Floors"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__message_follower_ids
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__message_partner_ids
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_re_contract__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.js:0
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__collection_status__closed
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+msgid "Fully Paid"
+msgstr ""
+
+#. module: re_sales_management
+#: model:re.unit.tag,name:re_sales_management.tag_garden
+msgid "Garden"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Generate Schedule"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "Generate the payment schedule of %s first."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.js:0
+msgid "Good Afternoon, %s!"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.js:0
+msgid "Good Evening, %s!"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.js:0
+msgid "Good Morning, %s!"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_aging_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__has_message
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Here's an overview of your real estate business."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_tag__id
+msgid "ID"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_re_contract__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_re_building__message_needaction
+#: model:ir.model.fields,help:re_sales_management.field_re_contract__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_re_building__message_has_error
+#: model:ir.model.fields,help:re_sales_management.field_re_building__message_has_sms_error
+#: model:ir.model.fields,help:re_sales_management.field_re_contract__message_has_error
+#: model:ir.model.fields,help:re_sales_management.field_re_contract__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__image_1920
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__image_1024
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__image_128
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__image_256
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__image_512
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit__image_ids
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_unit_view_form_sales
+msgid "Images"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_search_re_customers
+msgid "Individuals"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__installment_id
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__installment_type__installment
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid "Installment"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "Installment %s"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__amount
+msgid "Installment Amount"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__installment_frequency
+msgid "Installment Frequency"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_company__re_installment_product_id
+#: model:ir.model.fields,field_description:re_sales_management.field_res_config_settings__re_installment_product_id
+msgid "Installment Product"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__installment_type
+msgid "Installment Type"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_installment.py:0
+msgid "Installment amounts cannot be negative."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_re_project__analytic_account_id
+msgid ""
+"Installment invoices of this project are tagged with this analytic account."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/res_partner.py:0
+#: model:ir.actions.act_window,name:re_sales_management.re_installment_action
+#: model:ir.model.fields,field_description:re_sales_management.field_account_payment__re_installment_ids
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__installment_ids
+#: model:ir.ui.menu,name:re_sales_management.menu_re_payments_installments
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Installments"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_company__re_sales_journal_id
+#: model:ir.model.fields,field_description:re_sales_management.field_res_config_settings__re_sales_journal_id
+msgid "Installments Journal"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_res_company__re_grace_days
+#: model:ir.model.fields,help:re_sales_management.field_res_config_settings__re_grace_days
+msgid ""
+"Installments late by up to this number of days mark the contract \"At "
+"Risk\"; beyond it the contract is \"Overdue\"."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+msgid ""
+"Installments late by up to this number of days mark the contract At Risk; "
+"beyond it, Overdue."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__installment_ids
+msgid "Installments to Pay"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit__internal_notes
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_unit_view_form_sales
+msgid "Internal Notes"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__invoice_id
+msgid "Invoice"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Invoice All Installments"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__invoice_count
+msgid "Invoice Count"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_company__re_invoice_lead_days
+#: model:ir.model.fields,field_description:re_sales_management.field_res_config_settings__re_invoice_lead_days
+msgid "Invoice Days Before Due Date"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_company__re_auto_invoice
+#: model:ir.model.fields,field_description:re_sales_management.field_res_config_settings__re_auto_invoice
+msgid "Invoice Installments Automatically"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__invoice_state
+msgid "Invoice Payment Status"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+msgid "Invoice installments automatically"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_installment.py:0
+msgid "Invoiced installments cannot be deleted."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Invoices"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__message_is_follower
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__journal_id
+msgid "Journal"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/wizard/re_payment_wizard.py:0
+msgid ""
+"Journal %s has no \"Outstanding Receipts\" account: set it in the journal "
+"configuration so the payment can be reconciled."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/wizard/re_payment_wizard.py:0
+msgid "Journal %s has no incoming payment method."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model,name:re_sales_management.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_res_company__re_cheque_journal_id
+#: model:ir.model.fields,help:re_sales_management.field_res_config_settings__re_cheque_journal_id
+msgid ""
+"Journal receiving customer cheques until they are deposited and cleared."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+msgid "Journals"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "Key Dates"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__last_payment_date
+msgid "Last Collection Date"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__write_uid
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__write_uid
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__write_uid
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__write_uid
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__write_uid
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_tag__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__write_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__write_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__write_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__write_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__write_date
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_tag__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_company__re_grace_days
+#: model:ir.model.fields,field_description:re_sales_management.field_res_config_settings__re_grace_days
+msgid "Late Payment Grace (days)"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+msgid "Late payment grace period"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__maintenance_amount
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__installment_type__maintenance
+#: model:product.template,name:re_sales_management.product_maintenance_deposit_product_template
+msgid "Maintenance Deposit"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_company__re_maintenance_product_id
+#: model:ir.model.fields,field_description:re_sales_management.field_res_config_settings__re_maintenance_product_id
+msgid "Maintenance Deposit Product"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__maintenance_due_date
+msgid "Maintenance Due Date"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_form_re
+msgid ""
+"Mark this cheque as bounced? The payment is cancelled and the installments "
+"become unpaid again."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__master_plan
+msgid "Master Plan"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__master_plan_filename
+msgid "Master Plan Filename"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__message_has_error
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__message_ids
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_re_list
+msgid "Method"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__installment_frequency__monthly
+msgid "Monthly"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+msgid "My Contracts"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__name
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__name
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_tag__name
+msgid "Name"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_national_id
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_national_id
+msgid "National ID / Passport"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "National ID:"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__net_price
+msgid "Net Price"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_unit.py:0
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_unit_view_form_sales
+msgid "New Contract"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__next_due_date
+msgid "Next Due Date"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "No contracts yet."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.actions.act_window,help:re_sales_management.action_re_payments
+msgid "No payments yet"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "No payments yet."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_unit__facing__north
+msgid "North"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_unit__facing__north_east
+msgid "North-East"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_unit__facing__north_west
+msgid "North-West"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__not_due
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_receivable_aging__bucket__0_not_due
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_aging_view_search
+msgid "Not Due Yet"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__notes
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__notes
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__notes
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__notes
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Notes"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Nothing due."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.actions.act_window,help:re_sales_management.re_aging_action
+msgid "Nothing overdue"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__message_needaction_counter
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__floor_count
+msgid "Number of Floors"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__installment_count
+msgid "Number of Installments"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__message_has_error_counter
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_re_building__message_needaction_counter
+#: model:ir.model.fields,help:re_sales_management.field_re_contract__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_re_building__message_has_error_counter
+#: model:ir.model.fields,help:re_sales_management.field_re_contract__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_project__sales_state__on_hold
+msgid "On Hold"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.js:0
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__collection_status__on_track
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+msgid "On Track"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/account_payment.py:0
+msgid "Only received cheques can be deposited."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/account_payment.py:0
+msgid "Only received or deposited cheques can be cleared."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/account_payment.py:0
+msgid "Only received or deposited cheques can bounce."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__installment_type__other
+#: model:ir.model.fields.selection,name:re_sales_management.selection__res_partner__re_source__other
+msgid "Other"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__remaining_amount
+msgid "Outstanding"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__bucket_90_plus
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_receivable_aging__bucket__4_90_plus
+msgid "Over 90 Days"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.js:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__overdue_amount
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__collection_status__overdue
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__state__overdue
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_aging_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Overdue"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "Overdue ("
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_overdue_amount
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_overdue_amount
+msgid "Overdue Amount"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "Overdue Inst."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.js:0
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_overdue_count
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_overdue_count
+msgid "Overdue Installments"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__paid_amount
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__state__paid
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Paid"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit__has_parking
+msgid "Parking Slot"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit__parking_number
+msgid "Parking Slot No."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__state__partial
+msgid "Partially Paid"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_list
+msgid "Pay"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__payment_count
+msgid "Payment Count"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__date
+msgid "Payment Date"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__payment_method
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__payment_method
+msgid "Payment Method"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Payment Plan"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Payment Schedule"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/wizard/re_payment_wizard.py:0
+msgid "Payment of %(amount)s recorded (%(method)s)."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+#: code:addons/re_sales_management/models/res_partner.py:0
+#: model:ir.actions.act_window,name:re_sales_management.action_re_payments
+#: model:ir.model,name:re_sales_management.model_account_payment
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__payment_ids
+#: model:ir.ui.menu,name:re_sales_management.menu_re_payments
+#: model:ir.ui.menu,name:re_sales_management.menu_re_payments_payments
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Payments"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Payments Received"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.js:0
+msgid "Pending"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__percent
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__down_payment_type__percent
+msgid "Percentage"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__amount_type__percent
+msgid "Percentage of Unit Price"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.actions.act_window,help:re_sales_management.re_contract_action
+msgid ""
+"Pick a customer and an available unit, generate the payment schedule and confirm.\n"
+"               Every installment becomes a customer invoice and payments are reconciled automatically."
+msgstr ""
+
+#. module: re_sales_management
+#: model:re.unit.tag,name:re_sales_management.tag_premium
+msgid "Premium"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Price"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "Prices cannot be negative."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Print Statement"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_res_company__re_installment_product_id
+#: model:ir.model.fields,help:re_sales_management.field_res_config_settings__re_installment_product_id
+msgid "Product used on installment invoices (its income account is used)."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_res_company__re_maintenance_product_id
+#: model:ir.model.fields,help:re_sales_management.field_res_config_settings__re_maintenance_product_id
+msgid ""
+"Product used on maintenance deposit invoices. Point its income account to a "
+"liability account if the deposit is held for the owners association."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+msgid "Products"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_account_payment__re_project_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__project_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__project_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__project_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__project_id
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_aging_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_kanban_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_search_re
+msgid "Project"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "Project Details"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__external_website
+msgid "Project Website"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.act_window,name:re_sales_management.re_project_sales_action
+#: model:ir.ui.menu,name:re_sales_management.menu_re_sales_projects
+msgid "Projects"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Projects Performance"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "Put On Hold"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__installment_frequency__quarterly
+msgid "Quarterly"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_currency_id
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_currency_id
+msgid "Re Currency"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "Reactivate Sales"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_form_re
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "Real Estate"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_account_bank_statement_line__re_contract_id
+#: model:ir.model.fields,field_description:re_sales_management.field_account_move__re_contract_id
+#: model:ir.model.fields,field_description:re_sales_management.field_account_payment__re_contract_id
+msgid "Real Estate Contract"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_contract_ids
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_contract_ids
+msgid "Real Estate Contracts"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__is_re_customer
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__is_re_customer
+msgid "Real Estate Customer"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model,name:re_sales_management.model_re_project
+msgid "Real Estate Project"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model,name:re_sales_management.model_re_contract
+msgid "Real Estate Sales Contract"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model,name:re_sales_management.model_re_unit
+msgid "Real Estate Unit"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.server,name:re_sales_management.cron_re_contract_daily_ir_actions_server
+msgid "Real Estate: refresh installment statuses and invoice due installments"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/wizard/re_payment_wizard.py:0
+msgid "Receipt"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__attachment
+msgid "Receipt / Cheque Copy"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Receivables"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.act_window,name:re_sales_management.re_aging_action
+#: model:ir.model,name:re_sales_management.model_re_receivable_aging
+#: model:ir.ui.menu,name:re_sales_management.menu_re_reports_aging
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_aging_view_graph
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_aging_view_pivot
+msgid "Receivables Aging"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__account_payment__re_cheque_state__received
+msgid "Received"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Recent Contracts"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Recent Payments"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model,name:re_sales_management.model_re_payment_wizard
+msgid "Record Contract Payment"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+#: code:addons/re_sales_management/models/re_installment.py:0
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_payment_wizard_view_form
+msgid "Record Payment"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.actions.act_window,help:re_sales_management.action_re_payments
+msgid "Record payments from a contract with \"Record Payment\"."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid "Record the transfer reference number for easy tracking."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__reference
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__reference
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_re_list
+msgid "Reference"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__res_partner__re_source__referral
+msgid "Referral"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__remaining_amount
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__remaining_amount
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__contract_remaining
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_remaining
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_remaining
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Remaining"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.ui.menu,name:re_sales_management.menu_re_reports
+msgid "Reports"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__state__draft
+msgid "Reservation"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+msgid "Reservations"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__reserved_count
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__reserved_units
+msgid "Reserved"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__reserved_pct
+msgid "Reserved %"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "Reserved ("
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Reset to Reservation"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__message_has_sms_error
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.ui.menu,name:re_sales_management.menu_re_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "Sales"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__sales_state
+msgid "Sales Status"
+msgstr ""
+
+#. module: re_sales_management
+#: model:res.groups,name:re_sales_management.group_re_sales_user
+msgid "Sales User"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__sales_value
+msgid "Sales Value"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__user_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__user_id
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_aging_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_search
+msgid "Salesperson"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__installment_total
+msgid "Scheduled Total"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Scheduled total:"
+msgstr ""
+
+#. module: re_sales_management
+#: model:re.unit.tag,name:re_sales_management.tag_sea_view
+msgid "Sea View"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_payment_wizard__selected_remaining
+msgid "Selected Remaining"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract__installment_frequency__semiannual
+msgid "Semi-annual"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__sequence
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__sequence
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "Set the number of installments to schedule %s."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.act_window,name:re_sales_management.action_re_sales_settings
+#: model:ir.ui.menu,name:re_sales_management.menu_re_config_settings
+msgid "Settings"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__res_partner__re_source__social
+msgid "Social Media"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__sold_count
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__sold_units
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_kanban_sales
+msgid "Sold"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__sold_pct
+msgid "Sold %"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+msgid "Sold ("
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid ""
+"Some installments of %s are already invoiced. Edit the remaining "
+"installments manually."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_unit__facing__south
+msgid "South"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_unit__facing__south_east
+msgid "South-East"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_unit__facing__south_west
+msgid "South-West"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+msgid "Special conditions, delivery notes..."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__state
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__state
+msgid "State"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_search
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Status"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_re_contract__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit__tag_ids
+msgid "Tags"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/wizard/re_payment_wizard.py:0
+msgid ""
+"The amount (%(amount)s) is more than the remaining balance of the contract "
+"(%(remaining)s)."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/wizard/re_payment_wizard.py:0
+msgid "The amount must be positive."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_payment_wizard_view_form
+msgid ""
+"The amount pays the selected installments first (oldest first); any extra pays the next installments.\n"
+"                                Installments without an invoice are invoiced automatically."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_unit.py:0
+msgid "The building of unit %s belongs to another project."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "The discount cannot exceed the unit price."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "The down payment percentage must be between 0 and 100."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+msgid "The installment is marked as paid once the payment is recorded."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid ""
+"The installments of %(contract)s total %(scheduled)s but the contract value "
+"is %(value)s. Fix the schedule before confirming."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "The number of installments cannot be negative."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "The schedule of a closed or cancelled contract cannot be changed."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.res_config_settings_view_form_re_sales
+msgid "Their income accounts are used on installment / maintenance invoices."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.constraint,message:re_sales_management.constraint_re_unit_tag_name_uniq
+msgid "This tag already exists."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_aging_view_list
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_contract_view_list
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_list
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_unit_view_list_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_account_payment_re_list
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "Total"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_unit_view_list_sales
+msgid "Total Area"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_collected
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_collected
+msgid "Total Collected"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "Total Collected ("
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_total_value
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_total_value
+msgid "Total Contract Value"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Total Contracts"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Total Customers"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Total Outstanding"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Total Projects"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_project__total_units
+msgid "Total Units"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_list_re_customers
+msgid "Type"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_re_contract__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.model.fields,field_description:re_sales_management.field_account_payment__re_unit_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__unit_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__unit_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_receivable_aging__unit_id
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit_image__unit_id
+#: model_terms:ir.ui.view,arch_db:re_sales_management.report_contract_statement_document
+msgid "Unit"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_unit.py:0
+msgid ""
+"Unit %(unit)s is linked to contract %(contract)s: change it from the "
+"contract."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "Unit %s already has an open contract or reservation."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_contract.py:0
+msgid "Unit %s was sold again in the meantime."
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_unit_view_list_sales
+msgid "Unit Code"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__unit_count
+msgid "Unit Count"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model,name:re_sales_management.model_re_unit_image
+msgid "Unit Image"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_unit__unit_number
+msgid "Unit Number"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__unit_price
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract_installment__unit_price
+msgid "Unit Price"
+msgstr ""
+
+#. module: re_sales_management
+#: model:product.template,name:re_sales_management.product_unit_installment_product_template
+msgid "Unit Sale Installment"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model,name:re_sales_management.model_re_unit_tag
+msgid "Unit Tag"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.actions.act_window,name:re_sales_management.re_unit_tag_action
+#: model:ir.ui.menu,name:re_sales_management.menu_re_config_unit_tags
+msgid "Unit Tags"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__unit_type
+msgid "Unit Type"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#. odoo-python
+#: code:addons/re_sales_management/models/res_partner.py:0
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+#: model:ir.actions.act_window,name:re_sales_management.re_unit_sales_action
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__unit_ids
+#: model:ir.model.fields,field_description:re_sales_management.field_res_partner__re_unit_count
+#: model:ir.model.fields,field_description:re_sales_management.field_res_users__re_unit_count
+#: model:ir.ui.menu,name:re_sales_management.menu_re_sales_units
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_form_sales
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_project_view_kanban_sales
+msgid "Units"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-python
+#: code:addons/re_sales_management/models/re_project.py:0
+msgid "Units - %s"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_search
+msgid "Unpaid"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.actions.act_window,help:re_sales_management.re_aging_action
+msgid ""
+"Unpaid installments of active contracts appear here, grouped by how late "
+"they are."
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_contract_installment__state__upcoming
+msgid "Upcoming"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Upcoming Installments"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_re_contract__maintenance_amount
+msgid "Usually collected at delivery; added to the contract value."
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "View Aging Report"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "View All"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__res_partner__re_source__walk_in
+msgid "Walk-in"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__res_partner__re_source__website
+msgid "Website"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,field_description:re_sales_management.field_re_building__website_message_ids
+#: model:ir.model.fields,field_description:re_sales_management.field_re_contract__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_re_building__website_message_ids
+#: model:ir.model.fields,help:re_sales_management.field_re_contract__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields.selection,name:re_sales_management.selection__re_unit__facing__west
+msgid "West"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "Year"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_payment_wizard_view_form
+msgid "e.g. 123456"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_installment_view_form
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_payment_wizard_view_form
+msgid "e.g. Ahmed Mohamed"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+msgid "e.g. Building A"
+msgstr ""
+
+#. module: re_sales_management
+#: model:ir.model.fields,help:re_sales_management.field_re_building__floors_label
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_building_view_form
+msgid "e.g. G+5"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.re_payment_wizard_view_form
+msgid "e.g. TRX-2025-002"
+msgstr ""
+
+#. module: re_sales_management
+#: model_terms:ir.ui.view,arch_db:re_sales_management.view_partner_form_re_sales
+msgid "installments)"
+msgstr ""
+
+#. module: re_sales_management
+#. odoo-javascript
+#: code:addons/re_sales_management/static/src/dashboard/dashboard.xml:0
+msgid "this month"
+msgstr ""

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_re_sales_user" model="res.groups">
+        <field name="name">Sales User</field>
+        <field name="category_id" ref="re_developer_website.module_category_real_estate"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('account.group_account_invoice'))]"/>
+        <field name="comment">Can manage customers, contracts and record payments.</field>
+    </record>
+
+    <!-- Real Estate managers are also sales users -->
+    <record id="re_developer_website.group_re_manager" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_re_sales_user'))]"/>
+    </record>
+</odoo>

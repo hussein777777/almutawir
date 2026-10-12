@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="re_unit_view_form_sales" model="ir.ui.view">
+        <field name="name">re.unit.form.sales</field>
+        <field name="model">re.unit</field>
+        <field name="inherit_id" ref="re_developer_website.re_unit_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_new_contract" type="object" string="New Contract" class="btn-primary"
+                        invisible="state != 'available'"/>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" type="object" name="action_view_contracts" icon="fa-file-text-o">
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">Contracts</span>
+                    </div>
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='project_id']" position="after">
+                <div><field name="building_id" placeholder="Building" options="{'no_quick_create': True}"/></div>
+            </xpath>
+            <xpath expr="//field[@name='unit_type']" position="before">
+                <field name="unit_number"/>
+                <field name="customer_id" invisible="not customer_id"/>
+                <field name="contract_id" invisible="not contract_id"/>
+            </xpath>
+            <xpath expr="//field[@name='finishing']" position="after">
+                <field name="facing"/>
+                <field name="has_parking"/>
+                <field name="parking_number" invisible="not has_parking"/>
+                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Images" name="images">
+                    <field name="image_ids" mode="kanban" context="{'default_unit_id': id}">
+                        <kanban>
+                            <templates>
+                                <t t-name="card" class="p-0">
+                                    <field name="image_1920" widget="image" options="{'preview_image': 'image_256', 'size': [180, 120]}"/>
+                                </t>
+                            </templates>
+                        </kanban>
+                        <form>
+                            <group>
+                                <field name="image_1920" widget="image"/>
+                                <field name="name"/>
+                                <field name="sequence"/>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+                <page string="Contracts" name="contracts">
+                    <field name="contract_ids" readonly="1">
+                        <list>
+                            <field name="name"/>
+                            <field name="date"/>
+                            <field name="partner_id"/>
+                            <field name="currency_id" column_invisible="1"/>
+                            <field name="total_value" widget="monetary"/>
+                            <field name="collection_pct" widget="progressbar"/>
+                            <field name="state" widget="badge"/>
+                        </list>
+                    </field>
+                </page>
+                <page string="Internal Notes" name="internal_notes">
+                    <field name="internal_notes" placeholder="Add any internal notes about this unit..."/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="re_unit_view_list_sales" model="ir.ui.view">
+        <field name="name">re.unit.list.sales</field>
+        <field name="model">re.unit</field>
+        <field name="priority">20</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state == 'sold'">
+                <field name="name" string="Unit Code"/>
+                <field name="project_id" optional="show"/>
+                <field name="building_id"/>
+                <field name="unit_type"/>
+                <field name="floor"/>
+                <field name="area" sum="Total Area"/>
+                <field name="bedrooms"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="price" string="Base Price" widget="monetary" sum="Total"/>
+                <field name="state" widget="badge" decoration-success="state == 'available'"
+                       decoration-warning="state == 'reserved'" decoration-danger="state == 'sold'"/>
+                <field name="customer_id" optional="show"/>
+                <field name="tag_ids" widget="many2many_tags" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="re_unit_view_search_sales" model="ir.ui.view">
+        <field name="name">re.unit.search.sales</field>
+        <field name="model">re.unit</field>
+        <field name="inherit_id" ref="re_developer_website.re_unit_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='project_id']" position="after">
+                <field name="building_id"/>
+                <field name="customer_id"/>
+            </xpath>
+            <xpath expr="//group" position="inside">
+                <filter name="group_building" string="Building" context="{'group_by': 'building_id'}"/>
+            </xpath>
+            <xpath expr="//search" position="inside">
+                <searchpanel>
+                    <field name="project_id" icon="fa-building" enable_counters="1"/>
+                    <field name="building_id" icon="fa-building-o" enable_counters="1"/>
+                    <field name="state" icon="fa-filter" select="multi" enable_counters="1"/>
+                </searchpanel>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="re_unit_sales_action" model="ir.actions.act_window">
+        <field name="name">Units</field>
+        <field name="res_model">re.unit</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('re_unit_view_list_sales')}),
+            (0, 0, {'view_mode': 'kanban', 'view_id': ref('re_developer_website.re_unit_view_kanban')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('re_developer_website.re_unit_view_form')})]"/>
+    </record>
+
+    <record id="re_unit_tag_view_list" model="ir.ui.view">
+        <field name="name">re.unit.tag.list</field>
+        <field name="model">re.unit.tag</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="name"/>
+                <field name="color" widget="color_picker"/>
+            </list>
+        </field>
+    </record>
+    <record id="re_unit_tag_action" model="ir.actions.act_window">
+        <field name="name">Unit Tags</field>
+        <field name="res_model">re.unit.tag</field>
+        <field name="view_mode">list</field>
+    </record>
+</odoo>

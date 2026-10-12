@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_contract_statement" model="ir.actions.report">
+        <field name="name">Contract Statement</field>
+        <field name="model">re.contract</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">re_sales_management.report_contract_statement</field>
+        <field name="report_file">re_sales_management.report_contract_statement</field>
+        <field name="print_report_name">'Statement - %s' % object.name</field>
+        <field name="binding_model_id" ref="model_re_contract"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_contract_statement_document">
+        <t t-call="web.external_layout">
+            <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
+            <t t-set="currency" t-value="o.currency_id"/>
+            <div class="page">
+                <h2 class="mb-1">Contract Statement</h2>
+                <p class="text-muted mb-4"><span t-field="o.name"/> · <span t-out="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/></p>
+
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <strong>Customer</strong>
+                        <div t-field="o.partner_id" t-options="{'widget': 'contact', 'fields': ['name', 'address', 'phone', 'email'], 'no_marker': True}"/>
+                        <div t-if="o.partner_id.re_national_id">National ID: <span t-field="o.partner_id.re_national_id"/></div>
+                    </div>
+                    <div class="col-6">
+                        <table class="table table-sm table-borderless mb-0">
+                            <tr><td>Project</td><td><strong t-field="o.project_id.name"/></td></tr>
+                            <tr t-if="o.building_id"><td>Building</td><td><span t-field="o.building_id.name"/></td></tr>
+                            <tr><td>Unit</td><td><span t-field="o.unit_id.name"/> (<span t-field="o.unit_id.unit_type"/>)</td></tr>
+                            <tr><td>Contract Date</td><td><span t-field="o.date"/></td></tr>
+                            <tr><td>Status</td><td><span t-field="o.collection_status"/></td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <table class="table table-sm mb-4">
+                    <thead>
+                        <tr>
+                            <th>Contract Value</th><th>Collected</th><th>Remaining</th><th>Overdue</th><th>Collection %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span t-field="o.total_value" t-options="{'widget': 'monetary', 'display_currency': currency}"/></td>
+                            <td><span t-field="o.collected_amount" t-options="{'widget': 'monetary', 'display_currency': currency}"/></td>
+                            <td><span t-field="o.remaining_amount" t-options="{'widget': 'monetary', 'display_currency': currency}"/></td>
+                            <td><span t-field="o.overdue_amount" t-options="{'widget': 'monetary', 'display_currency': currency}"/></td>
+                            <td><span t-out="'%.1f' % o.collection_pct"/>%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h5>Payment Schedule</h5>
+                <table class="table table-sm o_main_table">
+                    <thead>
+                        <tr>
+                            <th>#</th><th>Description</th><th>Due Date</th>
+                            <th class="text-end">Amount</th><th class="text-end">Paid</th>
+                            <th class="text-end">Remaining</th><th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="o.installment_ids" t-as="line">
+                            <td><span t-out="line_index + 1"/></td>
+                            <td><span t-field="line.name"/></td>
+                            <td><span t-field="line.due_date"/></td>
+                            <td class="text-end"><span t-field="line.amount" t-options="{'widget': 'monetary', 'display_currency': currency}"/></td>
+                            <td class="text-end"><span t-field="line.paid_amount" t-options="{'widget': 'monetary', 'display_currency': currency}"/></td>
+                            <td class="text-end"><span t-field="line.remaining_amount" t-options="{'widget': 'monetary', 'display_currency': currency}"/></td>
+                            <td><span t-field="line.state"/></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="fw-bold">
+                            <td colspan="3">Total</td>
+                            <td class="text-end"><span t-out="sum(o.installment_ids.mapped('amount'))" t-options="{'widget': 'monetary', 'display_currency': currency}"/></td>
+                            <td class="text-end"><span t-out="sum(o.installment_ids.mapped('paid_amount'))" t-options="{'widget': 'monetary', 'display_currency': currency}"/></td>
+                            <td class="text-end"><span t-out="sum(o.installment_ids.mapped('remaining_amount'))" t-options="{'widget': 'monetary', 'display_currency': currency}"/></td>
+                            <td/>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <t t-set="payments" t-value="o.payment_ids.filtered_domain([('state', 'in', ('in_process', 'paid'))])"/>
+                <t t-if="payments">
+                    <h5 class="mt-4">Payments Received</h5>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr><th>Date</th><th>Reference</th><th>Method</th><th>Cheque No.</th><th class="text-end">Amount</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="payments.sorted('date')" t-as="pay">
+                                <td><span t-field="pay.date"/></td>
+                                <td><span t-field="pay.name"/></td>
+                                <td><span t-field="pay.re_payment_method"/></td>
+                                <td><span t-out="pay.re_cheque_number or ''"/></td>
+                                <td class="text-end"><span t-field="pay.amount" t-options="{'widget': 'monetary', 'display_currency': currency}"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <template id="report_contract_statement">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="re_sales_management.report_contract_statement_document" t-lang="o.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+</odoo>

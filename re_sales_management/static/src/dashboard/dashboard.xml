@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="re_sales_management.Dashboard">
+        <div class="o_re_dashboard o_action">
+            <div t-if="state.loading and !state.data" class="o_re_dash_loading"><i class="fa fa-spinner fa-spin fa-2x"/></div>
+            <t t-if="state.data" t-set="d" t-value="state.data"/>
+            <div t-if="state.data" class="o_re_dash_inner">
+                <!-- Header -->
+                <div class="o_re_dash_header">
+                    <div>
+                        <h1 t-esc="greeting"/>
+                        <p>Here's an overview of your real estate business.</p>
+                    </div>
+                    <div class="o_re_dash_period">
+                        <i class="fa fa-calendar"/>
+                        <span class="d-none d-md-inline" t-esc="today"/>
+                        <select class="form-select form-select-sm" t-on-change="onYearChange" aria-label="Year">
+                            <t t-foreach="d.years" t-as="y" t-key="y">
+                                <option t-att-value="y" t-att-selected="y === state.year" t-esc="y"/>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- KPI cards -->
+                <div class="o_re_kpis">
+                    <div class="o_re_kpi o_re_kpi_blue" t-on-click="() => this.openAction('re_sales_management.re_project_sales_action')">
+                        <span class="o_re_kpi_icon"><i class="fa fa-building"/></span>
+                        <div><small>Total Projects</small><strong t-esc="d.kpi.projects"/>
+                            <em><i class="fa fa-arrow-up"/> +<t t-esc="d.kpi.projects_new"/> this month</em></div>
+                    </div>
+                    <div class="o_re_kpi o_re_kpi_green" t-on-click="() => this.openAction('re_sales_management.action_re_customers')">
+                        <span class="o_re_kpi_icon"><i class="fa fa-users"/></span>
+                        <div><small>Total Customers</small><strong t-esc="d.kpi.customers"/>
+                            <em><i class="fa fa-arrow-up"/> +<t t-esc="d.kpi.customers_new"/> this month</em></div>
+                    </div>
+                    <div class="o_re_kpi o_re_kpi_purple" t-on-click="() => this.openAction('re_sales_management.re_contract_action')">
+                        <span class="o_re_kpi_icon"><i class="fa fa-file-text"/></span>
+                        <div><small>Total Contracts</small><strong t-esc="d.kpi.contracts"/>
+                            <em><i class="fa fa-arrow-up"/> +<t t-esc="d.kpi.contracts_new"/> this month</em></div>
+                    </div>
+                    <div class="o_re_kpi o_re_kpi_yellow" t-on-click="() => this.openAction('re_sales_management.re_contract_collections_action')">
+                        <span class="o_re_kpi_icon"><i class="fa fa-database"/></span>
+                        <div><small>Total Contract Value</small><strong t-esc="money(d.kpi.total_value)"/></div>
+                    </div>
+                    <div class="o_re_kpi o_re_kpi_red" t-on-click="() => this.openAction('re_sales_management.action_re_payments')">
+                        <span class="o_re_kpi_icon"><i class="fa fa-usd"/></span>
+                        <div class="w-100"><small>Total Collected</small><strong t-esc="money(d.kpi.collected)"/>
+                            <em class="text-muted"><t t-esc="d.kpi.collected_pct"/>% of total value</em>
+                            <div class="o_re_progress"><div class="o_re_bar_green" t-attf-style="width: {{ Math.min(d.kpi.collected_pct, 100) }}%"/></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts row -->
+                <div class="o_re_dash_row o_re_row_3">
+                    <div class="o_re_panel">
+                        <div class="o_re_panel_head"><h3><i class="fa fa-bar-chart"/>Collections Overview</h3>
+                            <span class="o_re_chip" t-esc="state.year"/></div>
+                        <div class="o_re_chart_box"><canvas t-ref="barChart"/></div>
+                    </div>
+                    <div class="o_re_panel">
+                        <div class="o_re_panel_head"><h3><i class="fa fa-pie-chart"/>Contracts by Status</h3></div>
+                        <div class="o_re_donut_wrap">
+                            <div class="o_re_donut">
+                                <canvas t-ref="donutChart"/>
+                                <div class="o_re_donut_center"><strong t-esc="d.kpi.contracts"/><span>Contracts</span></div>
+                            </div>
+                            <ul class="o_re_legend">
+                                <li t-foreach="statusRows" t-as="row" t-key="row.key" t-on-click="() => this.openContractsByStatus(row.key)">
+                                    <span class="o_re_dot" t-attf-style="background: {{ row.color }}"/>
+                                    <span class="o_re_legend_label" t-esc="row.label"/>
+                                    <strong><t t-esc="row.count"/> (<t t-esc="row.pct"/>%)</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="o_re_panel">
+                        <div class="o_re_panel_head"><h3><i class="fa fa-hourglass-half"/>Receivables</h3></div>
+                        <div class="o_re_recv">
+                            <div class="o_re_recv_row" t-on-click="() => this.openAction('re_sales_management.re_aging_action')">
+                                <span>Total Outstanding</span><strong t-esc="money(d.receivables.outstanding)"/></div>
+                            <div class="o_re_recv_row" t-on-click="() => this.openDueThisMonth()">
+                                <span>Due This Month</span><strong t-esc="money(d.receivables.due_this_month)"/></div>
+                            <div class="o_re_recv_row" t-on-click="() => this.openOverdue()">
+                                <span>Overdue Amount</span><strong class="text-danger" t-esc="money(d.receivables.overdue)"/></div>
+                        </div>
+                        <a href="#" class="o_re_link" t-on-click.prevent="() => this.openAction('re_sales_management.re_aging_action')">
+                            View Aging Report <i class="fa fa-arrow-right"/></a>
+                    </div>
+                </div>
+
+                <!-- Tables row 1 -->
+                <div class="o_re_dash_row o_re_row_2">
+                    <div class="o_re_panel">
+                        <div class="o_re_panel_head"><h3><i class="fa fa-file-text"/>Recent Contracts</h3>
+                            <a href="#" t-on-click.prevent="() => this.openAction('re_sales_management.re_contract_action')">View All</a></div>
+                        <div class="table-responsive"><table class="o_re_table">
+                            <thead><tr><th>Contract No.</th><th>Customer</th><th>Project</th><th>Unit</th>
+                                <th class="text-end">Contract Value</th><th>Status</th><th class="text-end">Collected</th><th class="text-end">Remaining</th></tr></thead>
+                            <tbody>
+                                <tr t-foreach="d.recent_contracts" t-as="c" t-key="c.id" t-on-click="() => this.openRecord('re.contract', c.id)">
+                                    <td t-esc="c.name"/><td t-esc="c.customer"/><td t-esc="c.project"/><td t-esc="c.unit"/>
+                                    <td class="text-end" t-esc="number(c.value)"/>
+                                    <td><span t-attf-class="o_re_badge {{ badgeClass(c.status) }}" t-esc="c.status_label"/></td>
+                                    <td class="text-end" t-esc="number(c.collected)"/>
+                                    <td class="text-end" t-esc="number(c.remaining)"/>
+                                </tr>
+                                <tr t-if="!d.recent_contracts.length"><td colspan="8" class="o_re_empty">No contracts yet.</td></tr>
+                            </tbody>
+                        </table></div>
+                    </div>
+                    <div class="o_re_panel">
+                        <div class="o_re_panel_head"><h3><i class="fa fa-calendar"/>Upcoming Installments</h3>
+                            <a href="#" t-on-click.prevent="() => this.openAction('re_sales_management.re_installment_action')">View All</a></div>
+                        <div class="table-responsive"><table class="o_re_table">
+                            <thead><tr><th>Due Date</th><th>Contract No.</th><th>Customer</th><th class="text-end">Amount</th><th>Status</th></tr></thead>
+                            <tbody>
+                                <tr t-foreach="d.upcoming" t-as="i" t-key="i.id" t-on-click="() => this.openRecord('re.contract', i.contract_id)">
+                                    <td t-esc="i.due_date"/><td t-esc="i.contract"/><td t-esc="i.customer"/>
+                                    <td class="text-end" t-esc="number(i.amount)"/>
+                                    <td><span t-attf-class="o_re_badge {{ badgeClass(i.state) }}" t-esc="i.state_label"/></td>
+                                </tr>
+                                <tr t-if="!d.upcoming.length"><td colspan="5" class="o_re_empty">Nothing due.</td></tr>
+                            </tbody>
+                        </table></div>
+                    </div>
+                </div>
+
+                <!-- Tables row 2 -->
+                <div class="o_re_dash_row o_re_row_2">
+                    <div class="o_re_panel">
+                        <div class="o_re_panel_head"><h3><i class="fa fa-credit-card"/>Recent Payments</h3>
+                            <a href="#" t-on-click.prevent="() => this.openAction('re_sales_management.action_re_payments')">View All</a></div>
+                        <div class="table-responsive"><table class="o_re_table">
+                            <thead><tr><th>Date</th><th>Contract No.</th><th>Customer</th><th class="text-end">Amount</th><th>Payment Method</th><th>Reference</th></tr></thead>
+                            <tbody>
+                                <tr t-foreach="d.recent_payments" t-as="p" t-key="p.id" t-on-click="() => this.openRecord('account.payment', p.id)">
+                                    <td t-esc="p.date"/><td t-esc="p.contract"/><td t-esc="p.customer"/>
+                                    <td class="text-end" t-esc="number(p.amount)"/>
+                                    <td><i t-attf-class="fa {{ methodIcon(p.method) }} me-1 o_re_muted"/><t t-esc="p.method_label"/></td>
+                                    <td t-esc="p.reference"/>
+                                </tr>
+                                <tr t-if="!d.recent_payments.length"><td colspan="6" class="o_re_empty">No payments yet.</td></tr>
+                            </tbody>
+                        </table></div>
+                    </div>
+                    <div class="o_re_panel">
+                        <div class="o_re_panel_head"><h3><i class="fa fa-building"/>Projects Performance</h3>
+                            <a href="#" t-on-click.prevent="() => this.openAction('re_sales_management.re_project_sales_action')">View All</a></div>
+                        <div class="table-responsive"><table class="o_re_table">
+                            <thead><tr><th>Project</th><th>Units</th><th>Sold</th><th>Available</th><th class="text-end">Sales Value</th><th>Collection %</th></tr></thead>
+                            <tbody>
+                                <tr t-foreach="d.projects" t-as="p" t-key="p.id" t-on-click="() => this.openRecord('re.project', p.id)">
+                                    <td t-esc="p.name"/><td t-esc="p.units"/><td t-esc="p.sold"/><td t-esc="p.available"/>
+                                    <td class="text-end" t-esc="number(p.sales_value)"/>
+                                    <td class="o_re_pct_cell">
+                                        <span t-esc="p.collection_pct + '%'"/>
+                                        <div class="o_re_progress"><div t-attf-class="{{ progressClass(p.collection_pct) }}" t-attf-style="width: {{ Math.min(p.collection_pct, 100) }}%"/></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

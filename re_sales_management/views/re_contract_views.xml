@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="re_contract_view_form" model="ir.ui.view">
+        <field name="name">re.contract.form</field>
+        <field name="model">re.contract</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_generate_schedule" type="object" string="Generate Schedule"
+                            invisible="state != 'draft'" class="btn-secondary"/>
+                    <button name="action_confirm" type="object" string="Confirm Contract" class="btn-primary"
+                            invisible="state != 'draft'"/>
+                    <button name="action_register_payment" type="object" string="Record Payment" class="btn-primary"
+                            invisible="state != 'active'"/>
+                    <button name="action_invoice_all" type="object" string="Invoice All Installments"
+                            invisible="state != 'active'"
+                            confirm="Create and post the invoices of every remaining installment now?"/>
+                    <button name="action_print_statement" type="object" string="Print Statement" invisible="state == 'draft'"/>
+                    <button name="action_cancel" type="object" string="Cancel" invisible="state not in ('draft', 'active')"
+                            confirm="Cancel this contract? The unit becomes available again."/>
+                    <button name="action_set_draft" type="object" string="Reset to Reservation" invisible="state != 'cancelled'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,active,closed"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_payments" icon="fa-money"
+                                invisible="payment_count == 0">
+                            <field name="payment_count" widget="statinfo" string="Payments"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_invoices" icon="fa-pencil-square-o"
+                                invisible="invoice_count == 0">
+                            <field name="invoice_count" widget="statinfo" string="Invoices"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Fully Paid" bg_color="text-bg-success" invisible="state != 'closed'"/>
+                    <widget name="web_ribbon" title="Cancelled" bg_color="text-bg-danger" invisible="state != 'cancelled'"/>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                        <field name="collection_status" widget="badge" invisible="not collection_status"
+                               decoration-success="collection_status in ('on_track', 'closed')"
+                               decoration-warning="collection_status == 'at_risk'"
+                               decoration-danger="collection_status == 'overdue'"/>
+                    </div>
+                    <div class="o_re_stat_cards" invisible="state == 'draft'">
+                        <div class="o_re_stat_card o_re_card_blue">
+                            <i title="File Text" class="fa fa-file-text"/><div><field name="total_value" widget="monetary"/><span>Contract Value</span></div>
+                        </div>
+                        <button type="object" name="action_view_payments" class="o_re_stat_card o_re_card_green">
+                            <i title="Check Circle" class="fa fa-check-circle"/><div><field name="collected_amount" widget="monetary"/><span>Collected (<field name="collection_pct" widget="float" digits="[16, 0]" class="d-inline"/>%)</span></div>
+                        </button>
+                        <div class="o_re_stat_card o_re_card_orange">
+                            <i title="Hourglass Half" class="fa fa-hourglass-half"/><div><field name="remaining_amount" widget="monetary"/><span>Remaining</span></div>
+                        </div>
+                        <div class="o_re_stat_card o_re_card_red">
+                            <i title="Exclamation Circle" class="fa fa-exclamation-circle"/><div><field name="overdue_amount" widget="monetary"/><span>Overdue</span></div>
+                        </div>
+                        <div class="o_re_stat_card o_re_card_purple">
+                            <i title="Calendar" class="fa fa-calendar"/><div><field name="next_due_date"/><span>Next Due Date</span></div>
+                        </div>
+                    </div>
+                    <group>
+                        <group string="Customer &amp; Unit">
+                            <field name="partner_id" readonly="state != 'draft'"
+                                   context="{'default_is_re_customer': True, 'res_partner_search_mode': 'customer'}"/>
+                            <field name="project_id" readonly="state != 'draft'"/>
+                            <field name="unit_id" readonly="state != 'draft'" options="{'no_create': True}"/>
+                            <field name="building_id" invisible="not building_id"/>
+                            <field name="unit_type"/>
+                            <field name="date" readonly="state != 'draft'"/>
+                            <field name="user_id"/>
+                            <field name="company_id" groups="base.group_multi_company" readonly="state != 'draft'"/>
+                        </group>
+                        <group string="Price">
+                            <field name="currency_id" invisible="1"/>
+                            <field name="unit_price" widget="monetary" readonly="state != 'draft'"/>
+                            <field name="discount_amount" widget="monetary" readonly="state != 'draft'"/>
+                            <field name="net_price" widget="monetary"/>
+                            <field name="maintenance_amount" widget="monetary" readonly="state != 'draft'"/>
+                            <field name="maintenance_due_date" invisible="not maintenance_amount" readonly="state != 'draft'"/>
+                            <field name="total_value" widget="monetary" class="fw-bold"/>
+                        </group>
+                    </group>
+                    <group string="Payment Plan" invisible="state not in ('draft',)">
+                        <group>
+                            <field name="down_payment_type" widget="radio" options="{'horizontal': true}"/>
+                            <field name="down_payment_percent" invisible="down_payment_type != 'percent'"/>
+                            <field name="down_payment_fixed" widget="monetary" invisible="down_payment_type != 'fixed'"/>
+                            <field name="down_payment_amount" widget="monetary"/>
+                            <field name="down_payment_date"/>
+                        </group>
+                        <group>
+                            <field name="installment_count"/>
+                            <field name="installment_frequency"/>
+                            <field name="first_installment_date"/>
+                            <div colspan="2" class="text-muted small">
+                                Click "Generate Schedule" to (re)build the installments from this plan.
+                                You can then edit, add or remove installments before confirming.
+                            </div>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Installments" name="installments">
+                            <field name="installment_ids" context="{'default_contract_id': id}"
+                                   readonly="state in ('closed', 'cancelled')">
+                                <list decoration-danger="state == 'overdue'" decoration-muted="state in ('paid', 'cancelled')">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name"/>
+                                    <field name="installment_type" optional="hide"/>
+                                    <field name="due_date"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <field name="amount" widget="monetary" sum="Total"/>
+                                    <field name="paid_amount" widget="monetary" sum="Paid"/>
+                                    <field name="remaining_amount" widget="monetary" sum="Remaining"/>
+                                    <field name="payment_method" optional="show"/>
+                                    <field name="cheque_number" optional="hide"/>
+                                    <field name="invoice_id" optional="show" readonly="1"/>
+                                    <field name="state" widget="badge" decoration-success="state == 'paid'"
+                                           decoration-info="state == 'upcoming'" decoration-warning="state in ('due', 'partial')"
+                                           decoration-danger="state == 'overdue'"/>
+                                    <field name="contract_state" column_invisible="1"/>
+                                    <button name="action_create_invoice" type="object" icon="fa-file-text-o" title="Create Invoice"
+                                            invisible="invoice_id or contract_state not in ('active', 'closed')"/>
+                                    <button name="action_register_payment" type="object" icon="fa-money" title="Record Payment"
+                                            invisible="state in ('paid', 'cancelled') or contract_state not in ('active', 'closed')"/>
+                                </list>
+                            </field>
+                            <div class="text-end small text-muted" invisible="state != 'draft'">
+                                Scheduled total: <field name="installment_total" widget="monetary" class="d-inline fw-bold"/>
+                            </div>
+                        </page>
+                        <page string="Payments" name="payments" invisible="state == 'draft'">
+                            <field name="payment_ids" readonly="1" context="{'tree_view_ref': 're_sales_management.view_account_payment_re_list'}">
+                                <list>
+                                    <field name="date"/>
+                                    <field name="name"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <field name="amount" widget="monetary" sum="Total"/>
+                                    <field name="re_payment_method"/>
+                                    <field name="journal_id"/>
+                                    <field name="re_cheque_number" optional="show"/>
+                                    <field name="re_cheque_state" widget="badge" optional="show"/>
+                                    <field name="state" widget="badge"/>
+                                </list>
+                            </field>
+                            <field name="last_payment_date" invisible="1"/>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="notes" placeholder="Special conditions, delivery notes..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="re_contract_view_list" model="ir.ui.view">
+        <field name="name">re.contract.list</field>
+        <field name="model">re.contract</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="state == 'cancelled'">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="project_id"/>
+                <field name="unit_id"/>
+                <field name="date" optional="show"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="total_value" widget="monetary" sum="Total"/>
+                <field name="collected_amount" widget="monetary" sum="Total"/>
+                <field name="remaining_amount" widget="monetary" sum="Total"/>
+                <field name="collection_pct" widget="progressbar"/>
+                <field name="collection_status" widget="badge" decoration-success="collection_status in ('on_track', 'closed')"
+                       decoration-warning="collection_status == 'at_risk'" decoration-danger="collection_status == 'overdue'"/>
+                <field name="last_payment_date" optional="show"/>
+                <field name="state" widget="badge" optional="hide" decoration-info="state == 'draft'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="re_contract_view_kanban" model="ir.ui.view">
+        <field name="name">re.contract.kanban</field>
+        <field name="model">re.contract</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="collection_status" quick_create="false">
+                <field name="currency_id"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="d-flex justify-content-between">
+                            <field name="name" class="fw-bold"/>
+                            <field name="total_value" widget="monetary"/>
+                        </div>
+                        <field name="partner_id"/>
+                        <div class="small text-muted"><field name="project_id"/> · <field name="unit_id"/></div>
+                        <field name="collection_pct" widget="progressbar"/>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="re_contract_view_search" model="ir.ui.view">
+        <field name="name">re.contract.search</field>
+        <field name="model">re.contract</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="project_id"/>
+                <field name="unit_id"/>
+                <filter name="draft" string="Reservations" domain="[('state', '=', 'draft')]"/>
+                <filter name="active" string="Active" domain="[('state', '=', 'active')]"/>
+                <filter name="closed" string="Fully Paid" domain="[('state', '=', 'closed')]"/>
+                <separator/>
+                <filter name="on_track" string="On Track" domain="[('collection_status', '=', 'on_track')]"/>
+                <filter name="at_risk" string="At Risk" domain="[('collection_status', '=', 'at_risk')]"/>
+                <filter name="overdue" string="Overdue" domain="[('collection_status', '=', 'overdue')]"/>
+                <separator/>
+                <filter name="my" string="My Contracts" domain="[('user_id', '=', uid)]"/>
+                <filter name="date" string="Contract Date" date="date"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_project" string="Project" context="{'group_by': 'project_id'}"/>
+                    <filter name="group_partner" string="Customer" context="{'group_by': 'partner_id'}"/>
+                    <filter name="group_status" string="Collection Status" context="{'group_by': 'collection_status'}"/>
+                    <filter name="group_user" string="Salesperson" context="{'group_by': 'user_id'}"/>
+                    <filter name="group_month" string="Contract Month" context="{'group_by': 'date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="re_contract_view_pivot" model="ir.ui.view">
+        <field name="name">re.contract.pivot</field>
+        <field name="model">re.contract</field>
+        <field name="arch" type="xml">
+            <pivot string="Contracts Analysis">
+                <field name="project_id" type="row"/>
+                <field name="collection_status" type="col"/>
+                <field name="total_value" type="measure"/>
+                <field name="collected_amount" type="measure"/>
+                <field name="remaining_amount" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="re_contract_view_graph" model="ir.ui.view">
+        <field name="name">re.contract.graph</field>
+        <field name="model">re.contract</field>
+        <field name="arch" type="xml">
+            <graph string="Contracts" type="bar">
+                <field name="date" interval="month"/>
+                <field name="total_value" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="re_contract_action" model="ir.actions.act_window">
+        <field name="name">Contracts</field>
+        <field name="res_model">re.contract</field>
+        <field name="view_mode">list,kanban,form,pivot,graph</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create your first contract</p>
+            <p>Pick a customer and an available unit, generate the payment schedule and confirm.
+               Every installment becomes a customer invoice and payments are reconciled automatically.</p>
+        </field>
+    </record>
+
+    <!-- Collections: contracts with collection progress (Payments menu) -->
+    <record id="re_contract_collections_action" model="ir.actions.act_window">
+        <field name="name">Collections</field>
+        <field name="res_model">re.contract</field>
+        <field name="view_mode">list,form,pivot</field>
+        <field name="domain">[('state', 'in', ('active', 'closed'))]</field>
+    </record>
+
+    <record id="re_contract_analysis_action" model="ir.actions.act_window">
+        <field name="name">Contracts Analysis</field>
+        <field name="res_model">re.contract</field>
+        <field name="view_mode">pivot,graph,list</field>
+        <field name="domain">[('state', 'in', ('active', 'closed'))]</field>
+    </record>
+</odoo>

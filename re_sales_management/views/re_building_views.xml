@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="re_building_view_form" model="ir.ui.view">
+        <field name="name">re.building.form</field>
+        <field name="model">re.building</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_units" icon="fa-th">
+                            <field name="unit_count" widget="statinfo" string="Units"/>
+                        </button>
+                    </div>
+                    <field name="image_1920" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}"/>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="e.g. Building A"/></h1>
+                        <field name="project_id" placeholder="Project"/>
+                    </div>
+                    <div class="o_re_stat_cards o_re_stat_cards_sm">
+                        <div class="o_re_stat_card o_re_card_blue"><i title="Th" class="fa fa-th"/><div><field name="unit_count"/><span>Units</span></div></div>
+                        <div class="o_re_stat_card o_re_card_green"><i title="Check Circle" class="fa fa-check-circle"/><div><field name="available_count"/><span>Available</span></div></div>
+                        <div class="o_re_stat_card o_re_card_orange"><i title="Clock O" class="fa fa-clock-o"/><div><field name="reserved_count"/><span>Reserved</span></div></div>
+                        <div class="o_re_stat_card o_re_card_purple"><i title="File Text" class="fa fa-file-text"/><div><field name="sold_count"/><span>Sold</span></div></div>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="floors_label" placeholder="e.g. G+5"/>
+                            <field name="floor_count"/>
+                        </group>
+                        <group>
+                            <field name="sequence"/>
+                            <field name="active" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Units" name="units">
+                            <field name="unit_ids" context="{'default_project_id': project_id, 'default_building_id': id}">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="unit_type"/>
+                                    <field name="floor"/>
+                                    <field name="area"/>
+                                    <field name="bedrooms"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <field name="price" widget="monetary"/>
+                                    <field name="state" widget="badge" decoration-success="state == 'available'"
+                                           decoration-warning="state == 'reserved'" decoration-danger="state == 'sold'"/>
+                                    <field name="customer_id" optional="show"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="notes"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="re_building_view_list" model="ir.ui.view">
+        <field name="name">re.building.list</field>
+        <field name="model">re.building</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="project_id"/>
+                <field name="name"/>
+                <field name="floors_label"/>
+                <field name="unit_count"/>
+                <field name="available_count"/>
+                <field name="reserved_count"/>
+                <field name="sold_count"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="re_building_view_search" model="ir.ui.view">
+        <field name="name">re.building.search</field>
+        <field name="model">re.building</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="project_id"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_project" string="Project" context="{'group_by': 'project_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="re_building_action" model="ir.actions.act_window">
+        <field name="name">Buildings</field>
+        <field name="res_model">re.building</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_group_project': 1}</field>
+    </record>
+</odoo>
