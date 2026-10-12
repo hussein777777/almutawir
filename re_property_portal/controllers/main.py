@@ -34,9 +34,18 @@ class RealEstateWebsiteMarketplace(RealEstateWebsite):
     def home(self, **kw):
         response = super().home(**kw)
         if getattr(response, 'qcontext', None) is not None:
-            latest = request.env['re.listing'].search([('state', '=', 'published')], limit=4,
-                                                       order='is_premium desc, published_date desc')
-            response.qcontext.update(render_values(rp_latest=latest, **response.qcontext))
+            Listing = request.env['re.listing']
+            latest = Listing.search([('state', '=', 'published')], limit=4,
+                                    order='is_premium desc, published_date desc')
+            response.qcontext.update(render_values(
+                rp_latest=latest,
+                rp_search=True,
+                purpose='buy',
+                view='list',
+                filters=Listing._search_filters_from_params({'type': 'sale'}),
+                locations=request.env['re.location'].sudo().search([]),
+                amenities=request.env['re.amenity'].sudo().search([]),
+                **response.qcontext))
         return response
 
 
@@ -110,6 +119,8 @@ class PropertyMarketplace(http.Controller):
                 dict(filters_to_query(filters), type=filters['type'])),
             'alert_name': self._alert_name(filters),
         }
+        if purpose == 'buy' and int(page or 1) == 1 and not (filters['agent'] or filters['agency']):
+            values['projects'] = self._matching_projects(filters)
         if values['view'] == 'map':
             listings = Listing.search(domain + [('latitude', '!=', 0), ('longitude', '!=', 0)],
                                       order=Listing._search_order(filters), limit=MAP_MAX_MARKERS)
@@ -123,6 +134,25 @@ class PropertyMarketplace(http.Controller):
             values['listings'] = Listing.search(domain, order=Listing._search_order(filters),
                                                 limit=LISTINGS_PER_PAGE, offset=pager['offset'])
         return request.render('re_property_portal.page_search', render_values(**values))
+
+    def _matching_projects(self, filters, limit=6):
+        """New projects (re.project) matching the search, shown above the listings."""
+        domain = [] if self._is_editor() else [('is_published', '=', True)]
+        q = filters['q']
+        if q:
+            domain += ['|', '|', '|', ('name', 'ilike', q), ('city', 'ilike', q), ('location', 'ilike', q),
+                       ('location_id.complete_name', 'ilike', q)]
+        if filters['loc']:
+            domain.append(('location_id', 'child_of', filters['loc']))
+        if filters['completion'] == 'offplan':
+            domain.append(('state', 'in', ('planning', 'construction')))
+        elif filters['completion'] == 'ready':
+            domain.append(('state', '=', 'delivered'))
+        if filters['ptype']:
+            domain.append(('unit_ids.unit_type', 'in', filters['ptype']))
+        if filters['price_max']:
+            domain.append(('unit_ids.price', '<=', filters['price_max']))
+        return request.env['re.project'].search(domain, limit=limit)
 
     def _map_markers(self, listings):
         markers = []

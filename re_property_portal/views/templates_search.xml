@@ -70,6 +70,20 @@
                         </div>
                     </div>
 
+                    <!-- New projects (developers) matching the search -->
+                    <div t-if="projects" class="o_rp_projects mb-5">
+                        <div class="d-flex justify-content-between align-items-end mb-3">
+                            <h2 class="h5 mb-0"><i class="fa fa-building me-2 o_rp_gold_text"/>New projects</h2>
+                            <a href="/estate/projects" class="small">View all projects <i class="fa fa-arrow-right ms-1"/></a>
+                        </div>
+                        <div class="row g-4 o_re_site">
+                            <div t-foreach="projects" t-as="project" class="col-md-6 col-lg-4">
+                                <t t-call="re_developer_website.project_card"/>
+                            </div>
+                        </div>
+                        <h2 t-if="listings" class="h5 mt-5 mb-0"><i class="fa fa-home me-2 o_rp_gold_text"/>Properties</h2>
+                    </div>
+
                     <!-- Map view -->
                     <t t-if="view == 'map'">
                         <div class="o_rp_map o_rp_map_search" t-att-data-markers="markers_json"/>

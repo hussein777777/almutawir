@@ -38,6 +38,7 @@ $rp-shadow: 0 8px 26px rgba(6, 16, 30, 0.08);
         color: #9aa0a6;
     }
     .o_rp_agent_search { max-width: 560px; }
+    &.o_rp_home_search { position: relative; z-index: 2; margin-top: -3rem; }
 
     // ------------------------------------------------------------ Categories
     .o_rp_category {
@@ -71,8 +72,9 @@ $rp-shadow: 0 8px 26px rgba(6, 16, 30, 0.08);
     .o_rp_card_img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .o_rp_card_noimg { height: 100%; }
     @include media-breakpoint-up(md) {
-        .o_rp_card_wide { height: 250px; }
-        .o_rp_card_wide .o_rp_card_media { height: 100%; }
+        .o_rp_card_wide { height: 260px; }
+        // the photo must not dictate the row height: pin it inside its column
+        .o_rp_card_wide .o_rp_card_media { position: absolute; inset: 0; height: auto; }
     }
     .o_rp_card_compact {
         .o_rp_card_media { height: 180px; }

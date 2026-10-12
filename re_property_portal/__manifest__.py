@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Real Estate Property Portal',
-    'version': '18.0.1.0.0',
+    'version': '18.0.1.1.0',
     'summary': 'Property Finder style marketplace: buy / rent listings, map search, '
                'agents & agencies directory, agent portal with approval, saved search alerts.',
     'category': 'Website/Website',

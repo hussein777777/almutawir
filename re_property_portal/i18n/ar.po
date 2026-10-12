@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-11 22:19+0000\n"
-"PO-Revision-Date: 2026-10-11 22:19+0000\n"
+"POT-Creation-Date: 2026-10-12 01:05+0000\n"
+"PO-Revision-Date: 2026-10-12 01:05+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -134,6 +134,11 @@ msgid "<i class=\"fa fa-bell-o me-1\"/>Create alert"
 msgstr "<i class=\"fa fa-bell-o me-1\"/>إنشاء تنبيه"
 
 #. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "<i class=\"fa fa-building me-2 o_rp_gold_text\"/>New projects"
+msgstr "<i class=\"fa fa-building me-2 o_rp_gold_text\"/>مشروعات جديدة"
+
+#. module: re_property_portal
 #: model_terms:ir.ui.view,arch_db:re_property_portal.page_listing
 msgid "<i class=\"fa fa-building-o\"/><small>Type</small>"
 msgstr "<i class=\"fa fa-building-o\"/><small>النوع</small>"
@@ -175,6 +180,11 @@ msgstr "<i class=\"fa fa-eye\" title=\"المشاهدات\"/>"
 #: model_terms:ir.ui.view,arch_db:re_property_portal.page_agency
 msgid "<i class=\"fa fa-globe me-1\"/>Website"
 msgstr "<i class=\"fa fa-globe me-1\"/>الموقع"
+
+#. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "<i class=\"fa fa-home me-2 o_rp_gold_text\"/>Properties"
+msgstr "<i class=\"fa fa-home me-2 o_rp_gold_text\"/>عقارات"
 
 #. module: re_property_portal
 #: model_terms:ir.ui.view,arch_db:re_property_portal.portal_listing_form
@@ -2959,6 +2969,11 @@ msgid "View"
 msgstr "عرض"
 
 #. module: re_property_portal
+#: model_terms:ir.ui.view,arch_db:re_property_portal.page_search
+msgid "View all projects <i class=\"fa fa-arrow-right ms-1\"/>"
+msgstr "عرض كل المشروعات <i class=\"fa fa-arrow-right ms-1\"/>"
+
+#. module: re_property_portal
 #: model:ir.model.fields,field_description:re_property_portal.field_re_listing__view_count
 #: model_terms:ir.ui.view,arch_db:re_property_portal.re_listing_view_form
 msgid "Views"
@@ -2992,6 +3007,7 @@ msgid "We will email you new properties that match this search."
 msgstr "سنرسل لك العقارات الجديدة التي تطابق هذا البحث."
 
 #. module: re_property_portal
+#: model:ir.model,name:re_property_portal.model_website
 #: model:ir.model.fields,field_description:re_property_portal.field_re_agency__website
 #: model:ir.model.fields,field_description:re_property_portal.field_re_search_alert__website_id
 msgid "Website"

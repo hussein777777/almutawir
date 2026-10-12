@@ -2,6 +2,15 @@
 <odoo>
     <!-- Marketplace search + latest listings on the homepage -->
     <template id="page_home_marketplace" name="Property Portal: Homepage Marketplace" inherit_id="re_developer_website.page_home">
+        <!-- Replace the units search with the marketplace search (buy / rent + filters) -->
+        <xpath expr="//div[hasclass('o_re_search_wrap')]" position="replace">
+            <div t-if="rp_search" class="container o_re_search_wrap o_rp_site o_rp_home_search">
+                <t t-call="re_property_portal.search_bar"/>
+            </div>
+            <div t-else="" class="container o_re_search_wrap">
+                <t t-call="re_developer_website.unit_search_bar"/>
+            </div>
+        </xpath>
         <xpath expr="//div[@id='oe_structure_re_home_1']" position="after">
             <section t-if="rp_latest" class="py-5 o_rp_site o_rp_home_market">
                 <div class="container">
